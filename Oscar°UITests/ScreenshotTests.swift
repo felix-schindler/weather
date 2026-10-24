@@ -62,7 +62,7 @@ final class ScreenshotTests: XCTestCase {
         }
         XCTAssertTrue(entry.exists, "Settings entry never reached the bottom of the scroll")
         tapFrameCenter(entry, in: app)
-        let card = app.descendants(matching: .any)["settings.memberCard"].firstMatch
+        let card = app.descendants(matching: .any)["settings.sheet"].firstMatch
         XCTAssertTrue(card.waitForExistence(timeout: 10), "Settings sheet never opened")
         return card
     }

@@ -120,6 +120,7 @@ struct SettingsView: View {
       }
       .navigationTitle("Einstellungen")
       .toolbarTitleDisplayMode(.inline)
+      .accessibilityIdentifier("settings.sheet")
       .toolbar {
         ToolbarItem(placement: .topBarTrailing) {
           Button(role: .close) {

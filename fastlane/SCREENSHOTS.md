@@ -130,10 +130,9 @@ to a deliverable with the ★ toggle in Frame Studio.
 | 21 | map_layers | Kartenebenen sheet (layer tiles) |
 | 22 | map_layer_settings | Same sheet at .large, display toggles |
 | 23 | alert_detail | Warning sheet from the Now alert badge |
-| 24 | settings | Settings root, member card with stickers |
+| 24 | settings | Settings root |
 | 25 | settings_notifications | Alerts detail, all three types on |
 | 26 | settings_forecast | Vorhersage with DWD ICON forced + Tageswerte begrenzen |
-| 27 | member_card_dock | Member card with the sticker dock open |
 | 28–33 | onboarding_* | welcome, features, location, city, notifications, finale |
 | 34 | places | Orte list: Mein Standort, Leipzig, Essen (Essen rains) |
 | 37 | lock_notifications | Lock screen, rain alert + weather warning |
