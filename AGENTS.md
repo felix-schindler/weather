@@ -17,7 +17,7 @@ Guide for agents working in this repo — Oscar°, a SwiftUI weather app (iOS + 
 ```sh
 # Build / unit tests (project has no SPM; use xcodebuild)
 xcodebuild test -project Oscar°.xcodeproj -scheme "Oscar°" \
-  -destination 'platform=iOS Simulator,name=iPhone 17 Pro' -quiet
+  -destination 'platform=iOS Simulator,name=iPhone 18 Pro' -quiet
 # Single test class:
 xcodebuild test ... -only-testing:Oscar°Tests/OfflineCacheTests
 ```
