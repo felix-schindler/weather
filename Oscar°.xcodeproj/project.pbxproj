@@ -93,7 +93,6 @@
 		2546516729E492E500D8C13D /* RadarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2546516629E492E500D8C13D /* RadarProvider.swift */; };
 		2546516A29E4935600D8C13D /* LockscreenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2546516929E4935600D8C13D /* LockscreenProvider.swift */; };
 		255BDD9E2BD9B2E40061E4EB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
-		255BDD9F2BD9B2E40061E4EB /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 4EBF1FE0D46648989064EF72 /* Sentry */; };
 		256FDAC92BCB164C00E18655 /* GlobalRadarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256FDAC42BCB14D000E18655 /* GlobalRadarWidget.swift */; };
 		256FDACA2BCB164F00E18655 /* GlobalRadarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256FDAC62BCB14DA00E18655 /* GlobalRadarProvider.swift */; };
 		2576B2032B586E6C004E288A /* GlobalViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CB17E72B47043A001D973A /* GlobalViewExtensions.swift */; };
@@ -124,7 +123,6 @@
 		25A1C0042F8D000100000001 /* APIContactIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A1C0012F8D000100000001 /* APIContactIdentity.swift */; };
 		25A1C0062F8D000100000001 /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A1C0052F8D000100000001 /* NotificationSettingsView.swift */; };
 		25AD38E72BE716E100A8F305 /* MemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD38E62BE716E100A8F305 /* MemoryView.swift */; };
-		25B734172BD9BB86003C6756 /* SentrySwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 25B734162BD9BB86003C6756 /* SentrySwiftUI */; };
 		25BEDCE426CACF7D00D90D6B /* DataModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25BEDCE226CACF7D00D90D6B /* DataModels.xcdatamodeld */; };
 		25BEDCE626CACFC900D90D6B /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BEDCE526CACFC900D90D6B /* PersistenceController.swift */; };
 		25C42FFD2AC35EE2001DA5FC /* openapi.yml in Resources */ = {isa = PBXBuildFile; fileRef = 257D07DC2AC355EC005EBD16 /* openapi.yml */; };
@@ -438,7 +436,6 @@
 		B0AD00043007000000000002 /* OnboardingGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD00043007000000000001 /* OnboardingGate.swift */; };
 		B0AD00053007000000000002 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD00053007000000000001 /* OnboardingView.swift */; };
 		B0AD00083007000000000002 /* OnboardingButtonStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD00083007000000000001 /* OnboardingButtonStack.swift */; };
-		B0AD000A3100000000000002 /* OnboardingCrashReportsStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD000A3100000000000001 /* OnboardingCrashReportsStep.swift */; };
 		B0AD000B3007000000000002 /* OnboardingWelcomeStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD000B3007000000000001 /* OnboardingWelcomeStep.swift */; };
 		B0AD000C3007000000000002 /* OnboardingTourStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD000C3007000000000001 /* OnboardingTourStep.swift */; };
 		B0AD000A3101000000000002 /* OnboardingMapStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD000A3101000000000001 /* OnboardingMapStage.swift */; };
@@ -933,7 +930,6 @@
 		B0AD00043007000000000001 /* OnboardingGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingGate.swift; sourceTree = "<group>"; };
 		B0AD00053007000000000001 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		B0AD00083007000000000001 /* OnboardingButtonStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStack.swift; sourceTree = "<group>"; };
-		B0AD000A3100000000000001 /* OnboardingCrashReportsStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCrashReportsStep.swift; sourceTree = "<group>"; };
 		B0AD000B3007000000000001 /* OnboardingWelcomeStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingWelcomeStep.swift; sourceTree = "<group>"; };
 		B0AD000C3007000000000001 /* OnboardingTourStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTourStep.swift; sourceTree = "<group>"; };
 		B0AD000A3101000000000001 /* OnboardingMapStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMapStage.swift; sourceTree = "<group>"; };
@@ -1053,8 +1049,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				255BDD9F2BD9B2E40061E4EB /* Sentry in Frameworks */,
-				25B734172BD9BB86003C6756 /* SentrySwiftUI in Frameworks */,
 				25C4300F2AC36165001DA5FC /* OpenAPIRuntime in Frameworks */,
 				25C430122AC36173001DA5FC /* OpenAPIURLSession in Frameworks */,
 				AD60000A2FE4000000000001 /* MapLibre in Frameworks */,
@@ -1810,7 +1804,6 @@
 				B0AD00053007000000000001 /* OnboardingView.swift */,
 				B0AD00083007000000000001 /* OnboardingButtonStack.swift */,
 				B0AD00143007000000000001 /* OnboardingQuestionStep.swift */,
-				B0AD000A3100000000000001 /* OnboardingCrashReportsStep.swift */,
 				B0AD000B3007000000000001 /* OnboardingWelcomeStep.swift */,
 				B0AD000C3007000000000001 /* OnboardingTourStep.swift */,
 				B0AD000A3101000000000001 /* OnboardingMapStage.swift */,
@@ -2035,7 +2028,6 @@
 				3EB8900F251A55700028FED0 /* Resources */,
 				3EB8903A251A55980028FED0 /* Embed Foundation Extensions */,
 				25429BDE29E5F94300D5979F /* Embed Watch Content */,
-				99EB13A1B51E4E3299FDEFFF /* Upload Debug Symbols to Sentry */,
 			);
 			buildRules = (
 			);
@@ -2049,8 +2041,6 @@
 			packageProductDependencies = (
 				25C4300E2AC36165001DA5FC /* OpenAPIRuntime */,
 				25C430112AC36173001DA5FC /* OpenAPIURLSession */,
-				4EBF1FE0D46648989064EF72 /* Sentry */,
-				25B734162BD9BB86003C6756 /* SentrySwiftUI */,
 				AD6000092FE4000000000001 /* MapLibre */,
 			);
 			productName = "Oscar°";
@@ -2141,7 +2131,6 @@
 				25C430062AC3608E001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
 				25C4300D2AC36165001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
 				25C430102AC36173001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
-				61BF2619978C4D10BB7D4A9F /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 				AD6000062FE4000000000003 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
 			);
 			productRefGroup = 3EB89012251A55700028FED0 /* Products */;
@@ -2222,21 +2211,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		99EB13A1B51E4E3299FDEFFF /* Upload Debug Symbols to Sentry */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
-			);
-			name = "Upload Debug Symbols to Sentry";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This script is responsable to upload debug symbols and source context for Sentry.\nif which sentry-cli >/dev/null; then\nexport SENTRY_ORG=philipp-bolte\nexport SENTRY_PROJECT=oscar\nERROR=$(sentry-cli debug-files upload --include-sources \"$DWARF_DSYM_FOLDER_PATH\" 2>&1 >/dev/null)\nif [ ! $? -eq 0 ]; then\necho \"warning: sentry-cli - $ERROR\"\nfi\nelse\necho \"warning: sentry-cli not installed, download from https://github.com/getsentry/sentry-cli/releases\"\nfi\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -2386,7 +2360,6 @@
 				B0AD00053007000000000002 /* OnboardingView.swift in Sources */,
 				B0AD00083007000000000002 /* OnboardingButtonStack.swift in Sources */,
 				B0AD00143007000000000002 /* OnboardingQuestionStep.swift in Sources */,
-				B0AD000A3100000000000002 /* OnboardingCrashReportsStep.swift in Sources */,
 				B0AD000B3007000000000002 /* OnboardingWelcomeStep.swift in Sources */,
 				B0AD000C3007000000000002 /* OnboardingTourStep.swift in Sources */,
 				B0AD000A3101000000000002 /* OnboardingMapStage.swift in Sources */,
@@ -3369,14 +3342,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		61BF2619978C4D10BB7D4A9F /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/getsentry/sentry-cocoa/";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
 		AD6000062FE4000000000003 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maplibre/maplibre-gl-native-distribution";
@@ -3408,10 +3373,6 @@
 			package = 25C430102AC36173001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
 			productName = OpenAPIURLSession;
 		};
-		25B734162BD9BB86003C6756 /* SentrySwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SentrySwiftUI;
-		};
 		25C4300E2AC36165001DA5FC /* OpenAPIRuntime */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 25C4300D2AC36165001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */;
@@ -3421,11 +3382,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 25C430102AC36173001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
 			productName = OpenAPIURLSession;
-		};
-		4EBF1FE0D46648989064EF72 /* Sentry */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 61BF2619978C4D10BB7D4A9F /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
-			productName = Sentry;
 		};
 		5A7C003B2FAB000000000001 /* OpenAPIRuntime */ = {
 			isa = XCSwiftPackageProductDependency;

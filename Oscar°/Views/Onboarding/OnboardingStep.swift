@@ -11,7 +11,6 @@ enum OnboardingStep: String, Equatable {
     case location
     case manualLocation
     case notifications
-    case crashReports
     case finale
 }
 
@@ -41,12 +40,6 @@ extension OnboardingStep {
            OnboardingRegion.hasAlertCoverage(locationService.knownCoordinates() ?? locationService.getCoordinates()) {
             return .notifications
         }
-        return afterNotifications
-    }
-
-    @MainActor
-    static var afterNotifications: OnboardingStep {
-        guard !OnboardingCoordinator.shared.replaying else { return .crashReports }
-        return CrashReporting.hasAnswered ? .finale : .crashReports
+        return .finale
     }
 }

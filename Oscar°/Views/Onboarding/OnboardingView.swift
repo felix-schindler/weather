@@ -77,9 +77,7 @@ struct OnboardingView: View {
                 advance(to: .afterLocationResolved(locationService: locationService))
             }
         case .notifications:
-            OnboardingNotificationsStep { advance(to: .afterNotifications) }
-        case .crashReports:
-            OnboardingCrashReportsStep { advance(to: .finale) }
+            OnboardingNotificationsStep { advance(to: .finale) }
         case .finale:
             OnboardingFinaleStep { coordinator.complete() }
         }

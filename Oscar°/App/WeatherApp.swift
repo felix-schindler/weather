@@ -9,8 +9,6 @@ import CoreLocation
 import SwiftUI
 import OSLog
 import UserNotifications
-import Sentry
-import SentrySwiftUI
 import UIKit
 
 final class AppDelegate: NSObject, UIApplicationDelegate {
@@ -68,46 +66,6 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
     }
 }
 
-enum CrashReporting {
-    static let enabledKey = "crashReportsEnabled"
-
-    static var isEnabled: Bool {
-        UserDefaults.standard.object(forKey: enabledKey) as? Bool ?? OnboardingCoordinator.hasCompleted
-    }
-
-    static var hasAnswered: Bool {
-        UserDefaults.standard.object(forKey: enabledKey) != nil
-    }
-
-    static func answer(_ enabled: Bool) {
-        UserDefaults.standard.set(enabled, forKey: enabledKey)
-        if enabled {
-            start()
-        } else {
-            stop()
-        }
-    }
-
-    static func start() {
-        guard !SentrySDK.isEnabled else { return }
-        SentrySDK.start { options in
-            options.dsn = "https://f6b7fe82cd8cd8bb11dc0dc38db42255@o4507143648772096.ingest.de.sentry.io/4507143650148432"
-            options.debug = false
-            options.tracesSampleRate = 0.5
-
-            options.attachScreenshot = true
-            options.attachViewHierarchy = true
-            options.enableMetricKit = true
-            options.enableTimeToFullDisplayTracing = true
-            options.swiftAsyncStacktraces = true
-        }
-    }
-
-    static func stop() {
-        SentrySDK.close()
-    }
-}
-
 @main
 struct WeatherApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
@@ -129,10 +87,6 @@ struct WeatherApp: App {
             return
         }
         #endif
-
-        if CrashReporting.isEnabled {
-            CrashReporting.start()
-        }
 
         UsageCountingMiddleware.onRequest = { host in
             Task { @MainActor in
@@ -187,7 +141,6 @@ struct WeatherApp: App {
                     UsageStatsStore.shared.sceneDidActivate()
                     Task { await notificationSettingsManager.handleForeground() }
                 }
-                .sentryTrace("RootTabView")
         }
         .commands { OscarCommands() }
     }

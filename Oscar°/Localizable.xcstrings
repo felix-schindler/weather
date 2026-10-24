@@ -1544,28 +1544,6 @@
         }
       }
     }, 
-    "Absturzberichte senden": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Absturzberichte senden"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Send crash reports"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "needs_review", 
-            "value": "Çökme raporlarını gönder"
-          }
-        }
-      }
-    }, 
     "ACCESS-G - Australian Bureau of Meteorology (BOM)": {
       "extractionState": "stale", 
       "localizations": {
@@ -4523,28 +4501,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "O zaman Oscar hava durumunu tam burada gösterir ve yağmurdan önce haber verir."
-          }
-        }
-      }
-    }, 
-    "Darf ich Fehlerberichte bekommen?": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Darf ich Fehlerberichte bekommen?"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Can I get crash reports?"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Hata raporları alabilir miyim?"
           }
         }
       }
@@ -8548,28 +8504,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "Bugün %@ · Normal %@ · Rekor %@ (%@)"
-          }
-        }
-      }
-    }, 
-    "Hilft mir, Fehler zu finden. Berichte gehen an Sentry (gespeichert in der EU) und können einen Screenshot des Moments enthalten, in dem etwas schiefging.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Hilft mir, Fehler zu finden. Berichte gehen an Sentry (gespeichert in der EU) und können einen Screenshot des Moments enthalten, in dem etwas schiefging."
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Helps me find bugs. Reports go to Sentry (stored in the EU) and can include a screenshot of the moment something went wrong."
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "needs_review", 
-            "value": "Hataları bulmama yardımcı olur. Raporlar Sentry’ye gönderilir (AB’de saklanır) ve bir şeylerin ters gittiği ana ait bir ekran görüntüsü içerebilir."
           }
         }
       }
@@ -17519,28 +17453,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "Fırtınamsı rüzgar"
-          }
-        }
-      }
-    }, 
-    "Stürzt Oscar ab oder hakt, bekomme ich einen Bericht und kann den Fehler beheben. Gespeichert bei Sentry in der EU.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Stürzt Oscar ab oder hakt, bekomme ich einen Bericht und kann den Fehler beheben. Gespeichert bei Sentry in der EU."
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "If Oscar crashes or stutters, I get a report and can fix the problem. Stored with Sentry in the EU."
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Oscar çöker veya takılırsa bir rapor alırım ve hatayı düzeltebilirim. Sentry'de, AB'de saklanır."
           }
         }
       }

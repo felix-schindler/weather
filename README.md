@@ -127,5 +127,4 @@ Contributions are welcome, whether bug fixes, new features, or improvements to e
 - Forecast models: [ECMWF](https://www.ecmwf.int/)
 - Map data and tiles: [OpenStreetMap](https://www.openstreetmap.org/) contributors, [OpenFreeMap](https://openfreemap.org/), rendered with [MapLibre Native](https://maplibre.org/)
 - 3D weather icons: [Hosein Bagheri](https://ui8.net/hosein_bagheri/products/3d-weather-icons40)
-- Error tracking: [Sentry](https://sentry.io/)
 - Networking: Apple's [swift-openapi-generator](https://github.com/apple/swift-openapi-generator), swift-openapi-runtime, and swift-openapi-urlsession
