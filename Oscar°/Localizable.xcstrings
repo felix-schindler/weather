@@ -11686,29 +11686,6 @@
         }
       }
     }, 
-    "Member": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Member"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Member"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Üye"
-          }
-        }
-      }, 
-      "shouldTranslate": false
-    }, 
     "Messstationen": {
       "localizations": {
         "de": {
