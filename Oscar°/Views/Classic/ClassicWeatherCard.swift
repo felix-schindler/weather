@@ -240,9 +240,6 @@ struct ClassicWeatherCard: View {
     private var cardFill: some View {
         ZStack {
             Color(red: 0.12, green: 0.2, blue: 0.38)
-            if let sky = forecast?.sky {
-                AtmosphereSampler.skyGradient(snapshot: sky)
-            }
             LinearGradient(colors: [.black.opacity(0.25), .black.opacity(0.55)], startPoint: .top, endPoint: .bottom)
         }
     }

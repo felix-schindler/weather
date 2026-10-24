@@ -13,10 +13,8 @@ struct LocationCard: View {
     var detail: String?
     var mark: PlacePersonalization.Mark = .plain
     var temperature: Double?
-    var snapshot: AtmosphereSnapshot?
     var isSelected = false
     var isDefault = false
-    var backdropPaused = false
 
     @ScaledMetric(relativeTo: .headline) private var cardHeight: CGFloat = 102
     @ScaledMetric(relativeTo: .title) private var temperatureFontSize: CGFloat = 36
@@ -69,22 +67,7 @@ struct LocationCard: View {
         }
         .frame(maxWidth: .infinity)
         .frame(height: cardHeight)
-        .background(alignment: .leading) {
-            LocationSimBackdrop(snapshot: snapshot, paused: backdropPaused)
-                .overlay(
-                    LinearGradient(
-                        stops: [
-                            .init(color: .black.opacity(0.12), location: 0),
-                            .init(color: .black.opacity(0.26), location: 0.45),
-                            .init(color: .black.opacity(0.45), location: 1),
-                        ],
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
-                )
-                .containerRelativeFrame(.horizontal)
-                .frame(height: cardHeight)
-        }
+        .background(.thinMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
         .overlay(
             RoundedRectangle(cornerRadius: 22, style: .continuous)
@@ -137,58 +120,6 @@ struct LocationCard: View {
     }
 }
 
-struct LocationSimBackdrop: View {
-    var snapshot: AtmosphereSnapshot?
-    var paused = false
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
-
-    var body: some View {
-        let snap = snapshot ?? .twilight
-
-        GeometryReader { proxy in
-            ZStack {
-                AtmosphereSkyShaderView(snapshot: snap, size: proxy.size, pacing: .still)
-
-                let starOpacity = Double(snap.nightAmount) * Double(1 - snap.cloudCoverage * 0.85)
-                if starOpacity > 0.05 {
-                    StarsView(pacing: .still, opacityOverride: starOpacity)
-                }
-
-                if snap.showsSunDisc {
-                    SunView(progress: Double(snap.timeOfDay))
-                        .opacity(Double((1 - snap.cloudDensity * 0.45) * snap.phase * snap.sunDiscVisibility))
-                }
-
-                if snap.cloudDensity + snap.cloudCoverage > 0.02 {
-                    CloudsView(
-                        deck: snap.cloudDeck,
-                        lightDirection: snap.cloudLightDirection,
-                        topTint: AtmosphereSampler.cloudTopTint(snapshot: snap),
-                        bottomTint: AtmosphereSampler.cloudBottomTint(snapshot: snap),
-                        pacing: .still
-                    )
-                }
-            }
-            .drawingGroup()
-            .overlay {
-                if snap.showsPrecipitation {
-                    StormView(
-                        type: snap.stormContents,
-                        direction: .degrees(0),
-                        strength: snap.stormStrength(rainBase: 25, snowBase: 25, weight: 80, floor: 10, cap: 90, ramped: false),
-                        pacing: reduceMotion || paused ? .still : .active,
-                        speedMultiplier: 3
-                    )
-                    .opacity(0.75)
-                }
-            }
-        }
-        .background(AtmosphereSampler.skyGradient(snapshot: snap))
-        .allowsHitTesting(false)
-    }
-
-}
-
 struct LocationCardButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -204,7 +135,6 @@ struct LocationCardButtonStyle: ButtonStyle {
             detail: "Leipzig · Klar",
             mark: .emoji("🏠"),
             temperature: 21.4,
-            snapshot: .fallback,
             isSelected: true,
             isDefault: true
         )
@@ -212,15 +142,13 @@ struct LocationCardButtonStyle: ButtonStyle {
             title: "Mein Standort",
             detail: "Gewitter",
             mark: .locationGlyph,
-            temperature: 17.2,
-            snapshot: .fallback
+            temperature: 17.2
         )
         LocationCard(
             title: "Oma",
             detail: "Hessen",
             mark: .emoji("👵"),
-            temperature: nil,
-            snapshot: .fallback
+            temperature: nil
         )
     }
     .padding()

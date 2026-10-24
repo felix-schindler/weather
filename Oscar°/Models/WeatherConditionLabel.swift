@@ -1,5 +1,9 @@
 import Foundation
 
+enum AtmosphereConditionFamily: CaseIterable {
+    case clear, partlyCloudy, overcast, fog, drizzle, rain, freezingRain, snow, showers, thunderstorm
+}
+
 enum WeatherConditionLabel {
     static func text(for code: Int) -> String {
         switch code {

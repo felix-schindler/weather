@@ -17,16 +17,9 @@ struct NowLayoutPreview: View {
 struct SkyBand<Content: View>: View {
     @ViewBuilder let content: Content
 
-    @Environment(Weather.self) private var weather
-    @Environment(Location.self) private var location
-    @State private var snapshotCache = AtmosphereSnapshotCache()
-
     var body: some View {
-        let snapshot = weather.forecast.hourly != nil
-            ? snapshotCache.snapshot(from: weather, at: location.coordinates)
-            : .twilight
         content
-            .background(AtmosphereSampler.skyGradient(snapshot: snapshot))
+            .background(.thinMaterial)
             .clipShape(.rect(cornerRadius: 26))
     }
 }

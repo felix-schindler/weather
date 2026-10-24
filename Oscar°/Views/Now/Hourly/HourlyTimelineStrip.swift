@@ -428,7 +428,7 @@ struct HourlyTimelineStrip: View {
             with: .color(.white.opacity(0.95))
         )
         func interpolated(_ values: [Double]) -> Double? {
-            AtmosphereWeatherMapper.interpolatedValue(at: scrubTime, times: model.times, values: values)
+            HourlyTimelineModel.interpolatedValue(at: scrubTime, times: model.times, values: values)
         }
 
         for line in layout.lines {

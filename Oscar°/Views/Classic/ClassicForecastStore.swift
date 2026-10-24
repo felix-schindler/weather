@@ -27,7 +27,6 @@ struct ClassicForecast {
     typealias Payload = Operations.getForecast.Output.Ok.Body.jsonPayload
 
     let payload: Payload
-    let sky: AtmosphereSnapshot
     let isRadarRaining: Bool
 
     var currentWeatherCode: Double {
@@ -87,7 +86,6 @@ final class ClassicForecastStore {
             guard let (payload, radar) = payloads[place.id] else { continue }
             fetched[place.id] = ClassicForecast(
                 payload: payload,
-                sky: Self.sky(for: payload, radar: radar, at: place.coordinate),
                 isRadarRaining: radar?.isRaining() ?? false
             )
         }
@@ -98,15 +96,4 @@ final class ClassicForecastStore {
     }
 
     private typealias Payload = ClassicForecast.Payload
-
-    private static func sky(
-        for payload: Payload,
-        radar: PrecipSeriesResponse?,
-        at coordinate: CLLocationCoordinate2D
-    ) -> AtmosphereSnapshot {
-        let shell = Weather()
-        shell.forecast = payload
-        shell.precipSeries = radar
-        return AtmosphereWeatherMapper.snapshot(from: shell, at: coordinate)
-    }
 }

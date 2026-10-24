@@ -4,8 +4,7 @@
 //
 //  Batch current conditions for the locations list: one Open-Meteo request
 //  carrying every saved coordinate (comma-separated latitude/longitude lists),
-//  mapped into per-card display data plus an AtmosphereSnapshot so each card
-//  can render the same sky the full simulation would.
+//  mapped into per-card display data for the locations list.
 //
 
 import CoreLocation
@@ -17,10 +16,9 @@ struct CityConditions {
     let weathercode: Int
     let isDay: Bool
     let isRadarRaining: Bool
-    let snapshot: AtmosphereSnapshot
 
     var conditionText: String {
-        WeatherConditionLabel.text(for: snapshot.condition)
+        WeatherConditionLabel.text(for: weathercode)
     }
 
     var iconAssetName: String {
@@ -68,7 +66,6 @@ final class CityConditionsStore {
                 let key = Self.key(for: requested)
                 updated[key] = Self.makeConditions(
                     entry: entry,
-                    coordinate: requested,
                     radar: radarByKey[key]
                 )
             }
@@ -108,42 +105,15 @@ final class CityConditionsStore {
 
     private static func makeConditions(
         entry: BatchCurrentEntry,
-        coordinate: CLLocationCoordinate2D,
         radar: PrecipSeriesResponse?
     ) -> CityConditions? {
-        guard let current = entry.current else { return nil }
+        guard let current = entry.current, let temperature = current.temperature else { return nil }
 
-        let shell = Weather()
-        shell.precipSeries = radar
-        shell.forecast = .init(
-            latitude: entry.latitude,
-            longitude: entry.longitude,
-            utc_offset_seconds: entry.utc_offset_seconds,
-            hourly: .init(
-                time: [current.time],
-                relativehumidity_2m: current.relativehumidity_2m.map { [$0] },
-                pressure_msl: current.pressure_msl.map { [$0] }
-            ),
-            current: .init(
-                cloudcover: current.cloudcover ?? 0,
-                time: current.time,
-                temperature: current.temperature ?? 0,
-                windspeed: current.windspeed ?? 0,
-                wind_direction_10m: current.wind_direction_10m ?? 0,
-                weathercode: current.weathercode ?? 0,
-                precipitation: current.precipitation,
-                is_day: current.is_day
-            )
-        )
-        let snapshot = AtmosphereWeatherMapper.snapshot(from: shell, at: coordinate)
-
-        guard let temperature = current.temperature else { return nil }
         return CityConditions(
             temperature: temperature,
             weathercode: Int(current.weathercode ?? 0),
             isDay: current.is_day == 1,
-            isRadarRaining: radar?.isRaining() ?? false,
-            snapshot: snapshot
+            isRadarRaining: radar?.isRaining() ?? false
         )
     }
 

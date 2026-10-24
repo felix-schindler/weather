@@ -40,10 +40,7 @@ struct DailyForecastProvider: AppIntentTimelineProvider {
                 .precipitation, .snowfall, .windspeed_10m, .winddirection_10m,
             ]
         )
-        async let radarRequest = client.getRadarSeries(coordinates: coordinates)
-
         let weather = try await weatherRequest
-        let precipSeries = try? await radarRequest
 
         let daily = weather.daily
         let timeZone = weather.locationTimeZone
@@ -84,10 +81,6 @@ struct DailyForecastProvider: AppIntentTimelineProvider {
         let lows = days.map(\.low)
         let highs = days.map(\.high)
 
-        let gradient = await WeatherAtmosphericAdapter.widgetGradient(
-            weather: weather, precipSeries: precipSeries, coordinates: coordinates
-        )
-
         return DailyForecastEntry(
             date: .now,
             location: locationName,
@@ -95,8 +88,7 @@ struct DailyForecastProvider: AppIntentTimelineProvider {
             minTemp: lows.min() ?? 0,
             maxTemp: highs.max() ?? 40,
             temperatureUnit: weather.daily_units?.temperature_2m_min ?? "°C",
-            precipitationUnit: weather.daily_units?.precipitation_sum ?? "mm",
-            backgroundGradient: gradient
+            precipitationUnit: weather.daily_units?.precipitation_sum ?? "mm"
         )
     }
 

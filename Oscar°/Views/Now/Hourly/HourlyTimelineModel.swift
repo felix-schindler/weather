@@ -169,7 +169,49 @@ final class HourlyTimelineModel {
 
     func sample(_ values: [Double]) -> Double? {
         guard hasData else { return nil }
-        return AtmosphereWeatherMapper.interpolatedValue(at: scrubTime, times: times, values: values)
+        return Self.interpolatedValue(at: scrubTime, times: times, values: values)
+    }
+
+    static func interpolatedValue(at timestamp: Double, times: [Double], values: [Double]?) -> Double? {
+        guard let values, !values.isEmpty, !times.isEmpty else { return nil }
+        guard values.count == times.count else {
+            return value(at: nearestIndex(to: timestamp, in: times), in: values)
+        }
+        if timestamp <= times[0] { return values[0] }
+        if timestamp >= times[times.count - 1] { return values[values.count - 1] }
+
+        let upper = insertionIndex(for: timestamp, in: times)
+        let lower = upper - 1
+        let span = times[upper] - times[lower]
+        guard span > 0 else { return values[upper] }
+        let fraction = (timestamp - times[lower]) / span
+        return values[lower] + (values[upper] - values[lower]) * fraction
+    }
+
+    private static func nearestIndex(to timestamp: Double, in times: [Double]) -> Int {
+        let low = insertionIndex(for: timestamp, in: times)
+        if low > 0, abs(times[low - 1] - timestamp) <= abs(times[low] - timestamp) {
+            return low - 1
+        }
+        return low
+    }
+
+    private static func insertionIndex(for timestamp: Double, in times: [Double]) -> Int {
+        var low = 0
+        var high = times.count - 1
+        while low < high {
+            let mid = (low + high) / 2
+            if times[mid] < timestamp {
+                low = mid + 1
+            } else {
+                high = mid
+            }
+        }
+        return low
+    }
+
+    private static func value(at index: Int, in values: [Double]) -> Double? {
+        values.indices.contains(index) ? values[index] : nil
     }
 
     // MARK: - Lens layouts

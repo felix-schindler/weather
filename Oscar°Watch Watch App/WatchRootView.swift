@@ -13,29 +13,17 @@ struct WatchRootView: View {
     var body: some View {
         TabView(selection: $selection) {
             WatchNowView()
-                .containerBackground(for: .tabView) {
-                    WatchSimulationView()
-                }
                 .tag(0)
 
             if weather.precipSeries != nil {
                 WatchRainView()
-                    .containerBackground(for: .tabView) {
-                        WatchSimulationView(style: .gradientOnly)
-                    }
                     .tag(1)
             }
 
             WatchHourlyView()
-                .containerBackground(for: .tabView) {
-                    WatchSimulationView(style: .gradientOnly)
-                }
                 .tag(2)
 
             WatchDailyView()
-                .containerBackground(for: .tabView) {
-                    WatchSimulationView(style: .gradientOnly)
-                }
                 .tag(3)
         }
         .tabViewStyle(.verticalPage)

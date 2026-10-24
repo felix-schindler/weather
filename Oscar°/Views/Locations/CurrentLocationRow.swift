@@ -4,7 +4,6 @@ struct CurrentLocationRow: View {
     let conditions: CityConditions?
     let isSelected: Bool
     let isDefault: Bool
-    let backdropPaused: Bool
     let onSelect: () -> Void
     let onEdit: () -> Void
     let onToggleDefault: () -> Void
@@ -13,8 +12,7 @@ struct CurrentLocationRow: View {
         Button(action: onSelect) {
             CurrentLocationCard(
                 conditions: conditions,
-                isSelected: isSelected,
-                backdropPaused: backdropPaused
+                isSelected: isSelected
             )
         }
         .buttonStyle(LocationCardButtonStyle())

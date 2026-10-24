@@ -54,17 +54,8 @@ private struct EnsembleContent: View {
     let state: EnsembleState
     @Binding var expandedLens: EnsembleLens?
 
-    @Environment(Location.self) private var location
-
     var body: some View {
-        let snapshot = state.selectedDay.map {
-            AtmosphereWeatherMapper.snapshot(for: $0, at: location.coordinates, utcOffsetSeconds: state.utcOffsetSeconds)
-        } ?? .twilight
-
         ZStack {
-            WeatherSimulationView(snapshotOverride: snapshot)
-                .ignoresSafeArea()
-
             if state.days.isEmpty {
                 if state.isLoading {
                     ProgressView()
@@ -99,10 +90,7 @@ private struct EnsembleContent: View {
                 .padding(.bottom, 10)
             }
         }
-        .animation(.smooth(duration: 0.3), value: snapshot)
         .sensoryFeedback(.selection, trigger: state.selectedIndex)
-        .environment(\.cardTint, AtmosphereSampler.cardFill(snapshot: snapshot))
-        .environment(\.cardBorderOpacity, AtmosphereSampler.cardBorderOpacity(snapshot: snapshot))
         .environment(\.cardBackgroundStyle, AnyShapeStyle(.ultraThinMaterial.opacity(0.6)))
     }
 }

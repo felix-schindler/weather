@@ -4,7 +4,6 @@ import WidgetKit
 struct DailyForecastEntryView: View {
     var entry: DailyForecastEntry
     @Environment(\.widgetFamily) private var family
-    @Environment(\.widgetRenderingMode) private var renderingMode
 
     private var isCompact: Bool { family == .systemSmall }
     private var dayCount: Int { family == .systemLarge ? 9 : 4 }
@@ -37,10 +36,7 @@ struct DailyForecastEntryView: View {
         .padding(family == .systemLarge ? 16 : 12)
         .foregroundStyle(.white)
         .widgetAccentable()
-        .containerBackground(for: .widget) {
-            entry.backgroundGradient
-                .opacity(renderingMode == .accented ? 0 : 1)
-        }
+        .containerBackground(.black, for: .widget)
     }
 }
 

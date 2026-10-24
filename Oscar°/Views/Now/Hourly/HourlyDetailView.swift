@@ -13,7 +13,7 @@ struct HourlyDetailView: View {
         NavigationStack {
             Group {
                 if model.hasData {
-                    HourlyContent(model: model, isCovered: ensembleDate != nil)
+                    HourlyContent(model: model)
                 } else {
                     ContentUnavailableView(
                         "Keine stündlichen Daten",
@@ -65,23 +65,12 @@ struct HourlyDetailView: View {
 
 private struct HourlyContent: View {
     let model: HourlyTimelineModel
-    let isCovered: Bool
 
     @State private var expandedLens: HourlyLens? = .overview
 
-    @Environment(Weather.self) private var weather: Weather
-    @Environment(Location.self) private var location: Location
-
-    private static let stageTween: Animation = .smooth(duration: 0.3)
-
     var body: some View {
-        let snapshot = AtmosphereWeatherMapper.snapshot(
-            from: weather,
-            at: location.coordinates,
-            for: model.stageDate
-        )
         ZStack {
-            HourlyStage(model: model, snapshot: snapshot, isCovered: isCovered)
+            HourlyStage(model: model)
 
             VStack(spacing: 0) {
                 Spacer(minLength: 0)
@@ -100,24 +89,19 @@ private struct HourlyContent: View {
             .padding(.bottom, 10)
         }
         .accessibilityIdentifier("hourly.detail")
-        .animation(Self.stageTween, value: snapshot)
-        .environment(\.cardTint, AtmosphereSampler.cardFill(snapshot: snapshot))
-        .environment(\.cardBorderOpacity, AtmosphereSampler.cardBorderOpacity(snapshot: snapshot))
         .environment(\.cardBackgroundStyle, AnyShapeStyle(.ultraThinMaterial.opacity(0.6)))
     }
 }
 
 private struct HourlyStage: View {
     let model: HourlyTimelineModel
-    let snapshot: AtmosphereSnapshot
-    let isCovered: Bool
 
     @State private var dragStartTime: Double?
 
     private static let secondsPerPoint: Double = 240
 
     var body: some View {
-        WeatherSimulationView(isOffTab: isCovered, snapshotOverride: snapshot)
+        Color.clear
             .ignoresSafeArea()
             .contentShape(.rect)
             .gesture(skyDrag)

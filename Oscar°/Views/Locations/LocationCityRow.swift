@@ -5,7 +5,6 @@ struct LocationCityRow: View {
     let isDefault: Bool
     let conditions: CityConditions?
     let isSelected: Bool
-    let backdropPaused: Bool
     let onSelect: () -> Void
     let onEdit: () -> Void
     let onDelete: () -> Void
@@ -17,8 +16,7 @@ struct LocationCityRow: View {
                 personalization: personalization,
                 isDefault: isDefault,
                 conditions: conditions,
-                isSelected: isSelected,
-                backdropPaused: backdropPaused
+                isSelected: isSelected
             )
         }
         .buttonStyle(LocationCardButtonStyle())

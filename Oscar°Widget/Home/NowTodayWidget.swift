@@ -10,7 +10,6 @@ import WidgetKit
 struct NowTodayEntryView: View {
     var entry: HomeProvider.Entry
     @Environment(\.widgetFamily) var family
-    @Environment(\.widgetRenderingMode) var widgetRenderingMode
     
     var body: some View {
         VStack {
@@ -45,11 +44,7 @@ struct NowTodayEntryView: View {
         .widgetAccentable()
         .padding()
         .foregroundStyle(.white)
-        .background {
-            entry.backgroundGradient
-                .opacity(widgetRenderingMode == .accented ? 0 : 1)
-        }
-        .containerBackground(.clear, for: .widget)
+        .containerBackground(.black, for: .widget)
     }
 }
 
@@ -69,6 +64,5 @@ struct NowTodayWidget: Widget {
 }
 
 #Preview {
-    let previewGradient = LinearGradient(colors: [.sunriseStart, .sunnyDayEnd], startPoint: .top, endPoint: .bottom)
-    NowTodayEntryView(entry: HomeEntry(date: Date(), location: "Berlin", temperatureMin: 12.0, temperatureMax: 21.0, temperatureNow: 19.0, icon: "sun.max.fill", backgroundGradient: previewGradient))
+    NowTodayEntryView(entry: HomeEntry(date: Date(), location: "Berlin", temperatureMin: 12.0, temperatureMax: 21.0, temperatureNow: 19.0, icon: "sun.max.fill"))
 }

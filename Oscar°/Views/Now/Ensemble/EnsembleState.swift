@@ -160,33 +160,3 @@ final class EnsembleState {
         return shortDateLabel(day) + ", " + rowValue(for: lens) + ", " + titleLabel
     }
 }
-
-extension AtmosphereWeatherMapper {
-    static func snapshot(
-        for day: EnsembleDay,
-        at location: CLLocationCoordinate2D,
-        utcOffsetSeconds: Int
-    ) -> AtmosphereSnapshot {
-        let condition = conditionFamily(for: day.sky.dominantCode ?? 0)
-        let isWet = day.sky.dominant == .rain || day.sky.dominant == .snow
-        let cloudCoverage = max(clamp(Float(day.cloudCover ?? 0) / 100, 0, 1), isWet ? 0.75 : 0)
-        let intensity = isWet ? clamp(Float(day.precipitation?.median ?? 0) / 15, 0.15, 1) : 0
-        var deck = CloudDeck(total: cloudCoverage)
-        reconcile(&deck, total: cloudCoverage, condition: condition)
-        return finalize(
-            utcOffsetSeconds: utcOffsetSeconds,
-            aqiHaze: 0,
-            location: location,
-            timestamp: day.noon,
-            condition: condition,
-            cloudCoverage: cloudCoverage,
-            humidity: 0.6,
-            precipitation: intensity * 8,
-            snowfall: Float(day.snowfall ?? 0),
-            precipitationIntensity: intensity,
-            windSpeed: Float(day.wind?.median ?? 0),
-            windDirection: 0,
-            deck: deck
-        )
-    }
-}

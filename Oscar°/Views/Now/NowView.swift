@@ -21,9 +21,6 @@ struct NowView: View {
     @Environment(NowPresentationCoordinator.self) private var presentation
     @Environment(\.scenePhase) private var scenePhase
     @State private var tapCount = 0
-    private let onboarding = OnboardingCoordinator.shared
-    @State private var atmosphereDebug = AtmosphereDebugState()
-    @State private var snapshotCache = AtmosphereSnapshotCache()
     @State private var manualRefreshInFlight = false
     @State private var showRefreshIndicator = false
     @State private var spinnerShownAt: Date?
@@ -53,14 +50,7 @@ struct NowView: View {
     private var feedSections: [NowSection] { arrangement.feedSections }
 
     var body: some View {
-        let atmosphere = weather.forecast.hourly != nil
-            ? snapshotCache.snapshot(from: weather, at: location.coordinates)
-            : .twilight
-        let cardFill = AtmosphereSampler.cardFill(snapshot: atmosphere)
-
         ZStack {
-            WeatherSimulationView(isOffTab: presentation.selectedTab != .forecast || onboarding.frosted)
-                .ignoresSafeArea()
             if weather.hasContent {
                 Group {
                     if isTwoColumn {
@@ -96,16 +86,7 @@ struct NowView: View {
                     Task { await weather.refresh(location: location) }
                 }
             }
-            if weather.debug {
-                AtmosphereDebugPanel(state: atmosphereDebug)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-                    .padding(.horizontal, 12)
-                    .padding(.bottom, 12)
-            }
         }
-        .environment(atmosphereDebug)
-        .environment(\.cardTint, cardFill)
-        .environment(\.cardBorderOpacity, AtmosphereSampler.cardBorderOpacity(snapshot: atmosphere))
         .environment(\.cardBackgroundStyle, AnyShapeStyle(.ultraThinMaterial.opacity(0.6)))
         .ignoresSafeArea(edges: isTwoColumn ? [] : .top)
         .onGeometryChange(for: CGSize.self, of: { $0.size }) { size in

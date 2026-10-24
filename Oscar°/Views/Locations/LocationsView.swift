@@ -38,14 +38,6 @@ struct LocationsView: View {
         !searchText.isEmpty
     }
 
-    private var cardBackdropsPaused: Bool {
-        presentation.selectedTab != .places
-            || presentation.sheet != nil
-            || candidate != nil
-            || editTarget != nil
-            || isMapPresented
-    }
-
     var body: some View {
         NavigationStack {
             locationList
@@ -179,7 +171,6 @@ struct LocationsView: View {
             conditions: currentLocationConditions,
             isSelected: selectedCityURI == nil,
             isDefault: locationService.city.defaultIsCurrentLocation,
-            backdropPaused: cardBackdropsPaused,
             onSelect: selectCurrentLocation,
             onEdit: { editTarget = .currentLocation },
             onToggleDefault: {
@@ -199,7 +190,6 @@ struct LocationsView: View {
                 for: CLLocationCoordinate2D(latitude: city.lat, longitude: city.lon)
             ),
             isSelected: city.objectID.uriRepresentation() == selectedCityURI,
-            backdropPaused: cardBackdropsPaused,
             onSelect: { select(city) },
             onEdit: { editTarget = .city(city) },
             onDelete: { delete(city) },

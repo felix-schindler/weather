@@ -102,7 +102,7 @@ private struct OnboardingSky<Stage: View>: View {
 
         ZStack {
             ZStack {
-                OnboardingSceneView(scene: .day)
+                Color(uiColor: .systemBackground)
                 if !layout.isPad {
                     stage
                 }
@@ -126,7 +126,7 @@ private struct OnboardingSky<Stage: View>: View {
             if layout.isPad, isWindowed {
                 let window = layout.heroFrame
                 ZStack(alignment: .top) {
-                    OnboardingSceneView(scene: .day)
+                    Color(uiColor: .systemBackground)
                     stage
                 }
                 .frame(width: window.width, height: window.height, alignment: .top)

@@ -18,20 +18,17 @@ struct HomeEntry: TimelineEntry {
     let temperatureMax: Double
     let temperatureNow: Double
     let icon: String
-    let backgroundGradient: LinearGradient
 }
 
 final class HomeProvider: TimelineProvider, Sendable {
     let client = APIClient.shared
 
     func placeholder(in context: Context) -> HomeEntry {
-        let placeholderGradient = LinearGradient(colors: [.sunriseStart, .sunnyDayEnd], startPoint: .top, endPoint: .bottom)
-        return HomeEntry(date: Date(), location: "Berlin", temperatureMin: 0, temperatureMax: 22, temperatureNow: 10, icon: "cloud.fill", backgroundGradient: placeholderGradient)
+        HomeEntry(date: Date(), location: "Berlin", temperatureMin: 0, temperatureMax: 22, temperatureNow: 10, icon: "cloud.fill")
     }
 
     func getSnapshot(in context: Context, completion: @escaping @Sendable (HomeEntry) -> ()) {
-        let placeholderGradient = LinearGradient(colors: [.sunriseStart, .sunnyDayEnd], startPoint: .top, endPoint: .bottom)
-        let entry = HomeEntry(date: Date(), location: "Berlin", temperatureMin: 0, temperatureMax: 22, temperatureNow: 10, icon: "cloud.fill", backgroundGradient: placeholderGradient)
+        let entry = HomeEntry(date: Date(), location: "Berlin", temperatureMin: 0, temperatureMax: 22, temperatureNow: 10, icon: "cloud.fill")
         completion(entry)
     }
     
@@ -57,9 +54,6 @@ final class HomeProvider: TimelineProvider, Sendable {
             let weathercode = weather.current?.weathercode ?? 0
             let isDay = weather.current?.is_day ?? 0
             let modelPrecipitation = weather.current?.precipitation ?? 0
-            let gradient = await WeatherAtmosphericAdapter.widgetGradient(
-                weather: weather, precipSeries: precipSeries, coordinates: coordinates
-            )
 
             return nowcastEntryDates(refreshMinutes: 30).map { date in
                 let precipitation = precipSeries?.rate(at: date) ?? modelPrecipitation
@@ -69,27 +63,9 @@ final class HomeProvider: TimelineProvider, Sendable {
                     temperatureMin: temperatureMin,
                     temperatureMax: temperatureMax,
                     temperatureNow: temperatureNow,
-                    icon: WeatherSymbol.sfSymbol(weathercode: weathercode, isDay: isDay, isRaining: precipitation > 0, precipitation: precipitation),
-                    backgroundGradient: gradient
+                    icon: WeatherSymbol.sfSymbol(weathercode: weathercode, isDay: isDay, isRaining: precipitation > 0, precipitation: precipitation)
                 )
             }
-        }
-    }
-}
-
-extension WeatherAtmosphericAdapter {
-    nonisolated static func widgetGradient(
-        weather: Operations.getForecast.Output.Ok.Body.jsonPayload,
-        precipSeries: PrecipSeriesResponse?,
-        coordinates: CLLocationCoordinate2D
-    ) async -> LinearGradient {
-        let dayBegin = weather.hourly?.time.first ?? 0
-        return await MainActor.run {
-            let weatherForRendering = Weather()
-            weatherForRendering.time = (Date.now.timeIntervalSince1970 - Double(dayBegin)) / 86400.0
-            weatherForRendering.forecast = weather
-            weatherForRendering.precipSeries = precipSeries
-            return WeatherAtmosphericAdapter().getWidgetFullGradient(from: weatherForRendering, at: coordinates)
         }
     }
 }

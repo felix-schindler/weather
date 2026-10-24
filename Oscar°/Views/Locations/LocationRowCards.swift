@@ -7,7 +7,6 @@ struct CityCard: View {
     let isDefault: Bool
     let conditions: CityConditions?
     let isSelected: Bool
-    let backdropPaused: Bool
 
     var body: some View {
         LocationCard(
@@ -15,10 +14,8 @@ struct CityCard: View {
             detail: personalization.detailLine(condition: conditions?.conditionText),
             mark: personalization.mark,
             temperature: conditions?.temperature,
-            snapshot: conditions?.snapshot,
             isSelected: isSelected,
-            isDefault: isDefault,
-            backdropPaused: backdropPaused
+            isDefault: isDefault
         )
     }
 }
@@ -26,7 +23,6 @@ struct CityCard: View {
 struct CurrentLocationCard: View {
     let conditions: CityConditions?
     let isSelected: Bool
-    let backdropPaused: Bool
     let cityService = CityService.shared
 
     var body: some View {
@@ -36,10 +32,8 @@ struct CurrentLocationCard: View {
             detail: personalization.detailLine(condition: conditions?.conditionText),
             mark: personalization.mark,
             temperature: conditions?.temperature,
-            snapshot: conditions?.snapshot,
             isSelected: isSelected,
-            isDefault: cityService.defaultIsCurrentLocation,
-            backdropPaused: backdropPaused
+            isDefault: cityService.defaultIsCurrentLocation
         )
     }
 }
