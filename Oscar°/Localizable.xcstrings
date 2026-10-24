@@ -1,9 +1,15 @@
 {
   "sourceLanguage" : "de",
   "strings" : {
-    "" : {},
-    "--°" : {},
-    "–" : {},
+    "" : {
+
+    },
+    "--°" : {
+
+    },
+    "–" : {
+
+    },
     "... wurde in liebevoller Erinnerung an diejenigen entwickelt, die nicht mehr unter uns sind. In unseren Herzen und Gedanken bleiben sie jedoch für immer lebendig." : {
       "localizations" : {
         "de" : {
@@ -292,7 +298,9 @@
         }
       }
     },
-    "%@ mm/h" : {},
+    "%@ mm/h" : {
+
+    },
     "%@ Tage" : {
       "localizations" : {
         "de" : {
@@ -339,6 +347,7 @@
       }
     },
     "%@, %@ bis %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -500,8 +509,12 @@
         }
       }
     },
-    "%lld" : {},
-    "%lld %%" : {},
+    "%lld" : {
+
+    },
+    "%lld %%" : {
+
+    },
     "%lld aktive Tage in den letzten %lld Wochen" : {
       "localizations" : {
         "de" : {
@@ -592,7 +605,9 @@
         }
       }
     },
-    "%lld°" : {},
+    "%lld°" : {
+
+    },
     "^[%lld Tag](inflect: true)" : {
       "localizations" : {
         "de" : {
@@ -681,15 +696,33 @@
         }
       }
     },
-    "+10 °C" : {},
-    "+20 °C" : {},
-    "+30 °C" : {},
-    "+40 °C" : {},
-    "+50 °C" : {},
-    "−10 °C" : {},
-    "−20 °C" : {},
-    "−30 °C" : {},
-    "−40 °C" : {},
+    "+10 °C" : {
+
+    },
+    "+20 °C" : {
+
+    },
+    "+30 °C" : {
+
+    },
+    "+40 °C" : {
+
+    },
+    "+50 °C" : {
+
+    },
+    "−10 °C" : {
+
+    },
+    "−20 °C" : {
+
+    },
+    "−30 °C" : {
+
+    },
+    "−40 °C" : {
+
+    },
     "≈ 1 km · 5 Min." : {
       "localizations" : {
         "de" : {
@@ -889,9 +922,15 @@
         }
       }
     },
-    "≥8 m/s" : {},
-    "0 °C" : {},
-    "0 m/s" : {},
+    "≥8 m/s" : {
+
+    },
+    "0 °C" : {
+
+    },
+    "0 m/s" : {
+
+    },
     "1 Cola ohne Zucker im Monat" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -1007,7 +1046,9 @@
         }
       }
     },
-    "2 m/s" : {},
+    "2 m/s" : {
+
+    },
     "2.5" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -1054,8 +1095,12 @@
         }
       }
     },
-    "4 m/s" : {},
-    "6 m/s" : {},
+    "4 m/s" : {
+
+    },
+    "6 m/s" : {
+
+    },
     "7-Tage-Ensemble" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -1410,12 +1455,24 @@
         }
       }
     },
-    "950" : {},
-    "970" : {},
-    "990" : {},
-    "1010" : {},
-    "1030" : {},
-    "1060" : {},
+    "950" : {
+
+    },
+    "970" : {
+
+    },
+    "990" : {
+
+    },
+    "1010" : {
+
+    },
+    "1030" : {
+
+    },
+    "1060" : {
+
+    },
     "Ab %@" : {
       "localizations" : {
         "de" : {
@@ -1527,6 +1584,7 @@
       }
     },
     "Abspielen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1572,7 +1630,9 @@
       },
       "shouldTranslate" : false
     },
-    "AEMET" : {},
+    "AEMET" : {
+
+    },
     "AI GEFS ist ein guter Kompromiss für die nächsten ein bis zwei Wochen." : {
       "extractionState" : "stale",
       "localizations" : {
@@ -1754,6 +1814,7 @@
       }
     },
     "Aktualisiert" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3032,7 +3093,9 @@
         }
       }
     },
-    "Ausgewählter Ort" : {},
+    "Ausgewählter Ort" : {
+
+    },
     "Australien" : {
       "localizations" : {
         "de" : {
@@ -3055,7 +3118,9 @@
         }
       }
     },
-    "Auswahl" : {},
+    "Auswahl" : {
+
+    },
     "Auswahl aufheben" : {
       "localizations" : {
         "de" : {
@@ -4408,8 +4473,12 @@
       },
       "shouldTranslate" : false
     },
-    "Current Hour" : {},
-    "CWA" : {},
+    "Current Hour" : {
+
+    },
+    "CWA" : {
+
+    },
     "Dabei seit" : {
       "localizations" : {
         "de" : {
@@ -5732,7 +5801,9 @@
         }
       }
     },
-    "ECMWF" : {},
+    "ECMWF" : {
+
+    },
     "ECMWF IFS · ≈ 9 km" : {
       "localizations" : {
         "de" : {
@@ -6114,7 +6185,9 @@
         }
       }
     },
-    "End" : {},
+    "End" : {
+
+    },
     "Ende" : {
       "localizations" : {
         "de" : {
@@ -6532,7 +6605,9 @@
         }
       }
     },
-    "EUMETNET" : {},
+    "EUMETNET" : {
+
+    },
     "Europa" : {
       "localizations" : {
         "de" : {
@@ -7182,6 +7257,7 @@
       }
     },
     "Füge einen Ort hinzu oder erlaube den Standortzugriff." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -8127,6 +8203,28 @@
         }
       }
     },
+    "Größere Zweige und kleine Bäume bewegen sich." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Größere Zweige und kleine Bäume bewegen sich."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Larger branches and small trees move."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daha büyük dallar ve küçük ağaçlar hareket eder."
+          }
+        }
+      }
+    },
     "Großbritannien" : {
       "localizations" : {
         "de" : {
@@ -8171,28 +8269,6 @@
         }
       }
     },
-    "Größere Zweige und kleine Bäume bewegen sich." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Größere Zweige und kleine Bäume bewegen sich."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Larger branches and small trees move."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Daha büyük dallar ve küçük ağaçlar hareket eder."
-          }
-        }
-      }
-    },
     "Gut" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -8217,6 +8293,7 @@
       }
     },
     "H: %@ L: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -8824,7 +8901,9 @@
         }
       }
     },
-    "Hour" : {},
+    "Hour" : {
+
+    },
     "Ich bin Philipp und entwickle Oscar allein. Ich zahle den Apple-Entwickleraccount und den Server, der die Kartenebenen, Wetterwarnungen und Mitteilungen liefert. Ob Oscar weiterläuft, hängt von euch ab." : {
       "extractionState" : "stale",
       "localizations" : {
@@ -9593,7 +9672,9 @@
         }
       }
     },
-    "Kein Regen in Sicht" : {},
+    "Kein Regen in Sicht" : {
+
+    },
     "Kein Spam, versprochen" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -9685,7 +9766,9 @@
         }
       }
     },
-    "Keine aktuellen Radardaten · Stand %@" : {},
+    "Keine aktuellen Radardaten · Stand %@" : {
+
+    },
     "Keine Belastung" : {
       "localizations" : {
         "de" : {
@@ -9800,6 +9883,7 @@
       }
     },
     "Keine Orte" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -10277,7 +10361,9 @@
         }
       }
     },
-    "Lässt bald nach" : {},
+    "Lässt bald nach" : {
+
+    },
     "Leicht" : {
       "localizations" : {
         "de" : {
@@ -10322,7 +10408,9 @@
         }
       }
     },
-    "Leichter Regen" : {},
+    "Leichter Regen" : {
+
+    },
     "Leichter Regen ab %@" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -11124,7 +11212,9 @@
         }
       }
     },
-    "max." : {},
+    "max." : {
+
+    },
     "Maximum" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -11532,7 +11622,9 @@
         }
       }
     },
-    "Meteosat" : {},
+    "Meteosat" : {
+
+    },
     "Meteosat der dritten Generation über 0° Länge, Produkt Optimal Cloud Analysis. Zum Rand der Erdscheibe hin wird das Bild gröber. Contains modified EUMETSAT Meteosat data." : {
       "localizations" : {
         "de" : {
@@ -12387,7 +12479,9 @@
         }
       }
     },
-    "Neuer Regen gegen %@" : {},
+    "Neuer Regen gegen %@" : {
+
+    },
     "Nicht auf der Seite" : {
       "localizations" : {
         "de" : {
@@ -12592,7 +12686,9 @@
         }
       }
     },
-    "NOAA" : {},
+    "NOAA" : {
+
+    },
     "Noch keine Orte gespeichert." : {
       "localizations" : {
         "de" : {
@@ -13001,7 +13097,9 @@
         }
       }
     },
-    "Öffnet Details zur Satellitenquelle" : {},
+    "Öffnet Details zur Satellitenquelle" : {
+
+    },
     "Öffnet die Einstellungen" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -13776,7 +13874,9 @@
         }
       }
     },
-    "Ort wählen" : {},
+    "Ort wählen" : {
+
+    },
     "Orte" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -14658,7 +14758,9 @@
         }
       }
     },
-    "Precipitation" : {},
+    "Precipitation" : {
+
+    },
     "Privat by Design" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -14794,7 +14896,9 @@
         }
       }
     },
-    "Radar %@" : {},
+    "Radar %@" : {
+
+    },
     "Radarbild der 48 zusammenhängenden US-Bundesstaaten, alle 2 Minuten neu." : {
       "localizations" : {
         "de" : {
@@ -15066,7 +15170,9 @@
         }
       }
     },
-    "REDEMET" : {},
+    "REDEMET" : {
+
+    },
     "Referenz-Evapotranspiration" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -15135,9 +15241,15 @@
         }
       }
     },
-    "Regen · noch >%lld min" : {},
-    "Regen · noch ~%lld min" : {},
-    "Regen ab %@" : {},
+    "Regen · noch >%lld min" : {
+
+    },
+    "Regen · noch ~%lld min" : {
+
+    },
+    "Regen ab %@" : {
+
+    },
     "Regen auf dem Sperrbildschirm" : {
       "localizations" : {
         "de" : {
@@ -15160,7 +15272,9 @@
         }
       }
     },
-    "Regen bis %@" : {},
+    "Regen bis %@" : {
+
+    },
     "Regen im Anmarsch" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -15184,7 +15298,9 @@
         }
       }
     },
-    "Regen in Kürze" : {},
+    "Regen in Kürze" : {
+
+    },
     "Regen und Schnee pro Stunde" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -15208,7 +15324,9 @@
         }
       }
     },
-    "Regen vorbei" : {},
+    "Regen vorbei" : {
+
+    },
     "Regen zieht auf" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -15345,7 +15463,9 @@
         }
       }
     },
-    "Regenverlauf" : {},
+    "Regenverlauf" : {
+
+    },
     "Regenwahrscheinlichkeit" : {
       "localizations" : {
         "de" : {
@@ -15474,8 +15594,12 @@
         }
       }
     },
-    "Regnet gerade" : {},
-    "Reihe" : {},
+    "Regnet gerade" : {
+
+    },
+    "Reihe" : {
+
+    },
     "Reist automatisch mit" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -16108,7 +16232,9 @@
         }
       }
     },
-    "Segment" : {},
+    "Segment" : {
+
+    },
     "Sehr hoch" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -16223,8 +16349,12 @@
         }
       }
     },
-    "Selected" : {},
-    "Series" : {},
+    "Selected" : {
+
+    },
+    "Series" : {
+
+    },
     "Services" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -16739,6 +16869,7 @@
       }
     },
     "spinner=%@ pending=%@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -17004,7 +17135,9 @@
         }
       }
     },
-    "Starker Regen" : {},
+    "Starker Regen" : {
+
+    },
     "Starker Schauer" : {
       "localizations" : {
         "de" : {
@@ -17855,7 +17988,9 @@
         }
       }
     },
-    "Taiwan" : {},
+    "Taiwan" : {
+
+    },
     "Taupunkt" : {
       "localizations" : {
         "de" : {
@@ -19092,7 +19227,9 @@
         }
       }
     },
-    "UV: %.1f" : {},
+    "UV: %.1f" : {
+
+    },
     "Verbund der europäischen Wetterdienste" : {
       "localizations" : {
         "de" : {
@@ -19312,8 +19449,12 @@
         }
       }
     },
-    "Vorbei" : {},
-    "Vorerst trocken" : {},
+    "Vorbei" : {
+
+    },
+    "Vorerst trocken" : {
+
+    },
     "Vorhersage" : {
       "localizations" : {
         "de" : {
@@ -19449,7 +19590,9 @@
         }
       }
     },
-    "Wähle den Ort für die Tagesvorhersage." : {},
+    "Wähle den Ort für die Tagesvorhersage." : {
+
+    },
     "Wähle, ob die Tageswerte ersetzt oder im 24-Stunden-Bereich markiert werden." : {
       "localizations" : {
         "de" : {
@@ -20428,7 +20571,9 @@
         }
       }
     },
-    "Wie sicher ist das?" : {},
+    "Wie sicher ist das?" : {
+
+    },
     "Wie sicher ist die Vorhersage?" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -20903,7 +21048,9 @@
         }
       }
     },
-    "Zeit" : {},
+    "Zeit" : {
+
+    },
     "Zeit in Oscar" : {
       "localizations" : {
         "de" : {

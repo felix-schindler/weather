@@ -31,9 +31,6 @@ final class NowPresentationCoordinator {
     var placesSearchRequests = 0
 
     var isLayerPickerPresented = false
-    /// Latched by NowView.
-    var forecastSize: CGSize?
-    var forecastIsWide: Bool { (forecastSize?.width ?? 0) >= WideForecast.minWidth }
     /// Set by the map when it opens the picker: radar region, model layer, or neither (clouds).
     var selectLayer: (RadarRegion?, WeatherTileLayer?) -> Void = { _, _ in }
 
