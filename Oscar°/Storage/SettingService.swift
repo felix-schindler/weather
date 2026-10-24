@@ -62,9 +62,6 @@ final class SettingService {
     var mapOverlayOpacity: Double {
         didSet { UserDefaults.standard.set(mapOverlayOpacity, forKey: "mapOverlayOpacity") }
     }
-    var classicTheme: Bool {
-        didSet { UserDefaults.standard.set(classicTheme, forKey: "classicTheme") }
-    }
     var sectionArrangementsRaw: [String: Data] {
         didSet { UserDefaults.standard.set(sectionArrangementsRaw, forKey: "sectionArrangements") }
     }
@@ -185,7 +182,6 @@ final class SettingService {
         cloudLayerActive = UserDefaults.standard.bool(forKey: "cloudLayerActive")
         let storedOpacity = UserDefaults.standard.object(forKey: "mapOverlayOpacity") as? Double
         mapOverlayOpacity = min(max(storedOpacity ?? 0.7, 0.3), 1)
-        classicTheme = UserDefaults.standard.bool(forKey: "classicTheme")
         sectionArrangementsRaw = UserDefaults.standard.dictionary(forKey: "sectionArrangements") as? [String: Data] ?? [:]
         nowSectionOrderRaw = UserDefaults.standard.stringArray(forKey: "nowSectionOrder")
         hiddenNowSectionsRaw = UserDefaults.standard.stringArray(forKey: "hiddenNowSections")

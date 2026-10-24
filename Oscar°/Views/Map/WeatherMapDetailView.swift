@@ -14,8 +14,6 @@ import UIKit
 
 struct WeatherMapDetailView: View {
     let settingsService: SettingService
-    var classicChrome = false
-    var onDone: () -> Void = {}
     @Environment(Location.self) private var location: Location
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
@@ -47,7 +45,7 @@ struct WeatherMapDetailView: View {
                 oscarRadarState: radarState,
                 modelGridState: modelGridState,
                 cloudLayerState: cloudLayerState,
-                combinedTimeline: classicChrome ? nil : timeline,
+                combinedTimeline: timeline,
                 onAlertsTapped: { alerts in
                     tappedAlerts = TappedAlerts(alerts: alerts)
                 },
@@ -60,18 +58,6 @@ struct WeatherMapDetailView: View {
             )
             .ignoresSafeArea()
 
-            if classicChrome {
-                ClassicMapChrome(
-                    settingsService: settingsService,
-                    radarState: radarState,
-                    modelGridState: modelGridState,
-                    cloudLayerState: cloudLayerState,
-                    onSelectRadar: { activate(radar: $0) },
-                    onSelectTileLayer: { activate(model: $0) },
-                    onSelectClouds: { activate() },
-                    onDone: onDone
-                )
-            } else {
             VStack {
                 HStack(alignment: .top) {
                     MapLegendStack(settingsService: settingsService,
@@ -108,7 +94,6 @@ struct WeatherMapDetailView: View {
                     .padding(.leading, 18)
                     .padding(.top, 5)
                     .padding(.bottom, 2)
-            }
             }
         }
         .task(id: "\(location.coordinates.latitude)|\(location.coordinates.longitude)") {
@@ -194,7 +179,7 @@ struct WeatherMapDetailView: View {
     }
 
     private var continuation: MapLayers.Continuation? {
-        classicChrome ? nil : layers.continuation
+        layers.continuation
     }
 
     // MARK: - Map controls
@@ -273,12 +258,8 @@ struct WeatherMapDetailView: View {
     }
 
     private func presentLayerPicker() {
-        if classicChrome {
-            isLayerPickerPresented = true
-        } else {
-            presentation?.selectLayer = { activate(radar: $0, model: $1) }
-            presentation?.isLayerPickerPresented = true
-        }
+        presentation?.selectLayer = { activate(radar: $0, model: $1) }
+        presentation?.isLayerPickerPresented = true
     }
     private func activate(radar: RadarRegion? = nil, model: WeatherTileLayer? = nil) {
         let clouds = radar == nil && model == nil

@@ -55,10 +55,6 @@ struct SettingsView: View {
               .labelStyle(.settingsIcon(.pink))
           }
           .accessibilityIdentifier("settings.layout")
-
-          Toggle(isOn: $settingsService.classicTheme) {
-            classicThemeLabel
-          }
         }
 
         Section("Allgemein") {
@@ -129,11 +125,6 @@ struct SettingsView: View {
         Task { await NotificationSettingsManager.shared.reloadNotificationStatus() }
       }
     }
-  }
-
-  private var classicThemeLabel: some View {
-    Label("Klassisch", systemImage: "clock.arrow.circlepath")
-      .labelStyle(.settingsIcon(.gray))
   }
 
   private var aboutFooter: some View {

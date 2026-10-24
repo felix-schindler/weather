@@ -34,27 +34,23 @@ struct RootTabView: View {
             }
         )
         ZStack(alignment: .top) {
-            if settingsService.classicTheme {
-                ClassicWeatherView()
-            } else {
-                TabView(selection: selection) {
-                    Tab("Orte", systemImage: "location.fill", value: AppTab.places) {
-                        LocationsView()
-                            .tint(.primary)
-                    }
-                    Tab("Wetter", systemImage: "cloud.sun", value: AppTab.forecast) {
-                        NowView()
-                    }
-                    Tab("Karten", systemImage: "globe.europe.africa", value: AppTab.maps) {
-                        WeatherMapDetailView(settingsService: settingsService)
-                            .tint(.primary)
-                    }
+            TabView(selection: selection) {
+                Tab("Orte", systemImage: "location.fill", value: AppTab.places) {
+                    LocationsView()
+                        .tint(.primary)
                 }
-                .tabBarMinimizeBehavior(horizontalSizeClass == .regular || presentation.selectedTab == .maps ? .never : .onScrollDown)
-                .tint(.white)
-                .layerPickerInspector(isPresented: $presentation.isLayerPickerPresented, settingsService: settingsService) {
-                    presentation.selectLayer($0, $1)
+                Tab("Wetter", systemImage: "cloud.sun", value: AppTab.forecast) {
+                    NowView()
                 }
+                Tab("Karten", systemImage: "globe.europe.africa", value: AppTab.maps) {
+                    WeatherMapDetailView(settingsService: settingsService)
+                        .tint(.primary)
+                }
+            }
+            .tabBarMinimizeBehavior(horizontalSizeClass == .regular || presentation.selectedTab == .maps ? .never : .onScrollDown)
+            .tint(.white)
+            .layerPickerInspector(isPresented: $presentation.isLayerPickerPresented, settingsService: settingsService) {
+                presentation.selectLayer($0, $1)
             }
 
             if let message = modelFallbackToast, presentation.sheet == nil {
