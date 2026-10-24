@@ -11,7 +11,8 @@ struct DailyView: View {
   @State private var expandedDay: Int? = 0
 
   @ScaledMetric private var weekdayColumnWidth: CGFloat = 45
-  @ScaledMetric private var precipitationColumnWidth: CGFloat = 50
+  @ScaledMetric private var iconColumnWidth: CGFloat = 50
+  @ScaledMetric(relativeTo: .caption) private var precipitationLineHeight: CGFloat = 16
   @ScaledMetric private var temperatureColumnWidth: CGFloat = 37
   @ScaledMetric private var dayIconSize: CGFloat = 30
 
@@ -95,19 +96,27 @@ extension DailyView {
     isExpanded: Bool? = nil
   ) -> some View {
     let rowTemperatures = temperatureRow(for: dayPos)
+    let precipitation = weather.forecast.daily?.precipitation_sum?[dayPos] ?? 0
     return HStack {
       Text(getWeekDay(timestamp: weather.forecast.daily?.time[dayPos] ?? 0.0))
         .foregroundStyle(Color(uiColor: .label))
         .bold()
         .frame(width: weekdayColumnWidth, alignment: .leading)
-      Image(decorative: getWeatherIcon(pos: dayPos))
-        .resizable()
-        .scaledToFit()
-        .frame(width: dayIconSize, height: dayIconSize)
-      Text("\(weather.forecast.daily?.precipitation_sum?[dayPos] ?? 0, specifier: "%.1f") \(precipitationUnit)")
-        .font(.caption)
-        .foregroundStyle(Color(uiColor: .label))
-        .frame(width: precipitationColumnWidth)
+      VStack(spacing: 1) {
+        Image(decorative: getWeatherIcon(pos: dayPos))
+          .resizable()
+          .scaledToFit()
+          .frame(width: dayIconSize, height: dayIconSize)
+        if precipitation > 0 {
+          Text("\(precipitation, specifier: "%.1f") \(precipitationUnit)")
+            .font(.caption)
+            .foregroundStyle(Color(uiColor: .label))
+            .lineLimit(1)
+            .minimumScaleFactor(0.75)
+        }
+      }
+      .frame(width: iconColumnWidth)
+      .alignmentGuide(VerticalAlignment.center) { $0[.top] + dayIconSize / 2 }
       Text(roundTemperatureString(temperature: rowTemperatures.labelLow))
         .frame(width: temperatureColumnWidth, alignment: .trailing)
       TemperatureRangeView(
@@ -128,7 +137,9 @@ extension DailyView {
           .accessibilityHidden(true)
       }
     }
-    .padding(.vertical, 8)
+    // The precipitation line sits below the icon's centre line, so it needs extra room above the divider.
+    .padding(.top, 8)
+    .padding(.bottom, precipitation > 0 ? precipitationLineHeight : 8)
     .contentShape(.rect)
   }
 
@@ -303,11 +314,14 @@ private struct DailyPlaceholderRow: View {
       RoundedRectangle(cornerRadius: 3)
         .frame(width: 35, height: 15)
         .frame(width: 45, alignment: .leading)
-      Circle()
-        .frame(width: 30, height: 30)
-      RoundedRectangle(cornerRadius: 3)
-        .frame(width: 42, height: 12)
-        .frame(width: 50)
+      VStack(spacing: 1) {
+        Circle()
+          .frame(width: 30, height: 30)
+        RoundedRectangle(cornerRadius: 3)
+          .frame(width: 42, height: 12)
+      }
+      .frame(width: 50)
+      .alignmentGuide(VerticalAlignment.center) { $0[.top] + 15 }
       RoundedRectangle(cornerRadius: 3)
         .frame(width: 25, height: 15)
         .frame(width: 37, alignment: .trailing)
@@ -318,7 +332,8 @@ private struct DailyPlaceholderRow: View {
         .frame(width: 37, alignment: .leading)
     }
     .foregroundStyle(.secondary.opacity(0.28))
-    .padding(.vertical, 8)
+    .padding(.top, 8)
+    .padding(.bottom, 16)
     .accessibilityHidden(true)
   }
 }

@@ -5,10 +5,10 @@ struct HourlyPlaceholderCard: View {
     VStack(spacing: 8) {
       RoundedRectangle(cornerRadius: 3)
         .frame(width: 42, height: 12)
-      RoundedRectangle(cornerRadius: 3)
-        .frame(width: 52, height: 9)
       Circle()
         .frame(width: 35, height: 35)
+      RoundedRectangle(cornerRadius: 3)
+        .frame(width: 52, height: 9)
       RoundedRectangle(cornerRadius: 3)
         .frame(width: 30, height: 12)
     }
