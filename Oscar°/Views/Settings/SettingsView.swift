@@ -56,16 +56,6 @@ struct SettingsView: View {
           }
           .accessibilityIdentifier("settings.layout")
 
-          // A Mac running the iPad app can't swap its icon.
-          if UIApplication.shared.supportsAlternateIcons {
-            NavigationLink {
-              AppIconSettingsView()
-            } label: {
-              Label("App-Symbol", systemImage: "app.grid")
-                .labelStyle(.settingsIcon(.blue))
-            }
-          }
-
           Toggle(isOn: $settingsService.classicTheme) {
             classicThemeLabel
           }

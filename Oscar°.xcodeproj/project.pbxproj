@@ -56,9 +56,7 @@
 		2512E9592C398CCA004670E4 /* SettingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D72B2627C67016001F43FC /* SettingService.swift */; };
 		2512E95E2C398CCB004670E4 /* SettingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D72B2627C67016001F43FC /* SettingService.swift */; };
 		2512E9672C399B7D004670E4 /* UnitSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2512E9662C399B7D004670E4 /* UnitSettings.swift */; };
-		2512E9682C399B7D004670E4 /* AppIconCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2512E9692C399B7D004670E4 /* AppIconCatalog.swift */; };
 		2512E9692F70AA00004670E4 /* ForecastSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2512E9682F70AA00004670E4 /* ForecastSettingsView.swift */; };
-		2512E96A2C399B7D004670E4 /* AppIconSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2512E96B2C399B7D004670E4 /* AppIconSettingsView.swift */; };
 		2512E9702F70B000004670E4 /* ForecastDisplayModeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2512E96F2F70B000004670E4 /* ForecastDisplayModeOption.swift */; };
 		2512E97A2F70B000004670E4 /* DailyTemperatureRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2512E9792F70B000004670E4 /* DailyTemperatureRow.swift */; };
 		2512E97C2F70B000004670E4 /* TemperatureRangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2512E97B2F70B000004670E4 /* TemperatureRangeView.swift */; };
@@ -697,8 +695,6 @@
 		2505C94C29E5F0D200BDB0A8 /* PrecipitationLockscreenWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecipitationLockscreenWidget.swift; sourceTree = "<group>"; };
 		2512E9662C399B7D004670E4 /* UnitSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitSettings.swift; sourceTree = "<group>"; };
 		2512E9682F70AA00004670E4 /* ForecastSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastSettingsView.swift; sourceTree = "<group>"; };
-		2512E9692C399B7D004670E4 /* AppIconCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconCatalog.swift; sourceTree = "<group>"; };
-		2512E96B2C399B7D004670E4 /* AppIconSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconSettingsView.swift; sourceTree = "<group>"; };
 		2512E96F2F70B000004670E4 /* ForecastDisplayModeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDisplayModeOption.swift; sourceTree = "<group>"; };
 		2512E9792F70B000004670E4 /* DailyTemperatureRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTemperatureRow.swift; sourceTree = "<group>"; };
 		2512E97B2F70B000004670E4 /* TemperatureRangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureRangeView.swift; sourceTree = "<group>"; };
@@ -1807,8 +1803,6 @@
 				744ED7295B254D8D9025BE39 /* ForecastModelSettingsView.swift */,
 				2512E96F2F70B000004670E4 /* ForecastDisplayModeOption.swift */,
 				2512E9662C399B7D004670E4 /* UnitSettings.swift */,
-				2512E9692C399B7D004670E4 /* AppIconCatalog.swift */,
-				2512E96B2C399B7D004670E4 /* AppIconSettingsView.swift */,
 				25AD38E62BE716E100A8F305 /* MemoryView.swift */,
 				25A1C0052F8D000100000001 /* NotificationSettingsView.swift */,
 			);

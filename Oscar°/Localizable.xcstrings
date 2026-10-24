@@ -2576,29 +2576,6 @@
         }
       }
     }, 
-    "app_icon_ai_disclosure": {
-      "extractionState": "manual", 
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Alle App-Symbole außer dem originalen App-Symbol wurden mit Hilfe von KI-Tools erstellt. Wenn du Designer:in bist oder einfach Lust hast, ein eigenes App-Symbol beizusteuern, schreib mir an design@bolte.id."
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "All app icons except the original app icon were created with the help of AI tools. If you are a designer or just an enthusiast who would be willing to create a custom app icon, write me at design@bolte.id."
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Orijinal uygulama simgesi dışındaki tüm uygulama simgeleri yapay zeka araçlarının yardımıyla oluşturuldu. Tasarımcıysanız ya da özel bir uygulama simgesi hazırlamak isteyen bir meraklıysanız bana design@bolte.id adresinden yazın."
-          }
-        }
-      }
-    }, 
     "app_icon_error_change_failed": {
       "extractionState": "manual", 
       "localizations": {
@@ -2641,52 +2618,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "iOS uygulama simgesini değiştirmek için sistem istemini açamadı. Bu durum simülatörde sık görülür. Lütfen uygulamayı yeniden açıp tekrar deneyin. Geçerli simge: %@."
-          }
-        }
-      }
-    }, 
-    "app_icon_error_unsupported": {
-      "extractionState": "manual", 
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Dieses Gerät unterstützt keine alternativen App-Symbole."
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "This device does not support alternate app icons."
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Bu cihaz alternatif uygulama simgelerini desteklemiyor."
-          }
-        }
-      }
-    }, 
-    "App-Symbol": {
-      "extractionState": "manual", 
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "App-Symbol"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "App Icon"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Uygulama Simgesi"
           }
         }
       }
@@ -4324,29 +4255,6 @@
         }
       }
     }, 
-    "Chill": {
-      "extractionState": "manual", 
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Chill"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Chill"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Sakin"
-          }
-        }
-      }
-    }, 
     "China": {
       "localizations": {
         "de": {
@@ -5692,29 +5600,6 @@
         }
       }
     }, 
-    "Dschungel": {
-      "extractionState": "manual", 
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Dschungel"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Jungle"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Orman"
-          }
-        }
-      }
-    }, 
     "Du kannst den Ort jederzeit wechseln oder weitere hinzufügen.": {
       "extractionState": "stale", 
       "localizations": {
@@ -6071,29 +5956,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "Konumunuzda yağmur başlamadan kısa bir uyarı."
-          }
-        }
-      }
-    }, 
-    "Einfach": {
-      "extractionState": "manual", 
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Einfach"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Simple"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Sade"
           }
         }
       }
@@ -6689,29 +6551,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "Yaklaşık on beş dakika önce."
-          }
-        }
-      }
-    }, 
-    "EU-Mecha": {
-      "extractionState": "manual", 
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "EU-Mecha"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "EU Mecha"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "AB Mecha"
           }
         }
       }
@@ -8442,29 +8281,6 @@
         }
       }
     }, 
-    "Halloween": {
-      "extractionState": "manual", 
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Halloween"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Halloween"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Cadılar Bayramı"
-          }
-        }
-      }
-    }, 
     "HARMONIE - DMI": {
       "extractionState": "stale", 
       "localizations": {
@@ -9770,29 +9586,6 @@
         }
       }
     }, 
-    "Kawaii": {
-      "extractionState": "manual", 
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Kawaii"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Kawaii"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Kawaii"
-          }
-        }
-      }
-    }, 
     "Kein Emoji": {
       "localizations": {
         "de": {
@@ -10384,29 +10177,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "İklim arşivi"
-          }
-        }
-      }
-    }, 
-    "Klimakatastrophe": {
-      "extractionState": "manual", 
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Klimakatastrophe"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Climate Crisis"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "İklim Krizi"
           }
         }
       }
@@ -11456,29 +11226,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "Bugünün en yüksek değeri"
-          }
-        }
-      }
-    }, 
-    "Mecha": {
-      "extractionState": "manual", 
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Mecha"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Mecha"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Mecha"
           }
         }
       }
@@ -15780,29 +15527,6 @@
         }
       }
     }, 
-    "Regnerisch": {
-      "extractionState": "manual", 
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Regnerisch"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Rainy"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Yağmurlu"
-          }
-        }
-      }
-    }, 
     "Regnet gerade": {}, 
     "Reihe": {}, 
     "Reist automatisch mit": {
@@ -16949,29 +16673,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "Gün batımı"
-          }
-        }
-      }
-    }, 
-    "Sonnig": {
-      "extractionState": "manual", 
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Sonnig"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Sunny"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Güneşli"
           }
         }
       }
@@ -20372,29 +20073,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "Hangi yer?"
-          }
-        }
-      }
-    }, 
-    "Weltraum": {
-      "extractionState": "manual", 
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Weltraum"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Space"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Uzay"
           }
         }
       }
