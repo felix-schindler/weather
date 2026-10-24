@@ -47,9 +47,6 @@ struct NowSheetView: View {
         case .layout:
             NowLayoutSheet()
                 .presentationSizing(.page)
-        case .support:
-            SupportView(close: { dismiss() })
-                .presentationSizing(.page)
         }
     }
 }

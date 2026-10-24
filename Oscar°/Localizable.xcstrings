@@ -2286,28 +2286,6 @@
         }
       }
     }, 
-    "Am Kratzbaum gespielt": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Am Kratzbaum gespielt"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Scratching post plays"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Tırmalama direğinde oyun"
-          }
-        }
-      }
-    }, 
     "Ambrosia": {
       "comment": "Pollen type name", 
       "localizations": {
@@ -7702,28 +7680,6 @@
         }
       }
     }, 
-    "gelangweilt": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "gelangweilt"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "bored"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "sıkılmış"
-          }
-        }
-      }
-    }, 
     "GEM - Canadian Weather Service": {
       "extractionState": "stale", 
       "localizations": {
@@ -8037,28 +7993,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "Kaydırılan mesafe"
-          }
-        }
-      }
-    }, 
-    "Gestreichelt": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Gestreichelt"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Pets"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Sevilme"
           }
         }
       }
@@ -9116,28 +9050,6 @@
       }
     }, 
     "Hour": {}, 
-    "hungrig": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "hungrig"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "hungry"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "aç"
-          }
-        }
-      }
-    }, 
     "Ich bin Philipp und entwickle Oscar allein. Ich zahle den Apple-Entwickleraccount und den Server, der die Kartenebenen, Wetterwarnungen und Mitteilungen liefert. Ob Oscar weiterläuft, hängt von euch ab.": {
       "extractionState": "stale", 
       "localizations": {
@@ -9858,28 +9770,6 @@
         }
       }
     }, 
-    "Katze": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Katze"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Cat"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Kedi"
-          }
-        }
-      }
-    }, 
     "Kawaii": {
       "extractionState": "manual", 
       "localizations": {
@@ -10568,28 +10458,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "tane/m³"
-          }
-        }
-      }
-    }, 
-    "Kratzbaum": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Kratzbaum"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Scratching post"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Tırmalama direği"
           }
         }
       }
@@ -12425,28 +12293,6 @@
     "mm/h": {
       "shouldTranslate": false
     }, 
-    "Möbel": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Möbel"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Furniture"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Mobilya"
-          }
-        }
-      }
-    }, 
     "Moderate": {
       "localizations": {
         "de": {
@@ -12763,28 +12609,6 @@
         }
       }
     }, 
-    "Napf": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Napf"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Food bowl"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Mama kabı"
-          }
-        }
-      }
-    }, 
     "Nationale Wetterdienste": {
       "localizations": {
         "de": {
@@ -12916,28 +12740,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "Sayfada değil"
-          }
-        }
-      }
-    }, 
-    "Nickerchen": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Nickerchen"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Naps"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Şekerleme"
           }
         }
       }
@@ -17821,28 +17623,6 @@
         }
       }
     }, 
-    "Streicheln": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Streicheln"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Pet"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Sev"
-          }
-        }
-      }
-    }, 
     "Stufe %@": {
       "extractionState": "stale", 
       "localizations": {
@@ -18847,28 +18627,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "Bir konum eklemek için haritaya dokunun."
-          }
-        }
-      }
-    }, 
-    "Tippe auf die Katze, um sie zu füttern oder mit ihr zu spielen.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Tippe auf die Katze, um sie zu füttern oder mit ihr zu spielen."
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Tap the cat to feed it or play with it."
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "Beslemek veya onunla oynamak için kediye dokunun."
           }
         }
       }
@@ -21778,28 +21536,6 @@
           "stringUnit": {
             "state": "translated", 
             "value": "Oldukça belirsiz"
-          }
-        }
-      }
-    }, 
-    "zufrieden": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "zufrieden"
-          }
-        }, 
-        "en": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "content"
-          }
-        }, 
-        "tr": {
-          "stringUnit": {
-            "state": "translated", 
-            "value": "memnun"
           }
         }
       }

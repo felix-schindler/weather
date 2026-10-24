@@ -1,9 +1,5 @@
 import Foundation
 
-enum CatStat: String, CaseIterable {
-    case fish, kicks, catches, scratches, pets, naps
-}
-
 struct UsageStats: Codable {
     struct Extreme: Codable {
         var value: Double
@@ -67,7 +63,6 @@ struct UsageStats: Codable {
     var windiest: Extreme?
     var wettest: Extreme?
     var highestUV: Extreme?
-    var cat: [String: Int]?
 
     var activeDays: Int { dailyOpens.count }
 
@@ -108,9 +103,6 @@ struct UsageStats: Codable {
         apiCalls.merge(other.apiCalls, uniquingKeysWith: +)
         scrolledPoints += other.scrolledPoints
         places.merge(other.places, uniquingKeysWith: +)
-        if let theirs = other.cat {
-            cat = (cat ?? [:]).merging(theirs, uniquingKeysWith: +)
-        }
         hottest = Self.higher(hottest, other.hottest)
         coldest = Self.lower(coldest, other.coldest)
         windiest = Self.higher(windiest, other.windiest)

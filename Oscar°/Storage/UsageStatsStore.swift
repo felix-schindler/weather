@@ -55,10 +55,6 @@ final class UsageStatsStore {
         if unsavedChanges >= 30 { flush() }
     }
 
-    func recordCat(_ stat: CatStat) {
-        record { $0.cat = ($0.cat ?? [:]).merging([stat.rawValue: 1], uniquingKeysWith: +) }
-    }
-
     func sceneDidActivate() {
         guard sessionStart == nil else { return }
         let now = Date.now

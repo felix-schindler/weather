@@ -108,8 +108,6 @@ struct NowView: View {
         .environment(\.cardBorderOpacity, AtmosphereSampler.cardBorderOpacity(snapshot: atmosphere))
         .environment(\.cardBackgroundStyle, AnyShapeStyle(.ultraThinMaterial.opacity(0.6)))
         .ignoresSafeArea(edges: isTwoColumn ? [] : .top)
-        .simultaneousGesture(SpatialTapGesture(coordinateSpace: .global).onEnded { CatModel.shared.dismissMenu(outside: $0.location) })
-        .overlay { SupportNudgeOverlay(isEnabled: weather.hasContent) }
         .onGeometryChange(for: CGSize.self, of: { $0.size }) { size in
             if let old = stageSize, old.width == size.width, abs(old.height - size.height) < 100 {
                 return
@@ -126,7 +124,6 @@ struct NowView: View {
                 HeadView()
                     .padding(.top, 35)
                     .debugConsoleTap(countDebugTap)
-                    .headCat()
                 sectionList(sections.prefix(firstPageCount))
             }
             .frame(minHeight: firstPageMinHeight, alignment: .topLeading)
@@ -142,7 +139,6 @@ struct NowView: View {
             HeadView(compact: true)
                 .fixedSize(horizontal: false, vertical: true)
                 .debugConsoleTap(countDebugTap)
-                .headCat()
             sectionList(stageSections[...])
         }
         .padding(.bottom)

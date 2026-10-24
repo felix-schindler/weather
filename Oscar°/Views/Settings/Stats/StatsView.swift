@@ -36,10 +36,6 @@ struct StatsView: View {
                     }
                 }
 
-                if let cat = stats.cat {
-                    CatStatsCard(counts: cat)
-                }
-
                 StatsCard(title: "Unterwegs in Oscar") {
                     VStack(spacing: 10) {
                         StatsRow(title: "Gescrollt", value: Text(Measurement(value: stats.scrolledMeters, unit: UnitLength.meters), format: .measurement(width: .abbreviated, usage: .asProvided, numberFormatStyle: .number.precision(.fractionLength(0)))))
@@ -100,7 +96,6 @@ struct StatsView: View {
         case "alerts": "Warnungen geöffnet"
         case "settings": "Einstellungen geöffnet"
         case "layout": "Ansicht angepasst"
-        case "support": "Oscar unterstützen"
         case let id where id.hasPrefix("environment"): "Umwelt geöffnet"
         default: LocalizedStringKey(id)
         }
