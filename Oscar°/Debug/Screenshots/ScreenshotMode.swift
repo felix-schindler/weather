@@ -2,7 +2,7 @@
 //  ScreenshotMode.swift
 //  Oscar°
 //
-//  App Store screenshot staging (fastlane snapshot). The UI tests launch the
+//  App Store screenshot staging. Staged runs launch the
 //  app with `-screenshotScene <rawValue>`; the bootstrap swaps the network
 //  layer for ScreenshotFixtureServer so every prod code path runs unmodified
 //  against deterministic data. Navigation happens through the real UI (the
