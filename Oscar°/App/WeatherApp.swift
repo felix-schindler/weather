@@ -178,9 +178,6 @@ struct WeatherApp: App {
                     await notificationSettingsManager.configureOnLaunch()
                     await WidgetBasemapRenderer.refreshIfNeeded()
                 }
-                .task {
-                    await SupporterStore.shared.start()
-                }
                 .onChange(of: scenePhase) { _, phase in
                     #if DEBUG
                     ScreenshotMode.scenePhaseDidChange(phase)

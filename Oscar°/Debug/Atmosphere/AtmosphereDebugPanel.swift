@@ -12,7 +12,6 @@ import SwiftUI
 struct AtmosphereDebugPanel: View {
     @Bindable var state: AtmosphereDebugState
     @Environment(Location.self) private var location
-    @Environment(NowPresentationCoordinator.self) private var presentation
     @State private var expanded = true
     @State private var moonReferenceDate = Date.now
     @State private var moonRise: Date?
@@ -39,19 +38,6 @@ struct AtmosphereDebugPanel: View {
                         .font(.caption.bold())
                         .padding(6)
                         .contentShape(Rectangle())
-                }
-            }
-
-            HStack(spacing: 6) {
-                ForEach(SupportNudge.Pose.allCases, id: \.self) { pose in
-                    Button {
-                        presentation.requestedNudge = pose
-                    } label: {
-                        Text(verbatim: "\(pose)")
-                            .font(.caption2.bold())
-                    }
-                    .buttonStyle(.bordered)
-                    .controlSize(.mini)
                 }
             }
 

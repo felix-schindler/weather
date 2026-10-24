@@ -666,18 +666,6 @@ enum ScreenshotFixtures {
         }
     }
 
-    // MARK: - Member card
-
-    #if !os(watchOS)
-    static var stickerPlacements: [MemberCardStickerPlacement] {
-        [
-            MemberCardStickerPlacement(assetName: "sticker_sun", xRatio: 0.60, yRatio: 0.28, scale: 0.85, rotation: 0.16, zIndex: 1),
-            MemberCardStickerPlacement(assetName: "sticker_umbrella", xRatio: 0.58, yRatio: 0.70, scale: 1.0, rotation: -0.2, zIndex: 2),
-            MemberCardStickerPlacement(assetName: "sticker_oscar", xRatio: 0.82, yRatio: 0.30, scale: 1.1, rotation: -0.1, zIndex: 3),
-            MemberCardStickerPlacement(assetName: "sticker_grumpy_cloud", xRatio: 0.82, yRatio: 0.70, scale: 0.85, rotation: 0.12, zIndex: 4),
-        ]
-    }
-    #endif
 
     static func notificationTime(_ date: Date) -> String {
         let german = Locale.current.language.languageCode?.identifier == "de"

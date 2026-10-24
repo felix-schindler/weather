@@ -50,7 +50,7 @@ struct RootTabView: View {
                             .tint(.primary)
                     }
                 }
-                .tabBarMinimizeBehavior(horizontalSizeClass == .regular || presentation.selectedTab == .maps || presentation.isNudgeOut ? .never : .onScrollDown)
+                .tabBarMinimizeBehavior(horizontalSizeClass == .regular || presentation.selectedTab == .maps ? .never : .onScrollDown)
                 .tint(.white)
                 .layerPickerInspector(isPresented: $presentation.isLayerPickerPresented, settingsService: settingsService) {
                     presentation.selectLayer($0, $1)

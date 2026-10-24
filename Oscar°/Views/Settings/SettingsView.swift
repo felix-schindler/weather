@@ -11,43 +11,11 @@ struct SettingsView: View {
   @Environment(\.dismiss) private var dismiss
   @Environment(\.scenePhase) private var scenePhase
   @Bindable private var settingsService = SettingService.shared
-  private let supporter = SupporterStore.shared
   @State private var showsMemory = false
 
   var body: some View {
     NavigationStack {
       List {
-        Section {
-          MemberCard()
-        }
-        .listRowInsets(EdgeInsets())
-        .listRowBackground(Color.clear)
-        .listRowSeparator(.hidden)
-
-        Section {
-          NavigationLink {
-            SupportView()
-          } label: {
-            LabeledContent {
-              if supporter.isSupporter {
-                Text("Danke")
-              }
-            } label: {
-              Label {
-                Text("Oscar unterstützen")
-              } icon: {
-                Image(systemName: "heart.fill")
-                  .overlay(alignment: .topTrailing) {
-                    HeartSparkle()
-                      .offset(x: 4, y: -4)
-                  }
-              }
-              .labelStyle(.settingsIcon(.pink))
-            }
-          }
-          .accessibilityIdentifier("settings.support")
-        }
-
         Section("Wetter") {
           NavigationLink {
             NotificationSettingsView()
@@ -98,21 +66,8 @@ struct SettingsView: View {
             }
           }
 
-          if supporter.isSupporter || settingsService.classicTheme {
-            Toggle(isOn: $settingsService.classicTheme) {
-              classicThemeLabel
-            }
-          } else {
-            NavigationLink {
-              SupportView()
-            } label: {
-              LabeledContent {
-                Image(systemName: "lock.fill")
-              } label: {
-                classicThemeLabel
-              }
-            }
-            .accessibilityValue(Text("Für Unterstützer:innen"))
+          Toggle(isOn: $settingsService.classicTheme) {
+            classicThemeLabel
           }
         }
 
@@ -192,9 +147,6 @@ struct SettingsView: View {
 
   private var aboutFooter: some View {
     VStack(spacing: 2) {
-      ProviderLogo(asset: "logo-oscar-cat", height: 44)
-        .opacity(0.7)
-        .padding(.bottom, 6)
       Text(verbatim: "Oscar° \(appVersion) (\(appBuild))")
       Text("by Philipp Bolte")
     }

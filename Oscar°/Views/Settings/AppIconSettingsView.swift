@@ -13,7 +13,6 @@ struct AppIconSettingsView: View {
     @State private var iconChangeError: String?
     @State private var isChangingIcon = false
     @State private var iconChangeSuccessCount = 0
-    private let supporter = SupporterStore.shared
 
     var body: some View {
         List {
@@ -21,37 +20,22 @@ struct AppIconSettingsView: View {
                 Section {
                     ForEach(section.icons) { icon in
                         let isSelected = selectedIconName == icon.alternateIconName
-                        if icon.isFree || supporter.isSupporter || isSelected {
-                            Button {
-                                Task {
-                                    await select(icon)
-                                }
-                            } label: {
-                                AppIconRow(icon: icon, isSelected: isSelected, isLocked: false)
+                        Button {
+                            Task {
+                                await select(icon)
                             }
-                            .buttonStyle(.plain)
-                            .disabled(isChangingIcon)
-                            .accessibilityLabel(Text(icon.name))
-                            .accessibilityValue(isSelected ? Text("Ausgewählt") : Text(""))
-                        } else {
-                            NavigationLink {
-                                SupportView()
-                            } label: {
-                                AppIconRow(icon: icon, isSelected: false, isLocked: true)
-                            }
-                            .accessibilityLabel(Text(icon.name))
-                            .accessibilityValue(Text("Für Unterstützer:innen"))
+                        } label: {
+                            AppIconRow(icon: icon, isSelected: isSelected, isLocked: false)
                         }
+                        .buttonStyle(.plain)
+                        .disabled(isChangingIcon)
+                        .accessibilityLabel(Text(icon.name))
+                        .accessibilityValue(isSelected ? Text("Ausgewählt") : Text(""))
                     }
                 }
             }
 
             Section {
-                if !supporter.isSupporter {
-                    Text("Symbole mit Schloss schaltest du frei, wenn du Oscar unterstützt. Alle Funktionen bleiben kostenlos.")
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
-                }
                 Text("app_icon_ai_disclosure")
                     .font(.footnote)
                     .foregroundStyle(.secondary)

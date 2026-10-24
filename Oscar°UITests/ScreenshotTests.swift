@@ -381,14 +381,6 @@ final class ScreenshotTests: XCTestCase {
         snapshot("26_settings_forecast", timeWaitingForIdle: 0)
     }
 
-    func test27MemberCardDock() throws {
-        let app = launch(scene: "customization")
-        let card = openSettings(app)
-        tapVisible(card, in: app)
-        sleep(3)
-        snapshot("27_member_card_dock", timeWaitingForIdle: 0)
-    }
-
     func test28Onboarding() throws {
         let steps = [
             (["welcome"], "28_onboarding_welcome"),

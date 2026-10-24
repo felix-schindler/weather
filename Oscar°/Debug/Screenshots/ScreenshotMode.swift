@@ -70,9 +70,6 @@ enum ScreenshotMode {
         #if !os(watchOS)
         seedPlaces(for: scene)
         seedSettings(for: scene)
-        if scene == .customization || scene.isSettings {
-            MemberCardStickerStore().save(ScreenshotFixtures.stickerPlacements)
-        }
         #else
         LocationService.shared.gpsLocation = CLLocationCoordinate2D(
             latitude: ScreenshotFixtures.latitude,

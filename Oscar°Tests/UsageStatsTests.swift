@@ -27,7 +27,6 @@ struct UsageStatsTests {
         theirs.hottest = extreme(34, place: "Berlin")
         theirs.coldest = extreme(5)
         theirs.firstLaunch = Date(timeIntervalSince1970: 1_000)
-        theirs.supporterSince = Date(timeIntervalSince1970: 3_000)
 
         mine.merge(theirs)
 
@@ -39,7 +38,6 @@ struct UsageStatsTests {
         #expect(mine.hottest?.place == "Berlin")
         #expect(mine.coldest?.value == -2)
         #expect(mine.firstLaunch == Date(timeIntervalSince1970: 1_000))
-        #expect(mine.supporterSince == Date(timeIntervalSince1970: 3_000))
     }
 
     @Test
