@@ -25,8 +25,8 @@ struct LocationCard: View {
                 if hasBadge {
                     ZStack {
                         Circle()
-                            .fill(.white.opacity(0.16))
-                            .overlay { Circle().strokeBorder(.white.opacity(0.22), lineWidth: 1) }
+                            .fill(Color.primary.opacity(0.16))
+                            .overlay { Circle().strokeBorder(Color.primary.opacity(0.22), lineWidth: 1) }
                         badgeContent
                     }
                     .frame(width: 44, height: 44)
@@ -36,7 +36,7 @@ struct LocationCard: View {
                     HStack(spacing: 6) {
                         Text(title)
                             .font(.headline)
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.primary)
                             .lineLimit(1)
                             .minimumScaleFactor(0.8)
                         if isDefault {
@@ -49,7 +49,7 @@ struct LocationCard: View {
                     if let detail {
                         Text(detail)
                             .font(.footnote)
-                            .foregroundStyle(.white.opacity(0.85))
+                            .foregroundStyle(Color.primary.opacity(0.85))
                             .lineLimit(1)
                     }
                 }
@@ -58,12 +58,12 @@ struct LocationCard: View {
 
                 Text(temperature.map { "\(Int($0.rounded()))°" } ?? "--°")
                     .font(.system(size: temperatureFontSize, weight: .medium, design: .rounded))
-                    .foregroundStyle(.white.opacity(temperature == nil ? 0.4 : 1))
+                    .foregroundStyle(Color.primary.opacity(temperature == nil ? 0.4 : 1))
                     .contentTransition(.numericText())
                     .animation(.spring(duration: 0.5), value: temperature)
             }
             .padding(.horizontal, 16)
-            .shadow(color: .black.opacity(0.35), radius: 3, y: 1)
+            .adaptiveShadow(opacity: 0.35, radius: 3)
         }
         .frame(maxWidth: .infinity)
         .frame(height: cardHeight)
@@ -72,7 +72,7 @@ struct LocationCard: View {
         .overlay(
             RoundedRectangle(cornerRadius: 22, style: .continuous)
                 .strokeBorder(
-                    .white.opacity(isSelected ? 0.75 : 0.12),
+                    Color.primary.opacity(isSelected ? 0.75 : 0.12),
                     lineWidth: isSelected ? 1.75 : 1
                 )
         )
@@ -81,7 +81,7 @@ struct LocationCard: View {
                 Image(systemName: "checkmark.circle.fill")
                     .font(.subheadline)
                     .symbolRenderingMode(.palette)
-                    .foregroundStyle(.black.opacity(0.65), .white)
+                    .foregroundStyle(Color(uiColor: .systemBackground), .primary)
                     .padding(9)
                     .transition(.scale.combined(with: .opacity))
                     .accessibilityHidden(true)
@@ -105,7 +105,7 @@ struct LocationCard: View {
         case .locationGlyph:
             Image(systemName: "location.fill")
                 .font(.body)
-                .foregroundStyle(.white)
+                .foregroundStyle(.primary)
         case .plain:
             EmptyView()
         }
@@ -152,6 +152,6 @@ struct LocationCardButtonStyle: ButtonStyle {
         )
     }
     .padding()
-    .background(Color.black)
+    .background(Color(uiColor: .systemBackground))
     .environment(Weather.mock)
 }

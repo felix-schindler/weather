@@ -23,7 +23,6 @@ struct NowSheetView: View {
                         }
                     }
             }
-            .preferredColorScheme(.dark)
             .presentationSizing(.page)
         case .environment(let section):
             EnvironmentDetailView(scrollTo: section)

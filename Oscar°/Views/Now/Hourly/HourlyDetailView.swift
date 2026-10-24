@@ -55,7 +55,6 @@ struct HourlyDetailView: View {
                 model.update(from: weather)
             }
         }
-        .preferredColorScheme(.dark)
     }
 
     private func finish() {

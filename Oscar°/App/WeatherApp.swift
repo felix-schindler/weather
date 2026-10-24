@@ -122,7 +122,6 @@ struct WeatherApp: App {
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environment(weather)
                 .environment(location)
-                .preferredColorScheme(.dark)
                 .task {
                     #if DEBUG
                     await ScreenshotMode.stageOnAppear()

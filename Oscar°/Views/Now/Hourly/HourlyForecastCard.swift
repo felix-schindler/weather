@@ -12,7 +12,7 @@ struct HourlyForecastCard: View {
         .minimumScaleFactor(0.75)
       Text(item.precipitation)
         .font(.footnote)
-        .foregroundStyle(.white.opacity(0.72))
+        .foregroundStyle(Color.primary.opacity(0.72))
         .padding(.top, 3)
       Image(item.iconName)
         .resizable()

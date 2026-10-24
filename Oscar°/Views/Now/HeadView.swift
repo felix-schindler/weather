@@ -138,7 +138,7 @@ struct HeadView: View {
         locationHeader
         Spacer()
       }
-      .shadow(radius: 5)
+      .adaptiveShadow(opacity: 0.3, radius: 5)
       .contentShape(Rectangle())
       .onTapGesture {
         presentation.selectedTab = .places
@@ -171,7 +171,7 @@ struct HeadView: View {
           .font(.system(size: temperatureFontSize))
           .minimumScaleFactor(0.5)
           .lineLimit(1)
-          .shadow(radius: 15)
+          .adaptiveShadow(opacity: 0.3, radius: 15)
           .contentTransition(.numericText())
           .animation(.default, value: weather.forecast.current?.temperature)
           .accessibilityLabel(Text("Temperatur \(roundTemperatureString(temperature: weather.forecast.current?.temperature))"))
@@ -205,7 +205,7 @@ struct HeadView: View {
         }
         .font(.subheadline.weight(.medium))
         .foregroundStyle(Color(uiColor: .label).opacity(0.85))
-        .shadow(radius: 3)
+        .adaptiveShadow(opacity: 0.3, radius: 3)
         .frame(maxWidth: .infinity, minHeight: 20)
         .contentShape(.rect)
         .onLongPressGesture {

@@ -12,21 +12,21 @@ struct DetailDeckCaption: View {
                 .textCase(.uppercase)
                 .tracking(1.2)
                 .monospacedDigit()
-                .foregroundStyle(.white.opacity(0.72))
-                .shadow(color: .black.opacity(0.35), radius: 1.5, y: 1)
+                .foregroundStyle(Color.primary.opacity(0.72))
+                .adaptiveShadow(opacity: 0.35, radius: 1.5)
                 .contentTransition(.numericText())
                 .animation(.snappy, value: eyebrow)
 
             Text(verbatim: title)
                 .font(.title.weight(.bold))
-                .foregroundStyle(.white)
-                .shadow(color: .black.opacity(0.3), radius: 2.5, y: 1)
+                .foregroundStyle(.primary)
+                .adaptiveShadow(opacity: 0.3, radius: 2.5)
 
             if let footnote {
                 Text(verbatim: footnote)
                     .font(.footnote)
-                    .foregroundStyle(.white.opacity(0.85))
-                    .shadow(color: .black.opacity(0.35), radius: 1.5, y: 1)
+                    .foregroundStyle(Color.primary.opacity(0.85))
+                    .adaptiveShadow(opacity: 0.35, radius: 1.5)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, 3)
             }
@@ -50,7 +50,7 @@ struct DetailDeckRow<Chart: View>: View {
         VStack(spacing: 0) {
             if showsDivider {
                 Rectangle()
-                    .fill(.white.opacity(0.08))
+                    .fill(Color.primary.opacity(0.08))
                     .frame(height: 1)
             }
 
@@ -73,7 +73,7 @@ struct DetailDeckRow<Chart: View>: View {
             }
             .background {
                 RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .fill(.white.opacity(isExpanded ? 0.09 : 0))
+                    .fill(Color.primary.opacity(isExpanded ? 0.09 : 0))
             }
             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
         }
@@ -88,17 +88,17 @@ struct DetailDeckRow<Chart: View>: View {
 
             Text(title)
                 .font(.subheadline.weight(.medium))
-                .foregroundStyle(.white)
+                .foregroundStyle(.primary)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
             Text(verbatim: value)
                 .font(.subheadline.weight(.semibold))
                 .monospacedDigit()
-                .foregroundStyle(.white.opacity(0.9))
+                .foregroundStyle(Color.primary.opacity(0.9))
 
             Image(systemName: "chevron.down")
                 .font(.caption2.weight(.bold))
-                .foregroundStyle(.white.opacity(isExpanded ? 0.5 : 0.4))
+                .foregroundStyle(Color.primary.opacity(isExpanded ? 0.5 : 0.4))
                 .rotationEffect(.degrees(isExpanded ? 180 : 0))
         }
         .accessibilityElement(children: .ignore)

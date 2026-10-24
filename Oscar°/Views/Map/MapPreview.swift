@@ -60,6 +60,7 @@ struct MapPreview: View {
                            cloudLayerState: layers.clouds,
                            modelGridState: layers.model)
                 .padding(12)
+                .environment(\.colorScheme, .dark)
         }
         .overlay(alignment: .bottomLeading) {
             MapAttributionLabel()

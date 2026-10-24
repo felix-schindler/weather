@@ -19,7 +19,7 @@ struct DetailCard<Content: View>: View {
         }
         .overlay {
             RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .stroke(.white.opacity(0.08), lineWidth: 1)
+                .stroke(Color.primary.opacity(0.08), lineWidth: 1)
         }
     }
 }

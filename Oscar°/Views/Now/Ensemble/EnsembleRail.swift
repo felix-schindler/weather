@@ -72,16 +72,16 @@ private struct RailSeries: View {
                     + highs.reversed().map { CGPoint(x: x($0.0), y: y($0.1.low)) }
             )
             band.closeSubpath()
-            context.fill(band, with: .color(.white.opacity(0.28)))
+            context.fill(band, with: .color(Color.primary.opacity(0.28)))
             var median = Path()
             median.addLines(highs.map { CGPoint(x: x($0.0), y: y($0.1.median)) })
-            context.stroke(median, with: .color(.white.opacity(0.85)), lineWidth: 1.5)
+            context.stroke(median, with: .color(Color.primary.opacity(0.85)), lineWidth: 1.5)
         }
 
         let labelFont = Font.system(size: 9.5, weight: .medium)
         for label in state.axisLabels(columnWidth: column) {
             let text = context.resolve(
-                Text(verbatim: label.text).font(labelFont).foregroundStyle(.white.opacity(0.7))
+                Text(verbatim: label.text).font(labelFont).foregroundStyle(Color.primary.opacity(0.7))
             )
             let anchor: UnitPoint = label.index == 0 && column < 22 ? .topLeading : .top
             context.draw(text, at: CGPoint(x: anchor == .topLeading ? 0 : x(label.index), y: height + 2), anchor: anchor)
@@ -106,8 +106,8 @@ private struct RailSelection: View {
                 height: EnsembleRail.chartHeight - 1.5
             )
             let box = Path(roundedRect: rect, cornerRadius: min(6, width / 3))
-            context.fill(box, with: .color(.white.opacity(0.1)))
-            context.stroke(box, with: .color(.white.opacity(0.9)), lineWidth: 1.5)
+            context.fill(box, with: .color(Color.primary.opacity(0.1)))
+            context.stroke(box, with: .color(Color.primary.opacity(0.9)), lineWidth: 1.5)
         }
     }
 }

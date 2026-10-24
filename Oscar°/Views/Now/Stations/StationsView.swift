@@ -142,7 +142,7 @@ private struct StationSparkline: View {
                 let label = context.resolve(
                     Text(verbatim: "\(Int(units.temperature(point.1).rounded()))°")
                         .font(.system(size: 9, weight: .medium))
-                        .foregroundStyle(.white.opacity(0.6)))
+                        .foregroundStyle(Color.primary.opacity(0.6)))
                 let labelSize = label.measure(in: size)
                 let anchor = position(point)
                 let labelX = min(max(anchor.x, labelSize.width / 2), size.width - labelSize.width / 2)

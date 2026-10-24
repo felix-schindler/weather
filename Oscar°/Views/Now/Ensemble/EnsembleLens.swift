@@ -49,9 +49,9 @@ extension EnsembleSky {
     var color: Color {
         switch self {
         case .sun: .yellow
-        case .clouds: Color(white: 0.72)
+        case .clouds: Color.adaptiveGray(dark: 0.72, light: 0.55)
         case .rain: .hourlyRain
-        case .snow: .white
+        case .snow: Color.adaptiveGray(dark: 1, light: 0.45)
         }
     }
 }

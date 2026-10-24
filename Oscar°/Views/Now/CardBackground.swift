@@ -30,7 +30,7 @@ private struct CardBorderModifier<S: InsettableShape>: ViewModifier {
     let shape: S
 
     func body(content: Content) -> some View {
-        content.overlay(shape.strokeBorder(.white.opacity(0.15), lineWidth: 1))
+        content.overlay(shape.strokeBorder(Color.primary.opacity(0.15), lineWidth: 1))
     }
 }
 

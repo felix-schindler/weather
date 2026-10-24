@@ -137,12 +137,12 @@ struct OnboardingLockup: View {
             VStack(spacing: 2) {
                 Text("Willkommen bei")
                     .font(.title3)
-                    .foregroundStyle(.white.opacity(0.92))
+                    .foregroundStyle(Color.primary.opacity(0.92))
                 Text(verbatim: "Oscar°")
                     .font(.system(.largeTitle, design: .rounded, weight: .bold).scaled(by: compact ? 1.05 : 1.3))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.primary)
             }
-            .shadow(color: .black.opacity(0.25), radius: 10, y: 4)
+            .adaptiveShadow(opacity: 0.25, radius: 10, y: 4)
         }
         .accessibilityElement(children: .combine)
     }

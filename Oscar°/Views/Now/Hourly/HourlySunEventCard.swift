@@ -12,7 +12,7 @@ struct HourlySunEventCard: View {
         .minimumScaleFactor(0.75)
       Text(item.weekday)
         .font(.footnote)
-        .foregroundStyle(.white.opacity(0.72))
+        .foregroundStyle(Color.primary.opacity(0.72))
         .padding(.top, 3)
       Image(item.kind.imageName)
         .resizable()

@@ -39,8 +39,8 @@ struct NowLayoutCanvas: View {
                         if let title = frame.title {
                             Text(title)
                                 .font(.caption2.weight(.semibold))
-                                .foregroundStyle(.white)
-                                .shadow(radius: 2)
+                                .foregroundStyle(.primary)
+                                .adaptiveShadow(opacity: 0.3, radius: 2)
                                 .frame(height: Self.captionHeight)
                         }
                         HStack(alignment: .top, spacing: 0) {
@@ -103,8 +103,8 @@ struct NowLayoutCanvas: View {
         .padding(12)
         .frame(width: frame.size.width, alignment: .top)
         .frame(minHeight: frame.size.height, alignment: .top)
-        .background(.white.opacity(0.12), in: .rect(cornerRadius: 32))
-        .overlay { RoundedRectangle(cornerRadius: 32).strokeBorder(.white.opacity(0.35), lineWidth: 6) }
+        .background(Color.primary.opacity(0.12), in: .rect(cornerRadius: 32))
+        .overlay { RoundedRectangle(cornerRadius: 32).strokeBorder(Color.primary.opacity(0.35), lineWidth: 6) }
         .clipShape(.rect(cornerRadius: 32))
         .coordinateSpace(.named(Self.frameSpace(frame.id)))
     }
@@ -118,7 +118,7 @@ struct NowLayoutCanvas: View {
             if let title = id.side.title {
                 Text(title)
                     .font(.system(size: 28, weight: .semibold))
-                    .foregroundStyle(.white.opacity(0.8))
+                    .foregroundStyle(Color.primary.opacity(0.8))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 8)
             }
@@ -143,7 +143,7 @@ struct NowLayoutCanvas: View {
         .frame(maxWidth: .infinity, alignment: .top)
         .overlay {
             if case .column(let target, _) = drag?.target, target == id {
-                RoundedRectangle(cornerRadius: 20).strokeBorder(.white, lineWidth: 6)
+                RoundedRectangle(cornerRadius: 20).strokeBorder(.primary, lineWidth: 6)
             }
         }
         .onGeometryChange(for: CGRect.self, of: { $0.frame(in: .named(space)) }) { columnRects[id] = $0 }
@@ -190,7 +190,7 @@ struct NowLayoutCanvas: View {
 
     private var insertionBar: some View {
         Capsule()
-            .fill(.white)
+            .fill(.primary)
             .frame(height: 12)
             .padding(.horizontal)
             .shadow(radius: 6)
@@ -455,7 +455,7 @@ private struct SectionBlock: View {
             if section != .map {
                 Text(section.title)
                     .font(.title3.bold())
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.primary)
                     .padding(.leading)
             }
             card
@@ -523,6 +523,7 @@ private struct Callout: View {
             if screenSide == .leading { line }
             Image(systemName: section.systemImage)
                 .font(.system(size: 10, weight: .semibold))
+                .foregroundStyle(.white)
                 .frame(width: 20, height: 20)
                 .background(section.tint.gradient, in: .rect(cornerRadius: 5))
             Text(section.title)
@@ -532,8 +533,8 @@ private struct Callout: View {
             if screenSide == .trailing { line }
         }
         .frame(height: Self.height)
-        .foregroundStyle(.white)
-        .shadow(radius: 2)
+        .foregroundStyle(.primary)
+        .adaptiveShadow(opacity: 0.3, radius: 2)
         .contentShape(Rectangle().inset(by: -6))
     }
 

@@ -106,7 +106,7 @@ private struct MinimapSeries: View {
                     started = true
                 }
             }
-            context.stroke(line, with: .color(.white.opacity(0.85)), lineWidth: 1.5)
+            context.stroke(line, with: .color(Color.primary.opacity(0.85)), lineWidth: 1.5)
         }
 
         let labelFont = Font.system(size: 9.5, weight: .medium)
@@ -119,13 +119,13 @@ private struct MinimapSeries: View {
                 rule.addLine(to: CGPoint(x: dayX, y: height))
                 context.stroke(
                     rule,
-                    with: .color(.white.opacity(0.15)),
+                    with: .color(Color.primary.opacity(0.15)),
                     style: StrokeStyle(lineWidth: 0.75, dash: [2, 2.5])
                 )
             }
             guard dayWidth > 30 || index % 2 == 0 else { continue }
             let label = context.resolve(
-                Text(verbatim: mark.shortLabel).font(labelFont).foregroundStyle(.white.opacity(0.7))
+                Text(verbatim: mark.shortLabel).font(labelFont).foregroundStyle(Color.primary.opacity(0.7))
             )
             context.draw(label, at: CGPoint(x: dayX + 3, y: height + 2), anchor: .topLeading)
         }
@@ -134,7 +134,7 @@ private struct MinimapSeries: View {
         if nowX > 0, nowX < width {
             context.fill(
                 Path(CGRect(x: nowX - 0.5, y: 0, width: 1, height: height)),
-                with: .color(.white.opacity(0.4))
+                with: .color(Color.primary.opacity(0.4))
             )
         }
     }
@@ -168,7 +168,7 @@ private struct MinimapViewport: View {
             height: height - 1.5
         )
         let viewport = Path(roundedRect: viewportRect, cornerRadius: 6)
-        context.fill(viewport, with: .color(.white.opacity(0.1)))
-        context.stroke(viewport, with: .color(.white.opacity(0.9)), lineWidth: 1.5)
+        context.fill(viewport, with: .color(Color.primary.opacity(0.1)))
+        context.stroke(viewport, with: .color(Color.primary.opacity(0.9)), lineWidth: 1.5)
     }
 }

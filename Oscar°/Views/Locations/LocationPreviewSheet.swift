@@ -63,7 +63,7 @@ struct LocationPreviewSheet: View {
             } else {
                 ProgressView()
                     .controlSize(.large)
-                    .tint(.white)
+                    .tint(.primary)
             }
         }
         .animation(.easeInOut(duration: 0.35), value: weather.hasContent)
@@ -95,7 +95,7 @@ struct LocationPreviewSheet: View {
                 .contentTransition(.numericText())
                 .padding(.top, 2)
         }
-        .shadow(radius: 8)
+        .adaptiveShadow(opacity: 0.3, radius: 8)
         .frame(maxWidth: .infinity)
         .accessibilityElement(children: .combine)
     }
@@ -130,7 +130,10 @@ struct LocationPreviewSheet: View {
         .padding(.bottom, 6)
         .background(
             LinearGradient(
-                colors: [.black.opacity(0), .black.opacity(0.35)],
+                colors: [
+                    Color(uiColor: .systemBackground).opacity(0),
+                    Color(uiColor: .systemBackground).opacity(0.85)
+                ],
                 startPoint: .top,
                 endPoint: .bottom
             )

@@ -72,6 +72,7 @@ struct WeatherMapDetailView: View {
                 }
                 Spacer()
             }
+            .environment(\.colorScheme, .dark)
 
             VStack(spacing: 0) {
                 Spacer()
@@ -95,6 +96,7 @@ struct WeatherMapDetailView: View {
                     .padding(.top, 5)
                     .padding(.bottom, 2)
             }
+            .environment(\.colorScheme, .dark)
         }
         .task(id: "\(location.coordinates.latitude)|\(location.coordinates.longitude)") {
             layers.pickRadarSource(for: location.coordinates)

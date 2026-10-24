@@ -5,6 +5,7 @@ struct EnsembleChart: View {
     let lens: EnsembleLens
 
     @State private var readoutSize: CGSize = .zero
+    @Environment(\.colorScheme) private var colorScheme
 
     static let axisHeight: CGFloat = 16
 
@@ -57,12 +58,12 @@ struct EnsembleChart: View {
             let text = context.resolve(
                 Text(verbatim: label.text)
                     .font(labelFont)
-                    .foregroundStyle(.white.opacity(label.index == selected ? 0.95 : 0.6))
+                    .foregroundStyle(Color.primary.opacity(label.index == selected ? 0.95 : 0.6))
             )
             let x = (CGFloat(label.index) + 0.5) * column
             context.fill(
                 Path(CGRect(x: x - 0.375, y: 0, width: 0.75, height: chartHeight)),
-                with: .color(.white.opacity(0.1))
+                with: .color(Color.primary.opacity(0.1))
             )
             let anchor: UnitPoint = label.index == 0 && column < 22 ? .leading : .center
             context.draw(text, at: CGPoint(x: anchor == .leading ? 0 : x, y: chartHeight + Self.axisHeight / 2 + 2), anchor: anchor)
@@ -105,7 +106,7 @@ struct EnsembleChart: View {
             width: barWidth + 5,
             height: fullHeight + 4
         )
-        context.stroke(Path(roundedRect: outline, cornerRadius: 4), with: .color(.white.opacity(0.9)), lineWidth: 1.5)
+        context.stroke(Path(roundedRect: outline, cornerRadius: 4), with: .color(Color.primary.opacity(0.9)), lineWidth: 1.5)
     }
 
     private func drawSpread(
@@ -138,7 +139,7 @@ struct EnsembleChart: View {
             var grid = Path()
             grid.move(to: CGPoint(x: 0, y: y(value)))
             grid.addLine(to: CGPoint(x: size.width, y: y(value)))
-            context.stroke(grid, with: .color(.white.opacity(0.1)), style: StrokeStyle(lineWidth: 0.75, dash: [2, 3]))
+            context.stroke(grid, with: .color(Color.primary.opacity(0.1)), style: StrokeStyle(lineWidth: 0.75, dash: [2, 3]))
         }
 
         func layer(_ path: Path, opacity: Double, in target: inout GraphicsContext) {
@@ -160,7 +161,7 @@ struct EnsembleChart: View {
                 layer(bar(spread.lowest, spread.highest), opacity: 0.3, in: &bars)
                 layer(bar(spread.low, spread.high), opacity: 0.75, in: &bars)
                 let tick = CGRect(x: left - 1, y: y(spread.median) - 1.75, width: barWidth + 2, height: 3.5)
-                bars.fill(Path(roundedRect: tick, cornerRadius: 1.75), with: .color(.white))
+                bars.fill(Path(roundedRect: tick, cornerRadius: 1.75), with: .color(Color.primary))
                 bars.fill(Path(roundedRect: tick.insetBy(dx: 1, dy: 1), cornerRadius: 0.75), with: .color(lens.color))
             }
         } else {
@@ -178,18 +179,18 @@ struct EnsembleChart: View {
             median.addMonotoneCurve(through: spreads.enumerated().compactMap { index, spread in
                 spread.map { CGPoint(x: x(index), y: y($0.median)) }
             })
-            context.stroke(median, with: .color(.white), style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
+            context.stroke(median, with: .color(Color.primary), style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
             context.stroke(median, with: .color(lens.color), style: StrokeStyle(lineWidth: 2.5, lineCap: .round, lineJoin: .round))
         }
 
         var labelContext = context
-        labelContext.addFilter(.shadow(color: .black.opacity(0.45), radius: 1.5))
+        labelContext.addFilter(.shadow(color: colorScheme == .dark ? .black.opacity(0.45) : .clear, radius: 1.5))
         var taken: [CGRect] = []
         for value in gridValues {
             let label = labelContext.resolve(
                 Text(verbatim: state.formatted(value, for: lens))
                     .font(.system(size: 9.5, weight: .medium))
-                    .foregroundStyle(.white.opacity(0.75))
+                    .foregroundStyle(Color.primary.opacity(0.75))
             )
             let labelSize = label.measure(in: CGSize(width: 200, height: 20))
             taken.append(CGRect(x: size.width - 2 - labelSize.width, y: y(value) - 2 - labelSize.height,
@@ -203,7 +204,7 @@ struct EnsembleChart: View {
             let label = labelContext.resolve(
                 Text(verbatim: state.number(spread.median, for: lens) + (lens == .high || lens == .low ? "°" : ""))
                     .font(.system(size: 10.5, weight: .semibold))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Color.primary)
             )
             let labelSize = label.measure(in: CGSize(width: 200, height: 20))
             let above = y(spread.median) - 5 - labelSize.height
@@ -222,11 +223,11 @@ struct EnsembleChart: View {
         let headX = x(selected)
         context.fill(
             Path(CGRect(x: headX - 0.75, y: 0, width: 1.5, height: chartHeight)),
-            with: .color(.white.opacity(0.95))
+            with: .color(Color.primary.opacity(0.95))
         )
         if let spread = spreads[selected] {
             let dot = Path(ellipseIn: CGRect(x: headX - 4, y: y(spread.median) - 4, width: 8, height: 8))
-            context.fill(dot, with: .color(.white))
+            context.fill(dot, with: .color(Color.primary))
             context.stroke(dot, with: .color(lens.color), lineWidth: 2)
         }
     }
@@ -250,7 +251,7 @@ private struct EnsembleReadout: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text(verbatim: state.shortDateLabel(day))
                     .font(.caption2.weight(.medium))
-                    .foregroundStyle(.white.opacity(0.65))
+                    .foregroundStyle(Color.primary.opacity(0.65))
                     .padding(.bottom, 1)
 
                 if lens == .sky {
@@ -259,7 +260,7 @@ private struct EnsembleReadout: View {
                             value: day.sky.share(of: sky).formatted(.percent.precision(.fractionLength(0))))
                     }
                 } else if let spread = state.spread(lens, of: day) {
-                    row(swatch: Capsule().fill(lens.color).stroke(.white, lineWidth: 1).frame(height: 4), label: String(localized: "Median"),
+                    row(swatch: Capsule().fill(lens.color).stroke(Color.primary, lineWidth: 1).frame(height: 4), label: String(localized: "Median"),
                         value: state.formatted(spread.median, for: lens))
                     row(swatch: RoundedRectangle(cornerRadius: 2).fill(lens.color.opacity(0.85)),
                         label: String(localized: "8 von 10"),
@@ -282,9 +283,9 @@ private struct EnsembleReadout: View {
             swatch
                 .frame(width: 8, height: 8)
             Text(verbatim: label)
-                .foregroundStyle(.white.opacity(0.75))
+                .foregroundStyle(Color.primary.opacity(0.75))
             Text(verbatim: value)
-                .foregroundStyle(.white)
+                .foregroundStyle(Color.primary)
         }
     }
 }

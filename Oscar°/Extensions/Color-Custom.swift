@@ -24,3 +24,38 @@ extension Color {
     static let sunnyDayStart = Color(hue: 0.6, saturation: 0.6, brightness: 0.6)
     static let sunnyDayEnd = Color(hue: 0.6, saturation: 0.4, brightness: 0.85)
 }
+
+private struct AdaptiveTextShadow: ViewModifier {
+    @Environment(\.colorScheme) private var colorScheme
+    let opacity: Double
+    let radius: CGFloat
+    let y: CGFloat
+
+    func body(content: Content) -> some View {
+        content.shadow(
+            color: colorScheme == .dark ? .black.opacity(opacity) : .clear,
+            radius: radius,
+            y: y
+        )
+    }
+}
+
+extension View {
+    // White text needs the shadow on dark material; dark text would only get a halo.
+    func adaptiveShadow(opacity: Double = 0.3, radius: CGFloat, y: CGFloat = 1) -> some View {
+        modifier(AdaptiveTextShadow(opacity: opacity, radius: radius, y: y))
+    }
+}
+
+extension Color {
+    // Series colors tuned for dark material need a darker twin on light material.
+    static func adaptiveGray(dark: Double, light: Double) -> Color {
+        #if os(watchOS)
+        Color(white: dark)
+        #else
+        Color(uiColor: UIColor { traits in
+            UIColor(white: traits.userInterfaceStyle == .dark ? dark : light, alpha: 1)
+        })
+        #endif
+    }
+}

@@ -48,8 +48,8 @@ struct PreviewHead: View {
             .minimumScaleFactor(0.7)
             .frame(minHeight: 20)
         }
-        .foregroundStyle(.white)
-        .shadow(radius: 3)
+        .foregroundStyle(.primary)
+        .adaptiveShadow(opacity: 0.3, radius: 3)
         .padding(.horizontal, 16)
     }
 }

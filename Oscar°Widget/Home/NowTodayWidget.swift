@@ -43,8 +43,8 @@ struct NowTodayEntryView: View {
         }
         .widgetAccentable()
         .padding()
-        .foregroundStyle(.white)
-        .containerBackground(.black, for: .widget)
+        .foregroundStyle(.primary)
+        .containerBackground(for: .widget) { Color(uiColor: .systemBackground) }
     }
 }
 

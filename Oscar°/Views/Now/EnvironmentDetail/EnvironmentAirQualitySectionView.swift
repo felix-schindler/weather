@@ -75,7 +75,7 @@ struct EnvironmentAirQualitySectionView: View {
 
                 ForEach(aqiComponents.enumerated(), id: \.element.id) { index, component in
                     if index > 0 {
-                        Divider().overlay(.white.opacity(0.08))
+                        Divider().overlay(Color.primary.opacity(0.08))
                     }
 
                     LabeledContent {

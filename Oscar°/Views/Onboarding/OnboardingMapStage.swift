@@ -153,13 +153,13 @@ private struct LayerTabs: View {
                         .font(.footnote.weight(.semibold))
                         .lineLimit(1)
                         .minimumScaleFactor(0.7)
-                        .foregroundStyle(isCurrent ? .black : .white)
+                        .foregroundStyle(isCurrent ? Color(uiColor: .systemBackground) : .primary)
                         .padding(.horizontal, 6)
                         .padding(.vertical, 8)
                         .frame(maxWidth: .infinity)
                         .background {
                             if isCurrent {
-                                Capsule().fill(.white)
+                                Capsule().fill(.primary)
                             }
                         }
                         .contentShape(.capsule)

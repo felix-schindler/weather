@@ -19,7 +19,7 @@ struct DetailSectionPicker<Section: DetailSection>: View {
         .background(.thinMaterial, in: .rect(cornerRadius: 18))
         .overlay {
             RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .stroke(.white.opacity(0.08), lineWidth: 1)
+                .stroke(Color.primary.opacity(0.08), lineWidth: 1)
         }
         .padding(.horizontal)
         .padding(.top, 8)

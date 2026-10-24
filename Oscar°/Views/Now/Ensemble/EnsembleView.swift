@@ -40,7 +40,7 @@ private struct EnsembleModelPicker: View {
                     .imageScale(.small)
             }
             .font(.footnote.weight(.semibold))
-            .foregroundStyle(.white)
+            .foregroundStyle(.primary)
             .padding(.horizontal, 10)
             .padding(.vertical, 5)
             .glassEffect(.regular.interactive(), in: Capsule())
@@ -59,7 +59,7 @@ private struct EnsembleContent: View {
             if state.days.isEmpty {
                 if state.isLoading {
                     ProgressView()
-                        .tint(.white)
+                        .tint(.primary)
                 } else {
                     ContentUnavailableView {
                         Label("Keine Ensemble-Daten", systemImage: "chart.line.downtrend.xyaxis")

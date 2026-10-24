@@ -169,7 +169,7 @@ struct LocationMapSheet: View {
         .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
         .overlay(
             RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .strokeBorder(.white.opacity(0.08), lineWidth: 1)
+                .strokeBorder(Color.primary.opacity(0.08), lineWidth: 1)
         )
         .padding(.horizontal, 16)
         .padding(.bottom, 16)

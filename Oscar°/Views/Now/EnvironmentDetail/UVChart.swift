@@ -73,7 +73,7 @@ struct UVChart: View {
                     series: .value("Segment", "uv-past")
                 )
                 .interpolationMethod(.catmullRom)
-                .foregroundStyle(.white.opacity(0.4))
+                .foregroundStyle(Color.primary.opacity(0.4))
                 .lineStyle(.init(lineWidth: 3, dash: [7, 5]))
             }
 
@@ -84,7 +84,7 @@ struct UVChart: View {
                     series: .value("Segment", "uv-future")
                 )
                 .interpolationMethod(.catmullRom)
-                .foregroundStyle(.white)
+                .foregroundStyle(.primary)
                 .lineStyle(.init(lineWidth: 3))
             }
 
@@ -106,7 +106,7 @@ struct UVChart: View {
 
                             HStack(spacing: 6) {
                                 Circle()
-                                    .fill(.white)
+                                    .fill(.primary)
                                     .frame(width: 6, height: 6)
 
                                 Text("UV: \(selectedData.value, specifier: "%.1f")")

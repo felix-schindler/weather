@@ -99,7 +99,7 @@ struct PrecipitationSeriesChart: View {
                 .interpolationMethod(.catmullRom)
                 .foregroundStyle(
                     LinearGradient(
-                        gradient: Gradient(colors: [Color.white, Color.white.opacity(0.3)]),
+                        gradient: Gradient(colors: [Color.primary, Color.primary.opacity(0.3)]),
                         startPoint: .top, endPoint: .bottom
                     )
                 )
@@ -115,11 +115,11 @@ struct PrecipitationSeriesChart: View {
                     ) {
                         VStack(alignment: .center) {
                             Text(SettingService.formattedTime(rawSelectedDate, timeZone: timeZone))
-                                .font(.caption2).foregroundStyle(.white.opacity(0.72))
+                                .font(.caption2).foregroundStyle(Color.primary.opacity(0.72))
                             VStack {
                                 Text(nearestPrecipitation(for: rawSelectedDate))
-                                    .bold().foregroundStyle(.white)
-                                Text("mm/h").font(.caption2).foregroundStyle(.white.opacity(0.72))
+                                    .bold().foregroundStyle(.primary)
+                                Text("mm/h").font(.caption2).foregroundStyle(Color.primary.opacity(0.72))
                                     .padding(.top, -12)
                             }
                         }
@@ -136,7 +136,7 @@ struct PrecipitationSeriesChart: View {
                 AxisValueLabel(anchor: value.index == 0 ? .topLeading : .top) {
                     if let date = value.as(Date.self) {
                         Text(SettingService.formattedTime(date, timeZone: timeZone))
-                            .foregroundStyle(.white.opacity(0.72))
+                            .foregroundStyle(Color.primary.opacity(0.72))
                     }
                 }
             }
@@ -147,7 +147,7 @@ struct PrecipitationSeriesChart: View {
                 AxisValueLabel() {
                     if let value = value.as(Double.self) {
                         Text("\(value, specifier: "%.1f") mm/h")
-                            .foregroundStyle(.white.opacity(0.72))
+                            .foregroundStyle(Color.primary.opacity(0.72))
                     }
                 }
             }

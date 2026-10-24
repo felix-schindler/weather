@@ -74,9 +74,9 @@ private struct ForecastStage: View {
             ProviderLogo(asset: "logo-ecmwf", height: 16)
             ProviderLogo(asset: "logo-noaa", height: 30)
         }
-        .foregroundStyle(.white)
-        .shadow(color: .black.opacity(0.35), radius: 1)
-        .shadow(color: .black.opacity(0.45), radius: 8, y: 2)
+        .foregroundStyle(.primary)
+        .adaptiveShadow(opacity: 0.35, radius: 1)
+        .adaptiveShadow(opacity: 0.45, radius: 8, y: 2)
         .padding(.top, 4)
     }
 }

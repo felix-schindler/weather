@@ -17,7 +17,7 @@ struct HourlyReadoutBox: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text(verbatim: model.clockLabel)
                     .font(.caption2.weight(.medium).monospacedDigit())
-                    .foregroundStyle(.white.opacity(0.65))
+                    .foregroundStyle(Color.primary.opacity(0.65))
                     .padding(.bottom, 1)
                 ForEach(rows) { row in
                     HStack(spacing: 5) {
@@ -26,10 +26,10 @@ struct HourlyReadoutBox: View {
                             .frame(width: 6, height: 6)
                         if let label = row.label {
                             Text(verbatim: label)
-                                .foregroundStyle(.white.opacity(0.75))
+                                .foregroundStyle(Color.primary.opacity(0.75))
                         }
                         Text(verbatim: row.value)
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.primary)
                     }
                 }
             }

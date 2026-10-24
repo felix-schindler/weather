@@ -23,7 +23,7 @@ struct OnboardingFinaleStep: View {
 
             Text("Alles bereit.")
                 .font(.title3)
-                .foregroundStyle(.white.opacity(0.8))
+                .foregroundStyle(Color.primary.opacity(0.8))
                 .padding(.top, 12)
                 .opacity(showsSubtitle ? 1 : 0)
 

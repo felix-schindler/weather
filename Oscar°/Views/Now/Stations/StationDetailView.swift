@@ -56,7 +56,6 @@ struct StationDetailView: View {
                 }
             }
         }
-        .preferredColorScheme(.dark)
     }
 }
 
@@ -366,7 +365,7 @@ private struct StationFooter: View {
                 ProviderLogo(asset: "logo-dwd", height: 28)
                 ProviderLogo(asset: "logo-oscar-server", height: 24)
             }
-            .foregroundStyle(.white)
+            .foregroundStyle(.primary)
             .opacity(0.7)
             .accessibilityElement(children: .ignore)
             .accessibilityLabel(Text(verbatim: "EUMETNET, DWD & Oscar Server"))
@@ -706,8 +705,8 @@ struct StationChart: View {
                     Text(verbatim: (extremeFormat ?? valueFormat)(extreme.point.value))
                         .font(.caption2.weight(.semibold))
                         .monospacedDigit()
-                        .foregroundStyle(.white)
-                        .shadow(color: .black.opacity(0.35), radius: 2)
+                        .foregroundStyle(.primary)
+                        .adaptiveShadow(opacity: 0.35, radius: 2)
                 }
         }
     }
@@ -811,7 +810,7 @@ private struct StationValueRow: View {
                 .frame(width: 6, height: 6)
             Text("\(Text(label)): \(text)")
                 .font(.caption2)
-                .foregroundStyle(.white)
+                .foregroundStyle(.primary)
         }
     }
 }

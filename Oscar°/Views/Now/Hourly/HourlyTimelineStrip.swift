@@ -6,6 +6,7 @@ struct HourlyTimelineStrip: View {
 
     @State private var isDragging = false
     @State private var readoutSize: CGSize = .zero
+    @Environment(\.colorScheme) private var colorScheme
 
     private static let axisHeight: CGFloat = 16
 
@@ -155,7 +156,7 @@ struct HourlyTimelineStrip: View {
             let columnX = x(model.times[currentHour]) - hourWidth / 2
             context.fill(
                 Path(roundedRect: CGRect(x: columnX, y: 0, width: hourWidth, height: chartHeight), cornerRadius: 4),
-                with: .color(.white.opacity(0.1))
+                with: .color(Color.primary.opacity(0.1))
             )
         }
 
@@ -173,13 +174,13 @@ struct HourlyTimelineStrip: View {
                     gridPath.addLine(to: CGPoint(x: width, y: gridY))
                     context.stroke(
                         gridPath,
-                        with: .color(.white.opacity(0.1)),
+                        with: .color(Color.primary.opacity(0.1)),
                         style: StrokeStyle(lineWidth: 0.75, dash: [2, 3])
                     )
                     let label = context.resolve(
                         Text(verbatim: layout.extremeFormat(value))
                             .font(gridFont)
-                            .foregroundStyle(.white.opacity(0.6))
+                            .foregroundStyle(Color.primary.opacity(0.6))
                     )
                     let labelSize = label.measure(in: CGSize(width: 200, height: 20))
                     labelRects.append(CGRect(
@@ -214,11 +215,11 @@ struct HourlyTimelineStrip: View {
             splitFill(ribbon, color: .hourlyCloud, opacity: 0.85)
 
             var labelContext = context
-            labelContext.addFilter(.shadow(color: .black.opacity(0.35), radius: 1.5))
+            labelContext.addFilter(.shadow(color: colorScheme == .dark ? .black.opacity(0.35) : .clear, radius: 1.5))
             let label = labelContext.resolve(
                 Text(verbatim: band.label)
                     .font(.caption2.weight(.medium))
-                    .foregroundStyle(.white.opacity(0.9))
+                    .foregroundStyle(Color.primary.opacity(0.9))
             )
             labelContext.draw(label, at: CGPoint(x: 6, y: centerY), anchor: .leading)
         }
@@ -328,7 +329,7 @@ struct HourlyTimelineStrip: View {
                     rule.addLine(to: CGPoint(x: startX, y: chartHeight))
                     context.stroke(
                         rule,
-                        with: .color(.white.opacity(0.18)),
+                        with: .color(Color.primary.opacity(0.18)),
                         style: StrokeStyle(lineWidth: 1, dash: [3, 3])
                     )
                 }
@@ -337,7 +338,7 @@ struct HourlyTimelineStrip: View {
                 let resolved = context.resolve(
                     Text(verbatim: mark.label)
                         .font(dayFont)
-                        .foregroundStyle(.white.opacity(0.85))
+                        .foregroundStyle(Color.primary.opacity(0.85))
                 )
                 let textSize = resolved.measure(in: CGSize(width: 200, height: 20))
                 let labelX = min(max(startX + 6, 6), endX - textSize.width - 6)
@@ -359,7 +360,7 @@ struct HourlyTimelineStrip: View {
             let label = context.resolve(
                 Text(verbatim: layout.extremeFormat(extreme.value))
                     .font(valueFont)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Color.primary)
             )
             let labelSize = label.measure(in: CGSize(width: 200, height: 20))
             let clampedX = min(max(markX - labelSize.width / 2, 2), width - labelSize.width - 2)
@@ -378,7 +379,7 @@ struct HourlyTimelineStrip: View {
         if nowX > 0, nowX < width {
             context.fill(
                 Path(CGRect(x: nowX - 0.5, y: 0, width: 1, height: chartHeight)),
-                with: .color(.white.opacity(0.35))
+                with: .color(Color.primary.opacity(0.35))
             )
         }
 
@@ -404,7 +405,7 @@ struct HourlyTimelineStrip: View {
                 if hour != 0, tickX > 0, tickX < width {
                     context.fill(
                         Path(CGRect(x: tickX - 0.375, y: 0, width: 0.75, height: chartHeight)),
-                        with: .color(.white.opacity(0.1))
+                        with: .color(Color.primary.opacity(0.1))
                     )
                 }
                 if tickX > 14, tickX < width - 14 {
@@ -413,7 +414,7 @@ struct HourlyTimelineStrip: View {
                             tickDate, timeZone: model.timeZone, showsMinutes: false
                         ))
                         .font(tickFont)
-                        .foregroundStyle(.white.opacity(0.6))
+                        .foregroundStyle(Color.primary.opacity(0.6))
                     )
                     context.draw(label, at: CGPoint(x: tickX, y: chartHeight + Self.axisHeight / 2 + 2))
                 }
@@ -425,7 +426,7 @@ struct HourlyTimelineStrip: View {
         let headX = x(scrubTime)
         context.fill(
             Path(CGRect(x: headX - 0.75, y: 0, width: 1.5, height: chartHeight)),
-            with: .color(.white.opacity(0.95))
+            with: .color(Color.primary.opacity(0.95))
         )
         func interpolated(_ values: [Double]) -> Double? {
             HourlyTimelineModel.interpolatedValue(at: scrubTime, times: model.times, values: values)
@@ -434,7 +435,7 @@ struct HourlyTimelineStrip: View {
         for line in layout.lines {
             guard let value = interpolated(line.values) else { continue }
             let dot = Path(ellipseIn: CGRect(x: headX - 4, y: yOf(value) - 4, width: 8, height: 8))
-            context.fill(dot, with: .color(.white))
+            context.fill(dot, with: .color(Color.primary))
             context.stroke(dot, with: .color(line.color), lineWidth: 2)
         }
         if layout.showsBars {
@@ -444,7 +445,7 @@ struct HourlyTimelineStrip: View {
                 let dot = Path(ellipseIn: CGRect(
                     x: headX - 4, y: chartHeight - barHeight(rate) - 4, width: 8, height: 8
                 ))
-                context.fill(dot, with: .color(.white))
+                context.fill(dot, with: .color(Color.primary))
                 context.stroke(dot, with: .color(isSnow ? .cyan : .hourlyRain), lineWidth: 2)
             }
         }

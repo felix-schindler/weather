@@ -41,7 +41,7 @@ enum HourlyLens: String, CaseIterable, Identifiable {
 
 extension Color {
     static let hourlyRain = Color.blue
-    static let hourlyCloud = Color(white: 0.9)
+    static let hourlyCloud = Color.adaptiveGray(dark: 0.9, light: 0.4)
 }
 
 struct HourlyLensLayout {

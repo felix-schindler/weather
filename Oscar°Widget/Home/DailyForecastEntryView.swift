@@ -34,9 +34,9 @@ struct DailyForecastEntryView: View {
             }
         }
         .padding(family == .systemLarge ? 16 : 12)
-        .foregroundStyle(.white)
+        .foregroundStyle(.primary)
         .widgetAccentable()
-        .containerBackground(.black, for: .widget)
+        .containerBackground(for: .widget) { Color(uiColor: .systemBackground) }
     }
 }
 
@@ -63,7 +63,7 @@ struct DailyForecastRow: View {
             Text(roundTemperatureString(temperature: day.low))
                 .font(.subheadline)
                 .monospacedDigit()
-                .foregroundStyle(.white.opacity(0.75))
+                .foregroundStyle(Color.primary.opacity(0.75))
                 .frame(width: 34, alignment: .trailing)
 
             TemperatureRangeView(
@@ -117,7 +117,7 @@ struct DailyForecastCompactRow: View {
             Text(roundTemperatureString(temperature: day.low))
                 .font(.footnote)
                 .monospacedDigit()
-                .foregroundStyle(.white.opacity(0.7))
+                .foregroundStyle(Color.primary.opacity(0.7))
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(
