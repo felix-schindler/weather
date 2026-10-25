@@ -1,97 +1,97 @@
 import SwiftUI
 
 extension HourlyTimelineModel {
-    private func nearestValue(in values: [Double]) -> Double? {
-        guard hasData, let first = times.first, !values.isEmpty else { return nil }
-        let index = Int(((scrubTime - first) / 3_600).rounded())
-        guard values.indices.contains(index) else { return values.last }
-        return values[index]
-    }
+	private func nearestValue(in values: [Double]) -> Double? {
+		guard hasData, let first = times.first, !values.isEmpty else { return nil }
+		let index = Int(((scrubTime - first) / 3_600).rounded())
+		guard values.indices.contains(index) else { return values.last }
+		return values[index]
+	}
 
-    // MARK: - Readout
+	// MARK: - Readout
 
-    var dateLabel: String {
-        guard hasData else { return "" }
-        return dayLabel + " " + SettingService.formattedDayMonth(Date(timeIntervalSince1970: scrubTime), timeZone: timeZone)
-    }
+	var dateLabel: String {
+		guard hasData else { return "" }
+		return dayLabel + " " + SettingService.formattedDayMonth(Date(timeIntervalSince1970: scrubTime), timeZone: timeZone)
+	}
 
-    var titleLabel: String {
-        guard hasData else { return "" }
-        return dayLabel + ", " + clockLabel
-    }
+	var titleLabel: String {
+		guard hasData else { return "" }
+		return dayLabel + ", " + clockLabel
+	}
 
-    private var dayLabel: String {
-        HourlyFormatting.dayLabel(timestamp: scrubTime, timeZone: timeZone, now: .now)
-    }
+	private var dayLabel: String {
+		HourlyFormatting.dayLabel(timestamp: scrubTime, timeZone: timeZone, now: .now)
+	}
 
-    var eyebrowLabel: String {
-        guard hasData else { return "" }
-        let date = Date(timeIntervalSince1970: scrubTime)
-        let dayMonth = SettingService.formattedDayMonth(date, timeZone: timeZone)
-        let weekday = SettingService.formattedWeekday(date, timeZone: timeZone)
-        guard dayLabel != weekday else { return dayMonth }
-        return weekday + " · " + dayMonth
-    }
+	var eyebrowLabel: String {
+		guard hasData else { return "" }
+		let date = Date(timeIntervalSince1970: scrubTime)
+		let dayMonth = SettingService.formattedDayMonth(date, timeZone: timeZone)
+		let weekday = SettingService.formattedWeekday(date, timeZone: timeZone)
+		guard dayLabel != weekday else { return dayMonth }
+		return weekday + " · " + dayMonth
+	}
 
-    var clockLabel: String {
-        guard hasData else { return "" }
-        let displayTime = (scrubTime / 600).rounded(.down) * 600
-        return HourlyFormatting.timeString(timestamp: displayTime, timeZone: timeZone)
-    }
+	var clockLabel: String {
+		guard hasData else { return "" }
+		let displayTime = (scrubTime / 600).rounded(.down) * 600
+		return HourlyFormatting.timeString(timestamp: displayTime, timeZone: timeZone)
+	}
 
-    var timeLabel: String {
-        guard hasData else { return "" }
-        return dateLabel + ", " + clockLabel
-    }
+	var timeLabel: String {
+		guard hasData else { return "" }
+		return dateLabel + ", " + clockLabel
+	}
 
-    var temperatureLabel: String {
-        HourlyFormatting.temperatureString(sample(temperature))
-    }
+	var temperatureLabel: String {
+		HourlyFormatting.temperatureString(sample(temperature))
+	}
 
-    var conditionLabel: String {
-        guard hasData else { return "" }
-        let code = Int(nearestValue(in: weathercode) ?? 0)
-        let dryCodes = code < 51 || code > 99
-        if dryCodes, precipitationRate >= 0.1 {
-            return WeatherConditionLabel.text(for: (sample(snowfall) ?? 0) > 0 ? .snow : .rain)
-        }
-        return WeatherConditionLabel.text(for: code)
-    }
+	var conditionLabel: String {
+		guard hasData else { return "" }
+		let code = Int(nearestValue(in: weathercode) ?? 0)
+		let dryCodes = code < 51 || code > 99
+		if dryCodes, precipitationRate >= 0.1 {
+			return WeatherConditionLabel.text(for: (sample(snowfall) ?? 0) > 0 ? .snow : .rain)
+		}
+		return WeatherConditionLabel.text(for: code)
+	}
 
-    var precipitationRate: Double {
-        sample(precipitation) ?? 0
-    }
+	var precipitationRate: Double {
+		sample(precipitation) ?? 0
+	}
 
-    var windLabel: String {
-        guard let speed = sample(windspeed) else { return "--" }
-        return HourlyFormatting.windString(
-            speed,
-            unit: WindSpeedUnit(settingValue: SettingService.shared.windSpeedUnit),
-            unitString: windUnitString
-        )
-    }
+	var windLabel: String {
+		guard let speed = sample(windspeed) else { return "--" }
+		return HourlyFormatting.windString(
+			speed,
+			unit: WindSpeedUnit(settingValue: SettingService.shared.windSpeedUnit),
+			unitString: windUnitString
+		)
+	}
 
-    func rowValue(for lens: HourlyLens) -> String? {
-        guard hasData else { return nil }
-        let layout = layout(for: lens)
-        switch lens {
-        case .overview:
-            return HourlyFormatting.temperatureString(sample(temperature))
-        case .clouds:
-            return layout.extremeFormat(sample(cloudcover) ?? 0)
-        default:
-            guard let primary = layout.primary, let value = sample(primary.values) else { return nil }
-            return layout.extremeFormat(value)
-        }
-    }
+	func rowValue(for lens: HourlyLens) -> String? {
+		guard hasData else { return nil }
+		let layout = layout(for: lens)
+		switch lens {
+		case .overview:
+			return HourlyFormatting.temperatureString(sample(temperature))
+		case .clouds:
+			return layout.extremeFormat(sample(cloudcover) ?? 0)
+		default:
+			guard let primary = layout.primary, let value = sample(primary.values) else { return nil }
+			return layout.extremeFormat(value)
+		}
+	}
 
-    var compactMoistureUnit: String {
-        soilMoistureUnit.replacingOccurrences(of: "/", with: "\u{2044}")
-    }
+	var compactMoistureUnit: String {
+		soilMoistureUnit.replacingOccurrences(of: "/", with: "\u{2044}")
+	}
 
-    var accessibilityValue: String {
-        guard hasData else { return "" }
-        return timeLabel + ", " + temperatureLabel + ", " + conditionLabel
-            + ", " + String(localized: "Wind") + " " + windLabel
-    }
+	var accessibilityValue: String {
+		guard hasData else { return "" }
+		return timeLabel + ", " + temperatureLabel + ", " + conditionLabel
+			+ ", " + String(localized: "Wind") + " " + windLabel
+	}
 }

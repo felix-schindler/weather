@@ -1,99 +1,99 @@
 import SwiftUI
 
 struct EnvironmentAirQualitySectionView: View {
-    let currentAQI: Double?
-    let currentAQIBadge: LocalizedStringKey
-    let currentAQIColor: Color
-    let aqiComponents: [AQIComponentSnapshot]
-    let mainPollutant: AQIComponentSnapshot?
-    let time: [Double]
-    let aqi: [Double]
-    let pm25: [Double]
-    let pm10: [Double]
-    let no2: [Double]
-    let o3: [Double]
-    let so2: [Double]
-    let maxTimeRange: ClosedRange<Date>
-    let referenceDate: Date
-    let initialChartScrollPosition: Date
-    let chartScrollSynchronizer: ChartScrollSynchronizer
-    let chartTimelineVersion: Int
+	let currentAQI: Double?
+	let currentAQIBadge: LocalizedStringKey
+	let currentAQIColor: Color
+	let aqiComponents: [AQIComponentSnapshot]
+	let mainPollutant: AQIComponentSnapshot?
+	let time: [Double]
+	let aqi: [Double]
+	let pm25: [Double]
+	let pm10: [Double]
+	let no2: [Double]
+	let o3: [Double]
+	let so2: [Double]
+	let maxTimeRange: ClosedRange<Date>
+	let referenceDate: Date
+	let initialChartScrollPosition: Date
+	let chartScrollSynchronizer: ChartScrollSynchronizer
+	let chartTimelineVersion: Int
 
-    var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            DetailCard {
-                EnvironmentDetailHeaderView(
-                    title: "Luftqualität",
-                    value: currentAQI.map { String(Int($0)) } ?? "--",
-                    badge: currentAQIBadge,
-                    color: currentAQIColor,
-                    subtitle: nil
-                )
+	var body: some View {
+		VStack(alignment: .leading, spacing: 16) {
+			DetailCard {
+				EnvironmentDetailHeaderView(
+					title: "Luftqualität",
+					value: currentAQI.map { String(Int($0)) } ?? "--",
+					badge: currentAQIBadge,
+					color: currentAQIColor,
+					subtitle: nil
+				)
 
-                AQIChart(
-                    points: AQIDataPoint.points(time: time, aqi: aqi, pm25: pm25, pm10: pm10, no2: no2, o3: o3, so2: so2),
-                    time: time,
-                    maxTimeRange: maxTimeRange,
-                    referenceDate: referenceDate
-                )
-                .synchronizedChartScroll(
-                    initialX: initialChartScrollPosition,
-                    using: chartScrollSynchronizer
-                )
-                .id(chartTimelineVersion)
-            }
+				AQIChart(
+					points: AQIDataPoint.points(time: time, aqi: aqi, pm25: pm25, pm10: pm10, no2: no2, o3: o3, so2: so2),
+					time: time,
+					maxTimeRange: maxTimeRange,
+					referenceDate: referenceDate
+				)
+				.synchronizedChartScroll(
+					initialX: initialChartScrollPosition,
+					using: chartScrollSynchronizer
+				)
+				.id(chartTimelineVersion)
+			}
 
-            DetailCard {
-                Text("Hauptschadstoff")
-                    .font(.headline)
-                    .foregroundStyle(.primary)
+			DetailCard {
+				Text("Hauptschadstoff")
+					.font(.headline)
+					.foregroundStyle(.primary)
 
-                if let mainPollutant {
-                    Text(verbatim: mainPollutant.label)
-                        .font(.title3.weight(.bold))
-                        .foregroundStyle(mainPollutant.accentColor)
+				if let mainPollutant {
+					Text(verbatim: mainPollutant.label)
+						.font(.title3.weight(.bold))
+						.foregroundStyle(mainPollutant.accentColor)
 
-                    Text("Aktuell dominierender Schadstoff")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+					Text("Aktuell dominierender Schadstoff")
+						.font(.caption)
+						.foregroundStyle(.secondary)
 
-                    Text(LocalizedStringKey(mainPollutant.explanationBodyKey))
-                        .font(.body)
-                        .foregroundStyle(.primary)
-                } else {
-                    EnvironmentDetailEmptyStateView(
-                        title: "Keine Daten",
-                        message: "Für die aktuelle Stunde liegen keine Luftqualitätsdaten vor."
-                    )
-                }
-            }
+					Text(LocalizedStringKey(mainPollutant.explanationBodyKey))
+						.font(.body)
+						.foregroundStyle(.primary)
+				} else {
+					EnvironmentDetailEmptyStateView(
+						title: "Keine Daten",
+						message: "Für die aktuelle Stunde liegen keine Luftqualitätsdaten vor."
+					)
+				}
+			}
 
-            DetailCard {
-                Text("Schadstoffe jetzt")
-                    .font(.headline)
-                    .foregroundStyle(.primary)
+			DetailCard {
+				Text("Schadstoffe jetzt")
+					.font(.headline)
+					.foregroundStyle(.primary)
 
-                ForEach(aqiComponents.enumerated(), id: \.element.id) { index, component in
-                    if index > 0 {
-                        Divider()
-                    }
+				ForEach(aqiComponents.enumerated(), id: \.element.id) { index, component in
+					if index > 0 {
+						Divider()
+					}
 
-                    LabeledContent {
-                        HStack(spacing: 8) {
-                            if let status = component.status, let statusColor = component.statusColor {
-                                Text(LocalizedStringKey(status))
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(statusColor)
-                            } else {
-                                Text("–")
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-                    } label: {
-                        Text(verbatim: component.label)
-                    }
-                }
-            }
-        }
-    }
+					LabeledContent {
+						HStack(spacing: 8) {
+							if let status = component.status, let statusColor = component.statusColor {
+								Text(LocalizedStringKey(status))
+									.fontWeight(.semibold)
+									.foregroundStyle(statusColor)
+							} else {
+								Text("–")
+									.foregroundStyle(.secondary)
+							}
+						}
+					} label: {
+						Text(verbatim: component.label)
+					}
+				}
+			}
+		}
+	}
 }

@@ -1,56 +1,56 @@
 import SwiftUI
 
 struct EnvironmentUVSectionView: View {
-    let currentUV: Double?
-    let currentUVBadge: LocalizedStringKey
-    let currentUVColor: Color
-    let riskTitle: String
-    let riskBody: String
-    let uvIndex: [Double]
-    let time: [Double]
-    let maxTimeRange: ClosedRange<Date>
-    let referenceDate: Date
-    let initialChartScrollPosition: Date
-    let chartScrollSynchronizer: ChartScrollSynchronizer
-    let chartTimelineVersion: Int
+	let currentUV: Double?
+	let currentUVBadge: LocalizedStringKey
+	let currentUVColor: Color
+	let riskTitle: String
+	let riskBody: String
+	let uvIndex: [Double]
+	let time: [Double]
+	let maxTimeRange: ClosedRange<Date>
+	let referenceDate: Date
+	let initialChartScrollPosition: Date
+	let chartScrollSynchronizer: ChartScrollSynchronizer
+	let chartTimelineVersion: Int
 
-    var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            DetailCard {
-                EnvironmentDetailHeaderView(
-                    title: "UV-Index",
-                    value: currentUV.map { $0.formatted(.number.precision(.fractionLength(1))) } ?? "--",
-                    badge: currentUVBadge,
-                    color: currentUVColor,
-                    subtitle: nil
-                )
+	var body: some View {
+		VStack(alignment: .leading, spacing: 16) {
+			DetailCard {
+				EnvironmentDetailHeaderView(
+					title: "UV-Index",
+					value: currentUV.map { $0.formatted(.number.precision(.fractionLength(1))) } ?? "--",
+					badge: currentUVBadge,
+					color: currentUVColor,
+					subtitle: nil
+				)
 
-                UVChart(
-                    points: UVDataPoint.points(time: time, uvIndex: uvIndex),
-                    time: time,
-                    maxTimeRange: maxTimeRange,
-                    referenceDate: referenceDate
-                )
-                .synchronizedChartScroll(
-                    initialX: initialChartScrollPosition,
-                    using: chartScrollSynchronizer
-                )
-                .id(chartTimelineVersion)
-            }
+				UVChart(
+					points: UVDataPoint.points(time: time, uvIndex: uvIndex),
+					time: time,
+					maxTimeRange: maxTimeRange,
+					referenceDate: referenceDate
+				)
+				.synchronizedChartScroll(
+					initialX: initialChartScrollPosition,
+					using: chartScrollSynchronizer
+				)
+				.id(chartTimelineVersion)
+			}
 
-            DetailCard {
-                Text("Gesundheitsbewertung")
-                    .font(.headline)
-                    .foregroundStyle(.primary)
+			DetailCard {
+				Text("Gesundheitsbewertung")
+					.font(.headline)
+					.foregroundStyle(.primary)
 
-                Text(LocalizedStringKey(riskTitle))
-                    .font(.headline)
-                    .foregroundStyle(currentUVColor)
+				Text(LocalizedStringKey(riskTitle))
+					.font(.headline)
+					.foregroundStyle(currentUVColor)
 
-                Text(LocalizedStringKey(riskBody))
-                    .font(.body)
-                    .foregroundStyle(.primary)
-            }
-        }
-    }
+				Text(LocalizedStringKey(riskBody))
+					.font(.body)
+					.foregroundStyle(.primary)
+			}
+		}
+	}
 }

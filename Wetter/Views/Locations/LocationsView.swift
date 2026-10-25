@@ -12,353 +12,359 @@ import CoreLocation
 import SwiftUI
 
 struct LocationsView: View {
-    @Environment(NowPresentationCoordinator.self) private var presentation
-    @Environment(\.dismiss) private var dismiss
-    @State private var searchText = ""
-    @State private var searchResult: Components.Schemas.SearchResponse = .init()
-    @State private var searchError: String?
-    @State private var isSearchInFlight = false
-    @State private var isMapPresented = false
-    @State private var isSearchPresented = false
-    @State private var candidate: LocationCandidate?
-    @State private var editTarget: LocationEditTarget?
-    @State private var selectedCityURI: URL?
-    @State private var selectionCount = 0
-    private let client = APIClient.shared
-    private var locationService = LocationService.shared
-    private var conditionsStore = CityConditionsStore.shared
+	@Environment(NowPresentationCoordinator.self) private var presentation
+	@Environment(\.dismiss) private var dismiss
+	@State private var searchText = ""
+	@State private var searchResult: Components.Schemas.SearchResponse = .init()
+	@State private var searchError: String?
+	@State private var isSearchInFlight = false
+	@State private var isMapPresented = false
+	@State private var isSearchPresented = false
+	@State private var candidate: LocationCandidate?
+	@State private var editTarget: LocationEditTarget?
+	@State private var selectedCityURI: URL?
+	@State private var selectionCount = 0
+	private let client = APIClient.shared
+	private var locationService = LocationService.shared
+	private var conditionsStore = CityConditionsStore.shared
 
-    private var gpsAuthorized: Bool {
-        locationService.authStatus == .authorizedWhenInUse
-            || locationService.authStatus == .authorizedAlways
-    }
+	private var gpsAuthorized: Bool {
+		locationService.authStatus == .authorizedWhenInUse
+			|| locationService.authStatus == .authorizedAlways
+	}
 
-    private var cities: [City] {
-        locationService.city.cities
-    }
+	private var cities: [City] {
+		locationService.city.cities
+	}
 
-    private var isSearching: Bool {
-        !searchText.isEmpty
-    }
+	private var isSearching: Bool {
+		!searchText.isEmpty
+	}
 
-    var body: some View {
-        NavigationStack {
-            locationList
-                .navigationTitle("Orte")
-                .toolbarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button(action: presentMapPicker) {
-                            Image(systemName: "map")
-                                .overlay(alignment: .bottomTrailing) {
-                                    Image(systemName: "plus.circle.fill")
-                                        .font(.system(size: 10, weight: .bold))
-                                        .symbolRenderingMode(.palette)
-                                        .foregroundStyle(Color(uiColor: .systemBackground), .primary)
-                                        .background {
-                                            Circle()
-                                                .fill(Color(uiColor: .systemBackground))
-                                                .scaleEffect(1.3)
-                                        }
-                                        .offset(x: 4, y: 4)
-                                }
-                        }
-                        .accessibilityLabel(Text("Karte"))
-                        .accessibilityHint(Text("Öffnet die Karte"))
-                    }
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button(role: .close) {
-                            dismiss()
-                        }
-                    }
-                }
-        }
-        .searchable(text: $searchText, isPresented: $isSearchPresented)
-        .onChange(of: isSearchPresented) { _, presented in
-            if !presented { searchText = "" }
-        }
-        .sheet(item: $candidate) { candidate in
-            LocationPreviewSheet(candidate: candidate) {
-                add(candidate)
-            }
-        }
-        .sheet(item: $editTarget) { target in
-            LocationEditSheet(target: target)
-        }
-        .fullScreenCover(isPresented: $isMapPresented) {
-            LocationMapSheet(
-                cities: cities,
-                initialCenter: locationService.getCoordinates()
-            ) { picked in
-                add(picked)
-            }
-        }
-        .sensoryFeedback(.selection, trigger: selectionCount)
-        .onReceive(NotificationCenter.default.publisher(for: .cityToggle)) { _ in
-            selectedCityURI = locationService.city.getSelectedCity()?.objectID.uriRepresentation()
-        }
-        .task {
-            selectedCityURI = locationService.city.getSelectedCity()?.objectID.uriRepresentation()
-        }
-        .task(id: conditionsKey) {
-            await conditionsStore.refresh(coordinates: conditionCoordinates)
-        }
-        .task(id: searchText) {
-            searchError = nil
-            guard !searchText.isEmpty else {
-                searchResult = .init()
-                isSearchInFlight = false
-                return
-            }
-            isSearchInFlight = true
-            do {
-                try await Task.sleep(for: .milliseconds(300))
-                searchResult = try await client.getGeocodeSearchResult(name: searchText)
-            } catch {
-                guard !Task.isCancelled else { return }
-                searchResult = .init()
-                searchError = error.localizedDescription
-            }
-            isSearchInFlight = false
-        }
-    }
+	var body: some View {
+		NavigationStack {
+			locationList
+				.navigationTitle("Orte")
+				.toolbarTitleDisplayMode(.inline)
+				.toolbar {
+					ToolbarItem(placement: .topBarLeading) {
+						Button(action: presentMapPicker) {
+							Image(systemName: "map")
+								.overlay(alignment: .bottomTrailing) {
+									Image(systemName: "plus.circle.fill")
+										.font(.system(size: 10, weight: .bold))
+										.symbolRenderingMode(.palette)
+										.foregroundStyle(Color(uiColor: .systemBackground), .primary)
+										.background {
+											Circle()
+												.fill(Color(uiColor: .systemBackground))
+												.scaleEffect(1.3)
+										}
+										.offset(x: 4, y: 4)
+								}
+						}
+						.accessibilityLabel(Text("Karte"))
+						.accessibilityHint(Text("Öffnet die Karte"))
+					}
+					ToolbarItem(placement: .topBarTrailing) {
+						Button(role: .close) {
+							dismiss()
+						}
+					}
+				}
+		}
+		.searchable(text: $searchText, isPresented: $isSearchPresented)
+		.onChange(of: isSearchPresented) { _, presented in
+			if !presented { searchText = "" }
+		}
+		.sheet(item: $candidate) { candidate in
+			LocationPreviewSheet(candidate: candidate) {
+				add(candidate)
+			}
+		}
+		.sheet(item: $editTarget) { target in
+			LocationEditSheet(target: target)
+		}
+		.fullScreenCover(isPresented: $isMapPresented) {
+			LocationMapSheet(
+				cities: cities,
+				initialCenter: locationService.getCoordinates()
+			) { picked in
+				add(picked)
+			}
+		}
+		.sensoryFeedback(.selection, trigger: selectionCount)
+		.onReceive(NotificationCenter.default.publisher(for: .cityToggle)) { _ in
+			selectedCityURI = locationService.city.getSelectedCity()?.objectID.uriRepresentation()
+		}
+		.task {
+			selectedCityURI = locationService.city.getSelectedCity()?.objectID.uriRepresentation()
+		}
+		.task(id: conditionsKey) {
+			await conditionsStore.refresh(coordinates: conditionCoordinates)
+		}
+		.task(id: searchText) {
+			searchError = nil
+			guard !searchText.isEmpty else {
+				searchResult = .init()
+				isSearchInFlight = false
+				return
+			}
+			isSearchInFlight = true
+			do {
+				try await Task.sleep(for: .milliseconds(300))
+				searchResult = try await client.getGeocodeSearchResult(name: searchText)
+			} catch {
+				guard !Task.isCancelled else { return }
+				searchResult = .init()
+				searchError = error.localizedDescription
+			}
+			isSearchInFlight = false
+		}
+	}
 
-    // MARK: - List
+	// MARK: - List
 
-    private var locationList: some View {
-        List {
-            if isSearching {
-                Section {
-                    searchResultRows
-                }
-            } else {
-                if gpsAuthorized {
-                    Section {
-                        currentLocationRow
-                    }
-                }
+	private var locationList: some View {
+		List {
+			if isSearching {
+				Section {
+					searchResultRows
+				}
+			} else {
+				if gpsAuthorized {
+					Section {
+						currentLocationRow
+					}
+				}
 
-                Section {
-                    ForEach(cities, id: \.objectID) { city in
-                        cityRow(city)
-                    }
-                    .onMove(perform: locationService.city.moveCity)
-                    .onDelete(perform: locationService.city.deleteCity)
-                }
+				Section {
+					ForEach(cities, id: \.objectID) { city in
+						cityRow(city)
+					}
+					.onMove(perform: locationService.city.moveCity)
+					.onDelete(perform: locationService.city.deleteCity)
+				}
 
-                if cities.isEmpty {
-                    Section {
-                        LocationsEmptyHint()
-                    }
-                }
-            }
-        }
-        .listStyle(.insetGrouped)
-        .scrollDismissesKeyboard(.immediately)
-        .overlay {
-            searchStatusOverlay
-        }
-    }
+				if cities.isEmpty {
+					Section {
+						LocationsEmptyHint()
+					}
+				}
+			}
+		}
+		.listStyle(.insetGrouped)
+		.scrollDismissesKeyboard(.immediately)
+		.overlay {
+			searchStatusOverlay
+		}
+	}
 
-    private var currentLocationRow: some View {
-        CurrentLocationRow(
-            conditions: currentLocationConditions,
-            isSelected: selectedCityURI == nil,
-            isDefault: locationService.city.defaultIsCurrentLocation,
-            onSelect: selectCurrentLocation,
-            onEdit: { editTarget = .currentLocation },
-            onToggleDefault: {
-                locationService.city.setDefault(
-                    city: nil,
-                    asCurrentLocation: !locationService.city.defaultIsCurrentLocation
-                )
-            }
-        )
-    }
+	private var currentLocationRow: some View {
+		CurrentLocationRow(
+			conditions: currentLocationConditions,
+			isSelected: selectedCityURI == nil,
+			isDefault: locationService.city.defaultIsCurrentLocation,
+			onSelect: selectCurrentLocation,
+			onEdit: { editTarget = .currentLocation },
+			onToggleDefault: {
+				locationService.city.setDefault(
+					city: nil,
+					asCurrentLocation: !locationService.city.defaultIsCurrentLocation
+				)
+			}
+		)
+	}
 
-    private func cityRow(_ city: City) -> some View {
-        LocationCityRow(
-            personalization: city.personalization,
-            isDefault: city.isDefault,
-            conditions: conditionsStore.conditions(
-                for: CLLocationCoordinate2D(latitude: city.lat, longitude: city.lon)
-            ),
-            isSelected: city.objectID.uriRepresentation() == selectedCityURI,
-            onSelect: { select(city) },
-            onEdit: { editTarget = .city(city) },
-            onDelete: { delete(city) },
-            onToggleDefault: { locationService.city.setDefault(city: city.isDefault ? nil : city) }
-        )
-    }
+	private func cityRow(_ city: City) -> some View {
+		LocationCityRow(
+			personalization: city.personalization,
+			isDefault: city.isDefault,
+			conditions: conditionsStore.conditions(
+				for: CLLocationCoordinate2D(latitude: city.lat, longitude: city.lon)
+			),
+			isSelected: city.objectID.uriRepresentation() == selectedCityURI,
+			onSelect: { select(city) },
+			onEdit: { editTarget = .city(city) },
+			onDelete: { delete(city) },
+			onToggleDefault: { locationService.city.setDefault(city: city.isDefault ? nil : city) }
+		)
+	}
 
-    // MARK: - Search
+	// MARK: - Search
 
-    private var searchResultRows: some View {
-        ForEach(searchResult.results ?? [], id: \.id) { result in
-            LocationSearchResultRow(result: result) {
-                preview(result)
-            }
-        }
-    }
+	private var searchResultRows: some View {
+		ForEach(searchResult.results ?? [], id: \.id) { result in
+			LocationSearchResultRow(result: result) {
+				preview(result)
+			}
+		}
+	}
 
-    @ViewBuilder
-    private var searchStatusOverlay: some View {
-        if isSearching {
-            if let searchError {
-                ContentUnavailableView(
-                    "Suche fehlgeschlagen",
-                    systemImage: "wifi.exclamationmark",
-                    description: Text(searchError)
-                )
-            } else if searchResult.results?.isEmpty ?? true {
-                if isSearchInFlight {
-                    ProgressView()
-                } else {
-                    ContentUnavailableView.search
-                }
-            }
-        }
-    }
+	@ViewBuilder
+	private var searchStatusOverlay: some View {
+		if isSearching {
+			if let searchError {
+				ContentUnavailableView(
+					"Suche fehlgeschlagen",
+					systemImage: "wifi.exclamationmark",
+					description: Text(searchError)
+				)
+			} else if searchResult.results?.isEmpty ?? true {
+				if isSearchInFlight {
+					ProgressView()
+				} else {
+					ContentUnavailableView.search
+				}
+			}
+		}
+	}
 
-    // MARK: - Actions
+	// MARK: - Actions
 
-    private var conditionCoordinates: [CLLocationCoordinate2D] {
-        var coordinates: [CLLocationCoordinate2D] = []
-        if gpsAuthorized {
-            coordinates.append(locationService.gpsLocation)
-        }
-        coordinates.append(contentsOf: cities.map {
-            CLLocationCoordinate2D(latitude: $0.lat, longitude: $0.lon)
-        })
-        return coordinates
-    }
+	private var conditionCoordinates: [CLLocationCoordinate2D] {
+		var coordinates: [CLLocationCoordinate2D] = []
+		if gpsAuthorized {
+			coordinates.append(locationService.gpsLocation)
+		}
+		coordinates.append(
+			contentsOf: cities.map {
+				CLLocationCoordinate2D(latitude: $0.lat, longitude: $0.lon)
+			})
+		return coordinates
+	}
 
-    private var conditionsKey: String {
-        conditionCoordinates
-            .map(LocationService.outboundCoordinate)
-            .map { "\($0.latitude),\($0.longitude)" }
-            .joined(separator: ";")
-    }
+	private var conditionsKey: String {
+		conditionCoordinates
+			.map(LocationService.outboundCoordinate)
+			.map { "\($0.latitude),\($0.longitude)" }
+			.joined(separator: ";")
+	}
 
-    private var currentLocationConditions: CityConditions? {
-        guard gpsAuthorized else { return nil }
-        return conditionsStore.conditions(for: locationService.gpsLocation)
-    }
+	private var currentLocationConditions: CityConditions? {
+		guard gpsAuthorized else { return nil }
+		return conditionsStore.conditions(for: locationService.gpsLocation)
+	}
 
-    private func select(_ city: City) {
-        selectionCount += 1
-        locationService.city.toggleActiveCity(city: city)
-        returnToNow()
-    }
+	private func select(_ city: City) {
+		selectionCount += 1
+		locationService.city.toggleActiveCity(city: city)
+		returnToNow()
+	}
 
-    private func selectCurrentLocation() {
-        selectionCount += 1
-        if locationService.city.getSelectedCity() != nil {
-            locationService.city.disableAllCities()
-        }
-        returnToNow()
-    }
+	private func selectCurrentLocation() {
+		selectionCount += 1
+		if locationService.city.getSelectedCity() != nil {
+			locationService.city.disableAllCities()
+		}
+		returnToNow()
+	}
 
-    /// Hands control back to the now view: closes the Orte sheet and makes
-    /// sure the forecast tab is the one underneath.
-    private func returnToNow() {
-        presentation.selectedTab = .forecast
-        presentation.sheet = nil
-    }
+	/// Hands control back to the now view: closes the Orte sheet and makes
+	/// sure the forecast tab is the one underneath.
+	private func returnToNow() {
+		presentation.selectedTab = .forecast
+		presentation.sheet = nil
+	}
 
-    private func presentMapPicker() {
-        isMapPresented = true
-    }
+	private func presentMapPicker() {
+		isMapPresented = true
+	}
 
-    private func delete(_ city: City) {
-        guard let index = cities.firstIndex(of: city) else { return }
-        locationService.city.deleteCity(offsets: IndexSet(integer: index))
-    }
+	private func delete(_ city: City) {
+		guard let index = cities.firstIndex(of: city) else { return }
+		locationService.city.deleteCity(offsets: IndexSet(integer: index))
+	}
 
-    private func preview(_ result: Components.Schemas.Location) {
-        guard let lat = result.latitude, let lon = result.longitude else { return }
-        candidate = LocationCandidate(
-            name: result.displayName,
-            detail: result.detailLine,
-            latitude: Double(lat),
-            longitude: Double(lon)
-        )
-    }
+	private func preview(_ result: Components.Schemas.Location) {
+		guard let lat = result.latitude, let lon = result.longitude else { return }
+		candidate = LocationCandidate(
+			name: result.displayName,
+			detail: result.detailLine,
+			latitude: Double(lat),
+			longitude: Double(lon)
+		)
+	}
 
-    private func add(_ candidate: LocationCandidate) {
-        locationService.city.addCity(
-            name: candidate.name,
-            latitude: candidate.latitude,
-            longitude: candidate.longitude
-        )
-        Haptics.impact()
-        self.candidate = nil
-        isMapPresented = false
-        searchText = ""
-        returnToNow()
-    }
+	private func add(_ candidate: LocationCandidate) {
+		locationService.city.addCity(
+			name: candidate.name,
+			latitude: candidate.latitude,
+			longitude: candidate.longitude
+		)
+		Haptics.impact()
+		self.candidate = nil
+		isMapPresented = false
+		searchText = ""
+		returnToNow()
+	}
 }
 
 /// Quick place switcher shared by the Now toolbar's long-press menu and the
 /// location header's context menu.
 struct LocationSwitchPicker: View {
-    private let cityService = CityService.shared
-    private let locationService = LocationService.shared
+	private let cityService = CityService.shared
+	private let locationService = LocationService.shared
 
-    private var gpsAuthorized: Bool {
-        locationService.authStatus == .authorizedWhenInUse
-            || locationService.authStatus == .authorizedAlways
-    }
+	private var gpsAuthorized: Bool {
+		locationService.authStatus == .authorizedWhenInUse
+			|| locationService.authStatus == .authorizedAlways
+	}
 
-    var body: some View {
-        let selectedURI = cityService.getSelectedCity()?.objectID.uriRepresentation()
-        Picker("Ort", selection: Binding(
-            get: { selectedURI },
-            set: { (uri: URL?) in
-                if let uri, let city = cityService.cities.first(
-                    where: { $0.objectID.uriRepresentation() == uri }
-                ) {
-                    switchTo(city)
-                } else {
-                    switchToCurrentLocation()
-                }
-            }
-        )) {
-            if gpsAuthorized {
-                Label(cityService.currentLocationDisplayName, systemImage: "location")
-                    .tag(URL?.none)
-            }
-            ForEach(cityService.cities, id: \.objectID) { city in
-                Text(menuTitle(for: city))
-                    .tag(Optional(city.objectID.uriRepresentation()))
-            }
-        }
-        .pickerStyle(.inline)
-        .id(selectedURI)
-    }
+	var body: some View {
+		let selectedURI = cityService.getSelectedCity()?.objectID.uriRepresentation()
+		Picker(
+			"Ort",
+			selection: Binding(
+				get: { selectedURI },
+				set: { (uri: URL?) in
+					if let uri,
+						let city = cityService.cities.first(
+							where: { $0.objectID.uriRepresentation() == uri }
+						)
+					{
+						switchTo(city)
+					} else {
+						switchToCurrentLocation()
+					}
+				}
+			)
+		) {
+			if gpsAuthorized {
+				Label(cityService.currentLocationDisplayName, systemImage: "location")
+					.tag(URL?.none)
+			}
+			ForEach(cityService.cities, id: \.objectID) { city in
+				Text(menuTitle(for: city))
+					.tag(Optional(city.objectID.uriRepresentation()))
+			}
+		}
+		.pickerStyle(.inline)
+		.id(selectedURI)
+	}
 
-    private func menuTitle(for city: City) -> String {
-        let personalization = city.personalization
-        let title = [personalization.mark.emoji, personalization.title]
-            .compactMap { $0 }
-            .filter { !$0.isEmpty }
-            .joined(separator: " ")
-        return title.isEmpty ? String(localized: "Unbekannter Ort") : title
-    }
+	private func menuTitle(for city: City) -> String {
+		let personalization = city.personalization
+		let title = [personalization.mark.emoji, personalization.title]
+			.compactMap { $0 }
+			.filter { !$0.isEmpty }
+			.joined(separator: " ")
+		return title.isEmpty ? String(localized: "Unbekannter Ort") : title
+	}
 
-    private func switchTo(_ city: City) {
-        guard !city.selected else { return }
-        cityService.toggleActiveCity(city: city)
-    }
+	private func switchTo(_ city: City) {
+		guard !city.selected else { return }
+		cityService.toggleActiveCity(city: city)
+	}
 
-    private func switchToCurrentLocation() {
-        guard cityService.getSelectedCity() != nil else { return }
-        cityService.disableAllCities()
-    }
+	private func switchToCurrentLocation() {
+		guard cityService.getSelectedCity() != nil else { return }
+		cityService.disableAllCities()
+	}
 }
 
 #Preview {
-    LocationsView()
-        .environment(Weather.mock)
-        .environment(NowPresentationCoordinator())
+	LocationsView()
+		.environment(Weather.mock)
+		.environment(NowPresentationCoordinator())
 }

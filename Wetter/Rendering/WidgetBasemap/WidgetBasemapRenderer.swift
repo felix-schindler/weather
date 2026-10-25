@@ -16,111 +16,116 @@ import WidgetKit
 
 @MainActor
 enum WidgetBasemapRenderer {
-    private static let sizes = WidgetBasemapStore.compositeSizes
-    private static let spanMeters = 65_000.0
-    private static let scale: CGFloat = 2
-    private static let maxLocationDrift: CLLocationDistance = 500
-    private static let maxAge: TimeInterval = 30 * 24 * 3600
+	private static let sizes = WidgetBasemapStore.compositeSizes
+	private static let spanMeters = 65_000.0
+	private static let scale: CGFloat = 2
+	private static let maxLocationDrift: CLLocationDistance = 500
+	private static let maxAge: TimeInterval = 30 * 24 * 3600
 
-    private static var isRefreshing = false
+	private static var isRefreshing = false
 
-    static func refreshIfNeeded() async {
-        guard !isRefreshing else { return }
-        isRefreshing = true
-        defer { isRefreshing = false }
+	static func refreshIfNeeded() async {
+		guard !isRefreshing else { return }
+		isRefreshing = true
+		defer { isRefreshing = false }
 
-        LocationService.shared.update()
-        let center = LocationService.shared.getCoordinates()
-        guard CLLocationCoordinate2DIsValid(center) else { return }
+		LocationService.shared.update()
+		let center = LocationService.shared.getCoordinates()
+		guard CLLocationCoordinate2DIsValid(center) else { return }
 
-        var rendered = false
-        for styleRaw in WidgetBasemapStore.requestedStyles() {
-            guard let style = MapBasemapStyle(rawValue: styleRaw) else { continue }
-            for size in sizes {
-                if let (record, _) = WidgetBasemapStore.load(size: size, style: styleRaw),
-                   Date().timeIntervalSince(record.renderedAt) < maxAge,
-                   CLLocation(latitude: record.latitude, longitude: record.longitude).distance(
-                       from: CLLocation(latitude: center.latitude, longitude: center.longitude)
-                   ) < maxLocationDrift {
-                    continue
-                }
-                guard let result = try? await snapshot(
-                    center: center, size: size, style: style) else { continue }
-                WidgetBasemapStore.save(result.record, image: result.image)
-                rendered = true
-            }
-        }
-        if rendered {
-            WidgetCenter.shared.reloadTimelines(ofKind: "WeatherWidget")
-        }
-    }
+		var rendered = false
+		for styleRaw in WidgetBasemapStore.requestedStyles() {
+			guard let style = MapBasemapStyle(rawValue: styleRaw) else { continue }
+			for size in sizes {
+				if let (record, _) = WidgetBasemapStore.load(size: size, style: styleRaw),
+					Date().timeIntervalSince(record.renderedAt) < maxAge,
+					CLLocation(latitude: record.latitude, longitude: record.longitude).distance(
+						from: CLLocation(latitude: center.latitude, longitude: center.longitude)
+					) < maxLocationDrift
+				{
+					continue
+				}
+				guard
+					let result = try? await snapshot(
+						center: center, size: size, style: style)
+				else { continue }
+				WidgetBasemapStore.save(result.record, image: result.image)
+				rendered = true
+			}
+		}
+		if rendered {
+			WidgetCenter.shared.reloadTimelines(ofKind: "WeatherWidget")
+		}
+	}
 
-    private static func snapshot(
-        center: CLLocationCoordinate2D, size: CGSize, style: MapBasemapStyle
-    ) async throws -> (record: WidgetBasemapRecord, image: UIImage) {
-        let options = MLNMapSnapshotOptions(
-            styleURL: style.styleURL,
-            camera: MLNMapCamera(lookingAtCenter: center, altitude: spanMeters, pitch: 0, heading: 0),
-            size: size
-        )
-        let halfLat = spanMeters / 2 / 111_320
-        let halfLon = spanMeters / 2 / (111_320 * max(0.2, cos(center.latitude * .pi / 180)))
-        options.coordinateBounds = MLNCoordinateBounds(
-            sw: CLLocationCoordinate2D(latitude: center.latitude - halfLat, longitude: center.longitude - halfLon),
-            ne: CLLocationCoordinate2D(latitude: center.latitude + halfLat, longitude: center.longitude + halfLon)
-        )
-        options.scale = scale
-        options.showsLogo = false
-        options.showsAttribution = false
+	private static func snapshot(
+		center: CLLocationCoordinate2D, size: CGSize, style: MapBasemapStyle
+	) async throws -> (record: WidgetBasemapRecord, image: UIImage) {
+		let options = MLNMapSnapshotOptions(
+			styleURL: style.styleURL,
+			camera: MLNMapCamera(lookingAtCenter: center, altitude: spanMeters, pitch: 0, heading: 0),
+			size: size
+		)
+		let halfLat = spanMeters / 2 / 111_320
+		let halfLon = spanMeters / 2 / (111_320 * max(0.2, cos(center.latitude * .pi / 180)))
+		options.coordinateBounds = MLNCoordinateBounds(
+			sw: CLLocationCoordinate2D(latitude: center.latitude - halfLat, longitude: center.longitude - halfLon),
+			ne: CLLocationCoordinate2D(latitude: center.latitude + halfLat, longitude: center.longitude + halfLon)
+		)
+		options.scale = scale
+		options.showsLogo = false
+		options.showsAttribution = false
 
-        let run = SnapshotRun(snapshotter: MLNMapSnapshotter(options: options))
-        let scale = scale
-        return try await withCheckedThrowingContinuation { continuation in
-            // A cancelled snapshotter never calls back, so the timeout resumes.
-            run.timeout = Task { @MainActor in
-                try? await Task.sleep(for: .seconds(20))
-                guard !Task.isCancelled, run.finish() else { return }
-                run.snapshotter.cancel()
-                continuation.resume(throwing: URLError(.timedOut))
-            }
-            run.snapshotter.start { snapshot, error in
-                let rendered = snapshot.map { snapshot in
-                    (nw: snapshot.coordinate(for: .zero),
-                     se: snapshot.coordinate(for: CGPoint(x: size.width, y: size.height)),
-                     image: snapshot.image)
-                }
-                MainActor.assumeIsolated {
-                    guard run.finish() else { return }
-                    run.timeout?.cancel()
-                    guard let rendered else {
-                        continuation.resume(throwing: error ?? URLError(.unknown))
-                        return
-                    }
-                    let record = WidgetBasemapRecord(
-                        latitude: center.latitude, longitude: center.longitude,
-                        north: rendered.nw.latitude, south: rendered.se.latitude,
-                        west: rendered.nw.longitude, east: rendered.se.longitude,
-                        width: size.width, height: size.height, scale: scale,
-                        renderedAt: Date(), style: style.rawValue
-                    )
-                    continuation.resume(returning: (record, rendered.image))
-                }
-            }
-        }
-    }
+		let run = SnapshotRun(snapshotter: MLNMapSnapshotter(options: options))
+		let scale = scale
+		return try await withCheckedThrowingContinuation { continuation in
+			// A cancelled snapshotter never calls back, so the timeout resumes.
+			run.timeout = Task { @MainActor in
+				try? await Task.sleep(for: .seconds(20))
+				guard !Task.isCancelled, run.finish() else { return }
+				run.snapshotter.cancel()
+				continuation.resume(throwing: URLError(.timedOut))
+			}
+			run.snapshotter.start { snapshot, error in
+				let rendered = snapshot.map { snapshot in
+					(
+						nw: snapshot.coordinate(for: .zero),
+						se: snapshot.coordinate(for: CGPoint(x: size.width, y: size.height)),
+						image: snapshot.image
+					)
+				}
+				MainActor.assumeIsolated {
+					guard run.finish() else { return }
+					run.timeout?.cancel()
+					guard let rendered else {
+						continuation.resume(throwing: error ?? URLError(.unknown))
+						return
+					}
+					let record = WidgetBasemapRecord(
+						latitude: center.latitude, longitude: center.longitude,
+						north: rendered.nw.latitude, south: rendered.se.latitude,
+						west: rendered.nw.longitude, east: rendered.se.longitude,
+						width: size.width, height: size.height, scale: scale,
+						renderedAt: Date(), style: style.rawValue
+					)
+					continuation.resume(returning: (record, rendered.image))
+				}
+			}
+		}
+	}
 
-    @MainActor
-    private final class SnapshotRun {
-        let snapshotter: MLNMapSnapshotter
-        var timeout: Task<Void, Never>?
-        private var finished = false
+	@MainActor
+	private final class SnapshotRun {
+		let snapshotter: MLNMapSnapshotter
+		var timeout: Task<Void, Never>?
+		private var finished = false
 
-        init(snapshotter: MLNMapSnapshotter) { self.snapshotter = snapshotter }
+		init(snapshotter: MLNMapSnapshotter) { self.snapshotter = snapshotter }
 
-        func finish() -> Bool {
-            if finished { return false }
-            finished = true
-            return true
-        }
-    }
+		func finish() -> Bool {
+			if finished { return false }
+			finished = true
+			return true
+		}
+	}
 }

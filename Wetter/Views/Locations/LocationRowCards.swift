@@ -3,82 +3,83 @@ import SwiftUI
 // MARK: - Row cards
 
 struct CityCard: View {
-    let personalization: PlacePersonalization
-    let isDefault: Bool
-    let conditions: CityConditions?
-    let isSelected: Bool
+	let personalization: PlacePersonalization
+	let isDefault: Bool
+	let conditions: CityConditions?
+	let isSelected: Bool
 
-    var body: some View {
-        LocationCard(
-            title: personalization.title,
-            detail: personalization.detailLine(condition: conditions?.conditionText),
-            mark: personalization.mark,
-            temperature: conditions?.temperature,
-            isSelected: isSelected,
-            isDefault: isDefault
-        )
-    }
+	var body: some View {
+		LocationCard(
+			title: personalization.title,
+			detail: personalization.detailLine(condition: conditions?.conditionText),
+			mark: personalization.mark,
+			temperature: conditions?.temperature,
+			isSelected: isSelected,
+			isDefault: isDefault
+		)
+	}
 }
 
 struct CurrentLocationCard: View {
-    let conditions: CityConditions?
-    let isSelected: Bool
-    let cityService = CityService.shared
+	let conditions: CityConditions?
+	let isSelected: Bool
+	let cityService = CityService.shared
 
-    var body: some View {
-        let personalization = cityService.currentLocationPersonalization
-        LocationCard(
-            title: personalization.title,
-            detail: personalization.detailLine(condition: conditions?.conditionText),
-            mark: personalization.mark,
-            temperature: conditions?.temperature,
-            isSelected: isSelected,
-            isDefault: cityService.defaultIsCurrentLocation
-        )
-    }
+	var body: some View {
+		let personalization = cityService.currentLocationPersonalization
+		LocationCard(
+			title: personalization.title,
+			detail: personalization.detailLine(condition: conditions?.conditionText),
+			mark: personalization.mark,
+			temperature: conditions?.temperature,
+			isSelected: isSelected,
+			isDefault: cityService.defaultIsCurrentLocation
+		)
+	}
 }
 
 extension View {
-    func placeRowActions(
-        isDefault: Bool,
-        onEdit: @escaping () -> Void,
-        onToggleDefault: @escaping () -> Void,
-        onDelete: (() -> Void)? = nil
-    ) -> some View {
-        let editButton = Button(action: onEdit) {
-            Label("Bearbeiten", systemImage: "pencil")
-        }
-        let defaultButton = Button(action: onToggleDefault) {
-            if isDefault {
-                Label("Standard entfernen", systemImage: "star.slash")
-            } else {
-                Label("Als Standard festlegen", systemImage: "star")
-            }
-        }
-        return self
-            .contextMenu {
-                editButton
-                defaultButton
-                if let onDelete {
-                    Button(role: .destructive, action: onDelete) {
-                        Label("Löschen", systemImage: "trash")
-                    }
-                    .tint(.red)
-                }
-            }
-            .swipeActions(edge: .trailing, allowsFullSwipe: onDelete != nil) {
-                if let onDelete {
-                    Button(role: .destructive, action: onDelete) {
-                        Label("Löschen", systemImage: "trash")
-                    }
-                    .tint(.red)
-                }
-                editButton
-                    .tint(.indigo)
-            }
-            .swipeActions(edge: .leading) {
-                defaultButton
-                    .tint(.yellow)
-            }
-    }
+	func placeRowActions(
+		isDefault: Bool,
+		onEdit: @escaping () -> Void,
+		onToggleDefault: @escaping () -> Void,
+		onDelete: (() -> Void)? = nil
+	) -> some View {
+		let editButton = Button(action: onEdit) {
+			Label("Bearbeiten", systemImage: "pencil")
+		}
+		let defaultButton = Button(action: onToggleDefault) {
+			if isDefault {
+				Label("Standard entfernen", systemImage: "star.slash")
+			} else {
+				Label("Als Standard festlegen", systemImage: "star")
+			}
+		}
+		return
+			self
+			.contextMenu {
+				editButton
+				defaultButton
+				if let onDelete {
+					Button(role: .destructive, action: onDelete) {
+						Label("Löschen", systemImage: "trash")
+					}
+					.tint(.red)
+				}
+			}
+			.swipeActions(edge: .trailing, allowsFullSwipe: onDelete != nil) {
+				if let onDelete {
+					Button(role: .destructive, action: onDelete) {
+						Label("Löschen", systemImage: "trash")
+					}
+					.tint(.red)
+				}
+				editButton
+					.tint(.indigo)
+			}
+			.swipeActions(edge: .leading) {
+				defaultButton
+					.tint(.yellow)
+			}
+	}
 }

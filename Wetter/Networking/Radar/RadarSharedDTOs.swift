@@ -16,12 +16,12 @@ typealias RadarFrameInfo = Components.Schemas.RadarFrameInfo
 typealias ModelFrameInfo = Components.Schemas.ModelFrameInfo
 
 extension Components.Schemas.RadarBounds {
-    var asDomain: OscarRadarBounds { OscarRadarBounds(north: north, south: south, west: west, east: east) }
+	var asDomain: OscarRadarBounds { OscarRadarBounds(north: north, south: south, west: west, east: east) }
 }
 
 extension Components.Schemas.ModelBounds {
-    var asDomain: OscarRadarBounds? {
-        guard let north, let south, let west, let east else { return nil }
-        return OscarRadarBounds(north: north, south: south, west: west, east: east)
-    }
+	var asDomain: OscarRadarBounds? {
+		guard let north, let south, let west, let east else { return nil }
+		return OscarRadarBounds(north: north, south: south, west: west, east: east)
+	}
 }

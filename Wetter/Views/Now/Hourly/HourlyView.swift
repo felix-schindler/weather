@@ -8,96 +8,96 @@
 import SwiftUI
 
 struct HourlyView: View {
-  @Environment(Weather.self) private var weather: Weather
-  @Environment(NowPresentationCoordinator.self) private var presentation
-  @Binding private var visibleDayLabel: String?
-  @State private var leadingItemID: String?
+	@Environment(Weather.self) private var weather: Weather
+	@Environment(NowPresentationCoordinator.self) private var presentation
+	@Binding private var visibleDayLabel: String?
+	@State private var leadingItemID: String?
 
-  init(visibleDayLabel: Binding<String?> = .constant(nil)) {
-    _visibleDayLabel = visibleDayLabel
-  }
+	init(visibleDayLabel: Binding<String?> = .constant(nil)) {
+		_visibleDayLabel = visibleDayLabel
+	}
 
-  private var items: [HourlyTimelineItem] {
-    HourlyForecastBuilder.makeItems(
-      forecast: weather.forecast,
-      precipSeries: weather.precipSeries,
-      isLoading: weather.isLoading
-    )
-  }
+	private var items: [HourlyTimelineItem] {
+		HourlyForecastBuilder.makeItems(
+			forecast: weather.forecast,
+			precipSeries: weather.precipSeries,
+			isLoading: weather.isLoading
+		)
+	}
 
-  private var hasHourlyDetailData: Bool {
-    HourlyForecastBuilder.hasHourlyDetailData(forecast: weather.forecast)
-  }
+	private var hasHourlyDetailData: Bool {
+		HourlyForecastBuilder.hasHourlyDetailData(forecast: weather.forecast)
+	}
 
-  var body: some View {
-    let items = self.items
-    let shouldShowPlaceholders = weather.isLoading && items.isEmpty
-    let timeZone = weather.forecast.locationTimeZone
-    let now = Date(timeIntervalSince1970: weather.forecast.current?.time ?? 0)
-    let leadingItem = items.first { $0.id == leadingItemID } ?? items.first
-    let dayLabel = leadingItem.map {
-      HourlyFormatting.dayLabel(timestamp: $0.timestamp, timeZone: timeZone, now: now)
-    }
+	var body: some View {
+		let items = self.items
+		let shouldShowPlaceholders = weather.isLoading && items.isEmpty
+		let timeZone = weather.forecast.locationTimeZone
+		let now = Date(timeIntervalSince1970: weather.forecast.current?.time ?? 0)
+		let leadingItem = items.first { $0.id == leadingItemID } ?? items.first
+		let dayLabel = leadingItem.map {
+			HourlyFormatting.dayLabel(timestamp: $0.timestamp, timeZone: timeZone, now: now)
+		}
 
-    ScrollView(.horizontal) {
-      LazyHStack(spacing: 0) {
-        if shouldShowPlaceholders {
-          ForEach(0..<10, id: \.self) { _ in
-            HourlyPlaceholderCard()
-          }
-        } else {
-          ForEach(items) { item in
-            timelineItemView(item)
-              .onTapGesture {
-                presentDetails(at: Date(timeIntervalSince1970: item.timestamp))
-              }
-          }
-        }
-      }
-      .scrollTargetLayout()
-    }
-    .scrollIndicators(.hidden)
-    .scrollTargetBehavior(.viewAligned(limitBehavior: .never))
-    .scrollPosition(id: $leadingItemID)
-    .frame(maxWidth: .infinity)
-    .contentShape(.rect)
-    .onTapGesture(perform: presentDetails)
-    .disabled(!hasHourlyDetailData)
-    .accessibilityAction(named: Text("Stündliche Details"), presentDetails)
-    .accessibilityIdentifier("now.hourly")
-    .onChange(of: dayLabel, initial: true) { _, label in
-      guard visibleDayLabel != label else { return }
-      visibleDayLabel = label
-    }
-  }
+		ScrollView(.horizontal) {
+			LazyHStack(spacing: 0) {
+				if shouldShowPlaceholders {
+					ForEach(0..<10, id: \.self) { _ in
+						HourlyPlaceholderCard()
+					}
+				} else {
+					ForEach(items) { item in
+						timelineItemView(item)
+							.onTapGesture {
+								presentDetails(at: Date(timeIntervalSince1970: item.timestamp))
+							}
+					}
+				}
+			}
+			.scrollTargetLayout()
+		}
+		.scrollIndicators(.hidden)
+		.scrollTargetBehavior(.viewAligned(limitBehavior: .never))
+		.scrollPosition(id: $leadingItemID)
+		.frame(maxWidth: .infinity)
+		.contentShape(.rect)
+		.onTapGesture(perform: presentDetails)
+		.disabled(!hasHourlyDetailData)
+		.accessibilityAction(named: Text("Stündliche Details"), presentDetails)
+		.accessibilityIdentifier("now.hourly")
+		.onChange(of: dayLabel, initial: true) { _, label in
+			guard visibleDayLabel != label else { return }
+			visibleDayLabel = label
+		}
+	}
 
-  private func timelineItemView(_ item: HourlyTimelineItem) -> some View {
-    Group {
-      switch item {
-      case .forecast(let forecast):
-        HourlyForecastCard(item: forecast)
-      case .sunEvent(let sunEvent):
-        HourlySunEventCard(item: sunEvent)
-      }
-    }
-  }
+	private func timelineItemView(_ item: HourlyTimelineItem) -> some View {
+		Group {
+			switch item {
+			case .forecast(let forecast):
+				HourlyForecastCard(item: forecast)
+			case .sunEvent(let sunEvent):
+				HourlySunEventCard(item: sunEvent)
+			}
+		}
+	}
 
-  private func presentDetails() {
-    presentDetails(at: nil)
-  }
+	private func presentDetails() {
+		presentDetails(at: nil)
+	}
 
-  private func presentDetails(at target: Date?) {
-    guard hasHourlyDetailData else {
-      return
-    }
+	private func presentDetails(at target: Date?) {
+		guard hasHourlyDetailData else {
+			return
+		}
 
-    presentation.present(.hourly(target))
-  }
+		presentation.present(.hourly(target))
+	}
 }
 
 #Preview {
-  HourlyView()
-    .frame(height: 200)
-    .environment(Weather.mock)
-    .environment(NowPresentationCoordinator())
+	HourlyView()
+		.frame(height: 200)
+		.environment(Weather.mock)
+		.environment(NowPresentationCoordinator())
 }

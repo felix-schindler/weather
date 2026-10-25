@@ -1,25 +1,25 @@
 import SwiftUI
 
 struct LocationCityRow: View {
-    let personalization: PlacePersonalization
-    let isDefault: Bool
-    let conditions: CityConditions?
-    let isSelected: Bool
-    let onSelect: () -> Void
-    let onEdit: () -> Void
-    let onDelete: () -> Void
-    let onToggleDefault: () -> Void
+	let personalization: PlacePersonalization
+	let isDefault: Bool
+	let conditions: CityConditions?
+	let isSelected: Bool
+	let onSelect: () -> Void
+	let onEdit: () -> Void
+	let onDelete: () -> Void
+	let onToggleDefault: () -> Void
 
-    var body: some View {
-        Button(action: onSelect) {
-            CityCard(
-                personalization: personalization,
-                isDefault: isDefault,
-                conditions: conditions,
-                isSelected: isSelected
-            )
-        }
-        .buttonStyle(.plain)
-        .placeRowActions(isDefault: isDefault, onEdit: onEdit, onToggleDefault: onToggleDefault, onDelete: onDelete)
-    }
+	var body: some View {
+		Button(action: onSelect) {
+			CityCard(
+				personalization: personalization,
+				isDefault: isDefault,
+				conditions: conditions,
+				isSelected: isSelected
+			)
+		}
+		.buttonStyle(.plain)
+		.placeRowActions(isDefault: isDefault, onEdit: onEdit, onToggleDefault: onToggleDefault, onDelete: onDelete)
+	}
 }

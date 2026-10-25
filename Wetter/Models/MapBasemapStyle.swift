@@ -1,21 +1,21 @@
 import SwiftUI
 
 enum MapBasemapStyle: String, CaseIterable, Identifiable {
-    case fiord
-    case dark
-    case positron
+	case fiord
+	case dark
+	case positron
 
-    var id: String { rawValue }
+	var id: String { rawValue }
 
-    var styleURL: URL {
-        URL(string: "https://tiles.openfreemap.org/styles/\(rawValue)")!
-    }
+	var styleURL: URL {
+		URL(string: "https://tiles.openfreemap.org/styles/\(rawValue)")!
+	}
 
-    var label: LocalizedStringKey {
-        switch self {
-        case .fiord: return "Fiord"
-        case .dark: return "Dunkel"
-        case .positron: return "Hell"
-        }
-    }
+	var label: LocalizedStringKey {
+		switch self {
+		case .fiord: return "Fiord"
+		case .dark: return "Dunkel"
+		case .positron: return "Hell"
+		}
+	}
 }

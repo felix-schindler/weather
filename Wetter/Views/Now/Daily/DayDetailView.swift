@@ -1,152 +1,152 @@
 import SwiftUI
 
 struct DayDetailView: View {
-    let day: ClosedRange<Double>
-    let startTime: Double
+	let day: ClosedRange<Double>
+	let startTime: Double
 
-    @Environment(Weather.self) private var weather
-    @Environment(NowPresentationCoordinator.self) private var presentation
-    @State private var model = HourlyTimelineModel()
-    @State private var lens = HourlyLens.overview
+	@Environment(Weather.self) private var weather
+	@Environment(NowPresentationCoordinator.self) private var presentation
+	@State private var model = HourlyTimelineModel()
+	@State private var lens = HourlyLens.overview
 
-    var body: some View {
-        VStack(alignment: .trailing, spacing: 12) {
-            DayChart(model: model, lens: lens)
-                .frame(height: 200)
+	var body: some View {
+		VStack(alignment: .trailing, spacing: 12) {
+			DayChart(model: model, lens: lens)
+				.frame(height: 200)
 
-            LensPicker(model: model, selection: $lens)
+			LensPicker(model: model, selection: $lens)
 
-            Button {
-                presentation.present(.hourly(Date(timeIntervalSince1970: model.scrubTime)))
-            } label: {
-                HStack(spacing: 2) {
-                    Text("Stündlich")
-                    Image(systemName: "chevron.forward")
-                        .imageScale(.small)
-                }
-                .font(.subheadline.weight(.medium))
-                .foregroundStyle(.secondary)
-                .contentShape(Rectangle().inset(by: -10))
-            }
-            .buttonStyle(.plain)
-        }
-        .onChange(of: day, initial: true) { load() }
-        .onChange(of: weather.lastUpdated) { load() }
-    }
+			Button {
+				presentation.present(.hourly(Date(timeIntervalSince1970: model.scrubTime)))
+			} label: {
+				HStack(spacing: 2) {
+					Text("Stündlich")
+					Image(systemName: "chevron.forward")
+						.imageScale(.small)
+				}
+				.font(.subheadline.weight(.medium))
+				.foregroundStyle(.secondary)
+				.contentShape(Rectangle().inset(by: -10))
+			}
+			.buttonStyle(.plain)
+		}
+		.onChange(of: day, initial: true) { load() }
+		.onChange(of: weather.lastUpdated) { load() }
+	}
 
-    private func load() {
-        model.update(from: weather)
-        model.show(day: day, at: startTime)
-    }
+	private func load() {
+		model.update(from: weather)
+		model.show(day: day, at: startTime)
+	}
 }
 
 private struct DayChart: View {
-    let model: HourlyTimelineModel
-    let lens: HourlyLens
+	let model: HourlyTimelineModel
+	let lens: HourlyLens
 
-    @State private var width: CGFloat = 1
+	@State private var width: CGFloat = 1
 
-    var body: some View {
-        HourlyTimelineStrip(model: model, lens: lens)
-            .onGeometryChange(for: CGFloat.self, of: { $0.size.width }) { width = max($0, 1) }
-            .gesture(HorizontalPan { x in model.scrub(to: time(at: x)) })
-            .onTapGesture { location in model.glide(to: time(at: location.x)) }
-    }
+	var body: some View {
+		HourlyTimelineStrip(model: model, lens: lens)
+			.onGeometryChange(for: CGFloat.self, of: { $0.size.width }) { width = max($0, 1) }
+			.gesture(HorizontalPan { x in model.scrub(to: time(at: x)) })
+			.onTapGesture { location in model.glide(to: time(at: location.x)) }
+	}
 
-    private func time(at x: CGFloat) -> Double {
-        let fraction = Double(min(max(x / width, 0), 1))
-        return model.windowStart + fraction * model.windowSeconds
-    }
+	private func time(at x: CGFloat) -> Double {
+		let fraction = Double(min(max(x / width, 0), 1))
+		return model.windowStart + fraction * model.windowSeconds
+	}
 }
 
 private struct HorizontalPan: UIGestureRecognizerRepresentable {
-    let onChange: (CGFloat) -> Void
+	let onChange: (CGFloat) -> Void
 
-    func makeCoordinator(converter: CoordinateSpaceConverter) -> Coordinator {
-        Coordinator()
-    }
+	func makeCoordinator(converter: CoordinateSpaceConverter) -> Coordinator {
+		Coordinator()
+	}
 
-    func makeUIGestureRecognizer(context: Context) -> UIPanGestureRecognizer {
-        let pan = UIPanGestureRecognizer()
-        pan.delegate = context.coordinator
-        return pan
-    }
+	func makeUIGestureRecognizer(context: Context) -> UIPanGestureRecognizer {
+		let pan = UIPanGestureRecognizer()
+		pan.delegate = context.coordinator
+		return pan
+	}
 
-    func handleUIGestureRecognizerAction(_ recognizer: UIPanGestureRecognizer, context: Context) {
-        guard recognizer.state == .began || recognizer.state == .changed else { return }
-        onChange(context.converter.localLocation.x)
-    }
+	func handleUIGestureRecognizerAction(_ recognizer: UIPanGestureRecognizer, context: Context) {
+		guard recognizer.state == .began || recognizer.state == .changed else { return }
+		onChange(context.converter.localLocation.x)
+	}
 
-    @MainActor
-    final class Coordinator: NSObject, UIGestureRecognizerDelegate {
-        func gestureRecognizerShouldBegin(_ recognizer: UIGestureRecognizer) -> Bool {
-            guard let pan = recognizer as? UIPanGestureRecognizer else { return true }
-            let velocity = pan.velocity(in: pan.view)
-            return abs(velocity.x) > abs(velocity.y)
-        }
-    }
+	@MainActor
+	final class Coordinator: NSObject, UIGestureRecognizerDelegate {
+		func gestureRecognizerShouldBegin(_ recognizer: UIGestureRecognizer) -> Bool {
+			guard let pan = recognizer as? UIPanGestureRecognizer else { return true }
+			let velocity = pan.velocity(in: pan.view)
+			return abs(velocity.x) > abs(velocity.y)
+		}
+	}
 }
 
 private struct LensPicker: View {
-    let model: HourlyTimelineModel
-    @Binding var selection: HourlyLens
+	let model: HourlyTimelineModel
+	@Binding var selection: HourlyLens
 
-    var body: some View {
-        ViewThatFits(in: .horizontal) {
-            grid(columns: 4)
-            grid(columns: 2)
-        }
-    }
+	var body: some View {
+		ViewThatFits(in: .horizontal) {
+			grid(columns: 4)
+			grid(columns: 2)
+		}
+	}
 
-    private func grid(columns: Int) -> some View {
-        let lenses = HourlyLens.allCases
-        let rows = stride(from: 0, to: lenses.count, by: columns).map {
-            Array(lenses[$0 ..< min($0 + columns, lenses.count)])
-        }
-        return Grid(horizontalSpacing: 6, verticalSpacing: 6) {
-            ForEach(rows, id: \.first) { row in
-                GridRow {
-                    ForEach(row) { lens in
-                        LensTile(model: model, lens: lens, isSelected: lens == selection) {
-                            withAnimation(.snappy) { selection = lens }
-                        }
-                    }
-                }
-            }
-        }
-    }
+	private func grid(columns: Int) -> some View {
+		let lenses = HourlyLens.allCases
+		let rows = stride(from: 0, to: lenses.count, by: columns).map {
+			Array(lenses[$0..<min($0 + columns, lenses.count)])
+		}
+		return Grid(horizontalSpacing: 6, verticalSpacing: 6) {
+			ForEach(rows, id: \.first) { row in
+				GridRow {
+					ForEach(row) { lens in
+						LensTile(model: model, lens: lens, isSelected: lens == selection) {
+							withAnimation(.snappy) { selection = lens }
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 private struct LensTile: View {
-    let model: HourlyTimelineModel
-    let lens: HourlyLens
-    let isSelected: Bool
-    let select: () -> Void
+	let model: HourlyTimelineModel
+	let lens: HourlyLens
+	let isSelected: Bool
+	let select: () -> Void
 
-    var body: some View {
-        Button(action: select) {
-            VStack(alignment: .leading, spacing: 3) {
-                HStack(spacing: 5) {
-                    Image(systemName: lens.systemImage)
-                        .foregroundStyle(model.layout(for: lens).primaryColor)
-                    Text(lens.title)
-                        .foregroundStyle(.secondary)
-                }
-                .font(.caption.weight(.medium))
+	var body: some View {
+		Button(action: select) {
+			VStack(alignment: .leading, spacing: 3) {
+				HStack(spacing: 5) {
+					Image(systemName: lens.systemImage)
+						.foregroundStyle(model.layout(for: lens).primaryColor)
+					Text(lens.title)
+						.foregroundStyle(.secondary)
+				}
+				.font(.caption.weight(.medium))
 
-                Text(verbatim: model.rowValue(for: lens) ?? "--")
-                    .font(.subheadline.weight(.semibold))
-                    .monospacedDigit()
-                    .foregroundStyle(.primary)
-            }
-            .lineLimit(1)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, 10)
-            .padding(.vertical, 8)
-            .background(isSelected ? AnyShapeStyle(.fill.secondary) : AnyShapeStyle(.fill.tertiary), in: .rect(cornerRadius: 12))
-            .contentShape(.rect)
-        }
-        .buttonStyle(.plain)
-        .accessibilityAddTraits(isSelected ? .isSelected : [])
-    }
+				Text(verbatim: model.rowValue(for: lens) ?? "--")
+					.font(.subheadline.weight(.semibold))
+					.monospacedDigit()
+					.foregroundStyle(.primary)
+			}
+			.lineLimit(1)
+			.frame(maxWidth: .infinity, alignment: .leading)
+			.padding(.horizontal, 10)
+			.padding(.vertical, 8)
+			.background(isSelected ? AnyShapeStyle(.fill.secondary) : AnyShapeStyle(.fill.tertiary), in: .rect(cornerRadius: 12))
+			.contentShape(.rect)
+		}
+		.buttonStyle(.plain)
+		.accessibilityAddTraits(isSelected ? .isSelected : [])
+	}
 }

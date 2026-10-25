@@ -1,170 +1,170 @@
 import SwiftUI
 
 struct HourlyTimelineMinimap: View {
-    let model: HourlyTimelineModel
+	let model: HourlyTimelineModel
 
-    @State private var grabOffset: Double?
+	@State private var grabOffset: Double?
 
-    static let chartHeight: CGFloat = 40
-    private static let labelHeight: CGFloat = 13
+	static let chartHeight: CGFloat = 40
+	private static let labelHeight: CGFloat = 13
 
-    var body: some View {
-        GeometryReader { geometry in
-            let width = max(geometry.size.width, 1)
-            ZStack {
-                MinimapSeries(model: model)
-                MinimapViewport(model: model)
-            }
-            .contentShape(.rect)
-            .gesture(
-                DragGesture(minimumDistance: 0)
-                    .onChanged { value in
-                        let domain = model.domain
-                        let seconds = max(domain.upperBound - domain.lowerBound, 1)
-                        let fraction = Double(min(max(0, value.location.x / width), 1))
-                        if grabOffset == nil {
-                            let startFraction = Double(min(max(0, value.startLocation.x / width), 1))
-                            let startTime = domain.lowerBound + startFraction * seconds
-                            let delta = startTime - model.scrubTime
-                            grabOffset = abs(delta) < model.windowSeconds / 2 ? delta : 0
-                        }
-                        model.scrub(to: domain.lowerBound + fraction * seconds - (grabOffset ?? 0))
-                    }
-                    .onEnded { _ in grabOffset = nil }
-            )
-        }
-        .frame(height: Self.chartHeight + Self.labelHeight)
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel(Text("Übersicht"))
-        .accessibilityValue(Text(verbatim: model.timeLabel))
-        .accessibilityAdjustableAction { direction in
-            model.nudge(hours: direction == .increment ? 24 : -24)
-        }
-    }
+	var body: some View {
+		GeometryReader { geometry in
+			let width = max(geometry.size.width, 1)
+			ZStack {
+				MinimapSeries(model: model)
+				MinimapViewport(model: model)
+			}
+			.contentShape(.rect)
+			.gesture(
+				DragGesture(minimumDistance: 0)
+					.onChanged { value in
+						let domain = model.domain
+						let seconds = max(domain.upperBound - domain.lowerBound, 1)
+						let fraction = Double(min(max(0, value.location.x / width), 1))
+						if grabOffset == nil {
+							let startFraction = Double(min(max(0, value.startLocation.x / width), 1))
+							let startTime = domain.lowerBound + startFraction * seconds
+							let delta = startTime - model.scrubTime
+							grabOffset = abs(delta) < model.windowSeconds / 2 ? delta : 0
+						}
+						model.scrub(to: domain.lowerBound + fraction * seconds - (grabOffset ?? 0))
+					}
+					.onEnded { _ in grabOffset = nil }
+			)
+		}
+		.frame(height: Self.chartHeight + Self.labelHeight)
+		.accessibilityElement(children: .ignore)
+		.accessibilityLabel(Text("Übersicht"))
+		.accessibilityValue(Text(verbatim: model.timeLabel))
+		.accessibilityAdjustableAction { direction in
+			model.nudge(hours: direction == .increment ? 24 : -24)
+		}
+	}
 }
 
 private struct MinimapSeries: View {
-    let model: HourlyTimelineModel
+	let model: HourlyTimelineModel
 
-    var body: some View {
-        Canvas { context, size in
-            draw(context: &context, size: size)
-        }
-    }
+	var body: some View {
+		Canvas { context, size in
+			draw(context: &context, size: size)
+		}
+	}
 
-    private func draw(context: inout GraphicsContext, size: CGSize) {
-        guard model.hasData else { return }
-        let width = size.width
-        let height = HourlyTimelineMinimap.chartHeight
-        let domain = model.domain
-        let seconds = max(domain.upperBound - domain.lowerBound, 1)
+	private func draw(context: inout GraphicsContext, size: CGSize) {
+		guard model.hasData else { return }
+		let width = size.width
+		let height = HourlyTimelineMinimap.chartHeight
+		let domain = model.domain
+		let seconds = max(domain.upperBound - domain.lowerBound, 1)
 
-        func x(_ time: Double) -> CGFloat {
-            CGFloat((time - domain.lowerBound) / seconds) * width
-        }
+		func x(_ time: Double) -> CGFloat {
+			CGFloat((time - domain.lowerBound) / seconds) * width
+		}
 
-        for range in model.nightRanges {
-            let x0 = max(0, x(range.lowerBound))
-            let x1 = min(width, x(range.upperBound))
-            guard x1 > x0 else { continue }
-            context.fill(
-                Path(CGRect(x: x0, y: 0, width: x1 - x0, height: height)),
-                with: .color(.black.opacity(0.12))
-            )
-        }
+		for range in model.nightRanges {
+			let x0 = max(0, x(range.lowerBound))
+			let x1 = min(width, x(range.upperBound))
+			guard x1 > x0 else { continue }
+			context.fill(
+				Path(CGRect(x: x0, y: 0, width: x1 - x0, height: height)),
+				with: .color(.black.opacity(0.12))
+			)
+		}
 
-        let times = model.times
-        let barWidth = max(1, width * CGFloat(7_200 / seconds))
-        for (index, value) in model.precipitation.enumerated() where value > 0 {
-            guard index < times.count else { break }
-            let barH = max(1.5, CGFloat(value / model.precipitationMax) * (height * 0.45))
-            context.fill(
-                Path(CGRect(x: x(times[index]) - barWidth / 2, y: height - barH, width: barWidth, height: barH)),
-                with: .color(.hourlyRain.opacity(0.9))
-            )
-        }
+		let times = model.times
+		let barWidth = max(1, width * CGFloat(7_200 / seconds))
+		for (index, value) in model.precipitation.enumerated() where value > 0 {
+			guard index < times.count else { break }
+			let barH = max(1.5, CGFloat(value / model.precipitationMax) * (height * 0.45))
+			context.fill(
+				Path(CGRect(x: x(times[index]) - barWidth / 2, y: height - barH, width: barWidth, height: barH)),
+				with: .color(.hourlyRain.opacity(0.9))
+			)
+		}
 
-        let temperature = model.temperature
-        if var low = temperature.min(), var high = temperature.max() {
-            let pad = max((high - low) * 0.08, 0.5)
-            low -= pad
-            high += pad
-            let valueSpan = max(high - low, 0.0001)
-            var line = Path()
-            var started = false
-            for index in stride(from: 0, to: min(times.count, temperature.count), by: 2) {
-                let fraction = (temperature[index] - low) / valueSpan
-                let point = CGPoint(x: x(times[index]), y: height * (0.78 - 0.56 * CGFloat(fraction)))
-                if started {
-                    line.addLine(to: point)
-                } else {
-                    line.move(to: point)
-                    started = true
-                }
-            }
-            context.stroke(line, with: .color(Color.primary.opacity(0.85)), lineWidth: 1.5)
-        }
+		let temperature = model.temperature
+		if var low = temperature.min(), var high = temperature.max() {
+			let pad = max((high - low) * 0.08, 0.5)
+			low -= pad
+			high += pad
+			let valueSpan = max(high - low, 0.0001)
+			var line = Path()
+			var started = false
+			for index in stride(from: 0, to: min(times.count, temperature.count), by: 2) {
+				let fraction = (temperature[index] - low) / valueSpan
+				let point = CGPoint(x: x(times[index]), y: height * (0.78 - 0.56 * CGFloat(fraction)))
+				if started {
+					line.addLine(to: point)
+				} else {
+					line.move(to: point)
+					started = true
+				}
+			}
+			context.stroke(line, with: .color(Color.primary.opacity(0.85)), lineWidth: 1.5)
+		}
 
-        let labelFont = Font.system(size: 9.5, weight: .medium)
-        let dayWidth = width * CGFloat(86_400 / seconds)
-        for (index, mark) in model.dayMarks.enumerated() {
-            let dayX = x(mark.start)
-            if index > 0 {
-                var rule = Path()
-                rule.move(to: CGPoint(x: dayX, y: 0))
-                rule.addLine(to: CGPoint(x: dayX, y: height))
-                context.stroke(
-                    rule,
-                    with: .color(Color.primary.opacity(0.15)),
-                    style: StrokeStyle(lineWidth: 0.75, dash: [2, 2.5])
-                )
-            }
-            guard dayWidth > 30 || index % 2 == 0 else { continue }
-            let label = context.resolve(
-                Text(verbatim: mark.shortLabel).font(labelFont).foregroundStyle(Color.primary.opacity(0.7))
-            )
-            context.draw(label, at: CGPoint(x: dayX + 3, y: height + 2), anchor: .topLeading)
-        }
+		let labelFont = Font.system(size: 9.5, weight: .medium)
+		let dayWidth = width * CGFloat(86_400 / seconds)
+		for (index, mark) in model.dayMarks.enumerated() {
+			let dayX = x(mark.start)
+			if index > 0 {
+				var rule = Path()
+				rule.move(to: CGPoint(x: dayX, y: 0))
+				rule.addLine(to: CGPoint(x: dayX, y: height))
+				context.stroke(
+					rule,
+					with: .color(Color.primary.opacity(0.15)),
+					style: StrokeStyle(lineWidth: 0.75, dash: [2, 2.5])
+				)
+			}
+			guard dayWidth > 30 || index % 2 == 0 else { continue }
+			let label = context.resolve(
+				Text(verbatim: mark.shortLabel).font(labelFont).foregroundStyle(Color.primary.opacity(0.7))
+			)
+			context.draw(label, at: CGPoint(x: dayX + 3, y: height + 2), anchor: .topLeading)
+		}
 
-        let nowX = x(Date.now.timeIntervalSince1970)
-        if nowX > 0, nowX < width {
-            context.fill(
-                Path(CGRect(x: nowX - 0.5, y: 0, width: 1, height: height)),
-                with: .color(Color.primary.opacity(0.4))
-            )
-        }
-    }
+		let nowX = x(Date.now.timeIntervalSince1970)
+		if nowX > 0, nowX < width {
+			context.fill(
+				Path(CGRect(x: nowX - 0.5, y: 0, width: 1, height: height)),
+				with: .color(Color.primary.opacity(0.4))
+			)
+		}
+	}
 }
 
 private struct MinimapViewport: View {
-    let model: HourlyTimelineModel
+	let model: HourlyTimelineModel
 
-    var body: some View {
-        let scrubTime = model.scrubTime
-        Canvas { context, size in
-            guard model.hasData else { return }
-            draw(context: &context, size: size, scrubTime: scrubTime)
-        }
-    }
+	var body: some View {
+		let scrubTime = model.scrubTime
+		Canvas { context, size in
+			guard model.hasData else { return }
+			draw(context: &context, size: size, scrubTime: scrubTime)
+		}
+	}
 
-    private func draw(context: inout GraphicsContext, size: CGSize, scrubTime: Double) {
-        let width = size.width
-        let height = HourlyTimelineMinimap.chartHeight
-        let domain = model.domain
-        let seconds = max(domain.upperBound - domain.lowerBound, 1)
+	private func draw(context: inout GraphicsContext, size: CGSize, scrubTime: Double) {
+		let width = size.width
+		let height = HourlyTimelineMinimap.chartHeight
+		let domain = model.domain
+		let seconds = max(domain.upperBound - domain.lowerBound, 1)
 
-        func x(_ time: Double) -> CGFloat {
-            CGFloat((time - domain.lowerBound) / seconds) * width
-        }
+		func x(_ time: Double) -> CGFloat {
+			CGFloat((time - domain.lowerBound) / seconds) * width
+		}
 
-        let viewportRect = CGRect(
-            x: x(scrubTime - model.windowSeconds / 2),
-            y: 0.75,
-            width: x(scrubTime + model.windowSeconds / 2) - x(scrubTime - model.windowSeconds / 2),
-            height: height - 1.5
-        )
-        let viewport = Path(roundedRect: viewportRect, cornerRadius: 6)
-        context.fill(viewport, with: .color(Color.primary.opacity(0.1)))
-        context.stroke(viewport, with: .color(Color.primary.opacity(0.9)), lineWidth: 1.5)
-    }
+		let viewportRect = CGRect(
+			x: x(scrubTime - model.windowSeconds / 2),
+			y: 0.75,
+			width: x(scrubTime + model.windowSeconds / 2) - x(scrubTime - model.windowSeconds / 2),
+			height: height - 1.5
+		)
+		let viewport = Path(roundedRect: viewportRect, cornerRadius: 6)
+		context.fill(viewport, with: .color(Color.primary.opacity(0.1)))
+		context.stroke(viewport, with: .color(Color.primary.opacity(0.9)), lineWidth: 1.5)
+	}
 }

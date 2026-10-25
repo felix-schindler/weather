@@ -19,37 +19,37 @@ import WidgetKit
 // MARK: - Widget
 
 struct DailyForecastWidget: Widget {
-    let kind = "DailyForecastWidget"
+	let kind = "DailyForecastWidget"
 
-    var body: some WidgetConfiguration {
-        AppIntentConfiguration(
-            kind: kind,
-            intent: SelectCityIntent.self,
-            provider: DailyForecastProvider()
-        ) { entry in
-            DailyForecastEntryView(entry: entry)
-        }
-        .contentMarginsDisabled()
-        .configurationDisplayName(String(localized: "Tagesvorhersage"))
-        .description(String(localized: "Mehrtägige Vorhersage mit Temperaturverlauf."))
-        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
-    }
+	var body: some WidgetConfiguration {
+		AppIntentConfiguration(
+			kind: kind,
+			intent: SelectCityIntent.self,
+			provider: DailyForecastProvider()
+		) { entry in
+			DailyForecastEntryView(entry: entry)
+		}
+		.contentMarginsDisabled()
+		.configurationDisplayName(String(localized: "Tagesvorhersage"))
+		.description(String(localized: "Mehrtägige Vorhersage mit Temperaturverlauf."))
+		.supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
+	}
 }
 
 #Preview("Small", as: .systemSmall) {
-    DailyForecastWidget()
+	DailyForecastWidget()
 } timeline: {
-    DailyForecastEntry.placeholder
+	DailyForecastEntry.placeholder
 }
 
 #Preview("Medium", as: .systemMedium) {
-    DailyForecastWidget()
+	DailyForecastWidget()
 } timeline: {
-    DailyForecastEntry.placeholder
+	DailyForecastEntry.placeholder
 }
 
 #Preview("Large", as: .systemLarge) {
-    DailyForecastWidget()
+	DailyForecastWidget()
 } timeline: {
-    DailyForecastEntry.placeholder
+	DailyForecastEntry.placeholder
 }
