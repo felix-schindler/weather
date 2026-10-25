@@ -73,11 +73,6 @@ struct NowView: View {
                 .listRowBackground(Color.clear)
             }
 
-            footer
-                .listRowInsets(EdgeInsets())
-                .listRowSeparator(.hidden)
-                .listRowBackground(Color.clear)
-
             if weather.debug {
                 debugDump
                     .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
@@ -94,45 +89,6 @@ struct NowView: View {
         .onGeometryChange(for: CGSize.self, of: { $0.size }) { size in
             form = LayoutForm.of(size)
             LayoutFrame.rememberWideWindow(size)
-        }
-    }
-
-    private var footer: some View {
-        VStack(spacing: 0) {
-            HStack(spacing: 24) {
-                ProviderLogo(asset: "logo-dwd", height: 36)
-                ProviderLogo(asset: "logo-open-meteo", height: 32)
-                ProviderLogo(asset: "logo-oscar-server", height: 28)
-            }
-            .foregroundStyle(.primary)
-            .opacity(0.7)
-            .adaptiveShadow(opacity: 0.35, radius: 1)
-            .adaptiveShadow(opacity: 0.45, radius: 8, y: 2)
-            .padding(12)
-            .drawingGroup()
-            .padding(-12)
-            .accessibilityElement(children: .ignore)
-            .accessibilityLabel(Text(verbatim: "DWD, Open-Meteo & Oscar Server"))
-            .frame(maxWidth: .infinity)
-            .padding(.bottom, 16)
-            .padding(.top, 28)
-            Button {
-                Haptics.impact()
-                presentation.present(.settings)
-            } label: {
-                Label("Einstellungen", systemImage: "gearshape")
-                    .font(.subheadline.weight(.medium))
-                    .foregroundStyle(.primary)
-                    .opacity(0.7)
-                    .adaptiveShadow(opacity: 0.35, radius: 1)
-                    .adaptiveShadow(opacity: 0.45, radius: 8, y: 2)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 9)
-                    .contentShape(Rectangle())
-            }
-            .accessibilityIdentifier("now.settings")
-            .frame(maxWidth: .infinity)
-            .padding(.bottom, 24)
         }
     }
 

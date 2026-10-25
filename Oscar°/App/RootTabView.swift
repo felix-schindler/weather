@@ -2,12 +2,11 @@
 //  RootTabView.swift
 //  Oscar°
 //
-//  App root: Orte / Wetter / Karten tabs. Orte is a plain tab, not the
+//  App root: Orte / Wetter / Karten / Einstellungen tabs. Orte is a plain tab, not the
 //  system search role — the separated search pill is a button affordance
 //  (instant keyboard + round trip), wrong for a dwell space like the
 //  locations list; its search field lives inside the list instead.
-//  Einstellungen is no tab — it opens as a sheet from the bottom of the
-//  forecast scroll. Also owns the app-wide refresh triggers and the sheet
+//  Also owns the app-wide refresh triggers and the sheet
 //  presentation shared by all tabs.
 //
 
@@ -44,6 +43,10 @@ struct RootTabView: View {
                 }
                 Tab("Karten", systemImage: "globe.europe.africa", value: AppTab.maps) {
                     WeatherMapDetailView(settingsService: settingsService)
+                        .tint(.primary)
+                }
+                Tab("Einstellungen", systemImage: "gearshape", value: AppTab.settings) {
+                    SettingsView(showsCloseButton: false)
                         .tint(.primary)
                 }
             }

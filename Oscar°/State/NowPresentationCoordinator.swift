@@ -5,6 +5,7 @@ enum AppTab: Hashable {
     case forecast
     case maps
     case places
+    case settings
 }
 
 @MainActor
