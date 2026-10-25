@@ -283,7 +283,7 @@ struct EnvironmentDetailView: View {
         case .high:
             "Hoch"
         case .veryHigh:
-            "Sehr Hoch"
+            "Sehr hoch"
         }
     }
 }

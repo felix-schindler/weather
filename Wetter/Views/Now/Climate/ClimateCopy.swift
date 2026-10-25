@@ -86,50 +86,11 @@ enum ClimateCopy {
     }
 
     static func yearCount(_ count: Int, of total: Int) -> String {
-        let countText: String
-        if Locale.current.language.languageCode?.identifier == "tr" {
-            countText = "\(count)\(turkishPossessiveSuffix(for: count))"
-        } else {
-            countText = String(count)
-        }
-        return String(localized: "climate.yearCount",
-                      defaultValue: "\(countText) von \(String(total))")
+        String(localized: "climate.yearCount",
+               defaultValue: "\(String(count)) von \(String(total))")
     }
 
     private static func headlinePercent(_ percent: Int) -> String {
-        if Locale.current.language.languageCode?.identifier == "tr" {
-            return "%\(percent)\(turkishAblativePossessiveSuffix(for: percent))"
-        }
-        return "\(percent) %"
-    }
-
-    private static func turkishAblativePossessiveSuffix(for value: Int) -> String {
-        let possessive = turkishPossessiveSuffix(for: value)
-        let isFront = possessive.last == "i" || possessive.last == "ü"
-        return "\(possessive)n\(isFront ? "den" : "dan")"
-    }
-
-    private static func turkishPossessiveSuffix(for value: Int) -> String {
-        let units = ["", "i", "si", "ü", "ü", "i", "sı", "si", "i", "u"]   // bir…dokuz
-        let tens  = ["", "u", "si", "u", "ı", "si", "ı", "i", "i", "ı"]    // on…doksan
-
-        let n = abs(value)
-        let body: String
-        if n % 10 != 0 {
-            body = units[n % 10]
-        } else if (n / 10) % 10 != 0 {
-            body = tens[(n / 10) % 10]
-        } else if n == 0 {
-            body = "ı"                       // sıfır
-        } else if n % 1_000 != 0 {
-            body = "ü"                       // …yüz
-        } else if n % 1_000_000 != 0 {
-            body = "i"                       // …bin
-        } else if n % 1_000_000_000 != 0 {
-            body = "u"                       // …milyon
-        } else {
-            body = "ı"                       // …milyar
-        }
-        return "'\(body)"
+        "\(percent) %"
     }
 }

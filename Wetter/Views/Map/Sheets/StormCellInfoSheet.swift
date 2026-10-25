@@ -98,14 +98,11 @@ struct StormCellInfoSheet: View {
 
     private var movement: String {
         guard cell.velocityKmh >= 3 else { return String(localized: "nahezu stationär") }
-        return "\(compassDirection) · \(Int(cell.velocityKmh.rounded())) km/h"
+        return "\(compassLabel) · \(Int(cell.velocityKmh.rounded())) km/h"
     }
 
-    private var compassDirection: String {
-        let names = ["N", "NO", "O", "SO", "S", "SW", "W", "NW"]
-        let normalizedBearing = cell.bearingDeg.truncatingRemainder(dividingBy: 360) + 360
-        let index = Int(((normalizedBearing.truncatingRemainder(dividingBy: 360) + 22.5) / 45).rounded(.down)) % 8
-        return names[index]
+    private var compassLabel: String {
+        compassDirection(cell.bearingDeg)
     }
 
     private var arrival: String? {

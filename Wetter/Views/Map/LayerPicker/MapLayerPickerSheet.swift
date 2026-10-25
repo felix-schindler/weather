@@ -187,7 +187,7 @@ struct MapLayerPickerSheet: View {
                                isOn: $settingsService.mapValueBubbles)
                 Divider().padding(.leading, 16)
                 LayerToggleRow(title: "Wetterwarnungen",
-                               subtitle: "Aktive Warngebiete des DWD",
+                               subtitle: "Aktive Warngebiete (DWD, MeteoAlarm)",
                                isOn: $settingsService.showAlertPolygons)
                 Divider().padding(.leading, 16)
                 LayerToggleRow(title: "Regenzellen",

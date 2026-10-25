@@ -16,10 +16,16 @@
             "value" : "Weather"
           }
         },
-        "tr" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hava Durumu"
+            "value" : "天氣"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo"
           }
         }
       }
@@ -34,12 +40,6 @@
           }
         },
         "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "WetterWatchWidgetExtension"
-          }
-        },
-        "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "WetterWatchWidgetExtension"
@@ -61,12 +61,6 @@
             "state" : "translated",
             "value" : ""
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
         }
       }
     },
@@ -76,7 +70,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy."
+            "value" : "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscar-Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy."
           }
         },
         "en" : {
@@ -85,10 +79,16 @@
             "value" : "Weather uses it to show the weather where you are. For forecasts and radar, your location is sent to Open-Meteo and Oscar’s server, rounded to about 100 m; Apple determines the place name. More at oscars.love/privacy."
           }
         },
-        "tr" : {
+        "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Hava Durumu bunu bulunduğun yerin hava durumunu göstermek için kullanır. Tahmin ve radar için konumun yaklaşık 100 m’ye yuvarlanarak Open-Meteo’ya ve Oscar’ın sunucusuna gönderilir; yer adını Apple belirler. Daha fazlası: oscars.love/privacy."
+            "state" : "translated",
+            "value" : "天氣會使用你的位置，顯示你目前所在地的天氣。為了提供預報與雷達，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo 和 Oscar 伺服器；地點名稱由 Apple 判斷。詳情請見 oscars.love/privacy。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Tempo usa sua localização para mostrar o clima onde você está. Para previsões e radar, sua localização é enviada ao Open-Meteo e ao servidor do Oscar, arredondada para cerca de 100 m; a Apple determina o nome do local. Saiba mais em oscars.love/privacy."
           }
         }
       }
@@ -99,7 +99,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy."
+            "value" : "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscar-Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy."
           }
         },
         "en" : {
@@ -108,10 +108,16 @@
             "value" : "Weather uses it to show the weather where you are. For forecasts and radar, your location is sent to Open-Meteo and Oscar’s server, rounded to about 100 m; Apple determines the place name. More at oscars.love/privacy."
           }
         },
-        "tr" : {
+        "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Hava Durumu bunu bulunduğun yerin hava durumunu göstermek için kullanır. Tahmin ve radar için konumun yaklaşık 100 m’ye yuvarlanarak Open-Meteo’ya ve Oscar’ın sunucusuna gönderilir; yer adını Apple belirler. Daha fazlası: oscars.love/privacy."
+            "state" : "translated",
+            "value" : "天氣會使用你的位置，顯示你目前所在地的天氣。為了提供預報與雷達，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo 和 Oscar 伺服器；地點名稱由 Apple 判斷。詳情請見 oscars.love/privacy。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Tempo usa sua localização para mostrar o clima onde você está. Para previsões e radar, sua localização é enviada ao Open-Meteo e ao servidor do Oscar, arredondada para cerca de 100 m; a Apple determina o nome do local. Saiba mais em oscars.love/privacy."
           }
         }
       }
@@ -122,7 +128,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy."
+            "value" : "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscar-Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy."
           }
         },
         "en" : {
@@ -131,10 +137,16 @@
             "value" : "Weather uses it to show the weather where you are. For forecasts and radar, your location is sent to Open-Meteo and Oscar’s server, rounded to about 100 m; Apple determines the place name. More at oscars.love/privacy."
           }
         },
-        "tr" : {
+        "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Hava Durumu bunu bulunduğun yerin hava durumunu göstermek için kullanır. Tahmin ve radar için konumun yaklaşık 100 m’ye yuvarlanarak Open-Meteo’ya ve Oscar’ın sunucusuna gönderilir; yer adını Apple belirler. Daha fazlası: oscars.love/privacy."
+            "state" : "translated",
+            "value" : "天氣會使用你的位置，顯示你目前所在地的天氣。為了提供預報與雷達，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo 和 Oscar 伺服器；地點名稱由 Apple 判斷。詳情請見 oscars.love/privacy。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Tempo usa sua localização para mostrar o clima onde você está. Para previsões e radar, sua localização é enviada ao Open-Meteo e ao servidor do Oscar, arredondada para cerca de 100 m; a Apple determina o nome do local. Saiba mais em oscars.love/privacy."
           }
         }
       }
@@ -145,7 +157,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy."
+            "value" : "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscar-Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy."
           }
         },
         "en" : {
@@ -154,10 +166,16 @@
             "value" : "Weather uses it to show the weather where you are. For forecasts and radar, your location is sent to Open-Meteo and Oscar’s server, rounded to about 100 m; Apple determines the place name. More at oscars.love/privacy."
           }
         },
-        "tr" : {
+        "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Hava Durumu bunu bulunduğun yerin hava durumunu göstermek için kullanır. Tahmin ve radar için konumun yaklaşık 100 m’ye yuvarlanarak Open-Meteo’ya ve Oscar’ın sunucusuna gönderilir; yer adını Apple belirler. Daha fazlası: oscars.love/privacy."
+            "state" : "translated",
+            "value" : "天氣會使用你的位置，顯示你目前所在地的天氣。為了提供預報與雷達，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo 和 Oscar 伺服器；地點名稱由 Apple 判斷。詳情請見 oscars.love/privacy。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Tempo usa sua localização para mostrar o clima onde você está. Para previsões e radar, sua localização é enviada ao Open-Meteo e ao servidor do Oscar, arredondada para cerca de 100 m; a Apple determina o nome do local. Saiba mais em oscars.love/privacy."
           }
         }
       }

@@ -21,7 +21,7 @@ struct SettingsView: View {
           NavigationLink {
             NotificationSettingsView()
           } label: {
-            Label("Benachrichtigungen", systemImage: "bell.badge.fill")
+            Label("Mitteilungen", systemImage: "bell.badge.fill")
               .labelStyle(.settingsIcon(.red))
           }
           .accessibilityIdentifier("settings.alerts")

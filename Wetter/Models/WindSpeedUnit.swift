@@ -63,7 +63,7 @@ enum BeaufortScale {
     Entry(force: 7, name: String(localized: "Steifer Wind"), range: "50-61 km/h", landMeaning: String(localized: "Bäume schwanken, Gehen gegen den Wind wird mühsam."), colorHex: 0xDAED12),
     Entry(force: 8, name: String(localized: "Stürmischer Wind"), range: "62-74 km/h", landMeaning: String(localized: "Große Bäume bewegen sich, Zweige können brechen."), colorHex: 0xEDC212),
     Entry(force: 9, name: String(localized: "Sturm"), range: "75-88 km/h", landMeaning: String(localized: "Äste brechen, kleinere Schäden sind möglich."), colorHex: 0xED8F12),
-    Entry(force: 10, name: String(localized: "Schwerer Sturm"), range: "89-102 km/h", landMeaning: String(localized: "Bäume können entwurzeln, Gebäude können Schaden nehmen."), colorHex: 0xED6312),
+    Entry(force: 10, name: String(localized: "Schwerer Sturm"), range: "89-102 km/h", landMeaning: String(localized: "Bäume können entwurzelt werden, Gebäude können Schaden nehmen."), colorHex: 0xED6312),
     Entry(force: 11, name: String(localized: "Orkanartiger Sturm"), range: "103-117 km/h", landMeaning: String(localized: "Schwere Sturmschäden, im Binnenland selten."), colorHex: 0xED2912),
     Entry(force: 12, name: String(localized: "Orkan"), range: ">= 118 km/h", landMeaning: String(localized: "Schwere Verwüstungen, sehr selten im Landesinneren."), colorHex: 0xD5102D),
   ]

@@ -57,14 +57,14 @@ struct WindProvider: TimelineProvider {
 
     static func compassDirection(_ degrees: Double) -> String {
         let directions = [
-            String(localized: "N", comment: "Kompass Nord"),
-            String(localized: "NO", comment: "Kompass Nordost"),
-            String(localized: "O", comment: "Kompass Ost"),
-            String(localized: "SO", comment: "Kompass Südost"),
-            String(localized: "S", comment: "Kompass Süd"),
-            String(localized: "SW", comment: "Kompass Südwest"),
-            String(localized: "W", comment: "Kompass West"),
-            String(localized: "NW", comment: "Kompass Nordwest"),
+            String(localized: "N_compass", comment: "Compass north"),
+            String(localized: "NE_compass", comment: "Compass north-east"),
+            String(localized: "E_compass", comment: "Compass east"),
+            String(localized: "SE_compass", comment: "Compass south-east"),
+            String(localized: "S_compass", comment: "Compass south"),
+            String(localized: "SW_compass", comment: "Compass south-west"),
+            String(localized: "W_compass", comment: "Compass west"),
+            String(localized: "NW_compass", comment: "Compass north-west"),
         ]
         let normalized = degrees.truncatingRemainder(dividingBy: 360)
         let positive = normalized < 0 ? normalized + 360 : normalized

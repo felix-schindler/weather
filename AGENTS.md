@@ -5,7 +5,7 @@ Guide for agents working in this repo — Wetter, a SwiftUI weather app (iOS + A
 ## Project shape
 
 - Single Xcode project, **no Package.swift**. Targets: `Wetter` (app), `WetterWatch Watch App`, `WetterWidget`, `WetterWatchWidget`, `WetterTests`.
-- The user-facing app name is localized: `Wetter` (de), `Weather` (en), `Hava Durumu` (tr). Targets and products stay `Wetter`.
+- The user-facing app name is localized: `Wetter` (de), `Weather` (en), `天氣` (zh-Hant), `Tempo` (pt-BR). Targets and products stay `Wetter`.
 - Swift 6.0, `SWIFT_STRICT_CONCURRENCY = complete`, deployment target iOS/watchOS 26.0. Expect Sendable/isolation errors to be real errors, not noise.
 - Shared targets read/write state through the app group `group.weather.schindlerfelix.de` (`Wetter/Storage/AppGroup.swift`). Anything widgets or Live Activities need at runtime must go through it.
 

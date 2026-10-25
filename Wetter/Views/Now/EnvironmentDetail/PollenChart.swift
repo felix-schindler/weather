@@ -69,7 +69,7 @@ struct PollenChart: View {
             case ..<0.5: String(localized: "Gering")
             case ..<0.75: String(localized: "Mäßig")
             case ..<1: String(localized: "Hoch")
-            default: String(localized: "Sehr Hoch")
+            default: String(localized: "Sehr hoch")
             }
             return "\(pollenSeries.label) \(tier)"
         }
@@ -181,7 +181,7 @@ struct PollenChart: View {
                             case 0.75:
                                 Text("Hoch")
                             default:
-                                Text("Sehr Hoch")
+                                Text("Sehr hoch")
                             }
                         }
                     }

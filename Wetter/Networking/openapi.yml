@@ -675,7 +675,8 @@ paths:
             enum:
               - de
               - en
-              - tr
+              - pt
+              - zh
           description: Language of the response.
         - name: format
           in: query

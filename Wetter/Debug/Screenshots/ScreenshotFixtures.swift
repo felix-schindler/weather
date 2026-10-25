@@ -48,12 +48,8 @@ enum ScreenshotFixtures {
         return rain
     }
 
-    private static func localized(de: String, en: String, tr: String) -> String {
-        switch Locale.current.language.languageCode?.identifier {
-        case "de": de
-        case "tr": tr
-        default: en
-        }
+    private static func localized(de: String, en: String) -> String {
+        Locale.current.language.languageCode?.identifier == "de" ? de : en
     }
 
     // MARK: - Forecast (api.open-meteo.com)
@@ -340,18 +336,15 @@ enum ScreenshotFixtures {
         let now = storyNow
         let event = localized(
             de: "Ergiebiger Dauerregen",
-            en: "Persistent heavy rain",
-            tr: "ŞİDDETLİ SÜREKLİ YAĞIŞ"
+            en: "Persistent heavy rain"
         )
         let headline = localized(
             de: "Amtliche Warnung vor ergiebigem Dauerregen",
-            en: "Warning of persistent heavy rain",
-            tr: "ŞİDDETLİ YAĞIŞ UYARISI"
+            en: "Warning of persistent heavy rain"
         )
         let description = localized(
             de: "Es tritt ergiebiger Dauerregen auf. Niederschlagsmengen bis 60 l/m² in 12 Stunden. Örtlich sind Überflutungen von Straßen und Unterführungen möglich.",
-            en: "Persistent heavy rain is occurring. Precipitation amounts of up to 60 l/m² within 12 hours. Local flooding of roads and underpasses is possible.",
-            tr: "Şiddetli ve sürekli yağış bekleniyor. 12 saat içinde metrekareye 60 litreye kadar yağış düşebilir. Yollarda ve alt geçitlerde su baskınları görülebilir."
+            en: "Persistent heavy rain is occurring. Precipitation amounts of up to 60 l/m² within 12 hours. Local flooding of roads and underpasses is possible."
         )
         let alert: [String: Any] = [
             "alertId": "screenshot.heavy.rain",
@@ -613,12 +606,12 @@ enum ScreenshotFixtures {
     }
 
     static func geocodeSearchJSON() -> [String: Any] {
-        let germany = localized(de: "Deutschland", en: "Germany", tr: "Almanya")
+        let germany = localized(de: "Deutschland", en: "Germany")
         let hits: [(String, Double, Double, String)] = [
-            ("Leipzig", 51.33962, 12.37129, localized(de: "Sachsen", en: "Saxony", tr: "Saksonya")),
+            ("Leipzig", 51.33962, 12.37129, localized(de: "Sachsen", en: "Saxony")),
             ("Leverkusen", 51.0303, 6.98432, "Nordrhein-Westfalen"),
             ("Lemgo", 52.02786, 8.89915, "Nordrhein-Westfalen"),
-            ("Lehrte", 52.37228, 9.97907, localized(de: "Niedersachsen", en: "Lower Saxony", tr: "Aşağı Saksonya")),
+            ("Lehrte", 52.37228, 9.97907, localized(de: "Niedersachsen", en: "Lower Saxony")),
             ("Leinfelden-Echterdingen", 48.69406, 9.16809, "Baden-Württemberg"),
         ]
         return [
@@ -686,20 +679,17 @@ enum ScreenshotFixtures {
         return [
             (
                 title: localized(de: "Warnung vor ergiebigem Dauerregen",
-                          en: "Warning of persistent heavy rain",
-                          tr: "ŞİDDETLİ YAĞIŞ UYARISI"),
+                          en: "Warning of persistent heavy rain"),
                 body: localized(
                     de: "Es tritt ergiebiger Dauerregen auf. Gültig bis \(alertEnd). (Leipzig)",
-                    en: "Persistent heavy rain is occurring. Valid until \(alertEnd). (Leipzig)",
-                    tr: "Şiddetli ve sürekli yağış bekleniyor. \(alertEnd) saatine kadar geçerli. (Leipzig)"
+                    en: "Persistent heavy rain is occurring. Valid until \(alertEnd). (Leipzig)"
                 )
             ),
             (
-                title: localized(de: "Regen zieht auf", en: "Rain soon", tr: "Yağmur yaklaşıyor"),
+                title: localized(de: "Regen zieht auf", en: "Rain soon"),
                 body: localized(
                     de: "Leichter Regen in Leipzig ab \(rainStart), voraussichtlich bis \(rainEnd).",
-                    en: "Light Rain in Leipzig from \(rainStart), likely until \(rainEnd).",
-                    tr: "Leipzig'de \(rainStart) itibarıyla hafif yağmur, tahminen \(rainEnd) saatine kadar."
+                    en: "Light Rain in Leipzig from \(rainStart), likely until \(rainEnd)."
                 )
             ),
         ]

@@ -47,7 +47,7 @@ struct NotificationSettingsView: View {
                     .accessibilityIdentifier("notifications.liveRainStatus")
                 }
             } footer: {
-                Text("Per Radar in Europa, den USA, Taiwan, Brasilien und auf den Kanaren.")
+                Text("Regenwarnungen per Radar in Europa, den USA, Taiwan, Brasilien und auf den Kanaren.")
             }
             .disabled(isUpdating)
 
@@ -59,7 +59,7 @@ struct NotificationSettingsView: View {
                 .accessibilityIdentifier("notifications.weatherAlerts")
             } footer: {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Amtliche Warnungen in Europa (DWD, MeteoAlarm), den USA (NWS) und Taiwan (CWA).")
+                    Text("Amtliche Warnungen in Europa (DWD, MeteoAlarm), den USA (NWS), Kanada (ECCC) und Taiwan (CWA).")
                     if location.name.isEmpty {
                         Text("Gilt für den Ort, der gerade in Wetter offen ist, auf etwa 100 m gerundet.")
                     } else {
@@ -69,7 +69,7 @@ struct NotificationSettingsView: View {
             }
             .disabled(isUpdating)
         }
-        .navigationTitle("Benachrichtigungen")
+        .navigationTitle("Mitteilungen")
         .navigationBarTitleDisplayMode(.inline)
         .alert(refusalTitle, isPresented: isRefusalPresented, presenting: refusal) { refusal in
             Button("Systemeinstellungen öffnen") { openSettings(for: refusal) }
@@ -99,7 +99,7 @@ struct NotificationSettingsView: View {
     private var refusalTitle: Text {
         switch refusal {
         case .liveActivities: Text("Live-Aktivitäten ausgeschaltet")
-        default: Text("Benachrichtigungen deaktiviert")
+        default: Text("Mitteilungen deaktiviert")
         }
     }
 

@@ -30,7 +30,7 @@ struct OnboardingNotificationsStep: View {
                 VStack(spacing: 0) {
                     NotificationChoice(title: "Bevor es regnet", detail: "Etwa eine Viertelstunde vorher.", isOn: $rainAlerts)
                     Divider().padding(.leading, 16)
-                    NotificationChoice(title: "Unwetterwarnungen", detail: "Amtliche Warnungen für deinen Ort.", isOn: $weatherAlerts)
+                    NotificationChoice(title: "Wetterwarnungen", detail: "Amtliche Warnungen für deinen Ort.", isOn: $weatherAlerts)
                     if RainRadarLiveActivityManager.isSupported {
                         Divider().padding(.leading, 16)
                         NotificationChoice(title: "Regen auf dem Sperrbildschirm", detail: "Live-Radar, solange es regnet.", isOn: $liveRain)
