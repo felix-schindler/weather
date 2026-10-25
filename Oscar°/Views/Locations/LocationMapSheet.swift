@@ -152,7 +152,6 @@ struct LocationMapSheet: View {
             }
             .buttonStyle(.borderedProminent)
             .buttonBorderShape(.capsule)
-            .tint(.blue)
             .disabled(point.isResolving && point.name == nil)
             Button {
                 withAnimation(.spring(duration: 0.3)) { picked = nil }
@@ -166,11 +165,7 @@ struct LocationMapSheet: View {
             .accessibilityLabel(Text("Auswahl aufheben"))
         }
         .padding(14)
-        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
-        .overlay(
-            RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .strokeBorder(Color.primary.opacity(0.08), lineWidth: 1)
-        )
+        .glassEffect(.regular, in: .rect(cornerRadius: 22))
         .padding(.horizontal, 16)
         .padding(.bottom, 16)
     }

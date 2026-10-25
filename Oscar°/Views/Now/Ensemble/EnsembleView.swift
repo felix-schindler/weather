@@ -55,11 +55,10 @@ private struct EnsembleContent: View {
     @Binding var expandedLens: EnsembleLens?
 
     var body: some View {
-        ZStack {
+        Group {
             if state.days.isEmpty {
                 if state.isLoading {
                     ProgressView()
-                        .tint(.primary)
                 } else {
                     ContentUnavailableView {
                         Label("Keine Ensemble-Daten", systemImage: "chart.line.downtrend.xyaxis")
@@ -70,28 +69,26 @@ private struct EnsembleContent: View {
                     }
                 }
             } else {
-                VStack(spacing: 0) {
-                    Spacer(minLength: 0)
-
-                    ZStack(alignment: Alignment(horizontal: .trailing, vertical: .firstTextBaseline)) {
-                        DetailDeckCaption(eyebrow: state.eyebrowLabel, title: state.titleLabel, footnote: state.footnote)
-                        EnsembleModelPicker(state: state)
+                List {
+                    Section {
+                        VStack(alignment: .leading, spacing: 12) {
+                            DetailDeckCaption(eyebrow: state.eyebrowLabel, title: state.titleLabel, footnote: state.footnote)
+                            EnsembleModelPicker(state: state)
+                        }
                     }
-                    .padding(.horizontal, 18)
-                        .padding(.bottom, 14)
 
-                    EnsembleDeck(state: state, expandedLens: $expandedLens)
-                        .padding(.horizontal, 16)
+                    Section {
+                        EnsembleDeck(state: state, expandedLens: $expandedLens)
+                    }
 
-                    EnsembleRail(state: state)
-                        .padding(.horizontal, 16)
-                        .padding(.top, 10)
+                    Section {
+                        EnsembleRail(state: state)
+                    }
                 }
-                .padding(.bottom, 10)
+                .listStyle(.insetGrouped)
             }
         }
         .sensoryFeedback(.selection, trigger: state.selectedIndex)
-        .environment(\.cardBackgroundStyle, AnyShapeStyle(.ultraThinMaterial.opacity(0.6)))
     }
 }
 
@@ -101,7 +98,7 @@ private struct EnsembleDeck: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            ForEach(EnsembleLens.allCases.enumerated(), id: \.element) { index, lens in
+            ForEach(EnsembleLens.allCases) { lens in
                 let isExpanded = lens == expandedLens
                 DetailDeckRow(
                     title: lens.title,
@@ -109,7 +106,6 @@ private struct EnsembleDeck: View {
                     tint: lens.color,
                     value: state.rowValue(for: lens),
                     isExpanded: isExpanded,
-                    showsDivider: index > 0 && !isExpanded && EnsembleLens.allCases[index - 1] != expandedLens,
                     toggle: {
                         withAnimation(.snappy) {
                             expandedLens = isExpanded ? nil : lens
@@ -120,6 +116,5 @@ private struct EnsembleDeck: View {
                 }
             }
         }
-        .detailDeckCard()
     }
 }

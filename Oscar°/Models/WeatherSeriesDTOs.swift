@@ -59,6 +59,13 @@ struct PrecipPoint: Codable, Equatable {
     }
 }
 
+extension PrecipSeriesResponse {
+    /// Whether any point from `date` onward carries measurable precipitation.
+    func hasPrecipitation(after date: Date = .now) -> Bool {
+        series.contains { $0.timestamp >= date && $0.precipitation > 0 }
+    }
+}
+
 enum PrecipSeriesDate {
     nonisolated(unsafe) private static let fractional: ISO8601DateFormatter = {
         let f = ISO8601DateFormatter()

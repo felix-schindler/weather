@@ -30,21 +30,7 @@ struct ClimateView: View {
             if (latitude == 0 && longitude == 0) || model.phase == .failed {
                 EmptyView()
             } else {
-                VStack(alignment: .leading) {
-                    NowSectionHeader(showMore: showDetail) {
-                        Text("Klima")
-                    }
-                    .padding(.bottom)
-
-                    content
-                        .padding(.horizontal)
-                        .padding(.bottom, 20)
-                }
-                .scrollTransition { content, phase in
-                    content
-                        .opacity(phase.isIdentity ? 1 : 0.8)
-                        .scaleEffect(phase.isIdentity ? 1 : 0.99)
-                }
+                content
             }
         }
         .task(id: loadIdentity) {
@@ -75,11 +61,6 @@ struct ClimateView: View {
         } else {
             ClimatePlaceholder(isThrottled: model.phase == .throttled)
         }
-    }
-
-    private var showDetail: (() -> Void)? {
-        guard let summary = model.summary, model.phase == .loaded else { return nil }
-        return { presentDetail(summary) }
     }
 
     private func presentDetail(_ summary: ClimateSummary) {

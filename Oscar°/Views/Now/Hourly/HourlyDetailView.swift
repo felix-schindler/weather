@@ -66,50 +66,27 @@ private struct HourlyContent: View {
     let model: HourlyTimelineModel
 
     @State private var expandedLens: HourlyLens? = .overview
-
-    var body: some View {
-        ZStack {
-            HourlyStage(model: model)
-
-            VStack(spacing: 0) {
-                Spacer(minLength: 0)
-
-                HourlyCaption(model: model)
-                    .padding(.horizontal, 18)
-                    .padding(.bottom, 14)
-
-                HourlyDeck(model: model, expandedLens: $expandedLens)
-                    .padding(.horizontal, 16)
-
-                HourlyTimelineMinimap(model: model)
-                    .padding(.horizontal, 16)
-                    .padding(.top, 10)
-            }
-            .padding(.bottom, 10)
-        }
-        .accessibilityIdentifier("hourly.detail")
-        .environment(\.cardBackgroundStyle, AnyShapeStyle(.ultraThinMaterial.opacity(0.6)))
-    }
-}
-
-private struct HourlyStage: View {
-    let model: HourlyTimelineModel
-
     @State private var dragStartTime: Double?
 
     private static let secondsPerPoint: Double = 240
 
     var body: some View {
-        Color.clear
-            .ignoresSafeArea()
-            .contentShape(.rect)
-            .gesture(skyDrag)
-            .accessibilityElement(children: .ignore)
-            .accessibilityLabel(Text("Himmel"))
-            .accessibilityValue(Text(verbatim: model.accessibilityValue))
-            .accessibilityAdjustableAction { direction in
-                model.nudge(hours: direction == .increment ? 1 : -1)
+        List {
+            Section {
+                HourlyCaption(model: model)
             }
+
+            Section {
+                HourlyDeck(model: model, expandedLens: $expandedLens)
+            }
+
+            Section {
+                HourlyTimelineMinimap(model: model)
+            }
+        }
+        .listStyle(.insetGrouped)
+        .simultaneousGesture(skyDrag)
+        .accessibilityIdentifier("hourly.detail")
     }
 
     private var skyDrag: some Gesture {
@@ -142,7 +119,7 @@ private struct HourlyDeck: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            ForEach(HourlyLens.allCases.enumerated(), id: \.element) { index, lens in
+            ForEach(HourlyLens.allCases) { lens in
                 let isExpanded = lens == expandedLens
                 DetailDeckRow(
                     title: lens.title,
@@ -150,7 +127,6 @@ private struct HourlyDeck: View {
                     tint: model.layout(for: lens).primaryColor,
                     value: model.rowValue(for: lens) ?? "--",
                     isExpanded: isExpanded,
-                    showsDivider: index > 0 && !isExpanded && HourlyLens.allCases[index - 1] != expandedLens,
                     toggle: {
                         withAnimation(.snappy) {
                             expandedLens = isExpanded ? nil : lens
@@ -161,7 +137,6 @@ private struct HourlyDeck: View {
                 }
             }
         }
-        .detailDeckCard()
     }
 }
 

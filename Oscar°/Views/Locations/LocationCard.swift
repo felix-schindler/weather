@@ -2,8 +2,8 @@
 //  LocationCard.swift
 //  Oscar°
 //
-//  A saved location as a card: a static miniature of the weather simulation
-//  showing the place's current sky, with name, label emoji, and temperature.
+//  A saved place as a standard list row: name, personalization mark,
+//  current conditions, and temperature.
 //
 
 import SwiftUI
@@ -16,78 +16,50 @@ struct LocationCard: View {
     var isSelected = false
     var isDefault = false
 
-    @ScaledMetric(relativeTo: .headline) private var cardHeight: CGFloat = 102
-    @ScaledMetric(relativeTo: .title) private var temperatureFontSize: CGFloat = 36
-
     var body: some View {
-        ZStack {
-            HStack(spacing: 12) {
-                if hasBadge {
-                    ZStack {
-                        Circle()
-                            .fill(Color.primary.opacity(0.16))
-                            .overlay { Circle().strokeBorder(Color.primary.opacity(0.22), lineWidth: 1) }
-                        badgeContent
-                    }
-                    .frame(width: 44, height: 44)
-                }
-
-                VStack(alignment: .leading, spacing: 3) {
-                    HStack(spacing: 6) {
-                        Text(title)
-                            .font(.headline)
-                            .foregroundStyle(.primary)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.8)
-                        if isDefault {
-                            Image(systemName: "star.fill")
-                                .font(.caption2)
-                                .foregroundStyle(.yellow.opacity(0.95))
-                                .accessibilityHidden(true)
-                        }
-                    }
-                    if let detail {
-                        Text(detail)
-                            .font(.footnote)
-                            .foregroundStyle(Color.primary.opacity(0.85))
-                            .lineLimit(1)
-                    }
-                }
-
-                Spacer(minLength: 8)
-
-                Text(temperature.map { "\(Int($0.rounded()))°" } ?? "--°")
-                    .font(.system(size: temperatureFontSize, weight: .medium, design: .rounded))
-                    .foregroundStyle(Color.primary.opacity(temperature == nil ? 0.4 : 1))
-                    .contentTransition(.numericText())
-                    .animation(.spring(duration: 0.5), value: temperature)
+        HStack(spacing: 12) {
+            if hasBadge {
+                badgeContent
+                    .frame(width: 32, height: 32)
             }
-            .padding(.horizontal, 16)
-            .adaptiveShadow(opacity: 0.35, radius: 3)
-        }
-        .frame(maxWidth: .infinity)
-        .frame(height: cardHeight)
-        .background(.thinMaterial)
-        .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
-        .overlay(
-            RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .strokeBorder(
-                    Color.primary.opacity(isSelected ? 0.75 : 0.12),
-                    lineWidth: isSelected ? 1.75 : 1
-                )
-        )
-        .overlay(alignment: .topTrailing) {
+
+            VStack(alignment: .leading, spacing: 2) {
+                HStack(spacing: 4) {
+                    Text(title)
+                        .lineLimit(1)
+                    if isDefault {
+                        Image(systemName: "star.fill")
+                            .font(.caption2)
+                            .foregroundStyle(.yellow)
+                            .accessibilityHidden(true)
+                    }
+                }
+                if let detail {
+                    Text(detail)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                }
+            }
+
+            Spacer(minLength: 8)
+
+            Text(temperature.map { "\(Int($0.rounded()))°" } ?? "--°")
+                .font(.title3)
+                .monospacedDigit()
+                .foregroundStyle(temperature == nil ? .secondary : .primary)
+                .contentTransition(.numericText())
+                .animation(.default, value: temperature)
+
             if isSelected {
-                Image(systemName: "checkmark.circle.fill")
-                    .font(.subheadline)
-                    .symbolRenderingMode(.palette)
-                    .foregroundStyle(Color(uiColor: .systemBackground), .primary)
-                    .padding(9)
-                    .transition(.scale.combined(with: .opacity))
+                Image(systemName: "checkmark")
+                    .font(.body.weight(.semibold))
+                    .foregroundStyle(.tint)
                     .accessibilityHidden(true)
             }
         }
-        .animation(.spring(duration: 0.35), value: isSelected)
+        .padding(.vertical, 4)
+        .contentShape(.rect)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(accessibilityText)
         .accessibilityValue(isSelected ? Text("Ausgewählt") : Text(""))
@@ -101,11 +73,11 @@ struct LocationCard: View {
     private var badgeContent: some View {
         switch mark {
         case .emoji(let emoji):
-            Text(emoji).font(.system(size: 24))
+            Text(emoji).font(.title2)
         case .locationGlyph:
             Image(systemName: "location.fill")
-                .font(.body)
-                .foregroundStyle(.primary)
+                .font(.title3)
+                .foregroundStyle(.secondary)
         case .plain:
             EmptyView()
         }
@@ -120,16 +92,8 @@ struct LocationCard: View {
     }
 }
 
-struct LocationCardButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .scaleEffect(configuration.isPressed ? 0.97 : 1)
-            .animation(.spring(response: 0.3, dampingFraction: 0.7), value: configuration.isPressed)
-    }
-}
-
 #Preview {
-    VStack(spacing: 12) {
+    List {
         LocationCard(
             title: "Zuhause",
             detail: "Leipzig · Klar",
@@ -151,7 +115,5 @@ struct LocationCardButtonStyle: ButtonStyle {
             temperature: nil
         )
     }
-    .padding()
-    .background(Color(uiColor: .systemBackground))
     .environment(Weather.mock)
 }

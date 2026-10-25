@@ -39,13 +39,6 @@ struct CurrentLocationCard: View {
 }
 
 extension View {
-    func listRowStyling() -> some View {
-        self
-            .listRowSeparator(.hidden)
-            .listRowBackground(Color.clear)
-            .listRowInsets(EdgeInsets(top: 6, leading: 16, bottom: 6, trailing: 16))
-    }
-
     func placeRowActions(
         isDefault: Bool,
         onEdit: @escaping () -> Void,

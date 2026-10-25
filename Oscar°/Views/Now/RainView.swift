@@ -9,8 +9,6 @@ import Charts
 
 struct RainView: View {
     @Environment(Weather.self) private var weather: Weather
-    @Environment(Location.self) private var location: Location
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     var openRadarMap: () -> Void = {}
 
     private var oscarPoints: [PrecipChartPoint] {
@@ -23,27 +21,10 @@ struct RainView: View {
         let points = oscarPoints
         let hasRain = points.contains(where: { $0.value > 0 })
         if hasRain {
-            VStack(alignment: .leading) {
-                NowSectionHeader(showMore: openRadarMap) {
-                    Text("Radar")
-                }
-
-                PrecipitationSeriesChart(points: points, timeZone: weather.forecast.locationTimeZone)
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 20)
-                    .cardBackground()
-                    .clipShape(.rect(cornerRadius: 10))
-                    .cardBorder()
-                    .padding([.leading, .trailing, .bottom])
-                    .frame(height: 180)
-                    .contentShape(.rect)
-                    .simultaneousGesture(TapGesture().onEnded { openRadarMap() })
-            }
-            .scrollTransition { [reduceMotion] content, phase in
-                content
-                    .opacity(phase.isIdentity ? 1 : 0.8)
-                    .scaleEffect(reduceMotion || phase.isIdentity ? 1 : 0.99)
-            }
+            PrecipitationSeriesChart(points: points, timeZone: weather.forecast.locationTimeZone)
+                .frame(height: 180)
+                .contentShape(.rect)
+                .simultaneousGesture(TapGesture().onEnded { openRadarMap() })
         }
     }
 

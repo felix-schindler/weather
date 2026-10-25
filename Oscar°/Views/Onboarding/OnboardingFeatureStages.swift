@@ -17,10 +17,9 @@ struct OnboardingFeatureStage: View {
             switch page {
             case .forecast where layout.isPad:
                 inset {
-                    DailyView(expandsDays: true, fadesInScroll: false)
+                    DailyView(expandsDays: true)
                         .environment(weather)
                         .environment(NowPresentationCoordinator())
-                        .environment(\.cardBackgroundStyle, AnyShapeStyle(Color(.secondarySystemBackground)))
                         .allowsHitTesting(false)
                 }
             case .forecast: inset { ForecastStage() }
@@ -29,7 +28,6 @@ struct OnboardingFeatureStage: View {
             case .more: OnboardingExtrasStage().padding(.horizontal, -80)
             }
         }
-        .environment(\.cardBackgroundStyle, stagedCardFill)
     }
 
     private func inset(@ViewBuilder _ content: () -> some View) -> some View {
@@ -75,8 +73,6 @@ private struct ForecastStage: View {
             ProviderLogo(asset: "logo-noaa", height: 30)
         }
         .foregroundStyle(.primary)
-        .adaptiveShadow(opacity: 0.35, radius: 1)
-        .adaptiveShadow(opacity: 0.45, radius: 8, y: 2)
         .padding(.top, 4)
     }
 }
@@ -106,12 +102,7 @@ private struct EnsembleStage: View {
         }
         .padding(12)
         .frame(maxWidth: .infinity)
-        .background(OnboardingMetrics.navy, in: .rect(cornerRadius: 24))
-        .overlay {
-            RoundedRectangle(cornerRadius: 24)
-                .stroke(.white.opacity(0.12), lineWidth: 1)
-        }
-        .environment(\.colorScheme, .dark)
+        .background(Color(uiColor: .secondarySystemBackground), in: .rect(cornerRadius: 24))
         .onAppear {
             if state.days.isEmpty {
                 state.stage(OnboardingSampleData.ensembleDays, selectedIndex: 1)
@@ -127,7 +118,7 @@ private struct EnsembleStage: View {
             }
 
             VStack(spacing: 0) {
-                ForEach(lenses.enumerated(), id: \.element) { index, lens in
+                ForEach(lenses.enumerated(), id: \.element) { _, lens in
                     let isExpanded = lens == expandedLens
                     DetailDeckRow(
                         title: lens.title,
@@ -135,7 +126,6 @@ private struct EnsembleStage: View {
                         tint: lens.color,
                         value: state.rowValue(for: lens),
                         isExpanded: isExpanded,
-                        showsDivider: index > 0 && !isExpanded && lenses[index - 1] != expandedLens,
                         toggle: {
                             withAnimation(.snappy) {
                                 expandedLens = isExpanded ? nil : lens
@@ -146,7 +136,6 @@ private struct EnsembleStage: View {
                     }
                 }
             }
-            .detailDeckCard()
 
             if showsRail {
                 EnsembleRail(state: state)

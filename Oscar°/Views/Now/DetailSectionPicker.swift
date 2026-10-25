@@ -15,14 +15,7 @@ struct DetailSectionPicker<Section: DetailSection>: View {
             }
         }
         .pickerStyle(.segmented)
-        .padding(6)
-        .background(.thinMaterial, in: .rect(cornerRadius: 18))
-        .overlay {
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .stroke(Color.primary.opacity(0.08), lineWidth: 1)
-        }
         .padding(.horizontal)
-        .padding(.top, 8)
-        .padding(.bottom, 4)
+        .padding(.vertical, 8)
     }
 }

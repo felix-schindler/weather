@@ -24,9 +24,10 @@ struct NowView: View {
 
     private var sections: [NowSection] {
         let arrangement = settingsService.arrangement(for: form)
-        return form.isWide
+        let visible = form.isWide
             ? arrangement.stageSections + arrangement.feedSections
             : arrangement.pageSections
+        return visible.filter { $0.hasContent(in: weather) }
     }
 
     var body: some View {
@@ -39,7 +40,6 @@ struct NowView: View {
                 }
             }
         }
-        .environment(\.cardBackgroundStyle, AnyShapeStyle(.ultraThinMaterial.opacity(0.6)))
     }
 
     private var list: some View {
@@ -53,35 +53,27 @@ struct NowView: View {
             ForEach(sections) { section in
                 Section {
                     section.view(openRadarMap: openRadarMap)
-                        .padding(.vertical, 14)
-                        .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
-                        .listRowSeparator(.hidden)
-                        .listRowBackground(Color.clear)
+                } header: {
+                    Text(section.title)
                 }
             }
 
             if sections.isEmpty {
-                Button("Abschnitte hinzufügen", systemImage: "plus") {
-                    Haptics.impact()
-                    presentation.present(.layout)
+                Section {
+                    Button("Abschnitte hinzufügen", systemImage: "plus") {
+                        Haptics.impact()
+                        presentation.present(.layout)
+                    }
                 }
-                .buttonStyle(.glass)
-                .buttonBorderShape(.capsule)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 14)
-                .listRowSeparator(.hidden)
-                .listRowBackground(Color.clear)
             }
 
             if weather.debug {
-                debugDump
-                    .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
-                    .listRowSeparator(.hidden)
-                    .listRowBackground(Color.clear)
+                Section("Debug") {
+                    debugDump
+                }
             }
         }
-        .listStyle(.plain)
-        .scrollContentBackground(.hidden)
+        .listStyle(.insetGrouped)
         .refreshable {
             await weather.refresh(location: location)
         }

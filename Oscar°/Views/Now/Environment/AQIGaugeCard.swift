@@ -26,11 +26,8 @@ struct AQIGaugeCard: View {
             .gaugeStyle(.accessoryCircular)
             .tint(metric.gradient)
         }
-        .padding(.horizontal, 10)
-        .padding(.vertical, 10)
-        .cardBackground()
-        .clipShape(.rect(cornerRadius: 10))
-        .cardBorder()
+        .padding(.vertical, 4)
+        .frame(minWidth: 72)
     }
 
     @ViewBuilder private var titleText: some View {

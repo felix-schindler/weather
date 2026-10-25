@@ -10,15 +10,6 @@ enum OnboardingMetrics {
     static let edgePadding: CGFloat = 24
     static let contentMaxWidth: CGFloat = 480
     static let tourHeroShare: CGFloat = 0.5
-
-    static let navy = LinearGradient(
-        colors: [
-            Color(hue: 0.60, saturation: 0.58, brightness: 0.36),
-            Color(hue: 0.64, saturation: 0.78, brightness: 0.14),
-        ],
-        startPoint: .top,
-        endPoint: .bottom
-    )
 }
 
 struct OnboardingLayout {

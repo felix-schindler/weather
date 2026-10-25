@@ -19,8 +19,7 @@ struct SkyBand<Content: View>: View {
 
     var body: some View {
         content
-            .background(.thinMaterial)
-            .clipShape(.rect(cornerRadius: 26))
+            .background(Color(uiColor: .secondarySystemBackground), in: .rect(cornerRadius: 26))
     }
 }
 
@@ -49,7 +48,6 @@ struct PreviewHead: View {
             .frame(minHeight: 20)
         }
         .foregroundStyle(.primary)
-        .adaptiveShadow(opacity: 0.3, radius: 3)
         .padding(.horizontal, 16)
     }
 }

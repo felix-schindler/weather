@@ -132,7 +132,9 @@ struct LocationsView: View {
     private var locationList: some View {
         List {
             if isSearching {
-                searchResultRows
+                Section {
+                    searchResultRows
+                }
             } else {
                 if gpsAuthorized {
                     Section {
@@ -151,16 +153,12 @@ struct LocationsView: View {
                 if cities.isEmpty {
                     Section {
                         LocationsEmptyHint()
-                            .listRowStyling()
                     }
                 }
             }
         }
-        .listStyle(.plain)
-        .listRowSpacing(0)
-        .scrollIndicators(.hidden)
+        .listStyle(.insetGrouped)
         .scrollDismissesKeyboard(.immediately)
-        .contentMargins(.bottom, 24, for: .scrollContent)
         .overlay {
             searchStatusOverlay
         }

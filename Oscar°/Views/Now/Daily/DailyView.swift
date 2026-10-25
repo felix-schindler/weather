@@ -2,10 +2,8 @@ import SwiftUI
 
 struct DailyView: View {
   var expandsDays = false
-  var fadesInScroll = true
 
   @Environment(Weather.self) private var weather: Weather
-  @Environment(\.accessibilityReduceMotion) private var reduceMotion
   @Environment(NowPresentationCoordinator.self) private var presentation
   private let settingsService = SettingService.shared
   @State private var expandedDay: Int? = 0
@@ -19,69 +17,48 @@ struct DailyView: View {
     let showsPlaceholders = shouldShowPlaceholders
     let dayNumber = showsPlaceholders ? placeholderDayCount : dailyDisplayCount
     let temperatureScale = displayedTemperatureScale
-    let heading = String(localized: "\(dayNumber)-Tage", comment: "Headline for Daily View")
     let temperatureUnit = weather.forecast.daily_units?.temperature_2m_min ?? "°C"
     let precipitationUnit = weather.forecast.daily_units?.precipitation_sum ?? "mm"
 
-    VStack(alignment: .leading) {
-      NowSectionHeader(showMore: hasDays ? { expandsDays ? presentation.present(.ensemble) : presentDetails(day: 0) } : nil) {
-        Text(heading)
-      }
-      .padding(.bottom)
-
-      VStack(spacing: 0) {
-        if showsPlaceholders {
-          ForEach(0..<placeholderDayCount, id: \.self) { dayPos in
-            if dayPos > 0 { Divider() }
-            DailyPlaceholderRow()
-              .redacted(reason: .placeholder)
+    VStack(spacing: 0) {
+      if showsPlaceholders {
+        ForEach(0..<placeholderDayCount, id: \.self) { dayPos in
+          if dayPos > 0 { Divider() }
+          DailyPlaceholderRow()
+            .redacted(reason: .placeholder)
+        }
+      } else {
+        ForEach(0..<dayNumber, id: \.self) { dayPos in
+          let isExpanded = expandsDays && expandedDay == dayPos
+          if dayPos > 0 { Divider() }
+          Button {
+            if expandsDays {
+              withAnimation(.snappy) { expandedDay = isExpanded ? nil : dayPos }
+            } else {
+              presentDetails(day: dayPos)
+            }
+          } label: {
+            dayRow(
+              dayPos,
+              scale: temperatureScale,
+              temperatureUnit: temperatureUnit,
+              precipitationUnit: precipitationUnit,
+              isExpanded: expandsDays ? isExpanded : nil
+            )
           }
-        } else {
-          ForEach(0..<dayNumber, id: \.self) { dayPos in
-            let isExpanded = expandsDays && expandedDay == dayPos
-            if dayPos > 0 { Divider() }
-            Button {
-              if expandsDays {
-                withAnimation(.snappy) { expandedDay = isExpanded ? nil : dayPos }
-              } else {
-                presentDetails(day: dayPos)
-              }
-            } label: {
-              dayRow(
-                dayPos,
-                scale: temperatureScale,
-                temperatureUnit: temperatureUnit,
-                precipitationUnit: precipitationUnit,
-                isExpanded: expandsDays ? isExpanded : nil
-              )
-            }
-            .buttonStyle(.plain)
-            .accessibilityElement(children: .combine)
-            .accessibilityHint(rowHint(isExpanded: isExpanded))
+          .buttonStyle(.plain)
+          .accessibilityElement(children: .combine)
+          .accessibilityHint(rowHint(isExpanded: isExpanded))
 
-            if isExpanded, let day = dayRange(dayPos) {
-              DayDetailView(day: day, startTime: dayPos == 0 ? Date.now.timeIntervalSince1970 : day.lowerBound + 12 * 3_600)
-                .padding(.bottom, 12)
-                .transition(.opacity)
-            }
+          if isExpanded, let day = dayRange(dayPos) {
+            DayDetailView(day: day, startTime: dayPos == 0 ? Date.now.timeIntervalSince1970 : day.lowerBound + 12 * 3_600)
+              .padding(.bottom, 12)
+              .transition(.opacity)
           }
         }
       }
-      .padding(.horizontal, 20)
-      .padding(.vertical, 6)
-      .cardBackground()
-      .clipShape(.rect(cornerRadius: 10))
-      .cardBorder()
-      .font(.body)
-      .padding([.leading, .trailing])
-      .padding(.bottom, 20)
     }
     .accessibilityIdentifier("now.daily")
-    .scrollTransition { [reduceMotion, fadesInScroll] content, phase in
-      content
-        .opacity(phase.isIdentity || !fadesInScroll ? 1 : 0.8)
-        .scaleEffect(reduceMotion || phase.isIdentity || !fadesInScroll ? 1 : 0.99)
-    }
   }
 }
 

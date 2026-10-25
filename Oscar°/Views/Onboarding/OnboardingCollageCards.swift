@@ -1,7 +1,5 @@
 import SwiftUI
 
-let stagedCardFill = AnyShapeStyle(Color(uiColor: .systemBackground).opacity(0.78))
-
 struct CollageDailyCard: View {
     var dayCount = 5
 
@@ -37,12 +35,7 @@ struct CollageDailyCard: View {
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 14)
-        .background(stagedCardFill)
-        .clipShape(.rect(cornerRadius: 10))
-        .overlay {
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(.secondary.opacity(0.075), lineWidth: 1)
-        }
+        .background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 12))
     }
 }
 
@@ -58,11 +51,6 @@ struct CollageClimateCard: View {
             )
         }
         .padding(14)
-        .background(stagedCardFill)
-        .clipShape(.rect(cornerRadius: 10))
-        .overlay {
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(.secondary.opacity(0.08), lineWidth: 1)
-        }
+        .background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 12))
     }
 }

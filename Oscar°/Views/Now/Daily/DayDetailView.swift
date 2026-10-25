@@ -130,7 +130,7 @@ private struct LensTile: View {
                     Image(systemName: lens.systemImage)
                         .foregroundStyle(model.layout(for: lens).primaryColor)
                     Text(lens.title)
-                        .foregroundStyle(Color.primary.opacity(0.75))
+                        .foregroundStyle(.secondary)
                 }
                 .font(.caption.weight(.medium))
 
@@ -143,7 +143,7 @@ private struct LensTile: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 10)
             .padding(.vertical, 8)
-            .background(Color.primary.opacity(isSelected ? 0.14 : 0.05), in: .rect(cornerRadius: 12))
+            .background(isSelected ? AnyShapeStyle(.fill.secondary) : AnyShapeStyle(.fill.tertiary), in: .rect(cornerRadius: 12))
             .contentShape(.rect)
         }
         .buttonStyle(.plain)

@@ -38,9 +38,5 @@ struct ClimateSummaryCard: View {
             .minimumScaleFactor(0.8)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(14)
-        .cardBackground()
-        .clipShape(.rect(cornerRadius: 12))
-        .cardBorder(RoundedRectangle(cornerRadius: 12))
     }
 }

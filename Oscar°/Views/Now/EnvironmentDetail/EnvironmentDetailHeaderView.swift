@@ -14,7 +14,7 @@ struct EnvironmentDetailHeaderView: View {
 
         HStack(alignment: .center, spacing: 12) {
             Text(verbatim: value)
-                .font(.system(size: 42, weight: .bold, design: .rounded))
+                .font(.system(size: 42, weight: .bold))
                 .foregroundStyle(.primary)
 
             if let badge {

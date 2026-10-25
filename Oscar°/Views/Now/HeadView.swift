@@ -9,12 +9,10 @@ import SwiftUI
 
 struct HeadView: View {
   var compact = false
-  @Environment(\.accessibilityReduceMotion) private var reduceMotion
   @Environment(Weather.self) private var weather: Weather
   @Environment(Location.self) private var location: Location
   @Environment(NowPresentationCoordinator.self) private var presentation
-  @ScaledMetric(relativeTo: .largeTitle) private var temperatureFontSize: CGFloat = 120
-  @ScaledMetric(relativeTo: .title2) private var cityNameFontSize: CGFloat = 22
+  @ScaledMetric(relativeTo: .largeTitle) private var temperatureFontSize: CGFloat = 96
   private let settingsService = SettingService.shared
   private let cityService = CityService.shared
 
@@ -109,24 +107,21 @@ struct HeadView: View {
     VStack(spacing: 4) {
       if let eyebrow {
         eyebrow
-          .font(.caption.weight(.semibold))
-          .textCase(.uppercase)
-          .tracking(1.2)
-          .foregroundStyle(Color(uiColor: .label).opacity(0.6))
+          .font(.subheadline)
+          .foregroundStyle(.secondary)
           .lineLimit(1)
-          .opacity(0.8)
       }
-      HStack(spacing: 6) {
+      HStack(spacing: 4) {
         if showsLocationGlyph {
           Image(systemName: "location.fill")
-            .font(.system(size: cityNameFontSize * 0.55, weight: .bold))
-            .foregroundStyle(Color(uiColor: .label).opacity(0.75))
+            .font(.subheadline.weight(.semibold))
+            .foregroundStyle(.secondary)
         }
         Text(location.name)
-          .font(.system(size: cityNameFontSize, weight: .bold))
-          .lineSpacing(10)
+          .font(.title2.bold())
+          .lineLimit(1)
+          .minimumScaleFactor(0.7)
           .multilineTextAlignment(.center)
-          .foregroundStyle(Color(uiColor: .label))
       }
     }
   }
@@ -138,7 +133,6 @@ struct HeadView: View {
         locationHeader
         Spacer()
       }
-      .adaptiveShadow(opacity: 0.3, radius: 5)
       .contentShape(Rectangle())
       .onTapGesture {
         presentation.selectedTab = .places
@@ -167,11 +161,10 @@ struct HeadView: View {
         Spacer(minLength: compact ? 8 : Self.temperatureGapMinHeight)
 
         Text(roundTemperatureString(temperature: weather.forecast.current?.temperature))
-          .foregroundStyle(Color(uiColor: .label))
-          .font(.system(size: temperatureFontSize))
+          .foregroundStyle(.primary)
+          .font(.system(size: temperatureFontSize, weight: .thin))
           .minimumScaleFactor(0.5)
           .lineLimit(1)
-          .adaptiveShadow(opacity: 0.3, radius: 15)
           .contentTransition(.numericText())
           .animation(.default, value: weather.forecast.current?.temperature)
           .accessibilityLabel(Text("Temperatur \(roundTemperatureString(temperature: weather.forecast.current?.temperature))"))
@@ -191,7 +184,7 @@ struct HeadView: View {
                     Text(annotation.time)
                       .font(.caption2.weight(.medium))
                   }
-                  .foregroundStyle(Color(uiColor: .label).opacity(0.55))
+                  .foregroundStyle(.secondary)
                 }
               }
               if metric == .measured, let id = weather.headStation?.id {
@@ -203,9 +196,8 @@ struct HeadView: View {
             }
           }
         }
-        .font(.subheadline.weight(.medium))
-        .foregroundStyle(Color(uiColor: .label).opacity(0.85))
-        .adaptiveShadow(opacity: 0.3, radius: 3)
+        .font(.subheadline)
+        .foregroundStyle(.secondary)
         .frame(maxWidth: .infinity, minHeight: 20)
         .contentShape(.rect)
         .onLongPressGesture {
@@ -227,12 +219,7 @@ struct HeadView: View {
             .padding(.top, 14)
         }
       }
-      .padding(.bottom, 40)
-      .scrollTransition { [reduceMotion] content, phase in
-        content
-          .opacity(phase.isIdentity ? 1 : 0.8)
-          .scaleEffect(reduceMotion || phase.isIdentity ? 1 : 0.99)
-      }
+      .padding(.bottom, 24)
     }
   }
 

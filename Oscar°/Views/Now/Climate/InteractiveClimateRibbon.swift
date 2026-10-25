@@ -77,8 +77,7 @@ struct InteractiveClimateRibbon: View {
             }
             .padding(.horizontal, 8)
             .padding(.vertical, 4)
-            .cardBackground(in: Capsule())
-            .overlay { Capsule().stroke(.secondary.opacity(0.15), lineWidth: 0.5) }
+            .glassEffect(.regular, in: Capsule())
             .position(
                 x: min(max(centerX(for: index, width: width), half), max(width - half, half)),
                 y: 11)

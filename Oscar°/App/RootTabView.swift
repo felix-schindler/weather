@@ -36,22 +36,18 @@ struct RootTabView: View {
             TabView(selection: selection) {
                 Tab("Orte", systemImage: "location.fill", value: AppTab.places) {
                     LocationsView()
-                        .tint(.primary)
                 }
                 Tab("Wetter", systemImage: "cloud.sun", value: AppTab.forecast) {
                     NowView()
                 }
                 Tab("Karten", systemImage: "globe.europe.africa", value: AppTab.maps) {
                     WeatherMapDetailView(settingsService: settingsService)
-                        .tint(.primary)
                 }
                 Tab("Einstellungen", systemImage: "gearshape", value: AppTab.settings) {
                     SettingsView(showsCloseButton: false)
-                        .tint(.primary)
                 }
             }
             .tabBarMinimizeBehavior(horizontalSizeClass == .regular || presentation.selectedTab == .maps ? .never : .onScrollDown)
-            .tint(.primary)
             .layerPickerInspector(isPresented: $presentation.isLayerPickerPresented, settingsService: settingsService) {
                 presentation.selectLayer($0, $1)
             }

@@ -142,7 +142,6 @@ struct EnvironmentDetailView: View {
                     }
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
-                .ignoresSafeArea(.container, edges: .bottom)
             }
             .navigationTitle("Umweltdetails")
             .navigationBarTitleDisplayMode(.inline)
@@ -167,7 +166,6 @@ struct EnvironmentDetailView: View {
             .padding()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .ignoresSafeArea(.container, edges: .bottom)
     }
 
     @ViewBuilder

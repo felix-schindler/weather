@@ -40,7 +40,6 @@ struct NowLayoutCanvas: View {
                             Text(title)
                                 .font(.caption2.weight(.semibold))
                                 .foregroundStyle(.primary)
-                                .adaptiveShadow(opacity: 0.3, radius: 2)
                                 .frame(height: Self.captionHeight)
                         }
                         HStack(alignment: .top, spacing: 0) {
@@ -57,7 +56,6 @@ struct NowLayoutCanvas: View {
         }
         .padding(14)
         .frame(maxHeight: .infinity)
-        .environment(\.cardBackgroundStyle, stagedCardFill)
         .dynamicTypeSize(.large)
     }
 
@@ -454,8 +452,9 @@ private struct SectionBlock: View {
         VStack(alignment: .leading, spacing: 8) {
             if section != .map {
                 Text(section.title)
-                    .font(.title3.bold())
-                    .foregroundStyle(.primary)
+                    .font(.footnote.weight(.semibold))
+                    .textCase(.uppercase)
+                    .foregroundStyle(.secondary)
                     .padding(.leading)
             }
             card
@@ -470,17 +469,13 @@ private struct SectionBlock: View {
         case .map:
             Color.clear
                 .frame(height: 260)
-                .cardBackground()
-                .clipShape(.rect(cornerRadius: 10))
-                .cardBorder()
+                .background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 12))
                 .padding(.horizontal)
         case .radar:
             PrecipitationSeriesChart(points: OnboardingSampleData.showerPoints, timeZone: .current)
                 .padding(16)
                 .frame(height: 120)
-                .cardBackground()
-                .clipShape(.rect(cornerRadius: 10))
-                .cardBorder()
+                .background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 12))
                 .padding(.horizontal)
         case .hourly:
             strip(spacing: 12) {
@@ -534,7 +529,6 @@ private struct Callout: View {
         }
         .frame(height: Self.height)
         .foregroundStyle(.primary)
-        .adaptiveShadow(opacity: 0.3, radius: 2)
         .contentShape(Rectangle().inset(by: -6))
     }
 

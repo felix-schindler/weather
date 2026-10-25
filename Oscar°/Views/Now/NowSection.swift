@@ -49,10 +49,27 @@ enum NowSection: String, CaseIterable, Identifiable, Codable {
         }
     }
 
+    /// A section with no data must not contribute an empty list header.
+    @MainActor
+    func hasContent(in weather: Weather) -> Bool {
+        switch self {
+        case .map, .hourly, .daily, .environment:
+            return true
+        case .radar:
+            return weather.precipSeries?.hasPrecipitation() ?? false
+        case .climate:
+            let latitude = weather.forecast.latitude ?? 0
+            let longitude = weather.forecast.longitude ?? 0
+            return latitude != 0 || longitude != 0
+        case .stations:
+            return !weather.stations.isEmpty
+        }
+    }
+
     @MainActor @ViewBuilder
     func view(openRadarMap: @escaping () -> Void = {}, isWide: Bool = false) -> some View {
         switch self {
-        case .map: MapPreview().frame(minHeight: 240, maxHeight: .infinity)
+        case .map: MapPreview().frame(height: 260)
         case .radar: RainView(openRadarMap: openRadarMap)
         case .hourly: HourlyView()
         case .daily: DailyView(expandsDays: isWide)

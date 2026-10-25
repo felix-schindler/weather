@@ -14,9 +14,5 @@ struct ClimatePlaceholder: View {
             RoundedRectangle(cornerRadius: 6).fill(.quaternary).frame(width: 230, height: 12)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(14)
-        .cardBackground()
-        .clipShape(.rect(cornerRadius: 12))
-        .cardBorder(RoundedRectangle(cornerRadius: 12))
     }
 }

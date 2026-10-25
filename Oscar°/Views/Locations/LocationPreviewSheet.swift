@@ -33,20 +33,28 @@ struct LocationPreviewSheet: View {
     }
 
     var body: some View {
-        ZStack {
+        Group {
             if weather.hasContent {
-                ScrollView(.vertical) {
-                    VStack(alignment: .leading, spacing: 20) {
+                List {
+                    Section {
                         header
-                            .padding(.top, 52)
-                            .padding(.bottom, 8)
-                        RainView()
+                    }
+
+                    if hasRain {
+                        Section("Radar") {
+                            RainView()
+                        }
+                    }
+
+                    Section("Stündlich") {
                         HourlyView()
+                    }
+
+                    Section("Täglich") {
                         DailyView()
                     }
-                    .padding(.bottom, 12)
                 }
-                .scrollIndicators(.hidden)
+                .listStyle(.insetGrouped)
                 .transition(.opacity)
             } else if loadFailed {
                 ContentUnavailableView {
@@ -63,7 +71,6 @@ struct LocationPreviewSheet: View {
             } else {
                 ProgressView()
                     .controlSize(.large)
-                    .tint(.primary)
             }
         }
         .animation(.easeInOut(duration: 0.35), value: weather.hasContent)
@@ -74,28 +81,29 @@ struct LocationPreviewSheet: View {
         .environment(weather)
         .environment(previewLocation)
         .environment(presentation)
-        .environment(\.cardBackgroundStyle, AnyShapeStyle(.ultraThinMaterial.opacity(0.6)))
         .task {
             await load()
         }
     }
 
+    private var hasRain: Bool {
+        weather.precipSeries?.hasPrecipitation() ?? false
+    }
+
     private var header: some View {
         VStack(spacing: 4) {
             Text(candidate.name)
-                .font(.title2.weight(.bold))
-                .foregroundStyle(Color(uiColor: .label))
+                .font(.title2.bold())
+                .foregroundStyle(.primary)
                 .lineLimit(2)
                 .multilineTextAlignment(.center)
             Text(roundTemperatureString(temperature: weather.forecast.current?.temperature))
-                .font(.system(size: temperatureFontSize))
+                .font(.system(size: temperatureFontSize, weight: .thin))
                 .minimumScaleFactor(0.5)
                 .lineLimit(1)
-                .foregroundStyle(Color(uiColor: .label))
+                .foregroundStyle(.primary)
                 .contentTransition(.numericText())
-                .padding(.top, 2)
         }
-        .adaptiveShadow(opacity: 0.3, radius: 8)
         .frame(maxWidth: .infinity)
         .accessibilityElement(children: .combine)
     }
@@ -106,39 +114,22 @@ struct LocationPreviewSheet: View {
                 dismiss()
             } label: {
                 Text("Abbrechen")
-                    .font(.body.weight(.medium))
                     .frame(maxWidth: .infinity)
             }
-            .buttonStyle(.glass)
-            .buttonBorderShape(.capsule)
+            .buttonStyle(.bordered)
             .controlSize(.large)
 
             Button {
                 onAdd()
             } label: {
                 Label("Hinzufügen", systemImage: "plus")
-                    .font(.body.weight(.semibold))
                     .frame(maxWidth: .infinity)
             }
             .buttonStyle(.borderedProminent)
-            .buttonBorderShape(.capsule)
             .controlSize(.large)
-            .tint(.blue)
         }
-        .padding(.horizontal, 16)
-        .padding(.top, 10)
-        .padding(.bottom, 6)
-        .background(
-            LinearGradient(
-                colors: [
-                    Color(uiColor: .systemBackground).opacity(0),
-                    Color(uiColor: .systemBackground).opacity(0.85)
-                ],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea(edges: .bottom)
-        )
+        .padding()
+        .background(.bar)
     }
 
     private func load() async {

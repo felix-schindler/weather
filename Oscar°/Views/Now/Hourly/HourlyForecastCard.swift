@@ -17,7 +17,7 @@ struct HourlyForecastCard: View {
         .accessibilityHidden(true)
       Text(item.precipitation)
         .font(.footnote)
-        .foregroundStyle(Color.primary.opacity(0.72))
+        .foregroundStyle(.secondary)
         .lineLimit(1)
         .minimumScaleFactor(0.75)
         .opacity(item.precipitationValue > 0 ? 1 : 0)
@@ -26,12 +26,8 @@ struct HourlyForecastCard: View {
         .lineLimit(1)
         .minimumScaleFactor(0.75)
     }
-    .padding(.horizontal, 12)
-    .padding(.vertical, 12)
+    .padding(.vertical, 8)
     .frame(width: Self.cardWidth)
-    .cardBackground()
-    .clipShape(.rect(cornerRadius: 10))
-    .cardBorder()
     .accessibilityElement(children: .combine)
   }
 }

@@ -22,10 +22,6 @@ struct EnsembleRail: View {
             )
         }
         .frame(height: Self.chartHeight + Self.labelHeight)
-        .padding(.horizontal, 12)
-        .padding(.vertical, 8)
-        .cardBackground(in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-        .cardBorder(RoundedRectangle(cornerRadius: 16, style: .continuous))
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(Text("Übersicht"))
         .accessibilityValue(Text(verbatim: state.selectedDay.map(state.shortDateLabel) ?? ""))

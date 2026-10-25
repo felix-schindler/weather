@@ -25,7 +25,6 @@ struct MemoryView: View {
                     .padding([.leading, .trailing], 50)
             }
             .foregroundStyle(Color.primary.opacity(0.9))
-            .adaptiveShadow(opacity: 0.3, radius: 15)
             .padding(.bottom, 60)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

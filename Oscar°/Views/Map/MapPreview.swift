@@ -15,20 +15,12 @@ struct MapPreview: View {
     private let settingsService = SettingService.shared
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            NowSectionHeader(showMore: openMaps) {
-                Text("Karte")
-            }
-            .padding(.bottom)
-
-            Button(action: openMaps) {
-                map
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel(Text("Karte"))
-            .accessibilityHint(Text("Öffnet Karten"))
-            .padding(.horizontal)
+        Button(action: openMaps) {
+            map
         }
+        .buttonStyle(.plain)
+        .accessibilityLabel(Text("Karte"))
+        .accessibilityHint(Text("Öffnet Karten"))
         .task(id: "\(location.coordinates.latitude)|\(location.coordinates.longitude)") {
             layers.pickRadarSource(for: location.coordinates)
             layers.syncCloudActivation()
@@ -66,8 +58,6 @@ struct MapPreview: View {
             MapAttributionLabel()
                 .padding(10)
         }
-        .clipShape(.rect(cornerRadius: 10))
-        .cardBorder()
         .contentShape(.rect)
     }
 

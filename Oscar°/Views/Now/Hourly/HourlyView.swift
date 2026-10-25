@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HourlyView: View {
   @Environment(Weather.self) private var weather: Weather
-  @Environment(\.accessibilityReduceMotion) private var reduceMotion
   @Environment(NowPresentationCoordinator.self) private var presentation
   @State private var leadingItemID: String?
 
@@ -26,7 +25,6 @@ struct HourlyView: View {
   }
 
   var body: some View {
-    let shouldReduceMotion = reduceMotion
     let items = self.items
     let shouldShowPlaceholders = weather.isLoading && items.isEmpty
     let timeZone = weather.forecast.locationTimeZone
@@ -38,30 +36,27 @@ struct HourlyView: View {
     }
     let showDayBadge = leadingItemID != nil && leadingItemID != firstID && dayLabel != nil
 
-    VStack(alignment: .leading) {
-      header(dayLabel: showDayBadge ? dayLabel : nil)
+    VStack(alignment: .leading, spacing: 8) {
+      if showDayBadge, let dayLabel {
+        Text(dayLabel)
+          .font(.footnote.weight(.medium))
+          .foregroundStyle(.secondary)
+          .contentTransition(.numericText())
+          .transition(.opacity)
+          .animation(.snappy, value: dayLabel)
+      }
 
       ScrollView(.horizontal) {
         LazyHStack(spacing: 12) {
           if shouldShowPlaceholders {
             ForEach(0..<10, id: \.self) { _ in
               HourlyPlaceholderCard()
-                .scrollTransition { content, phase in
-                  content
-                    .opacity(phase.isIdentity ? 1 : 0.5)
-                    .scaleEffect(shouldReduceMotion || phase.isIdentity ? 1 : 0.9)
-                }
-                .padding(.vertical, 20)
+                .padding(.vertical, 4)
             }
           } else {
             ForEach(items) { item in
               timelineItemView(item)
-                .scrollTransition { content, phase in
-                  content
-                    .opacity(phase.isIdentity ? 1 : 0.5)
-                    .scaleEffect(shouldReduceMotion || phase.isIdentity ? 1 : 0.9)
-                }
-                .padding(.vertical, 20)
+                .padding(.vertical, 4)
                 .onTapGesture {
                   presentDetails(at: Date(timeIntervalSince1970: item.timestamp))
                 }
@@ -69,8 +64,6 @@ struct HourlyView: View {
           }
         }
         .scrollTargetLayout()
-        .font(.system(size: 18))
-        .padding(.leading)
       }
       .scrollIndicators(.hidden)
       .scrollTargetBehavior(.viewAligned(limitBehavior: .never))
@@ -82,33 +75,7 @@ struct HourlyView: View {
       .disabled(!hasHourlyDetailData)
       .accessibilityAction(named: Text("Stündliche Details"), presentDetails)
     }
-    .scrollTransition { content, phase in
-      content
-        .opacity(phase.isIdentity ? 1 : 0.8)
-        .scaleEffect(shouldReduceMotion || phase.isIdentity ? 1 : 0.99)
-    }
     .accessibilityIdentifier("now.hourly")
-  }
-
-  private func header(dayLabel: String?) -> some View {
-    NowSectionHeader(showMore: hasHourlyDetailData ? { presentDetails(at: nil) } : nil) {
-      HStack(spacing: 6) {
-        Text("Stündlich")
-          .contentShape(.rect)
-          .onTapGesture { scrollToStart() }
-          .accessibilityAddTraits(.isButton)
-          .accessibilityHint(Text("Zurück zum Anfang der stündlichen Vorhersage"))
-
-        if let dayLabel {
-          Text(verbatim: "· \(dayLabel)")
-            .font(.subheadline.weight(.semibold))
-            .foregroundStyle(.secondary)
-            .contentTransition(.numericText())
-            .transition(.opacity)
-        }
-      }
-      .animation(.snappy, value: dayLabel)
-    }
   }
 
   private func timelineItemView(_ item: HourlyTimelineItem) -> some View {
@@ -132,14 +99,6 @@ struct HourlyView: View {
     }
 
     presentation.present(.hourly(target))
-  }
-
-  private func scrollToStart() {
-    guard let firstID = items.first?.id, let current = leadingItemID, current != firstID else {
-      return
-    }
-
-    withAnimation(.snappy) { leadingItemID = firstID }
   }
 }
 

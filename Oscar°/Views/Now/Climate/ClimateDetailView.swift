@@ -83,7 +83,8 @@ struct ClimateDetailView: View {
     }
 
     private var statCard: some View {
-        VStack(spacing: 0) {
+        GroupBox {
+            VStack(spacing: 0) {
             ClimateStatRow(
                 label: "Heute",
                 value: "\(summary.todayHighString(unit)) (\(summary.anomalyString(unit)))")
@@ -119,14 +120,8 @@ struct ClimateDetailView: View {
                     label: "Frost (\(summary.frostThresholdLabel(unit)))",
                     value: ClimateCopy.yearCount(summary.frostYears, of: summary.totalYears))
             }
-        }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 4)
-        .background(.thinMaterial)
-        .clipShape(.rect(cornerRadius: 14))
-        .overlay {
-            RoundedRectangle(cornerRadius: 14)
-                .stroke(.secondary.opacity(0.1), lineWidth: 1)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 }

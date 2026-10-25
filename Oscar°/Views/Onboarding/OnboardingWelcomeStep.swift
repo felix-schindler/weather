@@ -142,7 +142,6 @@ struct OnboardingLockup: View {
                     .font(.system(.largeTitle, design: .rounded, weight: .bold).scaled(by: compact ? 1.05 : 1.3))
                     .foregroundStyle(.primary)
             }
-            .adaptiveShadow(opacity: 0.25, radius: 10, y: 4)
         }
         .accessibilityElement(children: .combine)
     }

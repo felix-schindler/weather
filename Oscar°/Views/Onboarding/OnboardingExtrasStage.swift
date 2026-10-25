@@ -51,9 +51,6 @@ struct OnboardingExtrasStage: View {
         PrecipitationSeriesChart(points: OnboardingSampleData.showerPoints, timeZone: .current)
             .padding(14)
             .frame(height: 110)
-            .cardBackground()
-            .clipShape(.rect(cornerRadius: 10))
-            .cardBorder()
     }
 
     private func gauges(_ first: Int, _ second: Int) -> some View {

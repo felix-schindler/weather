@@ -50,48 +50,26 @@ struct EnvironmentGaugesView: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading) {
-            NowSectionHeader(showMore: showDetail) {
-                Text("Umwelt")
-            }
-            .padding(.bottom)
-            ScrollView(.horizontal) {
-                LazyHStack(spacing: 14) {
-                    ForEach(metrics) { metric in
-                        Button(action: {
-                            presentDetail(for: metric)
-                        }) {
-                            AQIGaugeCard(metric: metric)
-                        }
-                        .buttonStyle(.plain)
-                        .scrollTransition { content, phase in
-                            content
-                                .opacity(phase.isIdentity ? 1 : 0.5)
-                                .scaleEffect(phase.isIdentity ? 1 : 0.9)
-                        }
-                        .accessibilityLabel(accessibilityLabel(for: metric))
-                        .accessibilityHint(Text("Öffnet stündliche Umweltdiagramme"))
-                        .accessibilityIdentifier("now.environment.\(metric.id)")
+        ScrollView(.horizontal) {
+            LazyHStack(spacing: 18) {
+                ForEach(metrics) { metric in
+                    Button(action: {
+                        presentDetail(for: metric)
+                    }) {
+                        AQIGaugeCard(metric: metric)
                     }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel(accessibilityLabel(for: metric))
+                    .accessibilityHint(Text("Öffnet stündliche Umweltdiagramme"))
+                    .accessibilityIdentifier("now.environment.\(metric.id)")
                 }
-                .scrollTargetLayout()
-                .font(.system(size: 18))
-                .padding([.leading, .trailing])
             }
-            .scrollIndicators(.hidden)
-            .scrollTargetBehavior(.viewAligned(limitBehavior: .never))
-            .frame(maxWidth: .infinity)
-            .padding(.bottom, 20)
+            .scrollTargetLayout()
         }
-        .scrollTransition { content, phase in
-            content
-                .opacity(phase.isIdentity ? 1 : 0.8)
-                .scaleEffect(phase.isIdentity ? 1 : 0.99)
-        }
-    }
-
-    private func showDetail() {
-        presentation.present(.environment(metrics.first.map { detailSection(for: $0) } ?? .aqi))
+        .scrollIndicators(.hidden)
+        .scrollTargetBehavior(.viewAligned(limitBehavior: .never))
+        .contentMargins(.trailing, 16, for: .scrollContent)
+        .frame(maxWidth: .infinity)
     }
 
     private func presentDetail(for metric: EnvironmentMetric) {

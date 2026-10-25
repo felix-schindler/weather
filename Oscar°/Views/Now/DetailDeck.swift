@@ -6,29 +6,23 @@ struct DetailDeckCaption: View {
     var footnote: String?
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 3) {
+        VStack(alignment: .leading, spacing: 4) {
             Text(verbatim: eyebrow)
-                .font(.footnote.weight(.semibold))
-                .textCase(.uppercase)
-                .tracking(1.2)
+                .font(.subheadline.weight(.semibold))
                 .monospacedDigit()
-                .foregroundStyle(Color.primary.opacity(0.72))
-                .adaptiveShadow(opacity: 0.35, radius: 1.5)
+                .foregroundStyle(.secondary)
                 .contentTransition(.numericText())
                 .animation(.snappy, value: eyebrow)
 
             Text(verbatim: title)
-                .font(.title.weight(.bold))
+                .font(.title2.bold())
                 .foregroundStyle(.primary)
-                .adaptiveShadow(opacity: 0.3, radius: 2.5)
 
             if let footnote {
                 Text(verbatim: footnote)
-                    .font(.footnote)
-                    .foregroundStyle(Color.primary.opacity(0.85))
-                    .adaptiveShadow(opacity: 0.35, radius: 1.5)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
-                    .padding(.top, 3)
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -42,76 +36,46 @@ struct DetailDeckRow<Chart: View>: View {
     let tint: Color
     let value: String
     let isExpanded: Bool
-    let showsDivider: Bool
     let toggle: () -> Void
     @ViewBuilder let chart: Chart
 
     var body: some View {
-        VStack(spacing: 0) {
-            if showsDivider {
-                Rectangle()
-                    .fill(Color.primary.opacity(0.08))
-                    .frame(height: 1)
-            }
-
-            VStack(spacing: 0) {
-                Button(action: toggle) {
-                    header
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 11)
-                        .contentShape(.rect)
-                }
-                .buttonStyle(.plain)
-
-                if isExpanded {
-                    chart
-                        .frame(height: 176)
-                        .padding(.horizontal, 12)
-                        .padding(.bottom, 12)
-                        .transition(.move(edge: .top).combined(with: .opacity))
-                }
-            }
-            .background {
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .fill(Color.primary.opacity(isExpanded ? 0.09 : 0))
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        DisclosureGroup(isExpanded: expansion) {
+            chart
+                .frame(height: 176)
+        } label: {
+            header
         }
+    }
+
+    private var expansion: Binding<Bool> {
+        Binding(
+            get: { isExpanded },
+            set: { expanded in
+                guard expanded != isExpanded else { return }
+                toggle()
+            }
+        )
     }
 
     private var header: some View {
         HStack(spacing: 12) {
             Image(systemName: systemImage)
-                .font(.subheadline.weight(.medium))
+                .font(.subheadline)
                 .foregroundStyle(tint)
                 .frame(width: 24)
 
             Text(title)
-                .font(.subheadline.weight(.medium))
                 .foregroundStyle(.primary)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
             Text(verbatim: value)
-                .font(.subheadline.weight(.semibold))
                 .monospacedDigit()
-                .foregroundStyle(Color.primary.opacity(0.9))
-
-            Image(systemName: "chevron.down")
-                .font(.caption2.weight(.bold))
-                .foregroundStyle(Color.primary.opacity(isExpanded ? 0.5 : 0.4))
-                .rotationEffect(.degrees(isExpanded ? 180 : 0))
+                .foregroundStyle(.secondary)
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(title)
         .accessibilityValue(Text(verbatim: value))
         .accessibilityHint(isExpanded ? Text("Klappt das Diagramm ein") : Text("Zeigt das Diagramm"))
-    }
-}
-
-extension View {
-    func detailDeckCard() -> some View {
-        padding(6)
-            .cardBackground(in: RoundedRectangle(cornerRadius: 22, style: .continuous))
-            .cardBorder(RoundedRectangle(cornerRadius: 22, style: .continuous))
     }
 }

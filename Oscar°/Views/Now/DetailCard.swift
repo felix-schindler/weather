@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// A native grouped container for detail-sheet content.
 struct DetailCard<Content: View>: View {
     private let content: Content
 
@@ -8,18 +9,11 @@ struct DetailCard<Content: View>: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            content
-        }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background {
-            RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .fill(.thinMaterial)
-        }
-        .overlay {
-            RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .stroke(Color.primary.opacity(0.08), lineWidth: 1)
+        GroupBox {
+            VStack(alignment: .leading, spacing: 12) {
+                content
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 }

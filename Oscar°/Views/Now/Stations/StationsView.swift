@@ -7,23 +7,9 @@ struct StationsView: View {
     var body: some View {
         let stations = Array(weather.stations.prefix(3))
         if !stations.isEmpty {
-            VStack(alignment: .leading) {
-                NowSectionHeader(showMore: { presentation.present(.stations(stations[0].id)) }) {
-                    Text("Messstationen")
-                }
-                .padding(.bottom)
-
-                StationsCard(stations: stations, timeZone: weather.forecast.locationTimeZone,
-                             isDay: (weather.forecast.current?.is_day ?? 1) > 0) { id in
-                    presentation.present(.stations(id))
-                }
-                    .padding(.horizontal)
-                    .padding(.bottom, 20)
-            }
-            .scrollTransition { content, phase in
-                content
-                    .opacity(phase.isIdentity ? 1 : 0.8)
-                    .scaleEffect(phase.isIdentity ? 1 : 0.99)
+            StationsCard(stations: stations, timeZone: weather.forecast.locationTimeZone,
+                         isDay: (weather.forecast.current?.is_day ?? 1) > 0) { id in
+                presentation.present(.stations(id))
             }
         }
     }
@@ -43,9 +29,6 @@ struct StationsCard: View {
                 }
             }
         }
-        .cardBackground()
-        .clipShape(.rect(cornerRadius: 12))
-        .cardBorder(RoundedRectangle(cornerRadius: 12))
     }
 }
 
@@ -91,13 +74,12 @@ private struct StationRow: View {
                     .monospacedDigit()
                     .frame(minWidth: 58, alignment: .trailing)
             }
-            .padding(.horizontal, 14)
             .padding(.vertical, 12)
             .contentShape(.rect)
         }
         .buttonStyle(.plain)
         .overlay(alignment: .top) {
-            if !isFirst { Divider().padding(.horizontal, 14) }
+            if !isFirst { Divider() }
         }
         .accessibilityElement(children: .combine)
         .accessibilityLabel(Text(verbatim: [station.name, condition, detail, units.temperatureString(station.current.temperature_c)]

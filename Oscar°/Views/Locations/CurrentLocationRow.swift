@@ -15,9 +15,8 @@ struct CurrentLocationRow: View {
                 isSelected: isSelected
             )
         }
-        .buttonStyle(LocationCardButtonStyle())
+        .buttonStyle(.plain)
         .placeRowActions(isDefault: isDefault, onEdit: onEdit, onToggleDefault: onToggleDefault)
-        .listRowStyling()
         .moveDisabled(true)
         .deleteDisabled(true)
     }

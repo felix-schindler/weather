@@ -83,18 +83,16 @@ private struct StationChips: View {
             HStack(spacing: 8) {
                 ForEach(stations) { station in
                     let selected = station.id == selectedID
-                    Button {
-                        selectedID = station.id
-                    } label: {
+                    Toggle(isOn: Binding(
+                        get: { selected },
+                        set: { isOn in if isOn { selectedID = station.id } }
+                    )) {
                         Text(verbatim: "\(station.name) · \(station.distance_km.formatted(.number.precision(.fractionLength(1)))) km")
-                            .font(.subheadline.weight(.semibold))
+                            .font(.subheadline)
                             .monospacedDigit()
-                            .padding(.horizontal, 12)
-                            .padding(.vertical, 7)
-                            .foregroundStyle(selected ? Color(uiColor: .systemBackground) : .primary)
-                            .background(selected ? AnyShapeStyle(.primary) : AnyShapeStyle(.thinMaterial), in: .capsule)
                     }
-                    .buttonStyle(.plain)
+                    .toggleStyle(.button)
+                    .buttonBorderShape(.capsule)
                     .accessibilityAddTraits(selected ? .isSelected : [])
                 }
             }
@@ -706,7 +704,6 @@ struct StationChart: View {
                         .font(.caption2.weight(.semibold))
                         .monospacedDigit()
                         .foregroundStyle(.primary)
-                        .adaptiveShadow(opacity: 0.35, radius: 2)
                 }
         }
     }

@@ -96,8 +96,6 @@ struct ChartReadoutRow {
 /// surface, resolved from the color scheme it renders in so text and background
 /// can never disagree. Layout and typography mirror `HourlyReadoutBox`.
 struct ChartReadoutView: View {
-    @Environment(\.colorScheme) private var colorScheme
-
     private struct Row: Identifiable {
         let id: Int
         let color: Color
@@ -136,7 +134,7 @@ struct ChartReadoutView: View {
         }
         .font(.caption2.weight(.semibold).monospacedDigit())
         .padding(8)
-        .background(Color.chartAnnotationSurface(for: colorScheme))
+        .background(Color(uiColor: .systemBackground))
         .clipShape(.rect(cornerRadius: 8))
         .shadow(radius: 4)
     }
@@ -147,8 +145,6 @@ struct ChartReadoutView: View {
 /// It sits in a chart annotation too, so it can't lean on a material capsule:
 /// without a backdrop the material leaves the text bare on the plot in light mode.
 struct ChartDaySeparatorLabel: View {
-    @Environment(\.colorScheme) private var colorScheme
-
     let text: String
 
     var body: some View {
@@ -157,7 +153,7 @@ struct ChartDaySeparatorLabel: View {
             .foregroundStyle(Color.primary.opacity(0.7))
             .padding(.horizontal, 6)
             .padding(.vertical, 2)
-            .background(Color.chartAnnotationSurface(for: colorScheme), in: .capsule)
+            .background(Color(uiColor: .systemBackground), in: .capsule)
     }
 }
 
