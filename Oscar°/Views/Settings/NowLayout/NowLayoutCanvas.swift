@@ -507,6 +507,64 @@ private struct SectionBlock: View {
     }
 }
 
+/// Compact stand-in for the daily forecast section, drawn with sample data so
+/// the layout editor can show a full page without loading a live forecast.
+struct CollageDailyCard: View {
+    var dayCount = 5
+
+    var body: some View {
+        VStack(spacing: 14) {
+            ForEach(OnboardingSampleData.dailyRows.prefix(dayCount)) { row in
+                HStack(spacing: 8) {
+                    Text(row.weekday)
+                        .font(.footnote.weight(.semibold))
+                        .lineLimit(1)
+                        .frame(width: 42, alignment: .leading)
+                    Image(row.iconName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 20, height: 20)
+                    Text(verbatim: "\(Int(row.low))°")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                    TemperatureRangeView(
+                        low: row.low,
+                        high: row.high,
+                        focusLow: nil,
+                        focusHigh: nil,
+                        minTemp: OnboardingSampleData.dailyTemperatureBounds.min,
+                        maxTemp: OnboardingSampleData.dailyTemperatureBounds.max,
+                        unit: "°C"
+                    )
+                    .frame(height: 5)
+                    Text(verbatim: "\(Int(row.high))°")
+                        .font(.footnote)
+                }
+            }
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 14)
+        .background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 12))
+    }
+}
+
+/// Compact stand-in for the climate section used by the layout editor.
+struct CollageClimateCard: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Dieser Tag seit 1940")
+                .font(.footnote.weight(.semibold))
+            WarmingStripesRibbon(
+                stripes: OnboardingSampleData.climateStripes,
+                sigma: 1.0,
+                height: 40
+            )
+        }
+        .padding(14)
+        .background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 12))
+    }
+}
+
 private struct Callout: View {
     static let height: CGFloat = 20
 

@@ -9,33 +9,16 @@ enum OnboardingMetrics {
     static let cornerRadius: CGFloat = 28
     static let edgePadding: CGFloat = 24
     static let contentMaxWidth: CGFloat = 480
-    static let tourHeroShare: CGFloat = 0.5
 }
 
 struct OnboardingLayout {
     var size = CGSize.zero
-    var insets = EdgeInsets()
 
     var isPad: Bool { size.width >= 700 }
 
     var cardFrame: CGRect {
         let card = CGSize(width: min(600, size.width - 48), height: min(820, size.height - 48))
         return CGRect(x: (size.width - card.width) / 2, y: (size.height - card.height) / 2, width: card.width, height: card.height)
-    }
-
-    var fullBleed: CGRect {
-        CGRect(
-            x: -insets.leading,
-            y: -insets.top,
-            width: size.width + insets.leading + insets.trailing,
-            height: size.height + insets.top + insets.bottom
-        )
-    }
-
-    var heroFrame: CGRect {
-        let page = isPad ? cardFrame : CGRect(origin: .zero, size: size)
-        let top: CGFloat = isPad ? 20 : 12
-        return CGRect(x: page.minX + 20, y: page.minY + top, width: page.width - 40, height: page.height * OnboardingMetrics.tourHeroShare - top - 8)
     }
 }
 

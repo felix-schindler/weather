@@ -2166,28 +2166,6 @@
         }
       }
     },
-    "Alles bereit." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alles bereit."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All set."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Her şey hazır."
-          }
-        }
-      }
-    },
     "Allgemein" : {
       "localizations" : {
         "de" : {
@@ -4495,28 +4473,6 @@
         }
       }
     },
-    "Danke, dass Du Oscar ausprobierst. Viele Jahre und viel Herzblut sind hier reingeflossen. Ich hoffe, es gefällt Dir mindestens so viel wie mir! - Philipp. Für Oscar, Daniela, Ursel, Werner, Reinhard & Sammy" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Danke, dass Du Oscar ausprobierst. Viele Jahre und viel Herzblut sind hier reingeflossen. Ich hoffe, es gefällt Dir mindestens so viel wie mir! - Philipp. Für Oscar, Daniela, Ursel, Werner, Reinhard & Sammy"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thank you for trying out Oscar. So many years and so much heart went into this. I hope you like it at least as much as I do! - Philipp"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thank you for trying out Oscar. So many years and so much heart went into this. I hope you like it at least as much as I do! - Philipp"
-          }
-        }
-      }
-    },
     "Dann siehst du immer das Wetter da, wo du gerade bist, und Oscar kann dich warnen, bevor es bei dir regnet." : {
       "extractionState" : "stale",
       "localizations" : {
@@ -4965,28 +4921,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Konumunuz yaklaşık 100 metreye yuvarlanır ve yalnızca hava durumu için kullanılır."
-          }
-        }
-      }
-    },
-    "Dein Wetter" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dein Wetter"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your weather"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hava durumun"
           }
         }
       }
@@ -5999,28 +5933,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ekle"
-          }
-        }
-      }
-    },
-    "Einführung erneut ansehen" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einführung erneut ansehen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Replay the welcome tour"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tanıtımı yeniden izleyin"
           }
         }
       }
@@ -7663,28 +7575,6 @@
         }
       }
     },
-    "Genaue Wetterberichte von lokalen und internationalen Wetterdiensten wie dem DWD, NOAA und vielen mehr. Ermöglicht durch Open-Meteo & Oscar Server." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Genaue Wetterberichte von lokalen und internationalen Wetterdiensten wie dem DWD, NOAA und vielen mehr. Ermöglicht durch Open-Meteo & Oscar Server."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Accurate forecasts from local and international weather services such as DWD, NOAA and many more. Made possible by Open-Meteo & Oscar Server."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "DWD, NOAA ve daha pek çok yerel ve uluslararası meteoroloji kurumundan doğru hava tahminleri. Open-Meteo ve Oscar Server sayesinde mümkün."
-          }
-        }
-      }
-    },
     "Geöffnet" : {
       "localizations" : {
         "de" : {
@@ -8177,28 +8067,6 @@
         }
       }
     },
-    "Größere Zweige und kleine Bäume bewegen sich." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Größere Zweige und kleine Bäume bewegen sich."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Larger branches and small trees move."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Daha büyük dallar ve küçük ağaçlar hareket eder."
-          }
-        }
-      }
-    },
     "Großbritannien" : {
       "localizations" : {
         "de" : {
@@ -8239,6 +8107,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Büyük ağaçlar hareket eder, dallar kırılabilir."
+          }
+        }
+      }
+    },
+    "Größere Zweige und kleine Bäume bewegen sich." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Größere Zweige und kleine Bäume bewegen sich."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Larger branches and small trees move."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daha büyük dallar ve küçük ağaçlar hareket eder."
           }
         }
       }
@@ -8379,28 +8269,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ana kirletici"
-          }
-        }
-      }
-    },
-    "Hauseigene Wetterkarten" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hauseigene Wetterkarten"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Our own weather maps"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kendi hava haritalarımız"
           }
         }
       }
@@ -10800,28 +10668,6 @@
         }
       }
     },
-    "Los geht's" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Los geht's"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Let's go"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Başlayalım"
-          }
-        }
-      }
-    },
     "Los geht's!" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -11505,28 +11351,6 @@
         }
       }
     },
-    "Messstationen, Pollen, Luftqualität, Klima. Dazu Widgets und die Watch. Kostenlos, ohne Werbung." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Messstationen, Pollen, Luftqualität, Klima. Dazu Widgets und die Watch. Kostenlos, ohne Werbung."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weather stations, pollen, air quality, climate. Plus widgets and the Watch. Free, no ads."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ölçüm istasyonları, polen, hava kalitesi, iklim. Ayrıca widget'lar ve Watch. Ücretsiz, reklamsız."
-          }
-        }
-      }
-    },
     "Messung" : {
       "localizations" : {
         "de" : {
@@ -12019,9 +11843,6 @@
       }
     },
     "mm" : {
-      "shouldTranslate" : false
-    },
-    "mm/h" : {
       "shouldTranslate" : false
     },
     "Moderate" : {
@@ -14121,28 +13942,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Oscar Server"
-          }
-        }
-      }
-    },
-    "Oscar Server visualisiert diverse Wettermodelle und Beobachtungen von Wetterdiensten. Von Radaren bis hin zu Windkarten." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oscar Server visualisiert diverse Wettermodelle und Beobachtungen von Wetterdiensten. Von Radaren bis hin zu Windkarten."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oscar Server visualises a range of weather models and observations from weather services. From radar to wind maps."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oscar Server, çeşitli hava modellerini ve meteoroloji servislerinin gözlemlerini görselleştirir. Radarlardan rüzgar haritalarına kadar."
           }
         }
       }
@@ -16300,28 +16099,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Çok kötü"
-          }
-        }
-      }
-    },
-    "Seite %lld von %lld" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seite %lld von %lld"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Page %1$lld of %2$lld"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sayfa %1$lld / %2$lld"
           }
         }
       }
@@ -18778,28 +18555,6 @@
         }
       }
     },
-    "Und noch viel mehr." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Und noch viel mehr."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "And so much more."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ve çok daha fazlası."
-          }
-        }
-      }
-    },
     "unregelmäßig" : {
       "localizations" : {
         "de" : {
@@ -20190,28 +19945,6 @@
         }
       }
     },
-    "Werde zum Profi und schau dir Ensemble-Vorhersagen an. Diese visualisieren alle möglichen Wetterbedingungen und zeigen so wie sicher die Vorhersage ist." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Werde zum Profi und schau dir Ensemble-Vorhersagen an. Diese visualisieren alle möglichen Wetterbedingungen und zeigen so wie sicher die Vorhersage ist."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Go pro and look at ensemble forecasts. They visualize every possible outcome and show how certain the forecast is."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Profi ol ve ensemble tahminlerine bak. Olası tüm hava koşullarını görselleştirir ve tahminin ne kadar kesin olduğunu gösterir."
-          }
-        }
-      }
-    },
     "Werte ersetzen" : {
       "localizations" : {
         "de" : {
@@ -20545,9 +20278,6 @@
         }
       }
     },
-    "Wie sicher ist das?" : {
-
-    },
     "Wie sicher ist die Vorhersage?" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -20589,28 +20319,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Oynat"
-          }
-        }
-      }
-    },
-    "Willkommen bei" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Willkommen bei"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Welcome to"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hoş geldiniz:"
           }
         }
       }
@@ -21331,28 +21039,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ev"
-          }
-        }
-      }
-    },
-    "Zum Wetter" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zum Wetter"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Show me the weather"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hava durumuna git"
           }
         }
       }

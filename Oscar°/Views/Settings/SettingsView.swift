@@ -72,14 +72,6 @@ struct SettingsView: View {
             Label("Statistik", systemImage: "chart.bar.fill")
               .labelStyle(.settingsIcon(.indigo))
           }
-
-          Button {
-            dismiss()
-            OnboardingCoordinator.shared.replay()
-          } label: {
-            Label("Einführung erneut ansehen", systemImage: "sparkles")
-              .labelStyle(.settingsIcon(.indigo))
-          }
         }
 
         Section {

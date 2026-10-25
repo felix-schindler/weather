@@ -51,15 +51,7 @@ struct OnboardingNotificationsStep: View {
             .onboardingEntrance(appeared, delay: 0.35)
         }
         .sensoryFeedback(.impact(weight: .light), trigger: [rainAlerts, weatherAlerts, liveRain])
-        .onAppear {
-            appeared = true
-            if OnboardingCoordinator.shared.replaying {
-                let manager = NotificationSettingsManager.shared
-                rainAlerts = manager.rainAlertsEnabled
-                weatherAlerts = manager.weatherAlertsEnabled
-                liveRain = manager.liveRainStatusEnabled
-            }
-        }
+        .onAppear { appeared = true }
     }
 
     private func confirm() {
