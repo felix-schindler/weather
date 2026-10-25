@@ -4,7 +4,7 @@ enum HeadMetric: String, CaseIterable, Identifiable {
     case cloudCover, wind, windDirection, feelsLike, humidity, uvIndex, pressure, precipitationChance, gusts, measured
 
     static let maxShown = 4
-    static let defaultHidden: Set<HeadMetric> = [.feelsLike, .humidity, .uvIndex, .pressure, .precipitationChance, .gusts, .measured]
+    static let defaultHidden: Set<HeadMetric> = [.cloudCover, .windDirection, .uvIndex, .pressure, .precipitationChance, .gusts, .measured]
 
     var id: String { rawValue }
 

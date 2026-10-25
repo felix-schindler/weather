@@ -12,7 +12,6 @@ struct DailyView: View {
 
   @ScaledMetric private var weekdayColumnWidth: CGFloat = 45
   @ScaledMetric private var iconColumnWidth: CGFloat = 50
-  @ScaledMetric(relativeTo: .caption) private var precipitationLineHeight: CGFloat = 16
   @ScaledMetric private var temperatureColumnWidth: CGFloat = 37
   @ScaledMetric private var dayIconSize: CGFloat = 30
 
@@ -76,7 +75,6 @@ struct DailyView: View {
       .font(.body)
       .padding([.leading, .trailing])
       .padding(.bottom, 20)
-
     }
     .accessibilityIdentifier("now.daily")
     .scrollTransition { [reduceMotion, fadesInScroll] content, phase in
@@ -102,6 +100,7 @@ extension DailyView {
         .foregroundStyle(Color(uiColor: .label))
         .bold()
         .frame(width: weekdayColumnWidth, alignment: .leading)
+      Spacer()
       VStack(spacing: 1) {
         Image(decorative: getWeatherIcon(pos: dayPos))
           .resizable()
@@ -116,7 +115,7 @@ extension DailyView {
         }
       }
       .frame(width: iconColumnWidth)
-      .alignmentGuide(VerticalAlignment.center) { $0[.top] + dayIconSize / 2 }
+      Spacer()
       Text(roundTemperatureString(temperature: rowTemperatures.labelLow))
         .frame(width: temperatureColumnWidth, alignment: .trailing)
       TemperatureRangeView(
@@ -137,9 +136,7 @@ extension DailyView {
           .accessibilityHidden(true)
       }
     }
-    // The precipitation line sits below the icon's centre line, so it needs extra room above the divider.
-    .padding(.top, 8)
-    .padding(.bottom, precipitation > 0 ? precipitationLineHeight : 8)
+    .padding(.vertical, 8)
     .contentShape(.rect)
   }
 
@@ -332,8 +329,7 @@ private struct DailyPlaceholderRow: View {
         .frame(width: 37, alignment: .leading)
     }
     .foregroundStyle(.secondary.opacity(0.28))
-    .padding(.top, 8)
-    .padding(.bottom, 16)
+    .padding(.vertical, 8)
     .accessibilityHidden(true)
   }
 }
