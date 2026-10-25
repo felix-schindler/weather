@@ -712,24 +712,22 @@ struct StationChart: View {
     }
 
     private func tooltip(at date: Date) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(date, format: .dateTime.hour().minute())
-                .font(.caption)
-                .foregroundStyle(.secondary)
-            ForEach(Array(lines.reversed().enumerated()), id: \.offset) { _, line in
-                StationValueRow(color: line.color, label: LocalizedStringKey(line.label),
-                                text: Self.sample(line.points, at: date).map(valueFormat) ?? "--")
-            }
-            if !bars.isEmpty {
-                let bar = bars.last { $0.start < date && date <= $0.end }
-                StationValueRow(color: .hourlyRain, label: "Regen",
-                                text: bar.map { "\(valueFormat($0.value)) / \($0.minutes / 60) h" } ?? "--")
-            }
+        var rows = lines.reversed().map { line in
+            ChartReadoutRow(
+                label: line.label,
+                value: Self.sample(line.points, at: date).map(valueFormat) ?? "--",
+                color: line.color
+            )
         }
-        .padding(8)
-        .background(.ultraThinMaterial.opacity(0.9))
-        .clipShape(.rect(cornerRadius: 8))
-        .shadow(radius: 4)
+        if !bars.isEmpty {
+            let bar = bars.last { $0.start < date && date <= $0.end }
+            rows.append(ChartReadoutRow(
+                label: String(localized: "Regen"),
+                value: bar.map { "\(valueFormat($0.value)) / \($0.minutes / 60) h" } ?? "--",
+                color: .hourlyRain
+            ))
+        }
+        return ChartReadoutView(time: SettingService.formattedTime(date), items: rows)
     }
 
     private var tickDates: [Date] {
@@ -798,19 +796,3 @@ private struct StationLegendItem: View {
     }
 }
 
-private struct StationValueRow: View {
-    let color: Color
-    let label: LocalizedStringKey
-    let text: String
-
-    var body: some View {
-        HStack(spacing: 4) {
-            Circle()
-                .fill(color)
-                .frame(width: 6, height: 6)
-            Text("\(Text(label)): \(text)")
-                .font(.caption2)
-                .foregroundStyle(.primary)
-        }
-    }
-}

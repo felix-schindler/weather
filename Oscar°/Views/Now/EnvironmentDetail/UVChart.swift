@@ -99,24 +99,16 @@ struct UVChart: View {
                         spacing: 0,
                         overflowResolution: .init(x: .fit(to: .chart), y: .fit(to: .chart))
                     ) {
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(SettingService.formattedTime(selectedData.time))
-                                .font(.caption)
-                                .foregroundStyle(.secondary)
-
-                            HStack(spacing: 6) {
-                                Circle()
-                                    .fill(.primary)
-                                    .frame(width: 6, height: 6)
-
-                                Text("UV: \(selectedData.value, specifier: "%.1f")")
-                                    .font(.caption2)
-                                    .foregroundStyle(.primary)
-                            }
-                        }
-                        .padding(8)
-                        .background(.ultraThinMaterial.opacity(0.9), in: .rect(cornerRadius: 8))
-                        .shadow(radius: 4)
+                        ChartReadoutView(
+                            time: SettingService.formattedTime(selectedData.time),
+                            items: [
+                                ChartReadoutRow(
+                                    label: "UV",
+                                    value: selectedData.value.formatted(.number.precision(.fractionLength(1))),
+                                    color: .primary
+                                )
+                            ]
+                        )
                     }
             }
 

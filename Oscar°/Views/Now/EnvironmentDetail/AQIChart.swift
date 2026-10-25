@@ -147,9 +147,11 @@ struct AQIChart: View {
                     spacing: 0,
                     overflowResolution: .init(x: .fit(to: .chart), y: .fit(to: .chart))
                 ) {
-                    AQIChartAnnotationView(
+                    ChartReadoutView(
                         time: SettingService.formattedTime(selectedData.time),
-                        rows: annotationRows(for: selectedData)
+                        items: annotationRows(for: selectedData).map {
+                            ChartReadoutRow(label: $0.label, value: "\(Int($0.value))", color: $0.seriesColor)
+                        }
                     )
                 }
         }
@@ -241,32 +243,4 @@ struct AQIChart: View {
         "\(series)-\(isPast ? "past" : "future")"
     }
 
-}
-
-private struct AQIChartAnnotationView: View {
-    let time: String
-    let rows: [(label: String, value: Double, seriesColor: Color)]
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(time)
-                .font(.caption)
-                .foregroundStyle(.secondary)
-
-            ForEach(rows.enumerated(), id: \.offset) { _, row in
-                HStack(spacing: 6) {
-                    Circle()
-                        .fill(row.seriesColor)
-                        .frame(width: 6, height: 6)
-
-                    Text("\(row.label): \(Int(row.value))")
-                        .font(.caption2)
-                        .foregroundStyle(.primary)
-                }
-            }
-        }
-        .padding(8)
-        .background(.ultraThinMaterial.opacity(0.9), in: .rect(cornerRadius: 8))
-        .shadow(radius: 4)
-    }
 }

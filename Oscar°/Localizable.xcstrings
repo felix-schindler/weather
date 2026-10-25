@@ -424,26 +424,6 @@
         }
       }
     },
-    "%@: %.0f" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@: %2$.0f"
-          }
-        }
-      }
-    },
-    "%@: %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@: %2$@"
-          }
-        }
-      }
-    },
     "%@: %@ - %@" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -463,16 +443,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@: %2$@ - %3$@"
-          }
-        }
-      }
-    },
-    "%@: %lld" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@: %2$lld"
           }
         }
       }
@@ -19226,9 +19196,6 @@
           }
         }
       }
-    },
-    "UV: %.1f" : {
-
     },
     "Verbund der europäischen Wetterdienste" : {
       "localizations" : {

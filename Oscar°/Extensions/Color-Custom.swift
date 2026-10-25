@@ -25,6 +25,12 @@ extension Color {
     static let sunnyDayEnd = Color(hue: 0.6, saturation: 0.4, brightness: 0.85)
 }
 
+extension Color {
+    static func chartAnnotationSurface(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(white: 0.16) : Color(white: 0.97)
+    }
+}
+
 private struct AdaptiveTextShadow: ViewModifier {
     @Environment(\.colorScheme) private var colorScheme
     let opacity: Double

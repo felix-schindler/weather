@@ -147,26 +147,16 @@ struct PollenChart: View {
                             let selectedRows = selectedRows(for: selectedDate)
 
                             if !selectedRows.isEmpty {
-                                VStack(alignment: .leading, spacing: 4) {
-                                    Text(SettingService.formattedTime(selectedRows[0].time))
-                                        .font(.caption)
-                                        .foregroundStyle(.secondary)
-
-                                    ForEach(selectedRows.enumerated(), id: \.offset) { _, row in
-                                        HStack(spacing: 6) {
-                                            Circle()
-                                                .fill(row.lineColor)
-                                                .frame(width: 6, height: 6)
-
-                                            Text("\(row.label): \(row.rawValue, specifier: "%.0f")")
-                                                .font(.caption2)
-                                                .foregroundStyle(.primary)
-                                        }
+                                ChartReadoutView(
+                                    time: SettingService.formattedTime(selectedRows[0].time),
+                                    items: selectedRows.map {
+                                        ChartReadoutRow(
+                                            label: $0.label,
+                                            value: String(format: "%.0f", $0.rawValue),
+                                            color: $0.lineColor
+                                        )
                                     }
-                                }
-                                .padding(8)
-                                .background(.ultraThinMaterial.opacity(0.9), in: .rect(cornerRadius: 8))
-                                .shadow(radius: 4)
+                                )
                             }
                         }
                 }

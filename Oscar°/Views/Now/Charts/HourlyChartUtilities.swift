@@ -50,12 +50,7 @@ extension HourlyChartUtilities {
                     spacing: 8,
                     overflowResolution: .init(x: .fit(to: .chart), y: .fit(to: .chart))
                 ) {
-                    Text(dayAbbreviation(from: Date(timeIntervalSince1970: time[index])))
-                        .font(.caption.weight(.medium))
-                        .foregroundStyle(.primary.opacity(0.7))
-                        .padding(.horizontal, 6)
-                        .padding(.vertical, 2)
-                        .background(.ultraThinMaterial, in: .capsule)
+                    ChartDaySeparatorLabel(text: dayAbbreviation(from: Date(timeIntervalSince1970: time[index])))
                 }
         }
     }
@@ -84,6 +79,85 @@ extension HourlyChartUtilities {
             AxisGridLine()
             AxisTick()
         }
+    }
+}
+
+struct ChartReadoutRow {
+    let label: String
+    let value: String
+    let color: Color
+}
+
+/// The scrub readout used by every chart that shows values while the finger is down.
+///
+/// Chart annotations don't get a backdrop to blur, so a material background there
+/// leaves the labels sitting straight on the plot's grid and lines — unreadable in
+/// light mode, where that ink is dark too. The readout therefore paints its own
+/// surface, resolved from the color scheme it renders in so text and background
+/// can never disagree. Layout and typography mirror `HourlyReadoutBox`.
+struct ChartReadoutView: View {
+    @Environment(\.colorScheme) private var colorScheme
+
+    private struct Row: Identifiable {
+        let id: Int
+        let color: Color
+        let label: String
+        let value: String
+    }
+
+    private let time: String
+    private let rows: [Row]
+
+    init(time: String, items: [ChartReadoutRow]) {
+        self.time = time
+        self.rows = items.enumerated().map { Row(id: $0.offset, color: $0.element.color, label: $0.element.label, value: $0.element.value) }
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Text(verbatim: time)
+                .font(.caption2.weight(.medium).monospacedDigit())
+                .foregroundStyle(Color.primary.opacity(0.65))
+                .padding(.bottom, 1)
+
+            ForEach(rows) { row in
+                HStack(spacing: 5) {
+                    Circle()
+                        .fill(row.color)
+                        .frame(width: 6, height: 6)
+
+                    Text(verbatim: row.label)
+                        .foregroundStyle(Color.primary.opacity(0.75))
+
+                    Text(verbatim: row.value)
+                        .foregroundStyle(.primary)
+                }
+            }
+        }
+        .font(.caption2.weight(.semibold).monospacedDigit())
+        .padding(8)
+        .background(Color.chartAnnotationSurface(for: colorScheme))
+        .clipShape(.rect(cornerRadius: 8))
+        .shadow(radius: 4)
+    }
+}
+
+/// Weekday label pinned to the day separator lines.
+///
+/// It sits in a chart annotation too, so it can't lean on a material capsule:
+/// without a backdrop the material leaves the text bare on the plot in light mode.
+struct ChartDaySeparatorLabel: View {
+    @Environment(\.colorScheme) private var colorScheme
+
+    let text: String
+
+    var body: some View {
+        Text(verbatim: text)
+            .font(.caption.weight(.medium))
+            .foregroundStyle(Color.primary.opacity(0.7))
+            .padding(.horizontal, 6)
+            .padding(.vertical, 2)
+            .background(Color.chartAnnotationSurface(for: colorScheme), in: .capsule)
     }
 }
 
