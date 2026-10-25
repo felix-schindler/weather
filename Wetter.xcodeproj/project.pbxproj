@@ -1245,12 +1245,12 @@
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = weather.schindlerfelix.de;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.schindlerfelix.weather;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.schindlerfelix.weather.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1277,12 +1277,12 @@
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = weather.schindlerfelix.de;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.schindlerfelix.weather;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.schindlerfelix.weather.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1311,7 +1311,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.watchkitapp.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = de.schindlerfelix.weather.watchkitapp.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1341,7 +1341,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.watchkitapp.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = de.schindlerfelix.weather.watchkitapp.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1558,7 +1558,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = de.schindlerfelix.weather.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1583,7 +1583,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = de.schindlerfelix.weather.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1599,7 +1599,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = de.schindlerfelix.weather.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 6.0;
@@ -1615,7 +1615,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = de.schindlerfelix.weather.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 6.0;

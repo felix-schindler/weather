@@ -7,7 +7,7 @@ Guide for agents working in this repo — Wetter, a SwiftUI weather app (iOS + A
 - Single Xcode project, **no Package.swift**. Targets: `Wetter` (app), `WetterWatch Watch App`, `WetterWidget`, `WetterWatchWidget`, `WetterTests`.
 - The user-facing app name is localized: `Wetter` (de), `Weather` (en), `天氣` (zh-Hant), `Tempo` (pt-BR). Targets and products stay `Wetter`.
 - Swift 6.0, `SWIFT_STRICT_CONCURRENCY = complete`, deployment target iOS/watchOS 26.0. Expect Sendable/isolation errors to be real errors, not noise.
-- Shared targets read/write state through the app group `group.weather.schindlerfelix.de` (`Wetter/Storage/AppGroup.swift`). Anything widgets or Live Activities need at runtime must go through it.
+- Shared targets read/write state through the app group `group.de.schindlerfelix.weather` (`Wetter/Storage/AppGroup.swift`). Anything widgets or Live Activities need at runtime must go through it.
 
 ## OpenAPI network code is generated
 
@@ -24,7 +24,7 @@ Guide for agents working in this repo — Wetter, a SwiftUI weather app (iOS + A
 Repo facts you may still rely on:
 
 - Unit tests live in `WetterTests` (pure logic tests) and are run by the human.
-- Local IAP testing uses the supporter/tip products under `weather.schindlerfelix.de` (`supporter.{monthly,yearly}`, `tip.{small,medium,large}`).
+- Local IAP testing uses the supporter/tip products under `de.schindlerfelix.weather` (`supporter.{monthly,yearly}`, `tip.{small,medium,large}`).
 - Localizable strings are in `Localizable.xcstrings` / `InfoPlist.xcstrings` string catalogs, one shared catalog per target.
 
 ## Conventions
