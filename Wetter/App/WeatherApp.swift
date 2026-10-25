@@ -88,12 +88,6 @@ struct WeatherApp: App {
         }
         #endif
 
-        UsageCountingMiddleware.onRequest = { host in
-            Task { @MainActor in
-                UsageStatsStore.shared.record { $0.apiCalls[host, default: 0] += 1 }
-            }
-        }
-
         locationService.city.applyDefaultSelectionOnLaunch()
         hydrateFromCache()
     }
@@ -135,9 +129,7 @@ struct WeatherApp: App {
                     #if DEBUG
                     ScreenshotMode.scenePhaseDidChange(phase)
                     #endif
-                    if phase == .background { UsageStatsStore.shared.sceneDidEnterBackground() }
                     guard phase == .active else { return }
-                    UsageStatsStore.shared.sceneDidActivate()
                     Task { await notificationSettingsManager.handleForeground() }
                 }
         }

@@ -63,13 +63,6 @@ struct SettingsView: View {
             Label("Berechtigungen", systemImage: "lock.shield.fill")
               .labelStyle(.settingsIcon(.green))
           }
-
-          NavigationLink {
-            StatsView()
-          } label: {
-            Label("Statistik", systemImage: "chart.bar.fill")
-              .labelStyle(.settingsIcon(.indigo))
-          }
         }
 
         Section {

@@ -9,19 +9,13 @@ enum AppTab: Hashable {
 @MainActor
 @Observable
 final class NowPresentationCoordinator {
-    var sheet: NowSheet? {
-        didSet {
-            guard let sheet else { return }
-            UsageStatsStore.shared.record { $0.sheets[sheet.id, default: 0] += 1 }
-        }
-    }
+    var sheet: NowSheet?
     /// Testing hook (screenshot flows without tapping through the UI):
     /// `-autoPresentMap YES` starts on the map tab.
     var selectedTab: AppTab = UserDefaults.standard.bool(forKey: "autoPresentMap") ? .maps : .forecast {
         didSet {
             guard selectedTab != oldValue else { return }
             if selectedTab != .maps { isLayerPickerPresented = false }
-            UsageStatsStore.shared.record { $0.tabs["\(selectedTab)", default: 0] += 1 }
         }
     }
 

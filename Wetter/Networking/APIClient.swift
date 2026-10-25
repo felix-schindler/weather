@@ -45,7 +45,6 @@ final class APIClient: Sendable {
       configuration: Self.oscarServerConfiguration,
       transport: URLSessionTransport(),
       middlewares: Self.stagingMiddlewares + [
-        UsageCountingMiddleware(),
         ContactIdentityMiddleware(),
         RetryingMiddleware(
           signals: [.code(429), .range(500..<600), .errorThrown],
@@ -83,7 +82,6 @@ final class APIClient: Sendable {
       transport: URLSessionTransport(),
       middlewares: Self.stagingMiddlewares + middlewares + [
         CachingMiddleware(cacheTime: 60),
-        UsageCountingMiddleware(),
         ContactIdentityMiddleware(),
         RetryingMiddleware(
           signals: [.code(429), .range(500..<600), .errorThrown],

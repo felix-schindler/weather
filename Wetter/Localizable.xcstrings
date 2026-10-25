@@ -530,34 +530,6 @@
         }
       }
     },
-    "%lld aktive Tage in den letzten %lld Wochen" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld aktive Tage in den letzten %lld Wochen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld active days in the last %lld weeks"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld dias ativos nas últimas %lld semanas"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld 個活躍日（最近 %lld 週）"
-          }
-        }
-      }
-    },
     "%lld von %lld" : {
       "localizations" : {
         "de" : {
@@ -604,34 +576,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld°"
-          }
-        }
-      }
-    },
-    "^[%lld Tag](inflect: true)" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "^[%lld Tag](inflect: true)"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "^[%lld day](inflect: true)"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "^[%lld dia](inflect: true)"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "^[%lld 天](inflect: true)"
           }
         }
       }
@@ -1883,34 +1827,6 @@
         }
       }
     },
-    "Abrufe" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abrufe"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lookups"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Consultas"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "查詢次數"
-          }
-        }
-      }
-    },
     "Abschnitte" : {
       "localizations" : {
         "de" : {
@@ -2035,34 +1951,6 @@
         }
       }
     },
-    "Aktive Tage" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktive Tage"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Active days"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dias ativos"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "活躍日"
-          }
-        }
-      }
-    },
     "Aktive Warngebiete (DWD, MeteoAlarm)" : {
       "localizations" : {
         "de" : {
@@ -2144,34 +2032,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "目前主要污染物"
-          }
-        }
-      }
-    },
-    "Aktuelle Serie" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktuelle Serie"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Current streak"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sequência atual"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "目前連續紀錄"
           }
         }
       }
@@ -2430,34 +2290,6 @@
         }
       }
     },
-    "Alle Zahlen bleiben auf deinem Gerät und in deiner iCloud." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alle Zahlen bleiben auf deinem Gerät und in deiner iCloud."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All numbers stay on your device and in your iCloud."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Todos os números ficam no seu dispositivo e no seu iCloud."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "所有數字都留在你的裝置與 iCloud 中。"
-          }
-        }
-      }
-    },
     "Allgemein" : {
       "localizations" : {
         "de" : {
@@ -2510,34 +2342,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設為預設"
-          }
-        }
-      }
-    },
-    "Am häufigsten" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Am häufigsten"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Most often"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mais frequentes"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "最常見"
           }
         }
       }
@@ -2627,62 +2431,6 @@
         }
       }
     },
-    "Anfragen" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anfragen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Requests"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solicitações"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "請求"
-          }
-        }
-      }
-    },
-    "Anfragen an Wetterdienste" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anfragen an Wetterdienste"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Requests to weather services"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solicitações a serviços de meteorologia"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "向天氣服務發出的請求"
-          }
-        }
-      }
-    },
     "Ansicht" : {
       "localizations" : {
         "de" : {
@@ -2707,34 +2455,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "檢視"
-          }
-        }
-      }
-    },
-    "Ansicht angepasst" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ansicht angepasst"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Layout customized"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visualização personalizada"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已自訂檢視"
           }
         }
       }
@@ -4108,34 +3828,6 @@
         }
       }
     },
-    "Dabei seit" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dabei seit"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Since"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Desde"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "加入於"
-          }
-        }
-      }
-    },
     "Dann zeigt Wetter das Wetter genau hier und sagt Bescheid, bevor es regnet." : {
       "localizations" : {
         "de" : {
@@ -4501,62 +4193,6 @@
         }
       }
     },
-    "Deine Aktivität" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deine Aktivität"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your activity"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sua atividade"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "你的活動"
-          }
-        }
-      }
-    },
-    "Deine Orte" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deine Orte"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your places"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seus locais"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "你的地點"
-          }
-        }
-      }
-    },
     "deinen Standort" : {
       "localizations" : {
         "de" : {
@@ -4882,34 +4518,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "無法載入天氣資料。請檢查你的連線，然後再試一次。"
-          }
-        }
-      }
-    },
-    "Dienst" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dienst"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Service"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Serviço"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "服務"
           }
         }
       }
@@ -5301,34 +4909,6 @@
         }
       }
     },
-    "Einstellungen geöffnet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einstellungen geöffnet"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings opened"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajustes abertos"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已開啟設定"
-          }
-        }
-      }
-    },
     "Emoji" : {
       "localizations" : {
         "de" : {
@@ -5442,6 +5022,7 @@
       }
     },
     "Environment Canada" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5900,34 +5481,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "極端陣雨"
-          }
-        }
-      }
-    },
-    "Extremwerte" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Extremwerte"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Extremes"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Extremos"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "極端值"
           }
         }
       }
@@ -6599,34 +6152,6 @@
         }
       }
     },
-    "Geöffnet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Geöffnet"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Opened"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aberto"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已開啟"
-          }
-        }
-      }
-    },
     "Gerade keine Messwerte in der Nähe." : {
       "localizations" : {
         "de" : {
@@ -6709,34 +6234,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "健康風險低"
-          }
-        }
-      }
-    },
-    "Gescrollt" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gescrollt"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scrolled"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rolado"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已捲動"
           }
         }
       }
@@ -7209,34 +6706,6 @@
         }
       }
     },
-    "Heißester Moment" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Heißester Moment"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hottest moment"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Momento mais quente"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "最熱時刻"
-          }
-        }
-      }
-    },
     "Hell" : {
       "localizations" : {
         "de" : {
@@ -7601,34 +7070,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "直式"
-          }
-        }
-      }
-    },
-    "Höchster UV-Index" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Höchster UV-Index"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Highest UV index"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Índice UV máximo"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "紫外線指數最高值"
           }
         }
       }
@@ -8117,34 +7558,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最冷"
-          }
-        }
-      }
-    },
-    "Kältester Moment" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kältester Moment"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Coldest moment"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Momento mais frio"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "最冷時刻"
           }
         }
       }
@@ -8779,34 +8192,6 @@
         }
       }
     },
-    "Klima geöffnet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Klima geöffnet"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Climate opened"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clima aberto"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已開啟氣候"
-          }
-        }
-      }
-    },
     "Klima. %@ %@" : {
       "localizations" : {
         "de" : {
@@ -8831,34 +8216,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "氣候。%@ %@"
-          }
-        }
-      }
-    },
-    "Klimaarchiv" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Klimaarchiv"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Climate archive"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Arquivo climático"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "氣候檔案"
           }
         }
       }
@@ -8965,62 +8322,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "即時預報"
-          }
-        }
-      }
-    },
-    "Längste Serie" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Längste Serie"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Longest streak"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Maior sequência"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "最長連續"
-          }
-        }
-      }
-    },
-    "Längste Sitzung" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Längste Sitzung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Longest session"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sessão mais longa"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "最長工作階段"
           }
         }
       }
@@ -9906,34 +9207,6 @@
         }
       }
     },
-    "Messstationen geöffnet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Messstationen geöffnet"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weather stations opened"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Estações meteorológicas abertas"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已開啟氣象測站"
-          }
-        }
-      }
-    },
     "Messung" : {
       "localizations" : {
         "de" : {
@@ -10194,62 +9467,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "允許通知"
-          }
-        }
-      }
-    },
-    "Mitteilungen geöffnet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mitteilungen geöffnet"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Notifications opened"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Notificações abertas"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已開啟通知"
-          }
-        }
-      }
-    },
-    "Mitteilungen gesehen" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mitteilungen gesehen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Notifications shown"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Notificações exibidas"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已顯示通知"
           }
         }
       }
@@ -11663,62 +10880,6 @@
         }
       }
     },
-    "Öffnungen" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Öffnungen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Opens"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aberturas"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "開啟次數"
-          }
-        }
-      }
-    },
-    "Ohne Aufschlüsselung" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ohne Aufschlüsselung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Not broken down"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sem detalhamento"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "無細分"
-          }
-        }
-      }
-    },
     "Open Source" : {
       "localizations" : {
         "de" : {
@@ -11748,6 +10909,7 @@
       }
     },
     "Open-Meteo" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -12110,9 +11272,6 @@
         }
       }
     },
-    "Orte geöffnet" : {
-
-    },
     "Orte verwalten" : {
       "localizations" : {
         "de" : {
@@ -12137,34 +11296,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "管理地點"
-          }
-        }
-      }
-    },
-    "Ortssuche" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ortssuche"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Location search"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Busca de local"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "地點搜尋"
           }
         }
       }
@@ -12198,6 +11329,7 @@
       }
     },
     "Oscar Server" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -14210,34 +13342,6 @@
         }
       }
     },
-    "Sonstiges" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sonstiges"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Miscellaneous"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Outros"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "其他"
-          }
-        }
-      }
-    },
     "Spanischer Wetterdienst (AEMET)" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -14625,62 +13729,6 @@
         }
       }
     },
-    "Stärkster Regen" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stärkster Regen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Heaviest rain"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chuva mais forte"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "最強降雨"
-          }
-        }
-      }
-    },
-    "Stärkster Wind" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stärkster Wind"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Strongest wind"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vento mais forte"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "最強風勢"
-          }
-        }
-      }
-    },
     "Start" : {
       "localizations" : {
         "de" : {
@@ -14705,34 +13753,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開始"
-          }
-        }
-      }
-    },
-    "Statistik" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Statistik"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Statistics"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Estatísticas"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "統計"
           }
         }
       }
@@ -14846,62 +13866,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "等級 %lld"
-          }
-        }
-      }
-    },
-    "Stunde" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stunde"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hour"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hora"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "小時"
-          }
-        }
-      }
-    },
-    "Stundenansicht geöffnet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stundenansicht geöffnet"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hourly view opened"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visualização por hora aberta"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已開啟每小時檢視"
           }
         }
       }
@@ -15211,34 +14175,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開啟系統設定"
-          }
-        }
-      }
-    },
-    "Tagesansicht geöffnet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tagesansicht geöffnet"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Daily view opened"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visualização diária aberta"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已開啟每日檢視"
           }
         }
       }
@@ -15827,34 +14763,6 @@
         }
       }
     },
-    "Umwelt geöffnet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Umwelt geöffnet"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Environment opened"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Meio ambiente aberto"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已開啟環境"
-          }
-        }
-      }
-    },
     "Umweltdetails" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -15992,34 +14900,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "溫度下方"
-          }
-        }
-      }
-    },
-    "Unterwegs mit Wetter" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unterwegs mit Wetter"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Out and about with Weather"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Na rua com o Tempo"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "帶著天氣上路"
           }
         }
       }
@@ -16626,34 +15506,6 @@
         }
       }
     },
-    "Wann du Wetter öffnest" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wann du Wetter öffnest"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "When you open Weather"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quando você abre o Tempo"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "當你開啟天氣時"
-          }
-        }
-      }
-    },
     "Wann soll sich Wetter melden?" : {
       "localizations" : {
         "de" : {
@@ -16767,6 +15619,7 @@
       }
     },
     "Warnungen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -16790,34 +15643,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "警報"
-          }
-        }
-      }
-    },
-    "Warnungen geöffnet" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Warnungen geöffnet"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Warnings opened"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alertas abertos"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已開啟警報"
           }
         }
       }
@@ -17126,34 +15951,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "全球模型。前 36 小時為每小時，之後以 4 小時為間隔，最遠涵蓋未來 3.5 天。每 6 小時進行一次新的運算。"
-          }
-        }
-      }
-    },
-    "Weniger" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weniger"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Less"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Menos"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "較少"
           }
         }
       }
@@ -17894,34 +16691,6 @@
         }
       }
     },
-    "Wochentag" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wochentag"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weekday"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dia da semana"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "星期"
-          }
-        }
-      }
-    },
     "Wolken" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -18025,34 +16794,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "時間"
-          }
-        }
-      }
-    },
-    "Zeit in Wetter" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zeit in Wetter"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Time in Weather"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Horário no Tempo"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "天氣中的時間"
           }
         }
       }
@@ -18389,34 +17130,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "跳到目前時間"
-          }
-        }
-      }
-    },
-    "Zusammengezählt über %lld Geräte. Alle Zahlen bleiben auf deinen Geräten und in deiner iCloud." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zusammengezählt über %lld Geräte. Alle Zahlen bleiben auf deinen Geräten und in deiner iCloud."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Added up across %lld devices. All numbers stay on your devices and in your iCloud."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Somado entre seus dispositivos (%lld). Todos os números ficam nos seus dispositivos e no seu iCloud."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "由 %lld 部裝置合計。所有數字都留在你的裝置與 iCloud 中。"
           }
         }
       }
