@@ -2,10 +2,12 @@
 //  RootTabView.swift
 //  Wetter
 //
-//  App root: Orte / Wetter / Karten / Einstellungen tabs. Orte is a plain tab, not the
-//  system search role — the separated search pill is a button affordance
-//  (instant keyboard + round trip), wrong for a dwell space like the
-//  locations list; its search field lives inside the list instead.
+//  App root: Wetter / Karten tabs. Orte and Einstellungen live in the Now
+//  screen's top toolbar and open as navigation sheets — Orte is also the
+//  quick-switch menu on long press. Orte is not the system search role: the
+//  separated search pill is a button affordance (instant keyboard + round
+//  trip), wrong for a dwell space like the locations list; its search field
+//  lives inside the list instead.
 //  Also owns the app-wide refresh triggers and the sheet
 //  presentation shared by all tabs.
 //
@@ -23,28 +25,15 @@ struct RootTabView: View {
 
     var body: some View {
         @Bindable var presentation = presentation
-        let selection = Binding(
-            get: { presentation.selectedTab },
-            set: { tab in
-                if tab == .places, presentation.selectedTab == .places {
-                    presentation.placesSearchRequests += 1
-                }
-                presentation.selectedTab = tab
-            }
-        )
         ZStack(alignment: .top) {
-            TabView(selection: selection) {
-                Tab("Orte", systemImage: "location.fill", value: AppTab.places) {
-                    LocationsView()
-                }
+            TabView(selection: $presentation.selectedTab) {
                 Tab("Wetter", systemImage: "cloud.sun", value: AppTab.forecast) {
-                    NowView()
+                    NavigationStack {
+                        NowView()
+                    }
                 }
                 Tab("Karten", systemImage: "globe.europe.africa", value: AppTab.maps) {
                     WeatherMapDetailView(settingsService: settingsService)
-                }
-                Tab("Einstellungen", systemImage: "gearshape", value: AppTab.settings) {
-                    SettingsView(showsCloseButton: false)
                 }
             }
             .tabBarMinimizeBehavior(horizontalSizeClass == .regular || presentation.selectedTab == .maps ? .never : .onScrollDown)
@@ -119,11 +108,11 @@ struct WetterCommands: Commands {
     var body: some Commands {
         CommandMenu("Wetter") {
             Group {
-                Button("Orte") { presentation?.selectedTab = .places }
-                    .keyboardShortcut("1")
                 Button("Wetter") { presentation?.selectedTab = .forecast }
-                    .keyboardShortcut("2")
+                    .keyboardShortcut("1")
                 Button("Karten") { presentation?.selectedTab = .maps }
+                    .keyboardShortcut("2")
+                Button("Orte") { presentation?.present(.places) }
                     .keyboardShortcut("3")
                 Divider()
                 Button("Aktualisieren") {

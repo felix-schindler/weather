@@ -4,6 +4,8 @@
 //
 //  Location management 2.0: saved places as live-conditions cards, text
 //  search, a map point picker, and a forecast preview before adding.
+//  Presented as a navigation sheet from the Now toolbar; selecting a place
+//  closes it and returns to the now view.
 //
 
 import CoreLocation
@@ -11,6 +13,7 @@ import SwiftUI
 
 struct LocationsView: View {
     @Environment(NowPresentationCoordinator.self) private var presentation
+    @Environment(\.dismiss) private var dismiss
     @State private var searchText = ""
     @State private var searchResult: Components.Schemas.SearchResponse = .init()
     @State private var searchError: String?
@@ -64,22 +67,15 @@ struct LocationsView: View {
                         .accessibilityHint(Text("Öffnet die Karte"))
                     }
                     ToolbarItem(placement: .topBarTrailing) {
-                        Button {
-                            isSearchPresented = true
-                        } label: {
-                            Image(systemName: "plus")
+                        Button(role: .close) {
+                            dismiss()
                         }
-                        .accessibilityLabel(Text("Ort hinzufügen"))
-                        .accessibilityHint(Text("Öffnet die Suche"))
                     }
                 }
         }
         .searchable(text: $searchText, isPresented: $isSearchPresented)
         .onChange(of: isSearchPresented) { _, presented in
             if !presented { searchText = "" }
-        }
-        .onChange(of: presentation.placesSearchRequests) {
-            isSearchPresented = true
         }
         .sheet(item: $candidate) { candidate in
             LocationPreviewSheet(candidate: candidate) {
@@ -252,7 +248,7 @@ struct LocationsView: View {
     private func select(_ city: City) {
         selectionCount += 1
         locationService.city.toggleActiveCity(city: city)
-        showForecast()
+        returnToNow()
     }
 
     private func selectCurrentLocation() {
@@ -260,11 +256,14 @@ struct LocationsView: View {
         if locationService.city.getSelectedCity() != nil {
             locationService.city.disableAllCities()
         }
-        showForecast()
+        returnToNow()
     }
 
-    private func showForecast() {
+    /// Hands control back to the now view: closes the Orte sheet and makes
+    /// sure the forecast tab is the one underneath.
+    private func returnToNow() {
         presentation.selectedTab = .forecast
+        presentation.sheet = nil
     }
 
     private func presentMapPicker() {
@@ -296,7 +295,65 @@ struct LocationsView: View {
         self.candidate = nil
         isMapPresented = false
         searchText = ""
-        showForecast()
+        returnToNow()
+    }
+}
+
+/// Quick place switcher shared by the Now toolbar's long-press menu and the
+/// location header's context menu.
+struct LocationSwitchPicker: View {
+    private let cityService = CityService.shared
+    private let locationService = LocationService.shared
+
+    private var gpsAuthorized: Bool {
+        locationService.authStatus == .authorizedWhenInUse
+            || locationService.authStatus == .authorizedAlways
+    }
+
+    var body: some View {
+        let selectedURI = cityService.getSelectedCity()?.objectID.uriRepresentation()
+        Picker("Ort", selection: Binding(
+            get: { selectedURI },
+            set: { (uri: URL?) in
+                if let uri, let city = cityService.cities.first(
+                    where: { $0.objectID.uriRepresentation() == uri }
+                ) {
+                    switchTo(city)
+                } else {
+                    switchToCurrentLocation()
+                }
+            }
+        )) {
+            if gpsAuthorized {
+                Label(cityService.currentLocationDisplayName, systemImage: "location")
+                    .tag(URL?.none)
+            }
+            ForEach(cityService.cities, id: \.objectID) { city in
+                Text(menuTitle(for: city))
+                    .tag(Optional(city.objectID.uriRepresentation()))
+            }
+        }
+        .pickerStyle(.inline)
+        .id(selectedURI)
+    }
+
+    private func menuTitle(for city: City) -> String {
+        let personalization = city.personalization
+        let title = [personalization.mark.emoji, personalization.title]
+            .compactMap { $0 }
+            .filter { !$0.isEmpty }
+            .joined(separator: " ")
+        return title.isEmpty ? String(localized: "Unbekannter Ort") : title
+    }
+
+    private func switchTo(_ city: City) {
+        guard !city.selected else { return }
+        cityService.toggleActiveCity(city: city)
+    }
+
+    private func switchToCurrentLocation() {
+        guard cityService.getSelectedCity() != nil else { return }
+        cityService.disableAllCities()
     }
 }
 

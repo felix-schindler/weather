@@ -7,6 +7,7 @@ enum NowSheet: Identifiable {
     case climate(ClimateSummary)
     case stations(String)
     case alerts
+    case places
     case settings
     case layout
 
@@ -24,6 +25,8 @@ enum NowSheet: Identifiable {
             "stations"  // the chips switch stations inside one sheet
         case .alerts:
             "alerts"
+        case .places:
+            "places"
         case .settings:
             "settings"
         case .layout:

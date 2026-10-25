@@ -40,6 +40,9 @@ struct NowSheetView: View {
                 .presentationDetents([.medium, .large])
                 .presentationBackgroundInteraction(.enabled(upThrough: .medium))
                 .presentationDragIndicator(.hidden)
+        case .places:
+            LocationsView()
+                .presentationSizing(.page)
         case .settings:
             SettingsView()
                 .presentationSizing(.page)

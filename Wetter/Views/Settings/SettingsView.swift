@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SettingsView: View {
-  var showsCloseButton = true
   @Environment(\.dismiss) private var dismiss
   @Environment(\.scenePhase) private var scenePhase
   @Bindable private var settingsService = SettingService.shared
@@ -98,11 +97,9 @@ struct SettingsView: View {
       .toolbarTitleDisplayMode(.inline)
       .accessibilityIdentifier("settings.sheet")
       .toolbar {
-        if showsCloseButton {
-          ToolbarItem(placement: .topBarTrailing) {
-            Button(role: .close) {
-              dismiss()
-            }
+        ToolbarItem(placement: .topBarTrailing) {
+          Button(role: .close) {
+            dismiss()
           }
         }
       }

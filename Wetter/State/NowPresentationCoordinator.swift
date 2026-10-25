@@ -4,8 +4,6 @@ import Observation
 enum AppTab: Hashable {
     case forecast
     case maps
-    case places
-    case settings
 }
 
 @MainActor
@@ -26,10 +24,6 @@ final class NowPresentationCoordinator {
             UsageStatsStore.shared.record { $0.tabs["\(selectedTab)", default: 0] += 1 }
         }
     }
-
-    /// Bumped when the Orte tab is tapped while already selected —
-    /// LocationsView observes it and presents the search field.
-    var placesSearchRequests = 0
 
     var isLayerPickerPresented = false
     /// Set by the map when it opens the picker: radar region, model layer, or neither (clouds).

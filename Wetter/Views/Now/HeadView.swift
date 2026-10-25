@@ -61,48 +61,6 @@ struct HeadView: View {
             SettingService.formattedTime(trend.at, timeZone: weather.forecast.locationTimeZone))
   }
 
-  private var locationSwitchPicker: some View {
-    Picker("Ort", selection: Binding(
-      get: { cityService.getSelectedCity()?.objectID.uriRepresentation() },
-      set: { (uri: URL?) in
-        if let uri, let city = cityService.cities.first(where: { $0.objectID.uriRepresentation() == uri }) {
-          switchTo(city)
-        } else {
-          switchToCurrentLocation()
-        }
-      }
-    )) {
-      if gpsAuthorized {
-        Label(cityService.currentLocationDisplayName, systemImage: "location")
-          .tag(URL?.none)
-      }
-      ForEach(cityService.cities, id: \.objectID) { city in
-        Text(menuTitle(for: city))
-          .tag(Optional(city.objectID.uriRepresentation()))
-      }
-    }
-    .pickerStyle(.inline)
-  }
-
-  private func menuTitle(for city: City) -> String {
-    let personalization = city.personalization
-    let title = [personalization.mark.emoji, personalization.title]
-      .compactMap { $0 }
-      .filter { !$0.isEmpty }
-      .joined(separator: " ")
-    return title.isEmpty ? String(localized: "Unbekannter Ort") : title
-  }
-
-  private func switchTo(_ city: City) {
-    guard !city.selected else { return }
-    cityService.toggleActiveCity(city: city)
-  }
-
-  private func switchToCurrentLocation() {
-    guard cityService.getSelectedCity() != nil else { return }
-    cityService.disableAllCities()
-  }
-
   private var locationHeader: some View {
     VStack(spacing: 4) {
       if let eyebrow {
@@ -135,13 +93,13 @@ struct HeadView: View {
       }
       .contentShape(Rectangle())
       .onTapGesture {
-        presentation.selectedTab = .places
+        presentation.present(.places)
       }
       .contextMenu {
-        locationSwitchPicker
+        LocationSwitchPicker()
         Divider()
         Button {
-          presentation.selectedTab = .places
+          presentation.present(.places)
         } label: {
           Label("Orte verwalten", systemImage: "list.bullet")
         }
@@ -152,7 +110,7 @@ struct HeadView: View {
         Text("Ort ändern, aktuell \([eyebrowDescription, location.name].compactMap { $0 }.joined(separator: ", "))")
       )
       .accessibilityAction {
-        presentation.selectedTab = .places
+        presentation.present(.places)
       }
       .padding(.bottom, 10)
       .padding(.top, 4)

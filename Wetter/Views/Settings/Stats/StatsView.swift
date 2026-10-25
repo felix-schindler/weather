@@ -94,6 +94,7 @@ struct StatsView: View {
         case "climate": "Klima geöffnet"
         case "stations": "Messstationen geöffnet"
         case "alerts": "Warnungen geöffnet"
+        case "places": "Orte geöffnet"
         case "settings": "Einstellungen geöffnet"
         case "layout": "Ansicht angepasst"
         case let id where id.hasPrefix("environment"): "Umwelt geöffnet"

@@ -7,11 +7,13 @@
 import SwiftUI
 
 #Preview {
-    NowView()
-        .environment(Weather())
-        .environment(Location())
-        .environment(NowPresentationCoordinator())
-        .preferredColorScheme(.dark)
+    NavigationStack {
+        NowView()
+    }
+    .environment(Weather())
+    .environment(Location())
+    .environment(NowPresentationCoordinator())
+    .preferredColorScheme(.dark)
 }
 
 struct NowView: View {
@@ -41,6 +43,22 @@ struct NowView: View {
                 }
             }
         }
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                NowLocationToolbarItem()
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    presentation.present(.settings)
+                } label: {
+                    Image(systemName: "gearshape")
+                }
+                .accessibilityLabel(Text("Einstellungen"))
+                .accessibilityHint(Text("Öffnet die Einstellungen"))
+                .accessibilityIdentifier("now.settings")
+            }
+        }
+        .toolbarTitleDisplayMode(.inline)
     }
 
     private var list: some View {
@@ -241,5 +259,45 @@ extension NowView {
 private extension View {
     func debugConsoleTap(_ action: @escaping () -> Void) -> some View {
         simultaneousGesture(TapGesture().onEnded(action))
+    }
+}
+
+/// Now toolbar's top-left control: tap opens the Orte sheet, long press shows
+/// the saved places (and "Mein Standort") for a quick switch.
+private struct NowLocationToolbarItem: View {
+    @Environment(NowPresentationCoordinator.self) private var presentation
+    private let cityService = CityService.shared
+    private let locationService = LocationService.shared
+
+    private var gpsAuthorized: Bool {
+        locationService.authStatus == .authorizedWhenInUse
+            || locationService.authStatus == .authorizedAlways
+    }
+
+    private var hasQuickSwitches: Bool {
+        gpsAuthorized || !cityService.cities.isEmpty
+    }
+
+    var body: some View {
+        let selectedURI = cityService.getSelectedCity()?.objectID.uriRepresentation()
+        Menu {
+            if hasQuickSwitches {
+                LocationSwitchPicker()
+                Divider()
+            }
+            Button {
+                presentation.present(.places)
+            } label: {
+                Label("Orte verwalten", systemImage: "list.bullet")
+            }
+        } label: {
+            Image(systemName: "location.fill")
+        } primaryAction: {
+            presentation.present(.places)
+        }
+        .id(selectedURI)
+        .accessibilityLabel(Text("Orte"))
+        .accessibilityHint(Text("Öffnet die Orte. Gedrückt halten, um schnell den Ort zu wechseln."))
+        .accessibilityIdentifier("now.locations")
     }
 }
