@@ -26,6 +26,11 @@ struct LocationMapSheet: View {
     @State private var candidate: LocationCandidate?
     private var conditionsStore = CityConditionsStore.shared
 
+    /// MapKit prints the Apple logo and legal link in the map's bottom ornament
+    /// band. The card floats above it so the attribution never ends up behind
+    /// the glass instead of staying visible.
+    private let bottomAttributionInset: CGFloat = 44
+
     init(
         cities: [City],
         initialCenter: CLLocationCoordinate2D,
@@ -70,7 +75,7 @@ struct LocationMapSheet: View {
 
     var body: some View {
         ZStack {
-            MapLibreLocationPicker(
+            LocationPickerMap(
                 chips: chips,
                 initialCenter: initialCenter,
                 pickedCoordinate: picked?.coordinate
@@ -101,19 +106,13 @@ struct LocationMapSheet: View {
 
         }
         .safeAreaInset(edge: .bottom) {
-            VStack(spacing: 0) {
-                if let picked {
-                    pickedCard(picked)
-                        .transition(.move(edge: .bottom).combined(with: .opacity))
-                } else {
-                    ToastBanner(message: String(localized: "Tippe auf die Karte, um einen Ort hinzuzufügen."))
-                        .padding(.bottom, 16)
-                        .transition(.move(edge: .bottom).combined(with: .opacity))
-                }
-                MapAttributionLabel()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 18)
-                    .padding(.bottom, 2)
+            if let picked {
+                pickedCard(picked)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+            } else {
+                ToastBanner(message: String(localized: "Tippe auf die Karte, um einen Ort hinzuzufügen."))
+                    .padding(.bottom, bottomAttributionInset)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
         .animation(.spring(duration: 0.35), value: picked)
@@ -167,7 +166,7 @@ struct LocationMapSheet: View {
         .padding(14)
         .glassEffect(.regular, in: .rect(cornerRadius: 22))
         .padding(.horizontal, 16)
-        .padding(.bottom, 16)
+        .padding(.bottom, bottomAttributionInset)
     }
 
     private func candidate(for point: PickedPoint) -> LocationCandidate {

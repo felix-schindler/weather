@@ -126,5 +126,6 @@ Contributions are welcome, whether bug fixes, new features, or improvements to e
 - Satellite cloud imagery: [EUMETSAT](https://www.eumetsat.int/)
 - Forecast models: [ECMWF](https://www.ecmwf.int/)
 - Map data and tiles: [OpenStreetMap](https://www.openstreetmap.org/) contributors, [OpenFreeMap](https://openfreemap.org/), rendered with [MapLibre Native](https://maplibre.org/)
+- Place picker: [Apple Maps](https://www.apple.com/maps/) via MapKit
 - 3D weather icons: [Hosein Bagheri](https://ui8.net/hosein_bagheri/products/3d-weather-icons40)
 - Networking: Apple's [swift-openapi-generator](https://github.com/apple/swift-openapi-generator), swift-openapi-runtime, and swift-openapi-urlsession
