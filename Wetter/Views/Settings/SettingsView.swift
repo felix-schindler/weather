@@ -12,7 +12,6 @@ struct SettingsView: View {
   @Environment(\.dismiss) private var dismiss
   @Environment(\.scenePhase) private var scenePhase
   @Bindable private var settingsService = SettingService.shared
-  @State private var showsMemory = false
 
   var body: some View {
     NavigationStack {
@@ -93,8 +92,6 @@ struct SettingsView: View {
           }
         } header: {
           Text("Über")
-        } footer: {
-          aboutFooter
         }
       }
       .navigationTitle("Einstellungen")
@@ -109,9 +106,6 @@ struct SettingsView: View {
           }
         }
       }
-      .navigationDestination(isPresented: $showsMemory) {
-        MemoryView()
-      }
       .task {
         await NotificationSettingsManager.shared.reloadNotificationStatus()
       }
@@ -120,32 +114,6 @@ struct SettingsView: View {
         Task { await NotificationSettingsManager.shared.reloadNotificationStatus() }
       }
     }
-  }
-
-  private var aboutFooter: some View {
-    VStack(spacing: 2) {
-      Text(verbatim: "\(appDisplayName) \(appVersion) (\(appBuild))")
-      Text("by Philipp Bolte")
-    }
-    .frame(maxWidth: .infinity)
-    .multilineTextAlignment(.center)
-    .padding(.top, 12)
-    .contentShape(Rectangle())
-    .onTapGesture {
-      showsMemory = true
-    }
-  }
-
-  private var appDisplayName: String {
-    Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? "Wetter"
-  }
-
-  private var appVersion: String {
-    Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0"
-  }
-
-  private var appBuild: String {
-    Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "1"
   }
 }
 

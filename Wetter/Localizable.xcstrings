@@ -55,34 +55,6 @@
         }
       }
     },
-    "... wurde in liebevoller Erinnerung an diejenigen entwickelt, die nicht mehr unter uns sind. In unseren Herzen und Gedanken bleiben sie jedoch für immer lebendig." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "... wurde in liebevoller Erinnerung an diejenigen entwickelt, die nicht mehr unter uns sind. In unseren Herzen und Gedanken bleiben sie jedoch für immer lebendig."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "... was developed in loving memory of those who are no longer with us. However, they remain forever alive in our hearts and minds."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "……為了紀念那些已不在我們身邊的人而開發。他們將永遠活在我們心中與記憶裡。"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "... foi desenvolvido em memória amorosa daqueles que já não estão entre nós. No entanto, eles permanecem para sempre vivos em nossos corações e mentes."
-          }
-        }
-      }
-    },
     "„Mein Standort“ bleibt als Untertitel sichtbar." : {
       "localizations" : {
         "de" : {
@@ -3905,34 +3877,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Palco"
-          }
-        }
-      }
-    },
-    "by Philipp Bolte" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "by Philipp Bolte"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "by Philipp Bolte"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "作者：Philipp Bolte"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "por Philipp Bolte"
           }
         }
       }
@@ -12385,34 +12329,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "O Tempo usa dados meteorológicos e geodados do Serviço Meteorológico Alemão (DWD), entre eles dados de radar, dados de previsão do modelo ICON e avisos oficiais. Base de dados: Deutscher Wetterdienst. Os dados são fornecidos sob os termos de uso de dados abertos do DWD."
-          }
-        }
-      }
-    },
-    "Oscar°" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oscar°"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oscar°"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oscar°"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oscar°"
           }
         }
       }
