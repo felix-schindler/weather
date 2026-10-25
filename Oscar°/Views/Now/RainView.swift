@@ -94,20 +94,16 @@ struct PrecipitationSeriesChart: View {
                         position: .topTrailing, spacing: 0,
                         overflowResolution: .init(x: .fit(to: .chart), y: .fit(to: .chart))
                     ) {
-                        VStack(alignment: .center) {
-                            Text(SettingService.formattedTime(rawSelectedDate, timeZone: timeZone))
-                                .font(.caption2).foregroundStyle(Color.primary.opacity(0.72))
-                            VStack {
-                                Text(nearestPrecipitation(for: rawSelectedDate))
-                                    .bold().foregroundStyle(.primary)
-                                Text("mm/h").font(.caption2).foregroundStyle(Color.primary.opacity(0.72))
-                                    .padding(.top, -12)
-                            }
-                        }
-                        .padding(6)
-                        .background(.ultraThinMaterial.opacity(0.5))
-                        .clipShape(.rect(cornerRadius: 7))
-                        .shadow(radius: 10)
+                        ChartReadoutView(
+                            time: SettingService.formattedTime(rawSelectedDate, timeZone: timeZone),
+                            items: [
+                                ChartReadoutRow(
+                                    label: String(localized: "Regen"),
+                                    value: "\(nearestPrecipitation(for: rawSelectedDate)) mm/h",
+                                    color: .hourlyRain
+                                )
+                            ]
+                        )
                     }
             }
         }
