@@ -155,7 +155,7 @@ struct HeadView: View {
         presentation.selectedTab = .places
       }
       .padding(.bottom, 10)
-      .padding(.top)
+      .padding(.top, 4)
 
       VStack(spacing: 0) {
         Spacer(minLength: compact ? 8 : Self.temperatureGapMinHeight)
@@ -219,7 +219,7 @@ struct HeadView: View {
             .padding(.top, 14)
         }
       }
-      .padding(.bottom, 24)
+      .padding(.bottom, 12)
     }
   }
 

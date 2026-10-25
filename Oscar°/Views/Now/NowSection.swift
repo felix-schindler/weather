@@ -67,11 +67,15 @@ enum NowSection: String, CaseIterable, Identifiable, Codable {
     }
 
     @MainActor @ViewBuilder
-    func view(openRadarMap: @escaping () -> Void = {}, isWide: Bool = false) -> some View {
+    func view(
+        openRadarMap: @escaping () -> Void = {},
+        isWide: Bool = false,
+        hourlyDayLabel: Binding<String?> = .constant(nil)
+    ) -> some View {
         switch self {
         case .map: MapPreview().frame(height: 260)
         case .radar: RainView(openRadarMap: openRadarMap)
-        case .hourly: HourlyView()
+        case .hourly: HourlyView(visibleDayLabel: hourlyDayLabel)
         case .daily: DailyView(expandsDays: isWide)
         case .environment: EnvironmentGaugesView()
         case .climate: ClimateView()

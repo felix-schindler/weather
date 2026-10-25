@@ -21,6 +21,7 @@ struct NowView: View {
     @Environment(NowPresentationCoordinator.self) private var presentation
     @State private var tapCount = 0
     @State private var form: LayoutForm = .compact
+    @State private var hourlyDayLabel: String?
 
     private var sections: [NowSection] {
         let arrangement = settingsService.arrangement(for: form)
@@ -44,17 +45,25 @@ struct NowView: View {
 
     private var list: some View {
         List {
-            HeadView(compact: true)
-                .debugConsoleTap(countDebugTap)
-                .listRowInsets(EdgeInsets())
-                .listRowSeparator(.hidden)
-                .listRowBackground(Color.clear)
+            Section {
+                HeadView(compact: true)
+                    .debugConsoleTap(countDebugTap)
+            }
 
             ForEach(sections) { section in
                 Section {
-                    section.view(openRadarMap: openRadarMap)
+                    section.view(
+                        openRadarMap: openRadarMap,
+                        isWide: form.isWide,
+                        hourlyDayLabel: $hourlyDayLabel
+                    )
+                    .listRowInsets(rowInsets(for: section))
                 } header: {
-                    Text(section.title)
+                    NowSectionHeader(
+                        title: section.title,
+                        subtitle: section == .hourly ? hourlyDayLabel : nil,
+                        action: moreAction(for: section)
+                    )
                 }
             }
 
@@ -112,6 +121,47 @@ struct NowView: View {
     }
 }
 
+private struct NowSectionHeader: View {
+    let title: LocalizedStringResource
+    var subtitle: String?
+    var action: (() -> Void)?
+
+    var body: some View {
+        HStack(alignment: .firstTextBaseline, spacing: 6) {
+            Text(title)
+                .font(.title3.bold())
+                .foregroundStyle(.primary)
+
+            if let subtitle {
+                Text(verbatim: "· \(subtitle)")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.secondary)
+                    .contentTransition(.numericText())
+                    .animation(.snappy, value: subtitle)
+            }
+
+            Spacer(minLength: 8)
+
+            if let action {
+                Button(action: action) {
+                    HStack(spacing: 2) {
+                        Text("Mehr")
+                        Image(systemName: "chevron.forward")
+                            .imageScale(.small)
+                    }
+                    .font(.subheadline.weight(.medium))
+                    .foregroundStyle(.secondary)
+                    .contentShape(Rectangle().inset(by: -10))
+                }
+                .buttonStyle(.plain)
+                .accessibilityHint(Text("Öffnet die Details"))
+            }
+        }
+        .textCase(nil)
+        .padding(.bottom, 2)
+    }
+}
+
 private struct WeatherUnavailableView: View {
     let isRetrying: Bool
     let retry: () -> Void
@@ -144,11 +194,47 @@ extension NowView {
         Haptics.impact()
     }
 
+    private func openMaps() {
+        Haptics.impact()
+        presentation.selectedTab = .maps
+    }
+
     private func openRadarMap() {
         settingsService.activeTileLayer = nil
         settingsService.oscarRadarLayer = true
         Haptics.impact()
         presentation.selectedTab = .maps
+    }
+
+    private func moreAction(for section: NowSection) -> (() -> Void)? {
+        switch section {
+        case .map:
+            return openMaps
+        case .radar:
+            return openRadarMap
+        case .hourly:
+            guard HourlyForecastBuilder.hasHourlyDetailData(forecast: weather.forecast) else { return nil }
+            return { presentation.present(.hourly(nil)) }
+        case .daily:
+            let destination: NowSheet = form.isWide ? .ensemble : .hourly(nil)
+            return { presentation.present(destination) }
+        case .environment:
+            return { presentation.present(.environment(.aqi)) }
+        case .stations:
+            guard let id = weather.stations.first?.id else { return nil }
+            return { presentation.present(.stations(id)) }
+        case .climate:
+            return nil
+        }
+    }
+
+    private func rowInsets(for section: NowSection) -> EdgeInsets? {
+        switch section {
+        case .daily, .stations:
+            return EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
+        default:
+            return nil
+        }
     }
 }
 
