@@ -17,6 +17,9 @@ import SwiftUI
 }
 
 struct NowView: View {
+    private static let contentInsets = EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)
+    private static let dailyInsets = EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16)
+
     private let settingsService = SettingService.shared
     @Environment(Weather.self) private var weather: Weather
     @Environment(Location.self) private var location: Location
@@ -66,6 +69,7 @@ struct NowView: View {
             Section {
                 HeadView(compact: true)
                     .debugConsoleTap(countDebugTap)
+                    .listRowInsets(Self.contentInsets)
             }
 
             ForEach(sections) { section in
@@ -75,7 +79,7 @@ struct NowView: View {
                         isWide: form.isWide,
                         hourlyDayLabel: $hourlyDayLabel
                     )
-                    .listRowInsets(rowInsets(for: section))
+                    .listRowInsets(section == .daily ? Self.dailyInsets : Self.contentInsets)
                 } header: {
                     NowSectionHeader(
                         title: section.title,
@@ -242,15 +246,6 @@ extension NowView {
             guard let id = weather.stations.first?.id else { return nil }
             return { presentation.present(.stations(id)) }
         case .climate:
-            return nil
-        }
-    }
-
-    private func rowInsets(for section: NowSection) -> EdgeInsets? {
-        switch section {
-        case .daily, .stations:
-            return EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
-        default:
             return nil
         }
     }

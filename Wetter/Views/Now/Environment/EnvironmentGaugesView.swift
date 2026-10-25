@@ -68,7 +68,6 @@ struct EnvironmentGaugesView: View {
         }
         .scrollIndicators(.hidden)
         .scrollTargetBehavior(.viewAligned(limitBehavior: .never))
-        .contentMargins(.trailing, 16, for: .scrollContent)
         .frame(maxWidth: .infinity)
     }
 

@@ -487,6 +487,7 @@ private struct SectionBlock: View {
         case .stations:
             StationsCard(stations: Array(OnboardingSampleData.stations.prefix(1)), timeZone: .current) { _ in }
                 .padding(.horizontal)
+                .padding(.vertical, 12)
         case .environment:
             strip(spacing: 14) {
                 ForEach(OnboardingSampleData.gauges) { AQIGaugeCard(metric: $0) }

@@ -22,9 +22,10 @@ struct StationsCard: View {
     let onSelect: (String) -> Void
 
     var body: some View {
-        VStack(spacing: 0) {
-            ForEach(stations) { station in
-                StationRow(station: station, timeZone: timeZone, isDay: isDay, isFirst: station.id == stations.first?.id) {
+        VStack(spacing: 12) {
+            ForEach(Array(stations.enumerated()), id: \.element.id) { index, station in
+                if index > 0 { Divider() }
+                StationRow(station: station, timeZone: timeZone, isDay: isDay) {
                     onSelect(station.id)
                 }
             }
@@ -36,7 +37,6 @@ private struct StationRow: View {
     let station: Components.Schemas.NearbyStation
     let timeZone: TimeZone
     let isDay: Bool
-    let isFirst: Bool
     let onSelect: () -> Void
 
     var body: some View {
@@ -74,13 +74,9 @@ private struct StationRow: View {
                     .monospacedDigit()
                     .frame(minWidth: 58, alignment: .trailing)
             }
-            .padding(.vertical, 12)
             .contentShape(.rect)
         }
         .buttonStyle(.plain)
-        .overlay(alignment: .top) {
-            if !isFirst { Divider() }
-        }
         .accessibilityElement(children: .combine)
         .accessibilityLabel(Text(verbatim: [station.name, condition, detail, units.temperatureString(station.current.temperature_c)]
             .compactMap(\.self).joined(separator: ", ")))

@@ -22,8 +22,8 @@ struct HourlySunEventCard: View {
           .lineLimit(1)
           .minimumScaleFactor(0.75)
     }
-    .padding(.vertical, 8)
-    .frame(width: HourlyForecastCard.cardWidth)
+    .frame(width: HourlyForecastCard.contentWidth)
+    .frame(width: HourlyForecastCard.cardWidth, alignment: .leading)
     .accessibilityElement(children: .combine)
   }
 }

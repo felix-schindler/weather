@@ -40,16 +40,14 @@ struct HourlyView: View {
     }
 
     ScrollView(.horizontal) {
-      LazyHStack(spacing: 12) {
+      LazyHStack(spacing: 0) {
         if shouldShowPlaceholders {
           ForEach(0..<10, id: \.self) { _ in
             HourlyPlaceholderCard()
-              .padding(.vertical, 4)
           }
         } else {
           ForEach(items) { item in
             timelineItemView(item)
-              .padding(.vertical, 4)
               .onTapGesture {
                 presentDetails(at: Date(timeIntervalSince1970: item.timestamp))
               }
@@ -61,7 +59,6 @@ struct HourlyView: View {
     .scrollIndicators(.hidden)
     .scrollTargetBehavior(.viewAligned(limitBehavior: .never))
     .scrollPosition(id: $leadingItemID)
-    .contentMargins(.trailing, 16, for: .scrollContent)
     .frame(maxWidth: .infinity)
     .contentShape(.rect)
     .onTapGesture(perform: presentDetails)
@@ -75,7 +72,7 @@ struct HourlyView: View {
   }
 
   private func timelineItemView(_ item: HourlyTimelineItem) -> some View {
-    VStack(spacing: 0) {
+    Group {
       switch item {
       case .forecast(let forecast):
         HourlyForecastCard(item: forecast)

@@ -20,7 +20,7 @@ struct DailyView: View {
     let temperatureUnit = weather.forecast.daily_units?.temperature_2m_min ?? "°C"
     let precipitationUnit = weather.forecast.daily_units?.precipitation_sum ?? "mm"
 
-    VStack(spacing: 0) {
+    VStack(spacing: 8) {
       if showsPlaceholders {
         ForEach(0..<placeholderDayCount, id: \.self) { dayPos in
           if dayPos > 0 { Divider() }
@@ -52,7 +52,6 @@ struct DailyView: View {
 
           if isExpanded, let day = dayRange(dayPos) {
             DayDetailView(day: day, startTime: dayPos == 0 ? Date.now.timeIntervalSince1970 : day.lowerBound + 12 * 3_600)
-              .padding(.bottom, 12)
               .transition(.opacity)
           }
         }
@@ -113,7 +112,6 @@ extension DailyView {
           .accessibilityHidden(true)
       }
     }
-    .padding(.vertical, 8)
     .contentShape(.rect)
   }
 
@@ -306,7 +304,6 @@ private struct DailyPlaceholderRow: View {
         .frame(width: 37, alignment: .leading)
     }
     .foregroundStyle(.secondary.opacity(0.28))
-    .padding(.vertical, 8)
     .accessibilityHidden(true)
   }
 }
