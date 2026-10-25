@@ -39,7 +39,7 @@
 			containerPortal = 3EB89009251A55700028FED0 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 25429BE529E5F9B000D5979F;
-			remoteInfo = "WetterWatchWidgetExtension";
+			remoteInfo = WetterWatchWidgetExtension;
 		};
 		3EB89034251A55980028FED0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -53,7 +53,7 @@
 			containerPortal = 3EB89009251A55700028FED0 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3EB89010251A55700028FED0;
-			remoteInfo = "Wetter";
+			remoteInfo = Wetter;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -95,14 +95,14 @@
 
 /* Begin PBXFileReference section */
 		25429BD029E5F94100D5979F /* WetterWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WetterWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		25429BE629E5F9B000D5979F /* WetterWatchWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WetterWatchWidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25429BE629E5F9B000D5979F /* WetterWatchWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WetterWatchWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B4C45A2B57441F0069B3B0 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
 		25ECE65D2BDA1F250088B302 /* ci_post_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_xcodebuild.sh; sourceTree = "<group>"; };
-		3EB89011251A55700028FED0 /* Wetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wetter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EB89028251A55950028FED0 /* WetterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WetterWidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EB89011251A55700028FED0 /* Wetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EB89028251A55950028FED0 /* WetterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WetterWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EB8902A251A55950028FED0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		3EB8902C251A55950028FED0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		5C22EF0430A2000000000001 /* WetterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WetterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C22EF0430A2000000000001 /* WetterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WetterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -134,9 +134,9 @@
 				Lockscreen/TemperatureLockscreenWidget.swift,
 				Lockscreen/UVIndexLockscreenWidget.swift,
 				Lockscreen/WindLockscreenWidget.swift,
-				WetterWidgetsBundle.swift,
 				Radar/RadarProvider.swift,
 				Radar/RadarWidget.swift,
+				WetterWidgetsBundle.swift,
 			);
 			target = 3EB89010251A55700028FED0 /* Wetter */;
 		};
@@ -842,11 +842,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DC52F219308CD6D70070B07E /* Wetter */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000001 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000003 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000005 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000006 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Wetter"; sourceTree = "<group>"; };
-		DC52F353308CD6ED0070B07E /* WetterWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000002 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000004 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000007 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "WetterWidget"; sourceTree = "<group>"; };
+		DC52F219308CD6D70070B07E /* Wetter */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000001 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000003 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000005 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000006 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Wetter; sourceTree = "<group>"; };
+		DC52F353308CD6ED0070B07E /* WetterWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000002 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000004 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000007 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = WetterWidget; sourceTree = "<group>"; };
 		DC52F37D308CD6FB0070B07E /* WetterWatch Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "WetterWatch Watch App"; sourceTree = "<group>"; };
-		DC52F38C308CD7070070B07E /* WetterWatchWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000008 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "WetterWatchWidget"; sourceTree = "<group>"; };
-		DC52F39B308CD7110070B07E /* WetterTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "WetterTests"; sourceTree = "<group>"; };
+		DC52F38C308CD7070070B07E /* WetterWatchWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000008 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = WetterWatchWidget; sourceTree = "<group>"; };
+		DC52F39B308CD7110070B07E /* WetterTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = WetterTests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -996,12 +996,12 @@
 				DC52F353308CD6ED0070B07E /* WetterWidget */,
 				DC52F38C308CD7070070B07E /* WetterWatchWidget */,
 			);
-			name = "WetterWatchWidgetExtension";
+			name = WetterWatchWidgetExtension;
 			packageProductDependencies = (
 				257EB3522BD8312000E46468 /* OpenAPIRuntime */,
 				257EB3542BD8312500E46468 /* OpenAPIURLSession */,
 			);
-			productName = "WetterWatchWidgetExtension";
+			productName = WetterWatchWidgetExtension;
 			productReference = 25429BE629E5F9B000D5979F /* WetterWatchWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
@@ -1027,13 +1027,13 @@
 				DC52F219308CD6D70070B07E /* Wetter */,
 				DC52F353308CD6ED0070B07E /* WetterWidget */,
 			);
-			name = "Wetter";
+			name = Wetter;
 			packageProductDependencies = (
 				25C4300E2AC36165001DA5FC /* OpenAPIRuntime */,
 				25C430112AC36173001DA5FC /* OpenAPIURLSession */,
 				AD6000092FE4000000000001 /* MapLibre */,
 			);
-			productName = "Wetter";
+			productName = Wetter;
 			productReference = 3EB89011251A55700028FED0 /* Wetter.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -1055,12 +1055,12 @@
 				DC52F219308CD6D70070B07E /* Wetter */,
 				DC52F353308CD6ED0070B07E /* WetterWidget */,
 			);
-			name = "WetterWidgetExtension";
+			name = WetterWidgetExtension;
 			packageProductDependencies = (
 				253F708B2B5316A90075D093 /* OpenAPIRuntime */,
 				253F708D2B5316A90075D093 /* OpenAPIURLSession */,
 			);
-			productName = "WetterWidgetExtension";
+			productName = WetterWidgetExtension;
 			productReference = 3EB89028251A55950028FED0 /* WetterWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
@@ -1080,8 +1080,8 @@
 			fileSystemSynchronizedGroups = (
 				DC52F39B308CD7110070B07E /* WetterTests */,
 			);
-			name = "WetterTests";
-			productName = "WetterTests";
+			name = WetterTests;
+			productName = WetterTests;
 			productReference = 5C22EF0430A2000000000001 /* WetterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -1337,10 +1337,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = "WetterWatchWidget/WetterWatchWidgetExtension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = WetterWatchWidget/WetterWatchWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WetterWatchWidget/Info.plist";
+				INFOPLIST_FILE = WetterWatchWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Wetter;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1349,7 +1349,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "weather.schindlerfelix.de.watchkitapp.widget";
+				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.watchkitapp.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1366,11 +1366,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = "WetterWatchWidget/WetterWatchWidgetExtension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = WetterWatchWidget/WetterWatchWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6J2M765XY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WetterWatchWidget/Info.plist";
+				INFOPLIST_FILE = WetterWatchWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Wetter;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1379,7 +1379,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "weather.schindlerfelix.de.watchkitapp.widget";
+				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.watchkitapp.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1529,13 +1529,14 @@
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIconChillDay AppIconChillDayRadar AppIconChillNight AppIconClassicHalloween AppIconClassicJungle AppIconFlatOscarBlack AppIconFlatOscarClassic AppIconFlatOscarKawaii AppIconFlatOscarSky AppIconFlatOscarSun AppIconMechaEUOscar AppIconMechaOscar AppIconSpaceShipOscar AppIconTVClassic AppIconTVClimateChangeOscar AppIconTVRainyOscar AppIconTVSunnyOscar";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Wetter/Wetter.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Wetter/Wetter.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"Wetter/Preview Content\"";
+				DEVELOPMENT_TEAM = S2D94HHFAY;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Wetter/Info.plist";
+				INFOPLIST_FILE = Wetter/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Wetter;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
@@ -1558,14 +1559,14 @@
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIconChillDay AppIconChillDayRadar AppIconChillNight AppIconClassicHalloween AppIconClassicJungle AppIconFlatOscarBlack AppIconFlatOscarClassic AppIconFlatOscarKawaii AppIconFlatOscarSky AppIconFlatOscarSun AppIconMechaEUOscar AppIconMechaOscar AppIconSpaceShipOscar AppIconTVClassic AppIconTVClimateChangeOscar AppIconTVRainyOscar AppIconTVSunnyOscar";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Wetter/Wetter.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Wetter/Wetter.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"Wetter/Preview Content\"";
-				DEVELOPMENT_TEAM = N6J2M765XY;
+				DEVELOPMENT_TEAM = S2D94HHFAY;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Wetter/Info.plist";
+				INFOPLIST_FILE = Wetter/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Wetter;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
@@ -1587,10 +1588,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = "WetterWidget/WetterWidgetExtension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = WetterWidget/WetterWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				INFOPLIST_FILE = "WetterWidget/Info.plist";
+				INFOPLIST_FILE = WetterWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1611,11 +1612,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = "WetterWidget/WetterWidgetExtension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = WetterWidget/WetterWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = N6J2M765XY;
-				INFOPLIST_FILE = "WetterWidget/Info.plist";
+				INFOPLIST_FILE = WetterWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
