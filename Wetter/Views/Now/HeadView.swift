@@ -12,7 +12,7 @@ struct HeadView: View {
   @Environment(Weather.self) private var weather: Weather
   @Environment(Location.self) private var location: Location
   @Environment(NowPresentationCoordinator.self) private var presentation
-  @ScaledMetric(relativeTo: .largeTitle) private var temperatureFontSize: CGFloat = 96
+  @ScaledMetric(relativeTo: .largeTitle) private var temperatureFontSize: CGFloat = 72
   private let settingsService = SettingService.shared
   private let cityService = CityService.shared
 
@@ -162,7 +162,7 @@ struct HeadView: View {
 
         Text(roundTemperatureString(temperature: weather.forecast.current?.temperature))
           .foregroundStyle(.primary)
-          .font(.system(size: temperatureFontSize, weight: .thin))
+          .font(.system(size: temperatureFontSize, weight: .medium, design: .rounded))
           .minimumScaleFactor(0.5)
           .lineLimit(1)
           .contentTransition(.numericText())
