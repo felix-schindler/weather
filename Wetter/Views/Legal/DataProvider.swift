@@ -103,5 +103,11 @@ extension DataProvider {
             about: "Wetter verwendet amtliche Wetterwarnungen von Environment and Climate Change Canada (ECCC) für Kanada. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu ECCC dar.",
             links: [DataProviderLink(title: "weather.gc.ca", url: URL(string: "https://weather.gc.ca/")!)]
         ),
+        DataProvider(
+            id: "oscar", name: "Oscar-Server", title: "Oscar-Server",
+            systemImage: "server.rack", tint: .gray,
+            about: "Der Oscar-Server ist der Begleit-Server der App. Er bereitet Radar-, Wolken- und Modelldaten für die Kartenansicht auf, liefert amtliche Wetterwarnungen, Messwerte nahegelegener Stationen und Webcams und verwaltet die Push-Benachrichtigungen. Die zugrunde liegenden Wetterdaten stammen von den weiteren hier aufgeführten Wetterdiensten.",
+            links: [DataProviderLink(title: "server.oscars.love", url: URL(string: "https://server.oscars.love")!)]
+        ),
     ]
 }

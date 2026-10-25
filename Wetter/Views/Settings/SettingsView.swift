@@ -66,16 +66,6 @@ struct SettingsView: View {
         }
 
         Section {
-          SettingsExternalLink(destination: URL(string: "https://oscars.love/privacy")!) {
-            Label("Datenschutz", systemImage: "hand.raised.fill")
-              .labelStyle(.settingsIcon(.blue))
-          }
-
-          SettingsExternalLink(destination: URL(string: "https://oscars.love/impressum")!) {
-            Label("Impressum", systemImage: "figure.wave")
-              .labelStyle(.settingsIcon(.gray))
-          }
-
           NavigationLink {
             DataSourcesView()
           } label: {
