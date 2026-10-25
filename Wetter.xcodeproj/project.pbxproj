@@ -23,6 +23,8 @@
 		3EB89036251A55980028FED0 /* WetterWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3EB89028251A55950028FED0 /* WetterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5A7C003D2FAB000000000001 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7C003B2FAB000000000001 /* OpenAPIRuntime */; };
 		5A7C003E2FAB000000000001 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7C003C2FAB000000000001 /* OpenAPIURLSession */; };
+		A1C0F00D2FA0000000000002 /* Weather.icon in Resources */ = {isa = PBXBuildFile; fileRef = A1C0F00D2FA0000000000001 /* Weather.icon */; };
+		A1C0F00D2FA0000000000003 /* Weather.icon in Resources */ = {isa = PBXBuildFile; fileRef = A1C0F00D2FA0000000000001 /* Weather.icon */; };
 		AD60000A2FE4000000000001 /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = AD6000092FE4000000000001 /* MapLibre */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,7 @@
 		3EB8902A251A55950028FED0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		3EB8902C251A55950028FED0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		5C22EF0430A2000000000001 /* WetterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WetterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C0F00D2FA0000000000001 /* Weather.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = Weather.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -914,6 +917,7 @@
 		3EB89008251A55700028FED0 = {
 			isa = PBXGroup;
 			children = (
+				A1C0F00D2FA0000000000001 /* Weather.icon */,
 				DC52F219308CD6D70070B07E /* Wetter */,
 				DC52F353308CD6ED0070B07E /* WetterWidget */,
 				DC52F37D308CD6FB0070B07E /* WetterWatch Watch App */,
@@ -1120,7 +1124,8 @@
 			knownRegions = (
 				de,
 				en,
-				tr,
+				"pt-BR",
+				"zh-Hant",
 				Base,
 			);
 			mainGroup = 3EB89008251A55700028FED0;
@@ -1148,6 +1153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1C0F00D2FA0000000000003 /* Weather.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1162,6 +1168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1C0F00D2FA0000000000002 /* Weather.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1271,7 +1278,7 @@
 		25429BDF29E5F94300D5979F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Weather;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = "WetterWatch Watch App/WetterWatch.entitlements";
@@ -1302,7 +1309,7 @@
 		25429BE029E5F94300D5979F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Weather;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = "WetterWatch Watch App/WetterWatch.entitlements";
@@ -1526,8 +1533,7 @@
 		3EB89021251A55740028FED0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIconChillDay AppIconChillDayRadar AppIconChillNight AppIconClassicHalloween AppIconClassicJungle AppIconFlatOscarBlack AppIconFlatOscarClassic AppIconFlatOscarKawaii AppIconFlatOscarSky AppIconFlatOscarSun AppIconMechaEUOscar AppIconMechaOscar AppIconSpaceShipOscar AppIconTVClassic AppIconTVClimateChangeOscar AppIconTVRainyOscar AppIconTVSunnyOscar";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Weather;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Wetter/Wetter.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -1556,8 +1562,7 @@
 		3EB89022251A55740028FED0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIconChillDay AppIconChillDayRadar AppIconChillNight AppIconClassicHalloween AppIconClassicJungle AppIconFlatOscarBlack AppIconFlatOscarClassic AppIconFlatOscarKawaii AppIconFlatOscarSky AppIconFlatOscarSun AppIconMechaEUOscar AppIconMechaOscar AppIconSpaceShipOscar AppIconTVClassic AppIconTVClimateChangeOscar AppIconTVRainyOscar AppIconTVSunnyOscar";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Weather;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Wetter/Wetter.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
