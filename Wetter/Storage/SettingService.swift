@@ -1,0 +1,273 @@
+import CoreData
+import SwiftUI
+import OSLog
+import WidgetKit
+
+@MainActor
+@Observable
+final class SettingService {
+    static let shared = SettingService()
+    private static let logger = Logger(
+        subsystem: Bundle.main.bundleIdentifier ?? "Wetter",
+        category: "Storage"
+    )
+    var temperatureUnit: String {
+        didSet { unitDidChange(key: Self.temperatureUnitKey, value: temperatureUnit) }
+    }
+    var windSpeedUnit: String {
+        didSet { unitDidChange(key: Self.windSpeedUnitKey, value: windSpeedUnit) }
+    }
+    var precipitationUnit: String {
+        didSet { unitDidChange(key: Self.precipitationUnitKey, value: precipitationUnit) }
+    }
+    var oscarRadarLayer: Bool {
+        didSet { UserDefaults.standard.set(oscarRadarLayer, forKey: "oscarRadarLayer") }
+    }
+    var activeTileLayerRaw: String? {
+        didSet { UserDefaults.standard.set(activeTileLayerRaw, forKey: "activeTileLayer") }
+    }
+    var oscarRadarRegionRaw: String {
+        didSet { Self.defaults.set(oscarRadarRegionRaw, forKey: "oscarRadarRegion") }
+    }
+    var radarSmoothMotion: Bool {
+        didSet { UserDefaults.standard.set(radarSmoothMotion, forKey: "radarSmoothMotion") }
+    }
+    var radarSoftRendering: Bool {
+        didSet { UserDefaults.standard.set(radarSoftRendering, forKey: "radarSoftRendering") }
+    }
+    var radarMotionArrows: Bool {
+        didSet { UserDefaults.standard.set(radarMotionArrows, forKey: "radarMotionArrows") }
+    }
+    var radarModelContinuation: Bool {
+        didSet { UserDefaults.standard.set(radarModelContinuation, forKey: "radarModelContinuation") }
+    }
+    var mapValueBubbles: Bool {
+        didSet { UserDefaults.standard.set(mapValueBubbles, forKey: "mapValueBubbles") }
+    }
+    var mapWebcams: Bool {
+        didSet { UserDefaults.standard.set(mapWebcams, forKey: "mapWebcams") }
+    }
+    var showAlertPolygons: Bool {
+        didSet { UserDefaults.standard.set(showAlertPolygons, forKey: "showAlertPolygons") }
+    }
+    var showStormCells: Bool {
+        didSet { UserDefaults.standard.set(showStormCells, forKey: "showStormCells") }
+    }
+    var showIsobars: Bool {
+        didSet { UserDefaults.standard.set(showIsobars, forKey: "showIsobars") }
+    }
+    var cloudLayerActive: Bool {
+        didSet { UserDefaults.standard.set(cloudLayerActive, forKey: "cloudLayerActive") }
+    }
+    var mapOverlayOpacity: Double {
+        didSet { UserDefaults.standard.set(mapOverlayOpacity, forKey: "mapOverlayOpacity") }
+    }
+    var sectionArrangementsRaw: [String: Data] {
+        didSet { UserDefaults.standard.set(sectionArrangementsRaw, forKey: "sectionArrangements") }
+    }
+    var nowSectionOrderRaw: [String]? {
+        didSet { UserDefaults.standard.set(nowSectionOrderRaw, forKey: "nowSectionOrder") }
+    }
+    var hiddenNowSectionsRaw: [String]? {
+        didSet { UserDefaults.standard.set(hiddenNowSectionsRaw, forKey: "hiddenNowSections") }
+    }
+    var stageNowSectionsRaw: [String]? {
+        didSet { UserDefaults.standard.set(stageNowSectionsRaw, forKey: "stageNowSections") }
+    }
+    var headMetricOrderRaw: [String]? {
+        didSet { UserDefaults.standard.set(headMetricOrderRaw, forKey: "headMetricOrder") }
+    }
+    var hiddenHeadMetricsRaw: [String]? {
+        didSet { UserDefaults.standard.set(hiddenHeadMetricsRaw, forKey: "hiddenHeadMetrics") }
+    }
+    var favoriteStationIDs: [String] {
+        didSet { UserDefaults.standard.set(favoriteStationIDs, forKey: "favoriteStationIDs") }
+    }
+    var mapBasemapStyleRaw: String {
+        didSet { Self.defaults.set(mapBasemapStyleRaw, forKey: "mapBasemapStyle") }
+    }
+    var mapBasemapStyle: MapBasemapStyle {
+        get { MapBasemapStyle(rawValue: mapBasemapStyleRaw) ?? .fiord }
+        set { mapBasemapStyleRaw = newValue.rawValue }
+    }
+    var timeFormatPreference: TimeFormatPreference {
+        didSet {
+            Self.defaults.set(timeFormatPreference.rawValue, forKey: Self.timeFormatPreferenceKey)
+            nc.post(name: .weatherRefreshNeeded, object: nil)
+        }
+    }
+    var dailyForecastDaytimeTemperaturesEnabled: Bool {
+        didSet {
+            Self.defaults.set(dailyForecastDaytimeTemperaturesEnabled, forKey: Self.dailyForecastDaytimeTemperaturesEnabledKey)
+        }
+    }
+    var dailyForecastDaytimeTemperatureDisplayMode: ForecastDaytimeTemperatureDisplayMode {
+        didSet {
+            Self.defaults.set(dailyForecastDaytimeTemperatureDisplayMode.rawValue, forKey: Self.dailyForecastDaytimeTemperatureDisplayModeKey)
+        }
+    }
+    var dailyForecastDaytimeTemperatureRangeMode: ForecastDaytimeTemperatureRangeMode {
+        didSet {
+            Self.defaults.set(dailyForecastDaytimeTemperatureRangeMode.rawValue, forKey: Self.dailyForecastDaytimeTemperatureRangeModeKey)
+        }
+    }
+    var dailyForecastDaytimeCustomStartHour: Int {
+        didSet {
+            let clamped = Self.clampedHour(dailyForecastDaytimeCustomStartHour)
+            if clamped != dailyForecastDaytimeCustomStartHour {
+                dailyForecastDaytimeCustomStartHour = clamped
+                return
+            }
+            if dailyForecastDaytimeCustomEndHour < clamped {
+                dailyForecastDaytimeCustomEndHour = clamped
+            }
+            Self.defaults.set(clamped, forKey: Self.dailyForecastDaytimeCustomStartHourKey)
+        }
+    }
+    var dailyForecastDaytimeCustomEndHour: Int {
+        didSet {
+            let clamped = Self.clampedHour(dailyForecastDaytimeCustomEndHour)
+            if clamped != dailyForecastDaytimeCustomEndHour {
+                dailyForecastDaytimeCustomEndHour = clamped
+                return
+            }
+            if dailyForecastDaytimeCustomStartHour > clamped {
+                dailyForecastDaytimeCustomStartHour = clamped
+            }
+            Self.defaults.set(clamped, forKey: Self.dailyForecastDaytimeCustomEndHourKey)
+        }
+    }
+    var forecastModelPreference: ForecastModelPreference {
+        didSet {
+            Self.defaults.set(forecastModelPreference.rawValue, forKey: Self.forecastModelPreferenceKey)
+            nc.post(name: .weatherRefreshNeeded, object: nil)
+        }
+    }
+    private let nc = NotificationCenter.default
+    nonisolated private static let timeFormatPreferenceKey = "timeFormatPreference"
+    private static let dailyForecastDaytimeTemperaturesEnabledKey = "dailyForecastDaytimeTemperaturesEnabled"
+    private static let dailyForecastDaytimeTemperatureDisplayModeKey = "dailyForecastDaytimeTemperatureDisplayMode"
+    private static let dailyForecastDaytimeTemperatureRangeModeKey = "dailyForecastDaytimeTemperatureRangeMode"
+    private static let dailyForecastDaytimeCustomStartHourKey = "dailyForecastDaytimeCustomStartHour"
+    private static let dailyForecastDaytimeCustomEndHourKey = "dailyForecastDaytimeCustomEndHour"
+    nonisolated private static let forecastModelPreferenceKey = "forecastModelPreference"
+    nonisolated private static let temperatureUnitKey = "temperatureUnit"
+    nonisolated private static let windSpeedUnitKey = "windSpeedUnit"
+    nonisolated private static let precipitationUnitKey = "precipitationUnit"
+    nonisolated private static var defaults: UserDefaults { AppGroup.defaults }
+
+    private init() {
+        Self.migrateUnitsFromCoreDataIfNeeded()
+        temperatureUnit = Self.resolvedTemperatureUnit
+        windSpeedUnit = Self.resolvedWindSpeedUnit
+        precipitationUnit = Self.resolvedPrecipitationUnit
+        oscarRadarLayer = UserDefaults.standard.bool(forKey: "oscarRadarLayer")
+        activeTileLayerRaw = UserDefaults.standard.string(forKey: "activeTileLayer")
+        let resolvedRadarRegion = Self.defaults.string(forKey: "oscarRadarRegion")
+            ?? UserDefaults.standard.string(forKey: "oscarRadarRegion")
+            ?? "germany"
+        oscarRadarRegionRaw = resolvedRadarRegion
+        Self.defaults.set(resolvedRadarRegion, forKey: "oscarRadarRegion")
+        UserDefaults.standard.removeObject(forKey: "radarPrecipTypeOverlay")
+        UserDefaults.standard.removeObject(forKey: "oscarRadarProduct")
+        radarSmoothMotion = (UserDefaults.standard.object(forKey: "radarSmoothMotion") as? Bool) ?? true
+        radarSoftRendering = (UserDefaults.standard.object(forKey: "radarSoftRendering") as? Bool) ?? true
+        radarMotionArrows = (UserDefaults.standard.object(forKey: "radarMotionArrows") as? Bool) ?? true
+        radarModelContinuation = UserDefaults.standard.bool(forKey: "radarModelContinuation")
+        mapValueBubbles = (UserDefaults.standard.object(forKey: "mapValueBubbles") as? Bool) ?? true
+        mapWebcams = UserDefaults.standard.bool(forKey: "mapWebcams")
+        showAlertPolygons = UserDefaults.standard.bool(forKey: "showAlertPolygons")
+        showStormCells = UserDefaults.standard.bool(forKey: "showStormCells")
+        showIsobars = UserDefaults.standard.bool(forKey: "showIsobars")
+        cloudLayerActive = UserDefaults.standard.bool(forKey: "cloudLayerActive")
+        let storedOpacity = UserDefaults.standard.object(forKey: "mapOverlayOpacity") as? Double
+        mapOverlayOpacity = min(max(storedOpacity ?? 0.7, 0.3), 1)
+        sectionArrangementsRaw = UserDefaults.standard.dictionary(forKey: "sectionArrangements") as? [String: Data] ?? [:]
+        nowSectionOrderRaw = UserDefaults.standard.stringArray(forKey: "nowSectionOrder")
+        hiddenNowSectionsRaw = UserDefaults.standard.stringArray(forKey: "hiddenNowSections")
+        stageNowSectionsRaw = UserDefaults.standard.stringArray(forKey: "stageNowSections")
+        headMetricOrderRaw = UserDefaults.standard.stringArray(forKey: "headMetricOrder")
+        hiddenHeadMetricsRaw = UserDefaults.standard.stringArray(forKey: "hiddenHeadMetrics")
+        favoriteStationIDs = UserDefaults.standard.stringArray(forKey: "favoriteStationIDs") ?? []
+        mapBasemapStyleRaw = Self.defaults.string(forKey: "mapBasemapStyle") ?? MapBasemapStyle.fiord.rawValue
+        timeFormatPreference = TimeFormatPreference(
+            rawValue: Self.defaults.string(forKey: Self.timeFormatPreferenceKey) ?? ""
+        ) ?? .system
+        dailyForecastDaytimeTemperaturesEnabled = Self.defaults.bool(
+            forKey: Self.dailyForecastDaytimeTemperaturesEnabledKey
+        )
+        dailyForecastDaytimeTemperatureDisplayMode = ForecastDaytimeTemperatureDisplayMode(
+            rawValue: Self.defaults.string(
+                forKey: Self.dailyForecastDaytimeTemperatureDisplayModeKey
+            ) ?? ""
+        ) ?? .replaceValues
+        dailyForecastDaytimeTemperatureRangeMode = ForecastDaytimeTemperatureRangeMode(
+            rawValue: Self.defaults.string(
+                forKey: Self.dailyForecastDaytimeTemperatureRangeModeKey
+            ) ?? ""
+        ) ?? .sunriseSunset
+        dailyForecastDaytimeCustomStartHour = Self.defaults.object(
+            forKey: Self.dailyForecastDaytimeCustomStartHourKey
+        ) == nil
+            ? 9
+            : Self.clampedHour(
+                Self.defaults.integer(forKey: Self.dailyForecastDaytimeCustomStartHourKey)
+            )
+        dailyForecastDaytimeCustomEndHour = Self.defaults.object(
+            forKey: Self.dailyForecastDaytimeCustomEndHourKey
+        ) == nil
+            ? 18
+            : Self.clampedHour(
+                Self.defaults.integer(forKey: Self.dailyForecastDaytimeCustomEndHourKey)
+            )
+        forecastModelPreference = ForecastModelPreference(
+            rawValue: Self.defaults.string(forKey: Self.forecastModelPreferenceKey) ?? ""
+        ) ?? .bestMatch
+    }
+
+    private func unitDidChange(key: String, value: String) {
+        Self.defaults.set(value, forKey: key)
+        nc.post(name: .weatherRefreshNeeded, object: nil)
+        WidgetCenter.shared.reloadAllTimelines()
+    }
+
+    private static func migrateUnitsFromCoreDataIfNeeded() {
+        guard defaults.string(forKey: temperatureUnitKey) == nil else { return }
+        let context = PersistenceController.shared.container.viewContext
+        guard let stored = try? context.fetch(Settings.fetchRequest()).first else { return }
+        defaults.set(stored.temperatureUnit ?? "celsius", forKey: temperatureUnitKey)
+        defaults.set(stored.windSpeedUnit ?? "kmh", forKey: windSpeedUnitKey)
+        defaults.set(stored.precipitationUnit ?? "mm", forKey: precipitationUnitKey)
+    }
+
+    nonisolated static var resolvedTimeFormatAPIValue: String {
+        resolvedTimeFormatPreference.resolvedAPIValue
+    }
+
+    nonisolated static var resolvedTimeFormatPreference: TimeFormatPreference {
+        let rawValue = defaults.string(forKey: timeFormatPreferenceKey)
+        return TimeFormatPreference(rawValue: rawValue ?? "") ?? .system
+    }
+
+    nonisolated static var resolvedForecastModelPreference: ForecastModelPreference {
+        let rawValue = defaults.string(forKey: forecastModelPreferenceKey)
+        return ForecastModelPreference(rawValue: rawValue ?? "") ?? .bestMatch
+    }
+
+    nonisolated static var resolvedTemperatureUnit: String {
+        defaults.string(forKey: temperatureUnitKey) ?? "celsius"
+    }
+
+    nonisolated static var resolvedWindSpeedUnit: String {
+        defaults.string(forKey: windSpeedUnitKey) ?? "kmh"
+    }
+
+    nonisolated static var resolvedPrecipitationUnit: String {
+        defaults.string(forKey: precipitationUnitKey) ?? "mm"
+    }
+
+    private static func clampedHour(_ hour: Int) -> Int {
+        min(max(hour, 0), 23)
+    }
+
+}

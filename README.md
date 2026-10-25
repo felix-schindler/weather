@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="img/thumbnail.png" alt="Oscar° - Weather for iOS" width="800">
+  <img src="img/thumbnail.png" alt="Wetter - Weather for iOS" width="800">
 </p>
 
-<h1 align="center">Oscar Weather</h1>
+<h1 align="center">Wetter</h1>
 
 <p align="center">
   A SwiftUI weather app with global forecasts and enhanced regional coverage for radar, satellite, and alerts.
@@ -21,9 +21,9 @@
 
 ## Overview
 
-Oscar provides current conditions, an hourly and daily forecast, rain radar, satellite imagery, air quality, and severe weather alerts, on iPhone and Apple Watch. Forecasts work globally through Open-Meteo's `best_match` feature, which automatically picks a national weather service for the location, and 17 individual models can be selected by hand. Radar, satellite, and alerts have their own regional coverage, listed below.
+Wetter provides current conditions, an hourly and daily forecast, rain radar, satellite imagery, air quality, and severe weather alerts, on iPhone and Apple Watch. Forecasts work globally through Open-Meteo's `best_match` feature, which automatically picks a national weather service for the location, and 17 individual models can be selected by hand. Radar, satellite, and alerts have their own regional coverage, listed below.
 
-> **Note:** Oscar° is in active development and not yet intended for production use.
+> **Note:** Wetter is in active development and not yet intended for production use.
 
 ---
 
@@ -98,7 +98,7 @@ A four-page vertical stack: an animated current-conditions scene, a rain nowcast
 ## Getting Started
 
 1. Clone the repository
-2. Open `Oscar°.xcodeproj` in Xcode 26 or later
+2. Open `Wetter.xcodeproj` in Xcode 26 or later
 3. Select your development team in the project signing settings
 4. Build and run on a device or simulator running iOS 26 or watchOS 26
 
@@ -108,7 +108,7 @@ A four-page vertical stack: an animated current-conditions scene, a rain nowcast
 
 Public beta is available on TestFlight:
 
-**[Oscar° Beta on TestFlight: testflight.apple.com/join/xf5iJcHh](https://testflight.apple.com/join/xf5iJcHh)**
+**[Wetter Beta on TestFlight: testflight.apple.com/join/xf5iJcHh](https://testflight.apple.com/join/xf5iJcHh)**
 
 ---
 

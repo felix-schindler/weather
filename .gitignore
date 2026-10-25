@@ -9,7 +9,7 @@ xcuserdata/
 build/
 
 # Stray dir from a misfired -I include flag being treated as a path
-/Oscar°.xcodeproj/-I/
-/Oscar°.xcodeproj/-Xcc/
+/Wetter.xcodeproj/-I/
+/Wetter.xcodeproj/-Xcc/
 
 

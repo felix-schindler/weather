@@ -1,0 +1,144 @@
+{
+  "sourceLanguage" : "de",
+  "strings" : {
+    "CFBundleDisplayName" : {
+      "comment" : "Bundle display name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wetter"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weather"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hava Durumu"
+          }
+        }
+      }
+    },
+    "CFBundleName" : {
+      "comment" : "Bundle name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wetter"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weather"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hava Durumu"
+          }
+        }
+      }
+    },
+    "NSLocationAlwaysAndWhenInUseUsageDescription" : {
+      "comment" : "Privacy - Location Always and When In Use Usage Description",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weather uses it to show the weather where you are. For forecasts and radar, your location is sent to Open-Meteo and Oscar’s server, rounded to about 100 m; Apple determines the place name. More at oscars.love/privacy."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Hava Durumu bunu bulunduğun yerin hava durumunu göstermek için kullanır. Tahmin ve radar için konumun yaklaşık 100 m’ye yuvarlanarak Open-Meteo’ya ve Oscar’ın sunucusuna gönderilir; yer adını Apple belirler. Daha fazlası: oscars.love/privacy."
+          }
+        }
+      }
+    },
+    "NSLocationAlwaysUsageDescription" : {
+      "comment" : "Privacy - Location Always Usage Description",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weather uses it to show the weather where you are. For forecasts and radar, your location is sent to Open-Meteo and Oscar’s server, rounded to about 100 m; Apple determines the place name. More at oscars.love/privacy."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Hava Durumu bunu bulunduğun yerin hava durumunu göstermek için kullanır. Tahmin ve radar için konumun yaklaşık 100 m’ye yuvarlanarak Open-Meteo’ya ve Oscar’ın sunucusuna gönderilir; yer adını Apple belirler. Daha fazlası: oscars.love/privacy."
+          }
+        }
+      }
+    },
+    "NSLocationUsageDescription" : {
+      "comment" : "Privacy - Location Usage Description",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weather uses it to show the weather where you are. For forecasts and radar, your location is sent to Open-Meteo and Oscar’s server, rounded to about 100 m; Apple determines the place name. More at oscars.love/privacy."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Hava Durumu bunu bulunduğun yerin hava durumunu göstermek için kullanır. Tahmin ve radar için konumun yaklaşık 100 m’ye yuvarlanarak Open-Meteo’ya ve Oscar’ın sunucusuna gönderilir; yer adını Apple belirler. Daha fazlası: oscars.love/privacy."
+          }
+        }
+      }
+    },
+    "NSLocationWhenInUseUsageDescription" : {
+      "comment" : "Privacy - Location When In Use Usage Description",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weather uses it to show the weather where you are. For forecasts and radar, your location is sent to Open-Meteo and Oscar’s server, rounded to about 100 m; Apple determines the place name. More at oscars.love/privacy."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Hava Durumu bunu bulunduğun yerin hava durumunu göstermek için kullanır. Tahmin ve radar için konumun yaklaşık 100 m’ye yuvarlanarak Open-Meteo’ya ve Oscar’ın sunucusuna gönderilir; yer adını Apple belirler. Daha fazlası: oscars.love/privacy."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

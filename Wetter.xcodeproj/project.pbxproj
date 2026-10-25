@@ -1,0 +1,1814 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		253F708C2B5316A90075D093 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 253F708B2B5316A90075D093 /* OpenAPIRuntime */; };
+		253F708E2B5316A90075D093 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 253F708D2B5316A90075D093 /* OpenAPIURLSession */; };
+		25429BDD29E5F94300D5979F /* WetterWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 25429BD029E5F94100D5979F /* WetterWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		25429BE729E5F9B000D5979F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB8902A251A55950028FED0 /* WidgetKit.framework */; };
+		25429BE829E5F9B000D5979F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB8902C251A55950028FED0 /* SwiftUI.framework */; };
+		25429BF429E5F9B300D5979F /* WetterWatchWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 25429BE629E5F9B000D5979F /* WetterWatchWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		255BDD9E2BD9B2E40061E4EB /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		257EB3532BD8312000E46468 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 257EB3522BD8312000E46468 /* OpenAPIRuntime */; };
+		257EB3552BD8312500E46468 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 257EB3542BD8312500E46468 /* OpenAPIURLSession */; };
+		25C4300F2AC36165001DA5FC /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 25C4300E2AC36165001DA5FC /* OpenAPIRuntime */; };
+		25C430122AC36173001DA5FC /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 25C430112AC36173001DA5FC /* OpenAPIURLSession */; };
+		3EB8902B251A55950028FED0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB8902A251A55950028FED0 /* WidgetKit.framework */; };
+		3EB8902D251A55950028FED0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB8902C251A55950028FED0 /* SwiftUI.framework */; };
+		3EB89036251A55980028FED0 /* WetterWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3EB89028251A55950028FED0 /* WetterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5A7C003D2FAB000000000001 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7C003B2FAB000000000001 /* OpenAPIRuntime */; };
+		5A7C003E2FAB000000000001 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7C003C2FAB000000000001 /* OpenAPIURLSession */; };
+		AD60000A2FE4000000000001 /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = AD6000092FE4000000000001 /* MapLibre */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		25429BDB29E5F94300D5979F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EB89009251A55700028FED0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25429BCF29E5F94100D5979F;
+			remoteInfo = "WetterWatch Watch App";
+		};
+		25429BF229E5F9B300D5979F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EB89009251A55700028FED0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25429BE529E5F9B000D5979F;
+			remoteInfo = "WetterWatchWidgetExtension";
+		};
+		3EB89034251A55980028FED0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EB89009251A55700028FED0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EB89027251A55950028FED0;
+			remoteInfo = WeatherWidgetExtension;
+		};
+		5C22EF0F30A2000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EB89009251A55700028FED0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EB89010251A55700028FED0;
+			remoteInfo = "Wetter";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		25429BDE29E5F94300D5979F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				25429BDD29E5F94300D5979F /* WetterWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25429BF829E5F9B300D5979F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				25429BF429E5F9B300D5979F /* WetterWatchWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EB8903A251A55980028FED0 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3EB89036251A55980028FED0 /* WetterWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		25429BD029E5F94100D5979F /* WetterWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WetterWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25429BE629E5F9B000D5979F /* WetterWatchWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WetterWatchWidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25B4C45A2B57441F0069B3B0 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
+		25ECE65D2BDA1F250088B302 /* ci_post_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_xcodebuild.sh; sourceTree = "<group>"; };
+		3EB89011251A55700028FED0 /* Wetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wetter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EB89028251A55950028FED0 /* WetterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WetterWidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EB8902A251A55950028FED0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		3EB8902C251A55950028FED0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5C22EF0430A2000000000001 /* WetterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WetterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E00000000000000000000001 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 3EB89010251A55700028FED0 /* Wetter */;
+		};
+		E00000000000000000000002 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				GlobalRadarWidget/GlobalRadarProvider.swift,
+				GlobalRadarWidget/GlobalRadarWidget.swift,
+				Home/DailyForecastEntry.swift,
+				Home/DailyForecastEntryView.swift,
+				Home/DailyForecastProvider.swift,
+				Home/DailyForecastWidget.swift,
+				Home/HomeProvider.swift,
+				Home/NowTodayWidget.swift,
+				Info.plist,
+				InfoPlist.xcstrings,
+				Localizable.xcstrings,
+				Lockscreen/LockscreenProvider.swift,
+				Lockscreen/PrecipitationLockscreenWidget.swift,
+				Lockscreen/RainTimelineLockscreenWidget.swift,
+				Lockscreen/TemperatureLockscreenWidget.swift,
+				Lockscreen/UVIndexLockscreenWidget.swift,
+				Lockscreen/WindLockscreenWidget.swift,
+				WetterWidgetsBundle.swift,
+				Radar/RadarProvider.swift,
+				Radar/RadarWidget.swift,
+			);
+			target = 3EB89010251A55700028FED0 /* Wetter */;
+		};
+		E00000000000000000000003 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				App/RootTabView.swift,
+				App/WeatherApp.swift,
+				Assets.xcassets,
+				Debug/DebugPermissionControls.swift,
+				Debug/Screenshots/ScreenshotFixtures.swift,
+				Debug/Screenshots/ScreenshotFixtureServer.swift,
+				Debug/Screenshots/ScreenshotMode.swift,
+				Debug/Screenshots/ScreenshotWidgetGallery.swift,
+				Debug/Screenshots/SyntheticRadar.swift,
+				"Extensions/GeocodeLocation+Display.swift",
+				Extensions/HapticsExtension.swift,
+				Info.plist,
+				InfoPlist.xcstrings,
+				LiveActivities/RainRadarLiveActivityManager.swift,
+				Localizable.xcstrings,
+				Models/ClimateSummary.swift,
+				Models/WeatherConditionLabel.swift,
+				Notifications/APNsEnvironment.swift,
+				Notifications/BearerAuthMiddleware.swift,
+				Notifications/NotificationSettingsManager.swift,
+				"Notifications/NotificationSettingsManager+LegacyMigration.swift",
+				"Notifications/NotificationSettingsManager+LiveActivity.swift",
+				"Notifications/NotificationSettingsManager+Subscription.swift",
+				"Notifications/NotificationSettingsManager+UNDelegate.swift",
+				"Preview Content/Preview Assets.xcassets",
+				Rendering/WidgetBasemap/WidgetBasemapRenderer.swift,
+				Services/CityConditionsService.swift,
+				Services/ClimateArchiveService.swift,
+				Services/WindFieldCache.swift,
+				State/NowPresentationCoordinator.swift,
+				Storage/KeychainStore.swift,
+				Storage/UsageStats.swift,
+				Storage/UsageStatsStore.swift,
+				Views/AlertListView.swift,
+				Views/AttributionViews.swift,
+				Views/Legal/DataProvider.swift,
+				Views/Legal/ProviderAttributionPage.swift,
+				Views/Legal/ProviderRow.swift,
+				Views/Locations/CurrentLocationRow.swift,
+				Views/Locations/EmojiKeyboardField.swift,
+				Views/Locations/LocationCandidate.swift,
+				Views/Locations/LocationCard.swift,
+				Views/Locations/LocationCityRow.swift,
+				Views/Locations/LocationEditSheet.swift,
+				Views/Locations/LocationMapPicker.swift,
+				Views/Locations/LocationMapSheet.swift,
+				Views/Locations/LocationPreviewSheet.swift,
+				Views/Locations/LocationRowCards.swift,
+				Views/Locations/LocationSearchResultRow.swift,
+				Views/Locations/LocationsEmptyHint.swift,
+				Views/Locations/LocationsView.swift,
+				Views/Map/Coordinator/WeatherMapView.swift,
+				"Views/Map/Coordinator/WeatherMapView+Annotations.swift",
+				"Views/Map/Coordinator/WeatherMapView+CityChips.swift",
+				"Views/Map/Coordinator/WeatherMapView+Clouds.swift",
+				"Views/Map/Coordinator/WeatherMapView+FeatureTap.swift",
+				"Views/Map/Coordinator/WeatherMapView+Isobars.swift",
+				"Views/Map/Coordinator/WeatherMapView+ModelLayer.swift",
+				"Views/Map/Coordinator/WeatherMapView+Radar.swift",
+				"Views/Map/Coordinator/WeatherMapView+StormCells.swift",
+				"Views/Map/Coordinator/WeatherMapView+ValueBubbles.swift",
+				"Views/Map/Coordinator/WeatherMapView+WarningPolygons.swift",
+				"Views/Map/Coordinator/WeatherMapView+Webcams.swift",
+				"Views/Map/Coordinator/WeatherMapView+WindParticles.swift",
+				Views/Map/LayerPicker/LayerPickerSectionHeader.swift,
+				Views/Map/LayerPicker/LayerTile.swift,
+				Views/Map/LayerPicker/LayerToggleRow.swift,
+				Views/Map/LayerPicker/MapLayerPickerSheet.swift,
+				Views/Map/LayerPicker/RadarInfoView.swift,
+				Views/Map/LayerPicker/SatelliteInfoView.swift,
+				Views/Map/LayerPicker/WeatherModelCard.swift,
+				Views/Map/LayerPicker/WeatherModelInfoView.swift,
+				Views/Map/MapAttributionLabel.swift,
+				Views/Map/MapPreview.swift,
+				Views/Map/Models/AlertSeverityStyle.swift,
+				Views/Map/Models/MapLayers.swift,
+				Views/Map/Models/StormCellInfo.swift,
+				Views/Map/Models/WeatherAlertInfo.swift,
+				Views/Map/Rendering/CityMarkerImage.swift,
+				Views/Map/Rendering/MapChip.swift,
+				Views/Map/Rendering/MapValueBubbles.swift,
+				Views/Map/Rendering/RadarCustomStyleLayer.swift,
+				Views/Map/Rendering/RadarMotionArrows.swift,
+				Views/Map/Rendering/UserLocationDot.swift,
+				Views/Map/Rendering/WindParticleView.swift,
+				Views/Map/Sheets/AlertInfoSheet.swift,
+				Views/Map/Sheets/StormCellInfoSheet.swift,
+				Views/Map/Timeline/RadarTimestampBadge.swift,
+				Views/Map/Timeline/TimelineControlsChip.swift,
+				Views/Map/Timeline/TimelineControlsWrappers.swift,
+				Views/Map/Timeline/TimelineLoadingPieces.swift,
+				Views/Map/Timeline/TimelinePlayerState.swift,
+				Views/Map/Timeline/TimelineScrubber.swift,
+				Views/Map/WeatherMapDetailView.swift,
+				Views/Map/WebcamSheet.swift,
+				Views/Now/AlertView.swift,
+				Views/Now/Charts/HourlyChartUtilities.swift,
+				Views/Now/Charts/ScrollSynchronization/ChartScrollSynchronizer.swift,
+				Views/Now/Charts/ScrollSynchronization/ChartScrollViewLocator.swift,
+				Views/Now/Charts/ScrollSynchronization/SynchronizedChartScroll.swift,
+				Views/Now/Climate/ClimateCopy.swift,
+				Views/Now/Climate/ClimateDetailView.swift,
+				Views/Now/Climate/ClimateLegend.swift,
+				Views/Now/Climate/ClimateModel.swift,
+				Views/Now/Climate/ClimatePlaceholder.swift,
+				Views/Now/Climate/ClimateStripeColor.swift,
+				Views/Now/Climate/ClimateSummaryCard.swift,
+				Views/Now/Climate/ClimateTimeAxis.swift,
+				Views/Now/Climate/ClimateView.swift,
+				Views/Now/Climate/InteractiveClimateRibbon.swift,
+				Views/Now/Climate/WarmingStripesRibbon.swift,
+				Views/Now/Daily/DailyTemperatureRow.swift,
+				Views/Now/Daily/DailyView.swift,
+				Views/Now/Daily/DayDetailView.swift,
+				Views/Now/DetailCard.swift,
+				Views/Now/DetailDeck.swift,
+				Views/Now/DetailSectionPicker.swift,
+				Views/Now/Ensemble/EnsembleChart.swift,
+				Views/Now/Ensemble/EnsembleLens.swift,
+				Views/Now/Ensemble/EnsembleRail.swift,
+				Views/Now/Ensemble/EnsembleState.swift,
+				Views/Now/Ensemble/EnsembleView.swift,
+				Views/Now/Environment/AQIGaugeCard.swift,
+				Views/Now/Environment/EnvironmentGaugesView.swift,
+				Views/Now/Environment/EnvironmentMetric.swift,
+				Views/Now/Environment/EUAirQualityBand.swift,
+				Views/Now/Environment/PollenSeverity.swift,
+				Views/Now/EnvironmentDetail/AQIChart.swift,
+				Views/Now/EnvironmentDetail/AQIComponentSnapshot.swift,
+				Views/Now/EnvironmentDetail/EnvironmentAirQualitySectionView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentDetailEmptyStateView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentDetailHeaderView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentDetailSection.swift,
+				Views/Now/EnvironmentDetail/EnvironmentDetailView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentPollenSectionView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentUVSectionView.swift,
+				Views/Now/EnvironmentDetail/PollenChart.swift,
+				Views/Now/EnvironmentDetail/PollenSnapshot.swift,
+				Views/Now/EnvironmentDetail/UVChart.swift,
+				Views/Now/HeadMetric.swift,
+				Views/Now/HeadView.swift,
+				Views/Now/Hourly/HourlyDetailView.swift,
+				Views/Now/Hourly/HourlyForecastBuilder.swift,
+				Views/Now/Hourly/HourlyForecastCard.swift,
+				Views/Now/Hourly/HourlyForecastItem.swift,
+				Views/Now/Hourly/HourlyFormatting.swift,
+				Views/Now/Hourly/HourlyLens.swift,
+				Views/Now/Hourly/HourlyPlaceholderCard.swift,
+				Views/Now/Hourly/HourlyReadoutBox.swift,
+				Views/Now/Hourly/HourlySunEventCard.swift,
+				Views/Now/Hourly/HourlyTimelineMinimap.swift,
+				Views/Now/Hourly/HourlyTimelineModel.swift,
+				"Views/Now/Hourly/HourlyTimelineModel+Derivations.swift",
+				"Views/Now/Hourly/HourlyTimelineModel+Layouts.swift",
+				"Views/Now/Hourly/HourlyTimelineModel+Readout.swift",
+				Views/Now/Hourly/HourlyTimelineStrip.swift,
+				Views/Now/Hourly/HourlyView.swift,
+				Views/Now/NowSection.swift,
+				Views/Now/NowSheet.swift,
+				Views/Now/NowSheetView.swift,
+				Views/Now/NowView.swift,
+				Views/Now/RainView.swift,
+				Views/Now/Stations/StationDetailView.swift,
+				Views/Now/Stations/StationsView.swift,
+				Views/Onboarding/OnboardingButtonStack.swift,
+				Views/Onboarding/OnboardingCoordinator.swift,
+				Views/Onboarding/OnboardingGate.swift,
+				Views/Onboarding/OnboardingLocationStep.swift,
+				Views/Onboarding/OnboardingManualLocationStep.swift,
+				Views/Onboarding/OnboardingNotificationsStep.swift,
+				Views/Onboarding/OnboardingQuestionStep.swift,
+				Views/Onboarding/OnboardingRegion.swift,
+				Views/Onboarding/OnboardingSampleData.swift,
+				Views/Onboarding/OnboardingStep.swift,
+				Views/Onboarding/OnboardingStyle.swift,
+				Views/Onboarding/OnboardingView.swift,
+				Views/Settings/DataSourcesView.swift,
+				Views/Settings/ForecastDisplayModeOption.swift,
+				Views/Settings/ForecastModelSettingsView.swift,
+				Views/Settings/ForecastSettingsView.swift,
+				Views/Settings/MemoryView.swift,
+				Views/Settings/NotificationSettingsView.swift,
+				Views/Settings/NowLayout/NowLayoutCanvas.swift,
+				Views/Settings/NowLayout/NowLayoutPreview.swift,
+				Views/Settings/NowLayout/NowLayoutSettingsView.swift,
+				Views/Settings/NowLayout/NowLayoutSheet.swift,
+				Views/Settings/PermissionSettingsView.swift,
+				Views/Settings/SettingsExternalLink.swift,
+				Views/Settings/SettingsIconLabelStyle.swift,
+				Views/Settings/SettingsView.swift,
+				Views/Settings/Stats/ActivityHeatmap.swift,
+				Views/Settings/Stats/ExtremeTile.swift,
+				Views/Settings/Stats/OpensByHourChart.swift,
+				Views/Settings/Stats/OpensByWeekdayChart.swift,
+				Views/Settings/Stats/ServicesChart.swift,
+				Views/Settings/Stats/StatsCard.swift,
+				Views/Settings/Stats/StatsChartHeader.swift,
+				Views/Settings/Stats/StatsOverviewGrid.swift,
+				Views/Settings/Stats/StatsRow.swift,
+				Views/Settings/Stats/StatsView.swift,
+				Views/Settings/Stats/StatTile.swift,
+				Views/Settings/Stats/TopPlacesChart.swift,
+				Views/Settings/UnitSettings.swift,
+				Views/ToastBanner.swift,
+			);
+			target = 3EB89027251A55950028FED0 /* WetterWidgetExtension */;
+		};
+		E00000000000000000000004 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 3EB89027251A55950028FED0 /* WetterWidgetExtension */;
+		};
+		E00000000000000000000005 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				App/RootTabView.swift,
+				App/WeatherApp.swift,
+				Assets.xcassets,
+				Debug/DebugPermissionControls.swift,
+				Debug/Screenshots/ScreenshotWidgetGallery.swift,
+				"Extensions/GeocodeLocation+Display.swift",
+				Extensions/HapticsExtension.swift,
+				Extensions/WeatherSymbol.swift,
+				Info.plist,
+				InfoPlist.xcstrings,
+				LiveActivities/RainRadarActivityAttributes.swift,
+				LiveActivities/RainRadarLiveActivityManager.swift,
+				Localizable.xcstrings,
+				Models/ClimateSummary.swift,
+				Networking/Radar/CloudLayerState.swift,
+				Networking/Radar/ModelGridLayerState.swift,
+				Networking/Radar/OscarRadarState.swift,
+				Networking/Radar/PlaybackTicker.swift,
+				Networking/Radar/RadarFrameSupport.swift,
+				Networking/Radar/RadarMotionData.swift,
+				Networking/Radar/RadarPalettes.swift,
+				Networking/Radar/RadarRegion.swift,
+				Networking/Radar/RadarSharedDTOs.swift,
+				Networking/Radar/RadarSharedGeometry.swift,
+				Networking/Radar/ServerPalettes.swift,
+				Networking/Radar/WeatherTileLayer.swift,
+				Notifications/APNsEnvironment.swift,
+				Notifications/BearerAuthMiddleware.swift,
+				Notifications/NotificationSettingsManager.swift,
+				"Notifications/NotificationSettingsManager+LegacyMigration.swift",
+				"Notifications/NotificationSettingsManager+LiveActivity.swift",
+				"Notifications/NotificationSettingsManager+Subscription.swift",
+				"Notifications/NotificationSettingsManager+UNDelegate.swift",
+				"Preview Content/Preview Assets.xcassets",
+				Rendering/WidgetBasemap/WidgetBasemapRenderer.swift,
+				Services/CityConditionsService.swift,
+				Services/ClimateArchiveService.swift,
+				Services/WidgetBasemapStore.swift,
+				Services/WindFieldCache.swift,
+				State/NowPresentationCoordinator.swift,
+				Storage/KeychainStore.swift,
+				"Storage/SettingService+MapLayers.swift",
+				Storage/UsageStats.swift,
+				Storage/UsageStatsStore.swift,
+				Views/AlertListView.swift,
+				Views/AttributionViews.swift,
+				Views/Legal/DataProvider.swift,
+				Views/Legal/ProviderAttributionPage.swift,
+				Views/Legal/ProviderRow.swift,
+				Views/Locations/CurrentLocationRow.swift,
+				Views/Locations/EmojiKeyboardField.swift,
+				Views/Locations/LocationCandidate.swift,
+				Views/Locations/LocationCard.swift,
+				Views/Locations/LocationCityRow.swift,
+				Views/Locations/LocationEditSheet.swift,
+				Views/Locations/LocationMapPicker.swift,
+				Views/Locations/LocationMapSheet.swift,
+				Views/Locations/LocationPreviewSheet.swift,
+				Views/Locations/LocationRowCards.swift,
+				Views/Locations/LocationSearchResultRow.swift,
+				Views/Locations/LocationsEmptyHint.swift,
+				Views/Locations/LocationsView.swift,
+				Views/Map/Coordinator/WeatherMapView.swift,
+				"Views/Map/Coordinator/WeatherMapView+Annotations.swift",
+				"Views/Map/Coordinator/WeatherMapView+CityChips.swift",
+				"Views/Map/Coordinator/WeatherMapView+Clouds.swift",
+				"Views/Map/Coordinator/WeatherMapView+FeatureTap.swift",
+				"Views/Map/Coordinator/WeatherMapView+Isobars.swift",
+				"Views/Map/Coordinator/WeatherMapView+ModelLayer.swift",
+				"Views/Map/Coordinator/WeatherMapView+Radar.swift",
+				"Views/Map/Coordinator/WeatherMapView+StormCells.swift",
+				"Views/Map/Coordinator/WeatherMapView+ValueBubbles.swift",
+				"Views/Map/Coordinator/WeatherMapView+WarningPolygons.swift",
+				"Views/Map/Coordinator/WeatherMapView+Webcams.swift",
+				"Views/Map/Coordinator/WeatherMapView+WindParticles.swift",
+				Views/Map/LayerPicker/LayerPickerSectionHeader.swift,
+				Views/Map/LayerPicker/LayerTile.swift,
+				Views/Map/LayerPicker/LayerToggleRow.swift,
+				Views/Map/LayerPicker/MapLayerPickerSheet.swift,
+				Views/Map/LayerPicker/RadarInfoView.swift,
+				Views/Map/LayerPicker/SatelliteInfoView.swift,
+				Views/Map/LayerPicker/WeatherModelCard.swift,
+				Views/Map/LayerPicker/WeatherModelInfoView.swift,
+				Views/Map/MapAttributionLabel.swift,
+				Views/Map/MapPreview.swift,
+				Views/Map/Models/AlertSeverityStyle.swift,
+				Views/Map/Models/MapLayers.swift,
+				Views/Map/Models/StormCellInfo.swift,
+				Views/Map/Models/WeatherAlertInfo.swift,
+				Views/Map/Rendering/CityMarkerImage.swift,
+				Views/Map/Rendering/MapChip.swift,
+				Views/Map/Rendering/MapValueBubbles.swift,
+				Views/Map/Rendering/RadarCustomStyleLayer.swift,
+				Views/Map/Rendering/RadarMotionArrows.swift,
+				Views/Map/Rendering/UserLocationDot.swift,
+				Views/Map/Rendering/WeatherColormap.swift,
+				Views/Map/Rendering/WindParticleView.swift,
+				Views/Map/Sheets/AlertInfoSheet.swift,
+				Views/Map/Sheets/StormCellInfoSheet.swift,
+				Views/Map/Timeline/RadarTimestampBadge.swift,
+				Views/Map/Timeline/TimelineControlsChip.swift,
+				Views/Map/Timeline/TimelineControlsWrappers.swift,
+				Views/Map/Timeline/TimelineLoadingPieces.swift,
+				Views/Map/Timeline/TimelinePlayerState.swift,
+				Views/Map/Timeline/TimelineScrubber.swift,
+				Views/Map/WeatherMapDetailView.swift,
+				Views/Map/WebcamSheet.swift,
+				Views/Now/AlertView.swift,
+				Views/Now/Charts/HourlyChartUtilities.swift,
+				Views/Now/Charts/ScrollSynchronization/ChartScrollSynchronizer.swift,
+				Views/Now/Charts/ScrollSynchronization/ChartScrollViewLocator.swift,
+				Views/Now/Charts/ScrollSynchronization/SynchronizedChartScroll.swift,
+				Views/Now/Climate/ClimateCopy.swift,
+				Views/Now/Climate/ClimateDetailView.swift,
+				Views/Now/Climate/ClimateLegend.swift,
+				Views/Now/Climate/ClimateModel.swift,
+				Views/Now/Climate/ClimatePlaceholder.swift,
+				Views/Now/Climate/ClimateStripeColor.swift,
+				Views/Now/Climate/ClimateSummaryCard.swift,
+				Views/Now/Climate/ClimateTimeAxis.swift,
+				Views/Now/Climate/ClimateView.swift,
+				Views/Now/Climate/InteractiveClimateRibbon.swift,
+				Views/Now/Climate/WarmingStripesRibbon.swift,
+				Views/Now/Daily/DailyTemperatureRow.swift,
+				Views/Now/Daily/DailyView.swift,
+				Views/Now/Daily/DayDetailView.swift,
+				Views/Now/DetailCard.swift,
+				Views/Now/DetailDeck.swift,
+				Views/Now/DetailSectionPicker.swift,
+				Views/Now/Ensemble/EnsembleChart.swift,
+				Views/Now/Ensemble/EnsembleLens.swift,
+				Views/Now/Ensemble/EnsembleRail.swift,
+				Views/Now/Ensemble/EnsembleState.swift,
+				Views/Now/Ensemble/EnsembleView.swift,
+				Views/Now/Environment/AQIGaugeCard.swift,
+				Views/Now/Environment/EnvironmentGaugesView.swift,
+				Views/Now/Environment/EnvironmentMetric.swift,
+				Views/Now/Environment/EUAirQualityBand.swift,
+				Views/Now/Environment/PollenSeverity.swift,
+				Views/Now/Environment/UVIndexCategory.swift,
+				Views/Now/EnvironmentDetail/AQIChart.swift,
+				Views/Now/EnvironmentDetail/AQIComponentSnapshot.swift,
+				Views/Now/EnvironmentDetail/EnvironmentAirQualitySectionView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentDetailEmptyStateView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentDetailHeaderView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentDetailSection.swift,
+				Views/Now/EnvironmentDetail/EnvironmentDetailView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentPollenSectionView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentUVSectionView.swift,
+				Views/Now/EnvironmentDetail/PollenChart.swift,
+				Views/Now/EnvironmentDetail/PollenSnapshot.swift,
+				Views/Now/EnvironmentDetail/UVChart.swift,
+				Views/Now/HeadMetric.swift,
+				Views/Now/HeadView.swift,
+				Views/Now/Hourly/HourlyDetailView.swift,
+				Views/Now/Hourly/HourlyForecastCard.swift,
+				Views/Now/Hourly/HourlyLens.swift,
+				Views/Now/Hourly/HourlyPlaceholderCard.swift,
+				Views/Now/Hourly/HourlyReadoutBox.swift,
+				Views/Now/Hourly/HourlySunEventCard.swift,
+				Views/Now/Hourly/HourlyTimelineMinimap.swift,
+				Views/Now/Hourly/HourlyTimelineModel.swift,
+				"Views/Now/Hourly/HourlyTimelineModel+Derivations.swift",
+				"Views/Now/Hourly/HourlyTimelineModel+Layouts.swift",
+				"Views/Now/Hourly/HourlyTimelineModel+Readout.swift",
+				Views/Now/Hourly/HourlyTimelineStrip.swift,
+				Views/Now/Hourly/HourlyView.swift,
+				Views/Now/NowSection.swift,
+				Views/Now/NowSheet.swift,
+				Views/Now/NowSheetView.swift,
+				Views/Now/NowView.swift,
+				Views/Now/RainView.swift,
+				Views/Now/Stations/StationDetailView.swift,
+				Views/Now/Stations/StationsView.swift,
+				Views/Onboarding/OnboardingButtonStack.swift,
+				Views/Onboarding/OnboardingCoordinator.swift,
+				Views/Onboarding/OnboardingGate.swift,
+				Views/Onboarding/OnboardingLocationStep.swift,
+				Views/Onboarding/OnboardingManualLocationStep.swift,
+				Views/Onboarding/OnboardingNotificationsStep.swift,
+				Views/Onboarding/OnboardingQuestionStep.swift,
+				Views/Onboarding/OnboardingRegion.swift,
+				Views/Onboarding/OnboardingSampleData.swift,
+				Views/Onboarding/OnboardingStep.swift,
+				Views/Onboarding/OnboardingStyle.swift,
+				Views/Onboarding/OnboardingView.swift,
+				Views/Settings/DataSourcesView.swift,
+				Views/Settings/ForecastDisplayModeOption.swift,
+				Views/Settings/ForecastModelSettingsView.swift,
+				Views/Settings/ForecastSettingsView.swift,
+				Views/Settings/MemoryView.swift,
+				Views/Settings/NotificationSettingsView.swift,
+				Views/Settings/NowLayout/NowLayoutCanvas.swift,
+				Views/Settings/NowLayout/NowLayoutPreview.swift,
+				Views/Settings/NowLayout/NowLayoutSettingsView.swift,
+				Views/Settings/NowLayout/NowLayoutSheet.swift,
+				Views/Settings/PermissionSettingsView.swift,
+				Views/Settings/SettingsExternalLink.swift,
+				Views/Settings/SettingsIconLabelStyle.swift,
+				Views/Settings/SettingsView.swift,
+				Views/Settings/Stats/ActivityHeatmap.swift,
+				Views/Settings/Stats/ExtremeTile.swift,
+				Views/Settings/Stats/OpensByHourChart.swift,
+				Views/Settings/Stats/OpensByWeekdayChart.swift,
+				Views/Settings/Stats/ServicesChart.swift,
+				Views/Settings/Stats/StatsCard.swift,
+				Views/Settings/Stats/StatsChartHeader.swift,
+				Views/Settings/Stats/StatsOverviewGrid.swift,
+				Views/Settings/Stats/StatsRow.swift,
+				Views/Settings/Stats/StatsView.swift,
+				Views/Settings/Stats/StatTile.swift,
+				Views/Settings/Stats/TopPlacesChart.swift,
+				Views/Settings/UnitSettings.swift,
+				Views/ToastBanner.swift,
+			);
+			target = 25429BCF29E5F94100D5979F /* WetterWatch Watch App */;
+		};
+		E00000000000000000000006 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				App/RootTabView.swift,
+				App/WeatherApp.swift,
+				Assets.xcassets,
+				Debug/DebugPermissionControls.swift,
+				Debug/Screenshots/ScreenshotFixtures.swift,
+				Debug/Screenshots/ScreenshotFixtureServer.swift,
+				Debug/Screenshots/ScreenshotMode.swift,
+				Debug/Screenshots/ScreenshotWidgetGallery.swift,
+				Debug/Screenshots/SyntheticRadar.swift,
+				"Extensions/Color-Custom.swift",
+				"Extensions/GeocodeLocation+Display.swift",
+				Extensions/HapticsExtension.swift,
+				Info.plist,
+				InfoPlist.xcstrings,
+				LiveActivities/RainRadarActivityAttributes.swift,
+				LiveActivities/RainRadarLiveActivityManager.swift,
+				Localizable.xcstrings,
+				Models/ClimateSummary.swift,
+				Models/WeatherConditionLabel.swift,
+				Networking/Radar/CloudLayerState.swift,
+				Networking/Radar/ModelGridLayerState.swift,
+				Networking/Radar/OscarRadarState.swift,
+				Networking/Radar/PlaybackTicker.swift,
+				Networking/Radar/RadarFrameSupport.swift,
+				Networking/Radar/RadarMotionData.swift,
+				Networking/Radar/RadarPalettes.swift,
+				Networking/Radar/RadarRegion.swift,
+				Networking/Radar/RadarSharedDTOs.swift,
+				Networking/Radar/RadarSharedGeometry.swift,
+				Networking/Radar/ServerPalettes.swift,
+				Networking/Radar/WeatherTileLayer.swift,
+				Notifications/APNsEnvironment.swift,
+				Notifications/BearerAuthMiddleware.swift,
+				Notifications/NotificationSettingsManager.swift,
+				"Notifications/NotificationSettingsManager+LegacyMigration.swift",
+				"Notifications/NotificationSettingsManager+LiveActivity.swift",
+				"Notifications/NotificationSettingsManager+Subscription.swift",
+				"Notifications/NotificationSettingsManager+UNDelegate.swift",
+				"Preview Content/Preview Assets.xcassets",
+				Rendering/WidgetBasemap/WidgetBasemapRenderer.swift,
+				Services/CityConditionsService.swift,
+				Services/ClimateArchiveService.swift,
+				Services/WidgetBasemapStore.swift,
+				Services/WindFieldCache.swift,
+				State/NowPresentationCoordinator.swift,
+				Storage/KeychainStore.swift,
+				"Storage/SettingService+MapLayers.swift",
+				Storage/UsageStats.swift,
+				Storage/UsageStatsStore.swift,
+				Views/AlertListView.swift,
+				Views/AttributionViews.swift,
+				Views/Legal/DataProvider.swift,
+				Views/Legal/ProviderAttributionPage.swift,
+				Views/Legal/ProviderRow.swift,
+				Views/Locations/CurrentLocationRow.swift,
+				Views/Locations/EmojiKeyboardField.swift,
+				Views/Locations/LocationCandidate.swift,
+				Views/Locations/LocationCard.swift,
+				Views/Locations/LocationCityRow.swift,
+				Views/Locations/LocationEditSheet.swift,
+				Views/Locations/LocationMapPicker.swift,
+				Views/Locations/LocationMapSheet.swift,
+				Views/Locations/LocationPreviewSheet.swift,
+				Views/Locations/LocationRowCards.swift,
+				Views/Locations/LocationSearchResultRow.swift,
+				Views/Locations/LocationsEmptyHint.swift,
+				Views/Locations/LocationsView.swift,
+				Views/Map/Coordinator/WeatherMapView.swift,
+				"Views/Map/Coordinator/WeatherMapView+Annotations.swift",
+				"Views/Map/Coordinator/WeatherMapView+CityChips.swift",
+				"Views/Map/Coordinator/WeatherMapView+Clouds.swift",
+				"Views/Map/Coordinator/WeatherMapView+FeatureTap.swift",
+				"Views/Map/Coordinator/WeatherMapView+Isobars.swift",
+				"Views/Map/Coordinator/WeatherMapView+ModelLayer.swift",
+				"Views/Map/Coordinator/WeatherMapView+Radar.swift",
+				"Views/Map/Coordinator/WeatherMapView+StormCells.swift",
+				"Views/Map/Coordinator/WeatherMapView+ValueBubbles.swift",
+				"Views/Map/Coordinator/WeatherMapView+WarningPolygons.swift",
+				"Views/Map/Coordinator/WeatherMapView+Webcams.swift",
+				"Views/Map/Coordinator/WeatherMapView+WindParticles.swift",
+				Views/Map/LayerPicker/LayerPickerSectionHeader.swift,
+				Views/Map/LayerPicker/LayerTile.swift,
+				Views/Map/LayerPicker/LayerToggleRow.swift,
+				Views/Map/LayerPicker/MapLayerPickerSheet.swift,
+				Views/Map/LayerPicker/RadarInfoView.swift,
+				Views/Map/LayerPicker/SatelliteInfoView.swift,
+				Views/Map/LayerPicker/WeatherModelCard.swift,
+				Views/Map/LayerPicker/WeatherModelInfoView.swift,
+				Views/Map/MapAttributionLabel.swift,
+				Views/Map/MapPreview.swift,
+				Views/Map/Models/AlertSeverityStyle.swift,
+				Views/Map/Models/MapLayers.swift,
+				Views/Map/Models/StormCellInfo.swift,
+				Views/Map/Models/WeatherAlertInfo.swift,
+				Views/Map/Rendering/CityMarkerImage.swift,
+				Views/Map/Rendering/MapChip.swift,
+				Views/Map/Rendering/MapValueBubbles.swift,
+				Views/Map/Rendering/RadarCustomStyleLayer.swift,
+				Views/Map/Rendering/RadarMotionArrows.swift,
+				Views/Map/Rendering/UserLocationDot.swift,
+				Views/Map/Rendering/WeatherColormap.swift,
+				Views/Map/Rendering/WindParticleView.swift,
+				Views/Map/Sheets/AlertInfoSheet.swift,
+				Views/Map/Sheets/StormCellInfoSheet.swift,
+				Views/Map/Timeline/RadarTimestampBadge.swift,
+				Views/Map/Timeline/TimelineControlsChip.swift,
+				Views/Map/Timeline/TimelineControlsWrappers.swift,
+				Views/Map/Timeline/TimelineLoadingPieces.swift,
+				Views/Map/Timeline/TimelinePlayerState.swift,
+				Views/Map/Timeline/TimelineScrubber.swift,
+				Views/Map/WeatherMapDetailView.swift,
+				Views/Map/WebcamSheet.swift,
+				Views/Now/AlertView.swift,
+				Views/Now/Charts/HourlyChartUtilities.swift,
+				Views/Now/Charts/ScrollSynchronization/ChartScrollSynchronizer.swift,
+				Views/Now/Charts/ScrollSynchronization/ChartScrollViewLocator.swift,
+				Views/Now/Charts/ScrollSynchronization/SynchronizedChartScroll.swift,
+				Views/Now/Climate/ClimateCopy.swift,
+				Views/Now/Climate/ClimateDetailView.swift,
+				Views/Now/Climate/ClimateLegend.swift,
+				Views/Now/Climate/ClimateModel.swift,
+				Views/Now/Climate/ClimatePlaceholder.swift,
+				Views/Now/Climate/ClimateStripeColor.swift,
+				Views/Now/Climate/ClimateSummaryCard.swift,
+				Views/Now/Climate/ClimateTimeAxis.swift,
+				Views/Now/Climate/ClimateView.swift,
+				Views/Now/Climate/InteractiveClimateRibbon.swift,
+				Views/Now/Climate/WarmingStripesRibbon.swift,
+				Views/Now/Daily/DailyTemperatureRow.swift,
+				Views/Now/Daily/DailyView.swift,
+				Views/Now/Daily/DayDetailView.swift,
+				Views/Now/Daily/TemperatureRangeView.swift,
+				Views/Now/DetailCard.swift,
+				Views/Now/DetailDeck.swift,
+				Views/Now/DetailSectionPicker.swift,
+				Views/Now/Ensemble/EnsembleChart.swift,
+				Views/Now/Ensemble/EnsembleLens.swift,
+				Views/Now/Ensemble/EnsembleRail.swift,
+				Views/Now/Ensemble/EnsembleState.swift,
+				Views/Now/Ensemble/EnsembleView.swift,
+				Views/Now/Environment/AQIGaugeCard.swift,
+				Views/Now/Environment/EnvironmentGaugesView.swift,
+				Views/Now/Environment/EnvironmentMetric.swift,
+				Views/Now/Environment/EUAirQualityBand.swift,
+				Views/Now/Environment/PollenSeverity.swift,
+				Views/Now/EnvironmentDetail/AQIChart.swift,
+				Views/Now/EnvironmentDetail/AQIComponentSnapshot.swift,
+				Views/Now/EnvironmentDetail/EnvironmentAirQualitySectionView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentDetailEmptyStateView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentDetailHeaderView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentDetailSection.swift,
+				Views/Now/EnvironmentDetail/EnvironmentDetailView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentPollenSectionView.swift,
+				Views/Now/EnvironmentDetail/EnvironmentUVSectionView.swift,
+				Views/Now/EnvironmentDetail/PollenChart.swift,
+				Views/Now/EnvironmentDetail/PollenSnapshot.swift,
+				Views/Now/EnvironmentDetail/UVChart.swift,
+				Views/Now/HeadMetric.swift,
+				Views/Now/HeadView.swift,
+				Views/Now/Hourly/HourlyDetailView.swift,
+				Views/Now/Hourly/HourlyForecastBuilder.swift,
+				Views/Now/Hourly/HourlyForecastCard.swift,
+				Views/Now/Hourly/HourlyForecastItem.swift,
+				Views/Now/Hourly/HourlyFormatting.swift,
+				Views/Now/Hourly/HourlyLens.swift,
+				Views/Now/Hourly/HourlyPlaceholderCard.swift,
+				Views/Now/Hourly/HourlyReadoutBox.swift,
+				Views/Now/Hourly/HourlySunEventCard.swift,
+				Views/Now/Hourly/HourlyTimelineMinimap.swift,
+				Views/Now/Hourly/HourlyTimelineModel.swift,
+				"Views/Now/Hourly/HourlyTimelineModel+Derivations.swift",
+				"Views/Now/Hourly/HourlyTimelineModel+Layouts.swift",
+				"Views/Now/Hourly/HourlyTimelineModel+Readout.swift",
+				Views/Now/Hourly/HourlyTimelineStrip.swift,
+				Views/Now/Hourly/HourlyView.swift,
+				Views/Now/NowSection.swift,
+				Views/Now/NowSheet.swift,
+				Views/Now/NowSheetView.swift,
+				Views/Now/NowView.swift,
+				Views/Now/RainView.swift,
+				Views/Now/Stations/StationDetailView.swift,
+				Views/Now/Stations/StationsView.swift,
+				Views/Onboarding/OnboardingButtonStack.swift,
+				Views/Onboarding/OnboardingCoordinator.swift,
+				Views/Onboarding/OnboardingGate.swift,
+				Views/Onboarding/OnboardingLocationStep.swift,
+				Views/Onboarding/OnboardingManualLocationStep.swift,
+				Views/Onboarding/OnboardingNotificationsStep.swift,
+				Views/Onboarding/OnboardingQuestionStep.swift,
+				Views/Onboarding/OnboardingRegion.swift,
+				Views/Onboarding/OnboardingSampleData.swift,
+				Views/Onboarding/OnboardingStep.swift,
+				Views/Onboarding/OnboardingStyle.swift,
+				Views/Onboarding/OnboardingView.swift,
+				Views/Settings/DataSourcesView.swift,
+				Views/Settings/ForecastDisplayModeOption.swift,
+				Views/Settings/ForecastModelSettingsView.swift,
+				Views/Settings/ForecastSettingsView.swift,
+				Views/Settings/MemoryView.swift,
+				Views/Settings/NotificationSettingsView.swift,
+				Views/Settings/NowLayout/NowLayoutCanvas.swift,
+				Views/Settings/NowLayout/NowLayoutPreview.swift,
+				Views/Settings/NowLayout/NowLayoutSettingsView.swift,
+				Views/Settings/NowLayout/NowLayoutSheet.swift,
+				Views/Settings/PermissionSettingsView.swift,
+				Views/Settings/SettingsExternalLink.swift,
+				Views/Settings/SettingsIconLabelStyle.swift,
+				Views/Settings/SettingsView.swift,
+				Views/Settings/Stats/ActivityHeatmap.swift,
+				Views/Settings/Stats/ExtremeTile.swift,
+				Views/Settings/Stats/OpensByHourChart.swift,
+				Views/Settings/Stats/OpensByWeekdayChart.swift,
+				Views/Settings/Stats/ServicesChart.swift,
+				Views/Settings/Stats/StatsCard.swift,
+				Views/Settings/Stats/StatsChartHeader.swift,
+				Views/Settings/Stats/StatsOverviewGrid.swift,
+				Views/Settings/Stats/StatsRow.swift,
+				Views/Settings/Stats/StatsView.swift,
+				Views/Settings/Stats/StatTile.swift,
+				Views/Settings/Stats/TopPlacesChart.swift,
+				Views/Settings/UnitSettings.swift,
+				Views/ToastBanner.swift,
+			);
+			target = 25429BE529E5F9B000D5979F /* WetterWatchWidgetExtension */;
+		};
+		E00000000000000000000007 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				GlobalRadarWidget/GlobalRadarProvider.swift,
+				GlobalRadarWidget/GlobalRadarWidget.swift,
+				Home/DailyForecastEntry.swift,
+				Home/DailyForecastEntryView.swift,
+				Home/DailyForecastProvider.swift,
+				Home/DailyForecastWidget.swift,
+				Home/HomeProvider.swift,
+				Home/NowTodayWidget.swift,
+				Home/WidgetCity.swift,
+				Home/WidgetCityIntent.swift,
+				Info.plist,
+				InfoPlist.xcstrings,
+				LiveActivities/RainRadarLiveActivityWidget.swift,
+				Radar/RadarGeometry.swift,
+				Radar/RadarPrecipGate.swift,
+				Radar/RadarProvider.swift,
+				Radar/RadarSnapshotRenderer.swift,
+				Radar/RadarSnapshotSmoothing.swift,
+				Radar/RadarStormCellOverlay.swift,
+				Radar/RadarWidget.swift,
+			);
+			target = 25429BE529E5F9B000D5979F /* WetterWatchWidgetExtension */;
+		};
+		E00000000000000000000008 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 25429BE529E5F9B000D5979F /* WetterWatchWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DC52F219308CD6D70070B07E /* Wetter */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000001 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000003 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000005 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000006 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Wetter"; sourceTree = "<group>"; };
+		DC52F353308CD6ED0070B07E /* WetterWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000002 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000004 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000007 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "WetterWidget"; sourceTree = "<group>"; };
+		DC52F37D308CD6FB0070B07E /* WetterWatch Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "WetterWatch Watch App"; sourceTree = "<group>"; };
+		DC52F38C308CD7070070B07E /* WetterWatchWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000008 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "WetterWatchWidget"; sourceTree = "<group>"; };
+		DC52F39B308CD7110070B07E /* WetterTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "WetterTests"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25429BCD29E5F94100D5979F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A7C003D2FAB000000000001 /* OpenAPIRuntime in Frameworks */,
+				5A7C003E2FAB000000000001 /* OpenAPIURLSession in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25429BE329E5F9B000D5979F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25429BE829E5F9B000D5979F /* SwiftUI.framework in Frameworks */,
+				257EB3532BD8312000E46468 /* OpenAPIRuntime in Frameworks */,
+				257EB3552BD8312500E46468 /* OpenAPIURLSession in Frameworks */,
+				25429BE729E5F9B000D5979F /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EB8900E251A55700028FED0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25C4300F2AC36165001DA5FC /* OpenAPIRuntime in Frameworks */,
+				25C430122AC36173001DA5FC /* OpenAPIURLSession in Frameworks */,
+				AD60000A2FE4000000000001 /* MapLibre in Frameworks */,
+				255BDD9E2BD9B2E40061E4EB /* (null) in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EB89025251A55950028FED0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB8902D251A55950028FED0 /* SwiftUI.framework in Frameworks */,
+				253F708C2B5316A90075D093 /* OpenAPIRuntime in Frameworks */,
+				253F708E2B5316A90075D093 /* OpenAPIURLSession in Frameworks */,
+				3EB8902B251A55950028FED0 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C22EF0930A2000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25B4C4592B5744000069B3B0 /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				25B4C45A2B57441F0069B3B0 /* ci_post_clone.sh */,
+				25ECE65D2BDA1F250088B302 /* ci_post_xcodebuild.sh */,
+			);
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
+		3EB89008251A55700028FED0 = {
+			isa = PBXGroup;
+			children = (
+				DC52F219308CD6D70070B07E /* Wetter */,
+				DC52F353308CD6ED0070B07E /* WetterWidget */,
+				DC52F37D308CD6FB0070B07E /* WetterWatch Watch App */,
+				DC52F38C308CD7070070B07E /* WetterWatchWidget */,
+				DC52F39B308CD7110070B07E /* WetterTests */,
+				25B4C4592B5744000069B3B0 /* ci_scripts */,
+				3EB89029251A55950028FED0 /* Frameworks */,
+				3EB89012251A55700028FED0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3EB89012251A55700028FED0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EB89011251A55700028FED0 /* Wetter.app */,
+				3EB89028251A55950028FED0 /* WetterWidgetExtension.appex */,
+				25429BD029E5F94100D5979F /* WetterWatch Watch App.app */,
+				25429BE629E5F9B000D5979F /* WetterWatchWidgetExtension.appex */,
+				5C22EF0430A2000000000001 /* WetterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EB89029251A55950028FED0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EB8902A251A55950028FED0 /* WidgetKit.framework */,
+				3EB8902C251A55950028FED0 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		25429BCF29E5F94100D5979F /* WetterWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25429BE129E5F94300D5979F /* Build configuration list for PBXNativeTarget "WetterWatch Watch App" */;
+			buildPhases = (
+				25429BCC29E5F94100D5979F /* Sources */,
+				25429BCD29E5F94100D5979F /* Frameworks */,
+				25429BCE29E5F94100D5979F /* Resources */,
+				25429BF829E5F9B300D5979F /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A7C003F2FAB000000000001 /* PBXTargetDependency */,
+				25429BF329E5F9B300D5979F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DC52F219308CD6D70070B07E /* Wetter */,
+				DC52F37D308CD6FB0070B07E /* WetterWatch Watch App */,
+			);
+			name = "WetterWatch Watch App";
+			packageProductDependencies = (
+				5A7C003B2FAB000000000001 /* OpenAPIRuntime */,
+				5A7C003C2FAB000000000001 /* OpenAPIURLSession */,
+			);
+			productName = "WetterWatch Watch App";
+			productReference = 25429BD029E5F94100D5979F /* WetterWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		25429BE529E5F9B000D5979F /* WetterWatchWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25429BF529E5F9B300D5979F /* Build configuration list for PBXNativeTarget "WetterWatchWidgetExtension" */;
+			buildPhases = (
+				25429BE229E5F9B000D5979F /* Sources */,
+				25429BE329E5F9B000D5979F /* Frameworks */,
+				25429BE429E5F9B000D5979F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1F0A0032E00000100ABCDEF /* PBXTargetDependency */,
+				257EB3572BD8314200E46468 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DC52F219308CD6D70070B07E /* Wetter */,
+				DC52F353308CD6ED0070B07E /* WetterWidget */,
+				DC52F38C308CD7070070B07E /* WetterWatchWidget */,
+			);
+			name = "WetterWatchWidgetExtension";
+			packageProductDependencies = (
+				257EB3522BD8312000E46468 /* OpenAPIRuntime */,
+				257EB3542BD8312500E46468 /* OpenAPIURLSession */,
+			);
+			productName = "WetterWatchWidgetExtension";
+			productReference = 25429BE629E5F9B000D5979F /* WetterWatchWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		3EB89010251A55700028FED0 /* Wetter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EB89020251A55740028FED0 /* Build configuration list for PBXNativeTarget "Wetter" */;
+			buildPhases = (
+				3EB8900D251A55700028FED0 /* Sources */,
+				3EB8900E251A55700028FED0 /* Frameworks */,
+				3EB8900F251A55700028FED0 /* Resources */,
+				3EB8903A251A55980028FED0 /* Embed Foundation Extensions */,
+				25429BDE29E5F94300D5979F /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1F0A0012E00000100ABCDEF /* PBXTargetDependency */,
+				25CBB6352B44648400223B69 /* PBXTargetDependency */,
+				3EB89035251A55980028FED0 /* PBXTargetDependency */,
+				25429BDC29E5F94300D5979F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DC52F219308CD6D70070B07E /* Wetter */,
+				DC52F353308CD6ED0070B07E /* WetterWidget */,
+			);
+			name = "Wetter";
+			packageProductDependencies = (
+				25C4300E2AC36165001DA5FC /* OpenAPIRuntime */,
+				25C430112AC36173001DA5FC /* OpenAPIURLSession */,
+				AD6000092FE4000000000001 /* MapLibre */,
+			);
+			productName = "Wetter";
+			productReference = 3EB89011251A55700028FED0 /* Wetter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3EB89027251A55950028FED0 /* WetterWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EB89037251A55980028FED0 /* Build configuration list for PBXNativeTarget "WetterWidgetExtension" */;
+			buildPhases = (
+				3EB89024251A55950028FED0 /* Sources */,
+				3EB89025251A55950028FED0 /* Frameworks */,
+				3EB89026251A55950028FED0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1F0A0022E00000100ABCDEF /* PBXTargetDependency */,
+				253F708A2B53167D0075D093 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DC52F219308CD6D70070B07E /* Wetter */,
+				DC52F353308CD6ED0070B07E /* WetterWidget */,
+			);
+			name = "WetterWidgetExtension";
+			packageProductDependencies = (
+				253F708B2B5316A90075D093 /* OpenAPIRuntime */,
+				253F708D2B5316A90075D093 /* OpenAPIURLSession */,
+			);
+			productName = "WetterWidgetExtension";
+			productReference = 3EB89028251A55950028FED0 /* WetterWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		5C22EF0C30A2000000000001 /* WetterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C22EF1230A2000000000001 /* Build configuration list for PBXNativeTarget "WetterTests" */;
+			buildPhases = (
+				5C22EF0A30A2000000000001 /* Sources */,
+				5C22EF0930A2000000000001 /* Frameworks */,
+				5C22EF0B30A2000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C22EF1030A2000000000001 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DC52F39B308CD7110070B07E /* WetterTests */,
+			);
+			name = "WetterTests";
+			productName = "WetterTests";
+			productReference = 5C22EF0430A2000000000001 /* WetterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EB89009251A55700028FED0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					25429BCF29E5F94100D5979F = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					25429BE529E5F9B000D5979F = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					3EB89010251A55700028FED0 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					3EB89027251A55950028FED0 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					5C22EF0C30A2000000000001 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = 3EB89010251A55700028FED0;
+					};
+				};
+			};
+			buildConfigurationList = 3EB8900C251A55700028FED0 /* Build configuration list for PBXProject "Wetter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = de;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				de,
+				en,
+				tr,
+				Base,
+			);
+			mainGroup = 3EB89008251A55700028FED0;
+			packageReferences = (
+				25C430062AC3608E001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
+				25C4300D2AC36165001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
+				25C430102AC36173001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
+				AD6000062FE4000000000003 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
+			);
+			productRefGroup = 3EB89012251A55700028FED0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EB89010251A55700028FED0 /* Wetter */,
+				3EB89027251A55950028FED0 /* WetterWidgetExtension */,
+				25429BCF29E5F94100D5979F /* WetterWatch Watch App */,
+				25429BE529E5F9B000D5979F /* WetterWatchWidgetExtension */,
+				5C22EF0C30A2000000000001 /* WetterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25429BCE29E5F94100D5979F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25429BE429E5F9B000D5979F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EB8900F251A55700028FED0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EB89026251A55950028FED0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C22EF0B30A2000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25429BCC29E5F94100D5979F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25429BE229E5F9B000D5979F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EB8900D251A55700028FED0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EB89024251A55950028FED0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C22EF0A30A2000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		253F708A2B53167D0075D093 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+		};
+		25429BDC29E5F94300D5979F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25429BCF29E5F94100D5979F /* WetterWatch Watch App */;
+			targetProxy = 25429BDB29E5F94300D5979F /* PBXContainerItemProxy */;
+		};
+		25429BF329E5F9B300D5979F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25429BE529E5F9B000D5979F /* WetterWatchWidgetExtension */;
+			targetProxy = 25429BF229E5F9B300D5979F /* PBXContainerItemProxy */;
+		};
+		257EB3572BD8314200E46468 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+		};
+		25CBB6352B44648400223B69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+		};
+		3EB89035251A55980028FED0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EB89027251A55950028FED0 /* WetterWidgetExtension */;
+			targetProxy = 3EB89034251A55980028FED0 /* PBXContainerItemProxy */;
+		};
+		5A7C003F2FAB000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A1F0A0002E00000100ABCDEF /* OpenAPIGenerator */;
+		};
+		5C22EF1030A2000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EB89010251A55700028FED0 /* Wetter */;
+			targetProxy = 5C22EF0F30A2000000000001 /* PBXContainerItemProxy */;
+		};
+		A1F0A0012E00000100ABCDEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A1F0A0002E00000100ABCDEF /* OpenAPIGenerator */;
+		};
+		A1F0A0022E00000100ABCDEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A1F0A0002E00000100ABCDEF /* OpenAPIGenerator */;
+		};
+		A1F0A0032E00000100ABCDEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A1F0A0002E00000100ABCDEF /* OpenAPIGenerator */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		25429BDF29E5F94300D5979F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = "WetterWatch Watch App/WetterWatch.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"WetterWatch Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Wetter;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = weather.schindlerfelix.de;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		25429BE029E5F94300D5979F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = "WetterWatch Watch App/WetterWatch.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"WetterWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = N6J2M765XY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Wetter;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Wetter zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und Radar wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Oscars Server gesendet, den Ortsnamen ermittelt Apple. Mehr unter oscars.love/privacy.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = weather.schindlerfelix.de;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		25429BF629E5F9B300D5979F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = "WetterWatchWidget/WetterWatchWidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WetterWatchWidget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Wetter;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "weather.schindlerfelix.de.watchkitapp.widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		25429BF729E5F9B300D5979F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = "WetterWatchWidget/WetterWatchWidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N6J2M765XY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WetterWatchWidget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Wetter;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "weather.schindlerfelix.de.watchkitapp.widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		3EB8901E251A55740028FED0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = N6J2M765XY;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+			};
+			name = Debug;
+		};
+		3EB8901F251A55740028FED0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = N6J2M765XY;
+				"DEVELOPMENT_TEAM[sdk=*]" = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EB89021251A55740028FED0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIconChillDay AppIconChillDayRadar AppIconChillNight AppIconClassicHalloween AppIconClassicJungle AppIconFlatOscarBlack AppIconFlatOscarClassic AppIconFlatOscarKawaii AppIconFlatOscarSky AppIconFlatOscarSun AppIconMechaEUOscar AppIconMechaOscar AppIconSpaceShipOscar AppIconTVClassic AppIconTVClimateChangeOscar AppIconTVRainyOscar AppIconTVSunnyOscar";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Wetter/Wetter.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"Wetter/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Wetter/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Wetter;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3EB89022251A55740028FED0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIconChillDay AppIconChillDayRadar AppIconChillNight AppIconClassicHalloween AppIconClassicJungle AppIconFlatOscarBlack AppIconFlatOscarClassic AppIconFlatOscarKawaii AppIconFlatOscarSky AppIconFlatOscarSun AppIconMechaEUOscar AppIconMechaOscar AppIconSpaceShipOscar AppIconTVClassic AppIconTVClimateChangeOscar AppIconTVRainyOscar AppIconTVSunnyOscar";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Wetter/Wetter.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"Wetter/Preview Content\"";
+				DEVELOPMENT_TEAM = N6J2M765XY;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Wetter/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Wetter;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3EB89038251A55980028FED0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "WetterWidget/WetterWidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				INFOPLIST_FILE = "WetterWidget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3EB89039251A55980028FED0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "WetterWidget/WetterWidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = N6J2M765XY;
+				INFOPLIST_FILE = "WetterWidget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5C22EF1130A2000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wetter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wetter";
+			};
+			name = Debug;
+		};
+		5C22EF1330A2000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = weather.schindlerfelix.de.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wetter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wetter";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25429BE129E5F94300D5979F /* Build configuration list for PBXNativeTarget "WetterWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25429BDF29E5F94300D5979F /* Debug */,
+				25429BE029E5F94300D5979F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25429BF529E5F9B300D5979F /* Build configuration list for PBXNativeTarget "WetterWatchWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25429BF629E5F9B300D5979F /* Debug */,
+				25429BF729E5F9B300D5979F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EB8900C251A55700028FED0 /* Build configuration list for PBXProject "Wetter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EB8901E251A55740028FED0 /* Debug */,
+				3EB8901F251A55740028FED0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EB89020251A55740028FED0 /* Build configuration list for PBXNativeTarget "Wetter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EB89021251A55740028FED0 /* Debug */,
+				3EB89022251A55740028FED0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EB89037251A55980028FED0 /* Build configuration list for PBXNativeTarget "WetterWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EB89038251A55980028FED0 /* Debug */,
+				3EB89039251A55980028FED0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C22EF1230A2000000000001 /* Build configuration list for PBXNativeTarget "WetterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C22EF1130A2000000000001 /* Debug */,
+				5C22EF1330A2000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		25C430062AC3608E001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-generator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-generator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+		25C4300D2AC36165001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-runtime";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+		25C430102AC36173001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-urlsession.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		AD6000062FE4000000000003 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maplibre/maplibre-gl-native-distribution";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		253F708B2B5316A90075D093 /* OpenAPIRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25C4300D2AC36165001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */;
+			productName = OpenAPIRuntime;
+		};
+		253F708D2B5316A90075D093 /* OpenAPIURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25C430102AC36173001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
+			productName = OpenAPIURLSession;
+		};
+		257EB3522BD8312000E46468 /* OpenAPIRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25C4300D2AC36165001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */;
+			productName = OpenAPIRuntime;
+		};
+		257EB3542BD8312500E46468 /* OpenAPIURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25C430102AC36173001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
+			productName = OpenAPIURLSession;
+		};
+		25C4300E2AC36165001DA5FC /* OpenAPIRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25C4300D2AC36165001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */;
+			productName = OpenAPIRuntime;
+		};
+		25C430112AC36173001DA5FC /* OpenAPIURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25C430102AC36173001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
+			productName = OpenAPIURLSession;
+		};
+		5A7C003B2FAB000000000001 /* OpenAPIRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25C4300D2AC36165001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */;
+			productName = OpenAPIRuntime;
+		};
+		5A7C003C2FAB000000000001 /* OpenAPIURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25C430102AC36173001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
+			productName = OpenAPIURLSession;
+		};
+		A1F0A0002E00000100ABCDEF /* OpenAPIGenerator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25C430062AC3608E001DA5FC /* XCRemoteSwiftPackageReference "swift-openapi-generator" */;
+			productName = "plugin:OpenAPIGenerator";
+		};
+		AD6000092FE4000000000001 /* MapLibre */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD6000062FE4000000000003 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */;
+			productName = MapLibre;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3EB89009251A55700028FED0 /* Project object */;
+}
