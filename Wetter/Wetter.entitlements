@@ -6,7 +6,7 @@
 	<string>development</string>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.weather.schindlerfelix.de</string>
+		<string>group.de.schindlerfelix.weather</string>
 	</array>
 </dict>
 </plist>
