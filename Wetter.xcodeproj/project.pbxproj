@@ -1239,6 +1239,7 @@
 				CODE_SIGN_ENTITLEMENTS = "WetterWatch Watch App/WetterWatch.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WetterWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = S2D94HHFAY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Wetter;
@@ -1270,7 +1271,7 @@
 				CODE_SIGN_ENTITLEMENTS = "WetterWatch Watch App/WetterWatch.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WetterWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = N6J2M765XY;
+				DEVELOPMENT_TEAM = S2D94HHFAY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Wetter;
@@ -1330,7 +1331,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = WetterWatchWidget/WetterWatchWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N6J2M765XY;
+				DEVELOPMENT_TEAM = S2D94HHFAY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WetterWatchWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Wetter;
@@ -1390,7 +1391,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = N6J2M765XY;
+				DEVELOPMENT_TEAM = S2D94HHFAY;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -1459,7 +1460,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = N6J2M765XY;
+				DEVELOPMENT_TEAM = S2D94HHFAY;
 				"DEVELOPMENT_TEAM[sdk=*]" = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1551,6 +1552,7 @@
 				CODE_SIGN_ENTITLEMENTS = WetterWidget/WetterWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = S2D94HHFAY;
 				INFOPLIST_FILE = WetterWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1575,7 +1577,7 @@
 				CODE_SIGN_ENTITLEMENTS = WetterWidget/WetterWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = N6J2M765XY;
+				DEVELOPMENT_TEAM = S2D94HHFAY;
 				INFOPLIST_FILE = WetterWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1596,7 +1598,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S2D94HHFAY;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.schindlerfelix.weather.tests;
@@ -1613,6 +1617,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S2D94HHFAY;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.schindlerfelix.weather.tests;
