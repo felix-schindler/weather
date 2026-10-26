@@ -120,6 +120,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Assets.xcassets,
+				"Felix°WidgetsBundle.swift",
 				GlobalRadarWidget/GlobalRadarProvider.swift,
 				GlobalRadarWidget/GlobalRadarWidget.swift,
 				Home/DailyForecastEntry.swift,
@@ -139,7 +140,6 @@
 				Lockscreen/WindLockscreenWidget.swift,
 				Radar/RadarProvider.swift,
 				Radar/RadarWidget.swift,
-				"Felix°WidgetsBundle.swift",
 			);
 			target = 3EB89010251A55700028FED0 /* Felix° */;
 		};
@@ -1252,8 +1252,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.schindlerfelix.weather.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				PRODUCT_MODULE_NAME = Felix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1285,8 +1285,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.schindlerfelix.weather.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				PRODUCT_MODULE_NAME = Felix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
