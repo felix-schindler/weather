@@ -41,7 +41,7 @@
 			containerPortal = 3EB89009251A55700028FED0 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 25429BE529E5F9B000D5979F;
-			remoteInfo = Felix°WatchWidgetExtension;
+			remoteInfo = "Felix°WatchWidgetExtension";
 		};
 		3EB89034251A55980028FED0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -55,7 +55,7 @@
 			containerPortal = 3EB89009251A55700028FED0 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3EB89010251A55700028FED0;
-			remoteInfo = Felix°;
+			remoteInfo = "Felix°";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -97,14 +97,14 @@
 
 /* Begin PBXFileReference section */
 		25429BD029E5F94100D5979F /* Felix°Watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Felix°Watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		25429BE629E5F9B000D5979F /* Felix°WatchWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Felix°WatchWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		25429BE629E5F9B000D5979F /* Felix°WatchWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Felix°WatchWidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B4C45A2B57441F0069B3B0 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
 		25ECE65D2BDA1F250088B302 /* ci_post_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_xcodebuild.sh; sourceTree = "<group>"; };
-		3EB89011251A55700028FED0 /* Felix°.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Felix°.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EB89028251A55950028FED0 /* Felix°WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Felix°WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EB89011251A55700028FED0 /* Felix°.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Felix°.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EB89028251A55950028FED0 /* Felix°WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Felix°WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EB8902A251A55950028FED0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		3EB8902C251A55950028FED0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		5C22EF0430A2000000000001 /* Felix°Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Felix°Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C22EF0430A2000000000001 /* Felix°Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Felix°Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C0F00D2FA0000000000001 /* Weather.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = Weather.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,7 +139,7 @@
 				Lockscreen/WindLockscreenWidget.swift,
 				Radar/RadarProvider.swift,
 				Radar/RadarWidget.swift,
-				Felix°WidgetsBundle.swift,
+				"Felix°WidgetsBundle.swift",
 			);
 			target = 3EB89010251A55700028FED0 /* Felix° */;
 		};
@@ -800,11 +800,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DC52F219308CD6D70070B07E /* Felix° */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000001 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000003 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000005 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000006 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Felix°; sourceTree = "<group>"; };
-		DC52F353308CD6ED0070B07E /* Felix°Widget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000002 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000004 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000007 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Felix°Widget; sourceTree = "<group>"; };
+		DC52F219308CD6D70070B07E /* Felix° */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000001 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000003 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000005 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000006 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Felix°"; sourceTree = "<group>"; };
+		DC52F353308CD6ED0070B07E /* Felix°Widget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000002 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000004 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E00000000000000000000007 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Felix°Widget"; sourceTree = "<group>"; };
 		DC52F37D308CD6FB0070B07E /* Felix°Watch Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Felix°Watch Watch App"; sourceTree = "<group>"; };
-		DC52F38C308CD7070070B07E /* Felix°WatchWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000008 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Felix°WatchWidget; sourceTree = "<group>"; };
-		DC52F39B308CD7110070B07E /* Felix°Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Felix°Tests; sourceTree = "<group>"; };
+		DC52F38C308CD7070070B07E /* Felix°WatchWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E00000000000000000000008 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Felix°WatchWidget"; sourceTree = "<group>"; };
+		DC52F39B308CD7110070B07E /* Felix°Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Felix°Tests"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -955,12 +955,12 @@
 				DC52F353308CD6ED0070B07E /* Felix°Widget */,
 				DC52F38C308CD7070070B07E /* Felix°WatchWidget */,
 			);
-			name = Felix°WatchWidgetExtension;
+			name = "Felix°WatchWidgetExtension";
 			packageProductDependencies = (
 				257EB3522BD8312000E46468 /* OpenAPIRuntime */,
 				257EB3542BD8312500E46468 /* OpenAPIURLSession */,
 			);
-			productName = Felix°WatchWidgetExtension;
+			productName = "Felix°WatchWidgetExtension";
 			productReference = 25429BE629E5F9B000D5979F /* Felix°WatchWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
@@ -986,13 +986,13 @@
 				DC52F219308CD6D70070B07E /* Felix° */,
 				DC52F353308CD6ED0070B07E /* Felix°Widget */,
 			);
-			name = Felix°;
+			name = "Felix°";
 			packageProductDependencies = (
 				25C4300E2AC36165001DA5FC /* OpenAPIRuntime */,
 				25C430112AC36173001DA5FC /* OpenAPIURLSession */,
 				AD6000092FE4000000000001 /* MapLibre */,
 			);
-			productName = Felix°;
+			productName = "Felix°";
 			productReference = 3EB89011251A55700028FED0 /* Felix°.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -1014,12 +1014,12 @@
 				DC52F219308CD6D70070B07E /* Felix° */,
 				DC52F353308CD6ED0070B07E /* Felix°Widget */,
 			);
-			name = Felix°WidgetExtension;
+			name = "Felix°WidgetExtension";
 			packageProductDependencies = (
 				253F708B2B5316A90075D093 /* OpenAPIRuntime */,
 				253F708D2B5316A90075D093 /* OpenAPIURLSession */,
 			);
-			productName = Felix°WidgetExtension;
+			productName = "Felix°WidgetExtension";
 			productReference = 3EB89028251A55950028FED0 /* Felix°WidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
@@ -1039,8 +1039,8 @@
 			fileSystemSynchronizedGroups = (
 				DC52F39B308CD7110070B07E /* Felix°Tests */,
 			);
-			name = Felix°Tests;
-			productName = Felix°Tests;
+			name = "Felix°Tests";
+			productName = "Felix°Tests";
 			productReference = 5C22EF0430A2000000000001 /* Felix°Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -1302,10 +1302,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = Felix°WatchWidget/Felix°WatchWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Felix°WatchWidget/Felix°WatchWidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Felix°WatchWidget/Info.plist;
+				INFOPLIST_FILE = "Felix°WatchWidget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Felix°";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1331,11 +1331,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = Felix°WatchWidget/Felix°WatchWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Felix°WatchWidget/Felix°WatchWidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S2D94HHFAY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Felix°WatchWidget/Info.plist;
+				INFOPLIST_FILE = "Felix°WatchWidget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Felix°";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1493,14 +1493,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = Weather;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Felix°/Felix°.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Felix°/Felix°.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"Felix°/Preview Content\"";
 				DEVELOPMENT_TEAM = S2D94HHFAY;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Felix°/Info.plist;
+				INFOPLIST_FILE = "Felix°/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Felix°";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
@@ -1522,14 +1522,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = Weather;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Felix°/Felix°.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Felix°/Felix°.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"Felix°/Preview Content\"";
 				DEVELOPMENT_TEAM = S2D94HHFAY;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Felix°/Info.plist;
+				INFOPLIST_FILE = "Felix°/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Felix°";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
@@ -1551,11 +1551,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = Felix°Widget/Felix°WidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Felix°Widget/Felix°WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = S2D94HHFAY;
-				INFOPLIST_FILE = Felix°Widget/Info.plist;
+				INFOPLIST_FILE = "Felix°Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1576,11 +1576,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = Felix°Widget/Felix°WidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Felix°Widget/Felix°WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = S2D94HHFAY;
-				INFOPLIST_FILE = Felix°Widget/Info.plist;
+				INFOPLIST_FILE = "Felix°Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
