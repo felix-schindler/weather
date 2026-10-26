@@ -1,0 +1,136 @@
+//
+//  WindLockscreenWidget.swift
+//  Felix°WidgetExtension
+//
+//  Created by Philipp Bolte on 05.07.26.
+//
+
+import CoreLocation
+import Foundation
+import SwiftUI
+import WidgetKit
+
+struct WindLockScreenEntry: TimelineEntry {
+	let date: Date
+	let speed: Double?
+	let unitLabel: String
+	let directionDegrees: Double?
+	let compass: String
+}
+
+struct WindProvider: TimelineProvider {
+	let client = APIClient.shared
+
+	func placeholder(in context: Context) -> WindLockScreenEntry {
+		WindLockScreenEntry(date: Date(), speed: 12, unitLabel: "km/h", directionDegrees: 45, compass: Self.compassDirection(45))
+	}
+
+	func getSnapshot(in context: Context, completion: @escaping @Sendable (WindLockScreenEntry) -> Void) {
+		completion(WindLockScreenEntry(date: Date(), speed: 12, unitLabel: "km/h", directionDegrees: 45, compass: Self.compassDirection(45)))
+	}
+
+	func getTimeline(in context: Context, completion: @escaping @Sendable (Timeline<WindLockScreenEntry>) -> Void) {
+		runWidgetTimeline(refreshMinutes: 30, completion: completion) { coordinates in
+			let weather = try await client.getForecast(
+				coordinates: coordinates,
+				forecastDays: ._1,
+				hourly: [.windspeed_10m]
+			)
+
+			let unit = WindSpeedUnit(settingValue: SettingService.resolvedWindSpeedUnit)
+			let rawSpeed = weather.current?.windspeed
+			let speed = unit.usesBeaufortDisplay ? BeaufortScale.value(forKilometersPerHour: rawSpeed) : rawSpeed
+			let unitLabel =
+				unit.usesBeaufortDisplay
+				? unit.displayUnit
+				: (weather.hourly_units?.windspeed_10m ?? unit.displayUnit)
+			let direction = weather.current?.wind_direction_10m
+
+			return [
+				WindLockScreenEntry(
+					date: Date(),
+					speed: speed,
+					unitLabel: unitLabel,
+					directionDegrees: direction,
+					compass: direction.map(Self.compassDirection) ?? ""
+				)
+			]
+		}
+	}
+
+	static func compassDirection(_ degrees: Double) -> String {
+		let directions = [
+			String(localized: "N_compass", comment: "Compass north"),
+			String(localized: "NE_compass", comment: "Compass north-east"),
+			String(localized: "E_compass", comment: "Compass east"),
+			String(localized: "SE_compass", comment: "Compass south-east"),
+			String(localized: "S_compass", comment: "Compass south"),
+			String(localized: "SW_compass", comment: "Compass south-west"),
+			String(localized: "W_compass", comment: "Compass west"),
+			String(localized: "NW_compass", comment: "Compass north-west"),
+		]
+		let normalized = degrees.truncatingRemainder(dividingBy: 360)
+		let positive = normalized < 0 ? normalized + 360 : normalized
+		let index = Int((positive + 22.5) / 45.0) % 8
+		return directions[index]
+	}
+}
+
+struct WindLockScreenView: View {
+	var entry: WindProvider.Entry
+	@Environment(\.widgetFamily) private var family
+
+	var body: some View {
+		Group {
+			switch family {
+			case .accessoryCircular:
+				VStack(spacing: 0) {
+					Image(systemName: "location.north.fill")
+						.font(.system(size: 11))
+						.rotationEffect(.degrees((entry.directionDegrees ?? 0) + 180))
+						.opacity(entry.directionDegrees == nil ? 0 : 1)
+						.widgetAccentable()
+					Text(speedText)
+						.font(.system(size: 17, weight: .semibold, design: .rounded))
+						.lineLimit(1)
+						.minimumScaleFactor(0.6)
+					Text(entry.unitLabel)
+						.font(.system(size: 9))
+						.foregroundStyle(.secondary)
+				}
+			case .accessoryInline:
+				HStack {
+					Image(systemName: "wind")
+					Text(inlineText)
+				}
+			default:
+				EmptyView()
+			}
+		}
+		.containerBackground(.clear, for: .widget)
+	}
+
+	private var speedText: String {
+		guard let speed = entry.speed else { return "–" }
+		return "\(Int(speed.rounded()))"
+	}
+
+	private var inlineText: String {
+		let speed = WindSpeedFormatter.string(entry.speed, unit: entry.unitLabel)
+		guard !entry.compass.isEmpty else { return speed }
+		return "\(speed) \(entry.compass)"
+	}
+}
+
+struct WindLockScreenWidget: Widget {
+	let kind: String = "WindLockScreenWidget"
+
+	var body: some WidgetConfiguration {
+		StaticConfiguration(kind: kind, provider: WindProvider()) { entry in
+			WindLockScreenView(entry: entry)
+		}
+		.configurationDisplayName(String(localized: "Wind", comment: "LS Widget Wind"))
+		.description(String(localized: "Aktuelle Windgeschwindigkeit und Windrichtung", comment: "LS Widget Wind Beschreibung"))
+		.supportedFamilies([.accessoryCircular, .accessoryInline])
+	}
+}

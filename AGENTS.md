@@ -1,17 +1,17 @@
 # AGENTS.md
 
-Guide for agents working in this repo — Wetter, a SwiftUI weather app (iOS + Apple Watch).
+Guide for agents working in this repo — Felix°, a SwiftUI weather app (iOS + Apple Watch).
 
 ## Project shape
 
-- Single Xcode project, **no Package.swift**. Targets: `Wetter` (app), `WetterWatch Watch App`, `WetterWidget`, `WetterWatchWidget`, `WetterTests`.
-- The user-facing app name is localized: `Wetter` (de), `Weather` (en), `天氣` (zh-Hant), `Tempo` (pt-BR). Targets and products stay `Wetter`.
+- Single Xcode project, **no Package.swift**. Targets: `Felix°` (app), `Felix°Watch Watch App`, `Felix°Widget`, `Felix°WatchWidget`, `Felix°Tests`.
+- The user-facing app name is `Felix°` in every language (CFBundleName/DisplayName). Targets and products stay `Felix°`; the app Swift module is `Felix` (PRODUCT_MODULE_NAME — `°` is not a valid identifier character).
 - Swift 6.0, `SWIFT_STRICT_CONCURRENCY = complete`, deployment target iOS/watchOS 26.0. Expect Sendable/isolation errors to be real errors, not noise.
-- Shared targets read/write state through the app group `group.de.schindlerfelix.weather` (`Wetter/Storage/AppGroup.swift`). Anything widgets or Live Activities need at runtime must go through it.
+- Shared targets read/write state through the app group `group.de.schindlerfelix.weather` (`Felix°/Storage/AppGroup.swift`). Anything widgets or Live Activities need at runtime must go through it.
 
 ## OpenAPI network code is generated
 
-`Wetter/Networking/openapi.yml` is the source of truth for the API client (Open-Meteo and the Oscar companion server). swift-openapi-generator is an Xcode **build plugin** — generated types are not committed. Never edit generated files; edit `openapi.yml` and the code regenerates on the next build. "file not found: client types" style errors usually mean a stale build — ask the human to build again.
+`Felix°/Networking/openapi.yml` is the source of truth for the API client (Open-Meteo and the Oscar companion server). swift-openapi-generator is an Xcode **build plugin** — generated types are not committed. Never edit generated files; edit `openapi.yml` and the code regenerates on the next build. "file not found: client types" style errors usually mean a stale build — ask the human to build again.
 
 ## Never build or run the app
 
@@ -23,7 +23,7 @@ Guide for agents working in this repo — Wetter, a SwiftUI weather app (iOS + A
 
 Repo facts you may still rely on:
 
-- Unit tests live in `WetterTests` (pure logic tests) and are run by the human.
+- Unit tests live in `Felix°Tests` (pure logic tests) and are run by the human.
 - Local IAP testing uses the supporter/tip products under `de.schindlerfelix.weather` (`supporter.{monthly,yearly}`, `tip.{small,medium,large}`).
 - Localizable strings are in `Localizable.xcstrings` / `InfoPlist.xcstrings` string catalogs, one shared catalog per target.
 

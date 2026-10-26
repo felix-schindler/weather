@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 
 CONFIG := {"lineLength":160,"tabWidth":4,"indentation":{"tabs":1}}
-SOURCES := ./Wetter ./WetterWidget ./WetterWatch\ Watch\ App ./WetterWatchWidget ./WetterTests
+SOURCES := ./Felix° ./Felix°Widget ./Felix°Watch\ Watch\ App ./Felix°WatchWidget ./Felix°Tests
 
 .PHONY: help fmt lint
 
