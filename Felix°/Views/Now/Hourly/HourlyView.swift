@@ -11,7 +11,7 @@ struct HourlyView: View {
 	@Environment(Weather.self) private var weather: Weather
 	@Environment(NowPresentationCoordinator.self) private var presentation
 	@Binding private var visibleDayLabel: String?
-	@State private var leadingItemID: String?
+	@State private var scrolledIndex = 0
 
 	init(visibleDayLabel: Binding<String?> = .constant(nil)) {
 		_visibleDayLabel = visibleDayLabel
@@ -34,9 +34,9 @@ struct HourlyView: View {
 		let shouldShowPlaceholders = weather.isLoading && items.isEmpty
 		let timeZone = weather.forecast.locationTimeZone
 		let now = Date(timeIntervalSince1970: weather.forecast.current?.time ?? 0)
-		let leadingItem = items.first { $0.id == leadingItemID } ?? items.first
-		let dayLabel = leadingItem.map {
-			HourlyFormatting.dayLabel(timestamp: $0.timestamp, timeZone: timeZone, now: now)
+		let leadingIndex = items.isEmpty ? nil : max(0, min(scrolledIndex, items.count - 1))
+		let dayLabel = leadingIndex.map {
+			HourlyFormatting.dayLabel(timestamp: items[$0].timestamp, timeZone: timeZone, now: now)
 		}
 
 		ScrollView(.horizontal) {
@@ -58,7 +58,12 @@ struct HourlyView: View {
 		}
 		.scrollIndicators(.hidden)
 		.scrollTargetBehavior(.viewAligned(limitBehavior: .never))
-		.scrollPosition(id: $leadingItemID)
+		.onScrollGeometryChange(for: Int.self) { geo in
+			let offset = max(0, geo.contentOffset.x)
+			return max(0, min(items.count - 1, Int((offset / HourlyForecastCard.cardWidth).rounded())))
+		} action: { _, index in
+			scrolledIndex = index
+		}
 		.frame(maxWidth: .infinity)
 		.contentShape(.rect)
 		.onTapGesture(perform: presentDetails)
