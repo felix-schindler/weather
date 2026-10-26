@@ -84,7 +84,7 @@ struct ClimateDetailView: View {
 
 	private var statCard: some View {
 		GroupBox {
-			VStack(spacing: 0) {
+			VStack {
 				ClimateStatRow(
 					label: "Heute",
 					value: "\(summary.todayHighString(unit)) (\(summary.anomalyString(unit)))")
@@ -140,6 +140,5 @@ private struct ClimateStatRow: View {
 				.foregroundStyle(.primary)
 		}
 		.font(.subheadline)
-		.padding(.vertical, 12)
 	}
 }
