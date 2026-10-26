@@ -51,16 +51,10 @@ struct LocationsView: View {
 						Button(action: presentMapPicker) {
 							Image(systemName: "map")
 								.overlay(alignment: .bottomTrailing) {
-									Image(systemName: "plus.circle.fill")
-										.font(.system(size: 10, weight: .bold))
-										.symbolRenderingMode(.palette)
-										.foregroundStyle(Color(uiColor: .systemBackground), .primary)
-										.background {
-											Circle()
-												.fill(Color(uiColor: .systemBackground))
-												.scaleEffect(1.3)
-										}
-										.offset(x: 4, y: 4)
+									Image(systemName: "plus")
+										.font(.system(size: 10, weight: .heavy))
+										.shadow(color: .black.opacity(0.5), radius: 2)
+									.offset(x: 4, y: 4)
 								}
 						}
 						.accessibilityLabel(Text("Karte"))
