@@ -79,7 +79,7 @@ extension APIClient {
 		if useCanadian {
 			return try await getCanadianWeatherAlerts(coordinates: coordinates)
 		} else if useUnitedStates || useTaiwan || useMeteoalarm {
-			return try await getWetterAlerts(coordinates: coordinates)
+			return try await getWeatherAlerts(coordinates: coordinates)
 		} else {
 			return .oscar(.empty)
 		}
@@ -128,7 +128,7 @@ extension APIClient {
 		return lat >= 20.5 && lat <= 26.5 && lon >= 118.0 && lon <= 124.0
 	}
 
-	private func getWetterAlerts(coordinates: CLLocationCoordinate2D) async throws
+	private func getWeatherAlerts(coordinates: CLLocationCoordinate2D) async throws
 		-> AlertResponse
 	{
 		.oscar(try await getOscarPointAlerts(coordinates: coordinates))

@@ -2,7 +2,7 @@
 //  RootTabView.swift
 //  Felix°
 //
-//  App root: Felix° / Karten tabs. Orte and Einstellungen live in the Now
+//  App root: Wetter / Karten tabs. Orte and Einstellungen live in the Now
 //  screen's top toolbar and open as navigation sheets — Orte is also the
 //  quick-switch menu on long press. Orte is not the system search role: the
 //  separated search pill is a button affordance (instant keyboard + round
@@ -27,7 +27,7 @@ struct RootTabView: View {
 		@Bindable var presentation = presentation
 		ZStack(alignment: .top) {
 			TabView(selection: $presentation.selectedTab) {
-				Tab("Felix°", systemImage: "cloud.sun", value: AppTab.forecast) {
+				Tab("Wetter", systemImage: "cloud.sun", value: AppTab.forecast) {
 					NavigationStack {
 						NowView()
 					}
@@ -54,7 +54,7 @@ struct RootTabView: View {
 		}
 		.sheet(item: $presentation.sheet, content: NowSheetView.init)
 		.onOpenURL { url in
-			guard url.scheme == "wetter", url.host == "radar" else { return }
+			guard url.scheme == "felix", url.host == "radar" else { return }
 			presentation.selectedTab = .maps
 		}
 		.environment(presentation)
@@ -89,9 +89,9 @@ struct FelixCommands: Commands {
 	@FocusedValue(NowPresentationCoordinator.self) private var presentation
 
 	var body: some Commands {
-		CommandMenu("Felix°") {
+		CommandMenu("Wetter") {
 			Group {
-				Button("Felix°") { presentation?.selectedTab = .forecast }
+				Button("Wetter") { presentation?.selectedTab = .forecast }
 					.keyboardShortcut("1")
 				Button("Karten") { presentation?.selectedTab = .maps }
 					.keyboardShortcut("2")

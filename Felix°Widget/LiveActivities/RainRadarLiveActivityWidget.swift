@@ -274,7 +274,7 @@ private enum RainActivityStyle {
 
 	static let dry = Color.white.opacity(0.2)
 	static let past = Color.white.opacity(0.28)
-	static let openURL = URL(string: "wetter://radar")
+	static let openURL = URL(string: "felix://radar")
 }
 
 // MARK: - Lock Screen and watch

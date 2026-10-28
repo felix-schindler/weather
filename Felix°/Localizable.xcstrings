@@ -15921,34 +15921,6 @@
         }
       }
     },
-    "Felix°" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix°"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix°"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix°"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix°"
-          }
-        }
-      }
-    },
     "Wetter nicht verfügbar" : {
       "localizations" : {
         "de" : {

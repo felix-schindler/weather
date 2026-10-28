@@ -29,7 +29,7 @@
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wetter</string>
+				<string>felix</string>
 			</array>
 		</dict>
 	</array>

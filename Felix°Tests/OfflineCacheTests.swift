@@ -192,7 +192,7 @@ struct PersistentCacheTests {
 
 	private func temporaryDirectory() throws -> URL {
 		let url = FileManager.default.temporaryDirectory
-			.appending(path: "WetterOfflineCacheTests")
+			.appending(path: "FelixOfflineCacheTests")
 			.appending(path: UUID().uuidString, directoryHint: .isDirectory)
 		try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
 		return url
