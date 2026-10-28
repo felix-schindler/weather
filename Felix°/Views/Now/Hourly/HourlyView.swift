@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HourlyView: View {
+	private static let visibleCards = 5
 	@Environment(Weather.self) private var weather: Weather
 	@Environment(NowPresentationCoordinator.self) private var presentation
 	@Binding private var visibleDayLabel: String?
@@ -43,10 +44,12 @@ struct HourlyView: View {
 				if shouldShowPlaceholders {
 					ForEach(0..<10, id: \.self) { _ in
 						HourlyPlaceholderCard()
+							.containerRelativeFrame(.horizontal, count: Self.visibleCards, spacing: 0)
 					}
 				} else {
 					ForEach(items) { item in
 						timelineItemView(item)
+							.containerRelativeFrame(.horizontal, count: Self.visibleCards, spacing: 0)
 							.onTapGesture {
 								presentDetails(at: Date(timeIntervalSince1970: item.timestamp))
 							}
@@ -59,7 +62,8 @@ struct HourlyView: View {
 		.scrollTargetBehavior(.viewAligned(limitBehavior: .never))
 		.onScrollGeometryChange(for: Int.self) { geo in
 			let offset = max(0, geo.contentOffset.x)
-			return max(0, min(items.count - 1, Int((offset / HourlyForecastCard.cardWidth).rounded())))
+			let cardStride = max(1, geo.containerSize.width / CGFloat(Self.visibleCards))
+			return max(0, min(items.count - 1, Int((offset / cardStride).rounded())))
 		} action: { _, index in
 			scrolledIndex = index
 		}

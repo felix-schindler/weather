@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EnvironmentGaugesView: View {
+	private static let visibleCards = 4
 	@Environment(Weather.self) private var weather: Weather
 	@Environment(NowPresentationCoordinator.self) private var presentation
 
@@ -57,6 +58,7 @@ struct EnvironmentGaugesView: View {
 						presentDetail(for: metric)
 					}) {
 						AQIGaugeCard(metric: metric)
+							.containerRelativeFrame(.horizontal, count: Self.visibleCards, spacing: 18)
 					}
 					.buttonStyle(.plain)
 					.accessibilityLabel(accessibilityLabel(for: metric))

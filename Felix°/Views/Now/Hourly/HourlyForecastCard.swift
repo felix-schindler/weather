@@ -2,7 +2,6 @@ import SwiftUI
 
 struct HourlyForecastCard: View {
 	let item: HourlyForecastItem
-	static let cardWidth: CGFloat = 64
 	static let contentWidth: CGFloat = 48
 
 	var body: some View {
@@ -28,7 +27,7 @@ struct HourlyForecastCard: View {
 				.minimumScaleFactor(0.75)
 		}
 		.frame(width: Self.contentWidth)
-		.frame(width: Self.cardWidth, alignment: .leading)
+		.frame(maxWidth: .infinity)
 		.accessibilityElement(children: .combine)
 	}
 }

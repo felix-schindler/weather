@@ -27,7 +27,6 @@ struct AQIGaugeCard: View {
 			.tint(metric.gradient)
 		}
 		.padding(.vertical, 4)
-		.frame(minWidth: 72)
 	}
 
 	@ViewBuilder private var titleText: some View {

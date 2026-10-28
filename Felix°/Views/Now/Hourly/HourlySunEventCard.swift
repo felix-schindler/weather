@@ -23,7 +23,7 @@ struct HourlySunEventCard: View {
 				.minimumScaleFactor(0.75)
 		}
 		.frame(width: HourlyForecastCard.contentWidth)
-		.frame(width: HourlyForecastCard.cardWidth, alignment: .leading)
+		.frame(maxWidth: .infinity)
 		.accessibilityElement(children: .combine)
 	}
 }

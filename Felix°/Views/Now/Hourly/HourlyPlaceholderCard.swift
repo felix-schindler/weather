@@ -14,7 +14,7 @@ struct HourlyPlaceholderCard: View {
 		}
 		.foregroundStyle(.secondary.opacity(0.28))
 		.frame(width: HourlyForecastCard.contentWidth)
-		.frame(width: HourlyForecastCard.cardWidth, alignment: .leading)
+		.frame(maxWidth: .infinity)
 		.frame(minHeight: 116)
 		.redacted(reason: .placeholder)
 		.accessibilityHidden(true)
