@@ -1,16 +1,16 @@
 import Foundation
 
-struct DailyEnsembleForecastResponse: Decodable {
+struct DailyEnsembleForecastResponse {
 	let utcOffsetSeconds: Int
 	let timezone: String?
 	let dailyUnits: [String: String]
 	let daily: DailyEnsembleForecastDaily
 
-	enum CodingKeys: String, CodingKey {
-		case utcOffsetSeconds = "utc_offset_seconds"
-		case timezone
-		case dailyUnits = "daily_units"
-		case daily
+	init(_ payload: Components.Schemas.EnsembleForecastResponse) {
+		utcOffsetSeconds = payload.utc_offset_seconds ?? 0
+		timezone = payload.timezone
+		dailyUnits = payload.daily_units?.additionalProperties ?? [:]
+		daily = DailyEnsembleForecastDaily(payload.daily)
 	}
 
 	var timeZone: TimeZone {
@@ -18,7 +18,7 @@ struct DailyEnsembleForecastResponse: Decodable {
 	}
 }
 
-struct DailyEnsembleForecastDaily: Decodable {
+struct DailyEnsembleForecastDaily {
 	let time: [String]
 	let highs: [[Double?]]
 	let lows: [[Double?]]
@@ -28,16 +28,15 @@ struct DailyEnsembleForecastDaily: Decodable {
 	let weatherCodes: [[Double?]]
 	let cloudCover: [[Double?]]
 
-	init(from decoder: Decoder) throws {
-		let container = try decoder.container(keyedBy: DynamicCodingKey.self)
-		time = try container.decode([String].self, forKey: DynamicCodingKey(stringValue: "time"))
-		highs = container.runs(of: "temperature_2m_max")
-		lows = container.runs(of: "temperature_2m_min")
-		precipitation = container.runs(of: "precipitation_sum")
-		snowfall = container.runs(of: "snowfall_sum")
-		wind = container.runs(of: "wind_speed_10m_max")
-		weatherCodes = container.runs(of: "weather_code")
-		cloudCover = container.runs(of: "cloud_cover_mean")
+	init(_ payload: Components.Schemas.EnsembleDailyResponse) {
+		time = payload.time
+		highs = payload.additionalProperties.runs(of: "temperature_2m_max")
+		lows = payload.additionalProperties.runs(of: "temperature_2m_min")
+		precipitation = payload.additionalProperties.runs(of: "precipitation_sum")
+		snowfall = payload.additionalProperties.runs(of: "snowfall_sum")
+		wind = payload.additionalProperties.runs(of: "wind_speed_10m_max")
+		weatherCodes = payload.additionalProperties.runs(of: "weather_code")
+		cloudCover = payload.additionalProperties.runs(of: "cloud_cover_mean")
 	}
 }
 
@@ -158,25 +157,12 @@ extension DailyEnsembleForecastResponse {
 	}()
 }
 
-private struct DynamicCodingKey: CodingKey {
-	let stringValue: String
-	let intValue: Int? = nil
-
-	init(stringValue: String) {
-		self.stringValue = stringValue
-	}
-
-	init?(intValue: Int) {
-		return nil
-	}
-}
-
-extension KeyedDecodingContainer where Key == DynamicCodingKey {
+extension Dictionary where Key == String, Value == [Double?] {
 	fileprivate func runs(of name: String) -> [[Double?]] {
-		allKeys
-			.filter { $0.stringValue == name || $0.stringValue.hasPrefix(name + "_member") }
-			.sorted { $0.stringValue < $1.stringValue }
-			.compactMap { try? decodeIfPresent([Double?].self, forKey: $0) }
+		keys
+			.filter { $0 == name || $0.hasPrefix(name + "_member") }
+			.sorted()
+			.compactMap { self[$0] }
 	}
 }
 

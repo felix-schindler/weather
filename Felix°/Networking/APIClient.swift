@@ -17,6 +17,7 @@ final class APIClient: Sendable {
 	let openMeteoAqi: Client
 	let openMeteoGeo: Client
 	let openMeteoArchive: Client
+	let openMeteoEnsemble: Client
 
 	init() {
 		openMeteo = APIClient.get(
@@ -26,6 +27,7 @@ final class APIClient: Sendable {
 		openMeteoAqi = APIClient.get(url: Self.serverURL(Servers.server2))
 		openMeteoGeo = APIClient.get(url: Self.serverURL(Servers.server3))
 		openMeteoArchive = APIClient.get(url: Self.serverURL(Servers.server4))
+		openMeteoEnsemble = APIClient.get(url: Self.serverURL(Servers.server5))
 	}
 
 	private static func serverURL(_ make: () throws -> URL) -> URL {
@@ -248,53 +250,71 @@ final class APIClient: Sendable {
 	) async throws -> DailyEnsembleForecastResponse {
 		let outboundCoordinates = LocationService.outboundCoordinate(coordinates)
 		let windSpeedUnit = WindSpeedUnit(settingValue: SettingService.resolvedWindSpeedUnit)
-		var components = URLComponents(string: "https://ensemble-api.open-meteo.com/v1/ensemble")!
-		components.queryItems = [
-			URLQueryItem(name: "latitude", value: String(outboundCoordinates.latitude)),
-			URLQueryItem(name: "longitude", value: String(outboundCoordinates.longitude)),
-			URLQueryItem(
-				name: "daily",
-				value: [
-					"temperature_2m_max",
-					"temperature_2m_min",
-					"precipitation_sum",
-					"snowfall_sum",
-					"wind_speed_10m_max",
-					"weather_code",
-					"cloud_cover_mean",
-				].joined(separator: ",")
-			),
-			URLQueryItem(name: "models", value: model.rawValue),
-			URLQueryItem(name: "temperature_unit", value: SettingService.resolvedTemperatureUnit),
-			URLQueryItem(name: "wind_speed_unit", value: windSpeedUnit.apiRawValue),
-			URLQueryItem(name: "precipitation_unit", value: SettingService.resolvedPrecipitationUnit),
-			URLQueryItem(name: "timezone", value: "auto"),
-			URLQueryItem(name: "forecast_days", value: "35"),
-		]
+		let temperatureUnit = SettingService.resolvedTemperatureUnit
+		let precipitationUnit = SettingService.resolvedPrecipitationUnit
+		let cacheKey = Self.ensembleCacheKey(
+			coordinates: outboundCoordinates,
+			model: model,
+			temperatureUnit: temperatureUnit,
+			windSpeedUnit: windSpeedUnit.apiRawValue,
+			precipitationUnit: precipitationUnit
+		)
 
-		guard let url = components.url else {
-			throw URLError(.badURL)
-		}
-
-		let cacheKey = url.absoluteString
 		let decoder = JSONDecoder()
-		if let cachedData = await DailyEnsembleForecastCache.shared.data(for: cacheKey) {
-			return try decoder.decode(DailyEnsembleForecastResponse.self, from: cachedData)
+		if let cachedData = await DailyEnsembleForecastCache.shared.data(for: cacheKey),
+			let cached = try? decoder.decode(Components.Schemas.EnsembleForecastResponse.self, from: cachedData)
+		{
+			return DailyEnsembleForecastResponse(cached)
 		}
 
-		var request = URLRequest(url: url)
-		request.httpMethod = "GET"
-		request.cachePolicy = .reloadIgnoringLocalCacheData
-		request.setValue(APIContactIdentity.userAgent, forHTTPHeaderField: "User-Agent")
+		let response = try await openMeteoEnsemble.getDailyEnsemble(
+			.init(
+				query: .init(
+					latitude: outboundCoordinates.latitude,
+					longitude: outboundCoordinates.longitude,
+					daily: [
+						.temperature_2m_max, .temperature_2m_min, .precipitation_sum,
+						.snowfall_sum, .wind_speed_10m_max, .weather_code, .cloud_cover_mean,
+					],
+					models: model.apiModel,
+					temperature_unit: Operations.getDailyEnsemble.Input.Query.temperature_unitPayload(
+						rawValue: temperatureUnit),
+					wind_speed_unit: Operations.getDailyEnsemble.Input.Query.wind_speed_unitPayload(
+						rawValue: windSpeedUnit.apiRawValue),
+					precipitation_unit: Operations.getDailyEnsemble.Input.Query.precipitation_unitPayload(
+						rawValue: precipitationUnit),
+					timezone: "auto",
+					forecast_days: 35
+				)
+			)
+		)
 
-		let (data, httpResponse) = try await Self.fetchWithRetry(request)
-		guard (200...299).contains(httpResponse.statusCode) else {
+		switch response {
+		case .ok(let response):
+			switch response.body {
+			case .json(let payload):
+				if let data = try? JSONEncoder().encode(payload) {
+					await DailyEnsembleForecastCache.shared.set(data, for: cacheKey)
+				}
+				return DailyEnsembleForecastResponse(payload)
+			}
+		case .badRequest(_), .undocumented(statusCode: _, _):
 			throw URLError(.badServerResponse)
 		}
+	}
 
-		let decoded = try decoder.decode(DailyEnsembleForecastResponse.self, from: data)
-		await DailyEnsembleForecastCache.shared.set(data, for: cacheKey)
-		return decoded
+	private static func ensembleCacheKey(
+		coordinates: CLLocationCoordinate2D,
+		model: DailyEnsembleModel,
+		temperatureUnit: String,
+		windSpeedUnit: String,
+		precipitationUnit: String
+	) -> String {
+		[
+			"ensemble", model.rawValue,
+			String(coordinates.latitude), String(coordinates.longitude),
+			temperatureUnit, windSpeedUnit, precipitationUnit,
+		].joined(separator: "|")
 	}
 
 	func getArchive(
@@ -373,5 +393,19 @@ final class APIClient: Sendable {
 			}
 		}
 		throw lastError
+	}
+}
+
+extension DailyEnsembleModel {
+	fileprivate var apiModel: Operations.getDailyEnsemble.Input.Query.modelsPayload {
+		switch self {
+		case .ecmwfAIFS025Ensemble: return .ecmwf_aifs025_ensemble
+		case .ecmwfIFS025Ensemble: return .ecmwf_ifs025_ensemble
+		case .googleWeatherNext2Ensemble: return .google_weathernext2_ensemble
+		case .ncepAIGFS025: return .ncep_aigefs025
+		case .ncepGEFS05: return .ncep_gefs05
+		case .iconGlobalEPS: return .icon_global_eps
+		case .iconEUEPS: return .icon_eu_eps
+		}
 	}
 }
