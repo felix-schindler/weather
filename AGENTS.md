@@ -31,4 +31,4 @@ Repo facts you may still rely on:
 
 - Verification only happens through the human's build/test run (there is no CLI/Makefile/SPM shortcut and you must not create one). Write code that you are confident in by inspection, then ask for the build result.
 - Commit style is conventional commits (`feat:`, `fix:`).
-- The dark-only look is intentional; don't add light-mode branches.
+- Light and dark appearance are both supported on iOS — never hard-code dark-only colours. Prefer semantic styles (`.primary`, `.secondary`, `.systemBackground`) or `Color.adaptiveGray(dark:light:)`, and branch on `colorScheme` only where contrast demands it (chart labels, widget symbols). Only the Watch app is dark-only (`.preferredColorScheme(.dark)` in `WatchRootView`); widgets follow the system appearance and cannot opt out of it.

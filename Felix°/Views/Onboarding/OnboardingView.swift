@@ -65,5 +65,4 @@ struct OnboardingView: View {
 	OnboardingView()
 		.environment(Weather.mock)
 		.environment(Location())
-		.preferredColorScheme(.dark)
 }

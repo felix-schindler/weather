@@ -1,6 +1,17 @@
 import SwiftUI
 import WidgetKit
 
+private struct WeatherIconBackdrop: View {
+	let diameter: CGFloat
+
+	var body: some View {
+		Circle()
+            .fill(Color.adaptiveGray(dark: 0, light: 0.5).opacity(0.3))
+			.frame(width: diameter, height: diameter)
+			.blur(radius: 10)
+	}
+}
+
 struct DailyForecastEntryView: View {
 	var entry: DailyForecastEntry
 	@Environment(\.widgetFamily) private var family
@@ -59,6 +70,7 @@ struct DailyForecastRow: View {
 				.symbolRenderingMode(.multicolor)
 				.font(.body)
 				.frame(width: 30, height: 22)
+				.background { WeatherIconBackdrop(diameter: 26) }
 
 			Text(roundTemperatureString(temperature: day.low))
 				.font(.subheadline)
@@ -106,6 +118,7 @@ struct DailyForecastCompactRow: View {
 				.symbolRenderingMode(.multicolor)
 				.font(.footnote)
 				.frame(width: 22, height: 16)
+				.background { WeatherIconBackdrop(diameter: 18) }
 
 			Spacer(minLength: 2)
 

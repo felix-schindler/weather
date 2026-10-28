@@ -13,7 +13,6 @@ import SwiftUI
 	.environment(Weather())
 	.environment(Location())
 	.environment(NowPresentationCoordinator())
-	.preferredColorScheme(.dark)
 }
 
 struct NowView: View {

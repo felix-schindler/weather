@@ -90,5 +90,4 @@ struct FelixCommands: Commands {
 	RootTabView()
 		.environment(Weather())
 		.environment(Location())
-		.preferredColorScheme(.dark)
 }
