@@ -93,6 +93,18 @@
             "value" : "「現在地」はサブタイトルとして表示されたままになります。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「현재 위치」는 부제목으로 계속 표시됩니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "‘Mijn locatie’ blijft zichtbaar als ondertitel."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -246,6 +258,18 @@
             "value" : "%@日"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@일"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ dagen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -354,6 +378,18 @@
             "value" : "%@°/10年"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@°/10년"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@°/decennium"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -426,6 +462,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$lld / %2$lld"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$lld 중 %1$lld"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld van %2$lld"
           }
         },
         "pt-BR" : {
@@ -558,6 +606,18 @@
             "value" : "8/10"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 중 8"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "8 op 10"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -608,6 +668,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "12時間"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12시간"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12-uurs"
           }
         },
         "pt-BR" : {
@@ -662,6 +734,18 @@
             "value" : "13 km・5日"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "13 km · 5일"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "13 km · 5 dagen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -712,6 +796,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "15時"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오후 3시"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "15:00"
           }
         },
         "pt-BR" : {
@@ -766,6 +862,18 @@
             "value" : "16時"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오후 4시"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "16:00"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -816,6 +924,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "17時"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오후 5시"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "17:00"
           }
         },
         "pt-BR" : {
@@ -870,6 +990,18 @@
             "value" : "18時"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오후 6시"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "18:00"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -920,6 +1052,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "22時"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오후 10시"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "22:00"
           }
         },
         "pt-BR" : {
@@ -974,6 +1118,18 @@
             "value" : "24時間"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24시간"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24-uurs"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1024,6 +1180,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "25 km・15日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25 km · 15일"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25 km · 15 dagen"
           }
         },
         "pt-BR" : {
@@ -1078,6 +1246,18 @@
             "value" : "25 km・16日"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25 km · 16일"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25 km · 16 dagen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1128,6 +1308,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "26 km・7.5日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "26 km · 7.5일"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "26 km · 7,5 dagen"
           }
         },
         "pt-BR" : {
@@ -1182,6 +1374,18 @@
             "value" : "50 km・35日"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "50 km · 35일"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "50 km · 35 dagen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1232,6 +1436,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "キャンセル"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "취소"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuleer"
           }
         },
         "pt-BR" : {
@@ -1286,6 +1502,18 @@
             "value" : "セクション"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "섹션"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secties"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1336,6 +1564,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "セクションを追加"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "섹션 추가"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secties toevoegen"
           }
         },
         "pt-BR" : {
@@ -1408,6 +1648,18 @@
             "value" : "大気"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lucht"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1458,6 +1710,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "更新"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로고침"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vernieuwen"
           }
         },
         "pt-BR" : {
@@ -1513,6 +1777,18 @@
             "value" : "現在の主な汚染物質"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 주요 오염 물질"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Momenteel dominantste vervuiler"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1566,6 +1842,18 @@
             "value" : "現在の値"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 값"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huidige waarden"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1616,6 +1904,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "現在地"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 위치"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huidige locatie"
           }
         },
         "pt-BR" : {
@@ -1671,6 +1971,18 @@
             "value" : "普通"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보통"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redelijk"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1721,6 +2033,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "すべて"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전체"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alles"
           }
         },
         "pt-BR" : {
@@ -1775,6 +2099,18 @@
             "value" : "%lld時間ごと"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld시간마다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "elke %lld uur"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1825,6 +2161,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "すべてのセクションがページに表示されています。非表示にするにはここにドラッグしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모든 섹션이 페이지에 있습니다. 숨기려면 여기로 드래그하세요."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle secties staan op de pagina. Sleep er een hierheen om te verbergen."
           }
         },
         "pt-BR" : {
@@ -1879,6 +2227,18 @@
             "value" : "一般"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일반"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Algemeen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1929,6 +2289,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "デフォルトに設定"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본으로 설정"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als standaard instellen"
           }
         },
         "pt-BR" : {
@@ -1984,6 +2356,18 @@
             "value" : "ブタクサ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "돼지풀"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ambrosia"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2034,6 +2418,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weergave"
           }
         },
         "pt-BR" : {
@@ -2088,6 +2484,18 @@
             "value" : "表示をカスタマイズ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보기 사용자화"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weergave aanpassen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2137,6 +2545,18 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AQI"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AQI"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "AQI"
@@ -2194,6 +2614,18 @@
             "value" : "AQI %lld〜%lld、ピーク %@"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AQI %lld~%lld, 최고 %@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AQI %lld tot %lld, piek %@"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2244,6 +2676,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "仕事"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업무"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Werk"
           }
         },
         "pt-BR" : {
@@ -2334,6 +2778,18 @@
             "value" : "約100メートル単位に丸められます。天気のためにのみ使用します。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "약 100미터 단위로 반올림됩니다. 날씨에만 사용됩니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afgerond op ongeveer 100 meter. Alleen voor het weer."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2384,6 +2840,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "非表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가리기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verbergen"
           }
         },
         "pt-BR" : {
@@ -2439,6 +2907,18 @@
             "value" : "選択中"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택됨"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geselecteerd"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2483,6 +2963,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選択した場所"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택한 위치"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geselecteerde locatie"
           }
         },
         "pt-BR" : {
@@ -2537,6 +3029,18 @@
             "value" : "オーストラリア"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오스트레일리아"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Australië"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2587,6 +3091,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選択を解除"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택 해제"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selectie wissen"
           }
         },
         "pt-BR" : {
@@ -2641,6 +3157,18 @@
             "value" : "モデルの対象範囲外"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모델 적용 범위 밖"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buiten het dekkingsgebied van het model"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2691,6 +3219,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "モデル範囲外 — 自動選択を使用中。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모델 범위 밖 — 자동 선택 사용 중."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buiten modelgebied – automatisch actief."
           }
         },
         "pt-BR" : {
@@ -2745,6 +3285,18 @@
             "value" : "自動"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "자동"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatisch"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2795,6 +3347,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "編集"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "편집"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wijzig"
           }
         },
         "pt-BR" : {
@@ -2849,6 +3413,18 @@
             "value" : "本曇り"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "흐림"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zwaar bewolkt"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2899,6 +3475,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最高・最低を一定の時間帯に限定します。たとえば日の出後の最低気温をより意味のある値にできます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최고/최저를 특정 시간대로 제한합니다. 예를 들어 일출 이후의 최저 기온을 더 의미 있게 표시합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beperkt maximum/minimum tot een periode, bijvoorbeeld om minima na zonsopkomst relevanter te maken."
           }
         },
         "pt-BR" : {
@@ -2954,6 +3542,18 @@
             "value" : "このUVレベルでは健康へのリスクは低いです。多くの場合、特別な対策は必要ありません。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 자외선 지수에서는 건강 위험이 낮습니다. 대부분 특별한 보호 조치가 필요하지 않습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bij dit UV-niveau is het gezondheidsrisico laag. Meestal zijn geen bijzondere beschermingsmaatregelen nodig."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3005,6 +3605,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ヨモギ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "쑥"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bijvoet"
           }
         },
         "pt-BR" : {
@@ -3059,6 +3671,18 @@
             "value" : "カスタム"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사용자화"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aangepast"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3109,6 +3733,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "権限"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "권한"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toestemmingen"
           }
         },
         "pt-BR" : {
@@ -3163,6 +3799,18 @@
             "value" : "曇り"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "구름 많음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewolkt"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3214,6 +3862,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "雲量"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "운량"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewolking"
           }
         },
         "pt-BR" : {
@@ -3286,6 +3946,18 @@
             "value" : "シラカバ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "자작나무"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berk"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3336,6 +4008,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "土壌水分"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "토양 수분"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bodemvocht"
           }
         },
         "pt-BR" : {
@@ -3391,6 +4075,18 @@
             "value" : "地表付近のオゾンは、強い日差しのもとで排ガスから生成されます。咳や刺激、肺機能の低下を引き起こすことがあります。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지표 오존은 강한 햇빛 아래에서 배기가스로부터 생성됩니다. 기침, 자극, 폐 기능 저하를 일으킬 수 있습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ozon aan de grond ontstaat bij fel zonlicht uit uitlaatgassen. Het kan hoesten, irritatie en een verminderde longfunctie veroorzaken."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3441,6 +4137,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地温"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "토양 온도"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bodemtemperatuur"
           }
         },
         "pt-BR" : {
@@ -3496,6 +4204,18 @@
             "value" : "突風"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "돌풍"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Windstoten"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3546,6 +4266,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ステージ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스테이지"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fase"
           }
         },
         "pt-BR" : {
@@ -3600,6 +4332,18 @@
             "value" : "中国"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "중국"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "China"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3652,6 +4396,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@ / %2$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$@ 중 %1$@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ van %2$@"
           }
         },
         "pt-BR" : {
@@ -3724,6 +4480,18 @@
             "value" : "現在の時刻"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 시간"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huidig uur"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3774,6 +4542,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "そうすると Felix° がここでの天気を表示し、雨が降る前に知らせます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "그러면 Felix°가 바로 이곳의 날씨를 보여주고 비가 오기 전에 알려줍니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dan toont Felix° het weer precies hier en laat het je weten voordat het gaat regenen."
           }
         },
         "pt-BR" : {
@@ -3828,6 +4608,18 @@
             "value" : "外観"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모양"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weergave"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3878,6 +4670,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%3$@以降で%1$@番目に寒い%2$@です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%3$@ 이후 %1$@번째로 추운 %2$@입니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit is de %1$@e koudste %2$@ sinds %3$@"
           }
         },
         "pt-BR" : {
@@ -3932,6 +4736,18 @@
             "value" : "%3$@以降で%1$@番目に暑い%2$@です。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%3$@ 이후 %1$@번째로 더운 %2$@입니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit is de %1$@e warmste %2$@ sinds %3$@"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3982,6 +4798,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%2$@以降で最も寒い%1$@です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$@ 이후 가장 추운 %1$@입니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit is de koudste %1$@ sinds %2$@"
           }
         },
         "pt-BR" : {
@@ -4036,6 +4864,18 @@
             "value" : "%2$@以降で最も暑い%1$@です。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$@ 이후 가장 더운 %1$@입니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit is de warmste %1$@ sinds %2$@"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4086,6 +4926,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "データはERA5再解析に基づいています。気象モデルが観測所、衛星、航空機、ブイの観測値を組み合わせ、1940年までさかのぼる継続的な世界記録を作成しています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이터는 ERA5 재분석을 기반으로 합니다. 기상 모델이 관측소, 위성, 항공기, 부이의 관측값을 결합해 1940년까지 이어지는 빈틈없는 전 세계 기록을 만듭니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De gegevens komen uit de ERA5-reanalyse: weermodellen combineren metingen van stations, satellieten, vliegtuigen en boeien tot een sluitende wereldwijde reeks die teruggaat tot 1940."
           }
         },
         "pt-BR" : {
@@ -4140,6 +4992,18 @@
             "value" : "データソース"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이터 소스"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegevensbronnen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4190,6 +5054,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "データソースとライセンス"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이터 소스 및 라이선스"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gegevensbronnen en licenties"
           }
         },
         "pt-BR" : {
@@ -4244,6 +5120,18 @@
             "value" : "デバッグ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "디버그"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foutopsporing"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4294,6 +5182,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%2$@以降で最も寒い%1$@。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$@ 이후 가장 추운 %1$@."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De koudste %1$@ sinds %2$@."
           }
         },
         "pt-BR" : {
@@ -4348,6 +5248,18 @@
             "value" : "場所の名前はサブタイトルとして表示されたままになります。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "장소 이름은 부제목으로 계속 표시됩니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De plaatsnaam blijft zichtbaar als ondertitel."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4398,6 +5310,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%2$@以降で最も暑い%1$@。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$@ 이후 가장 더운 %1$@."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De warmste %1$@ sinds %2$@."
           }
         },
         "pt-BR" : {
@@ -4453,6 +5377,18 @@
             "value" : "世界保健機関（WHO）は、11時から16時までは屋内にとどまり、それ以外の時間も日陰に入ることを勧めています。日陰でも、目の詰まったシャツ、長ズボン、日焼け止め、サングラス、つばの広い帽子は欠かせません。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "세계보건기구(WHO)는 오전 11시부터 오후 4시까지는 실내에 머물고, 그 외 시간에도 그늘을 찾으라고 권장합니다. 촘촘히 짠 셔츠, 긴 바지, 자외선 차단제, 선글라스, 챙이 넓은 모자는 그늘에서도 필수입니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De Wereldgezondheidsorganisatie (WHO) raadt aan om tussen 11.00 en 16.00 uur binnen te blijven en op andere momenten de schaduw op te zoeken. Een dichtgeweven overhemd, een lange broek, zonnebrandcrème, een zonnebril en een hoed met brede rand blijven ook in de schaduw essentieel."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4504,6 +5440,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "世界保健機関（WHO）は、正午は日陰に入ることを勧めています。日差しの下ではシャツ、日焼け止め、サングラス、帽子が必要です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "세계보건기구(WHO)는 정오에는 그늘을 찾으라고 권장합니다. 햇빛 아래에서는 셔츠, 자외선 차단제, 선글라스, 모자가 필요합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De Wereldgezondheidsorganisatie (WHO) adviseert om rond het middaguur de schaduw op te zoeken. In de zon zijn een overhemd, zonnebrandcrème, een zonnebril en een hoofddeksel nodig."
           }
         },
         "pt-BR" : {
@@ -4559,6 +5507,18 @@
             "value" : "世界保健機関（WHO）は、11時から16時の屋外での滞在を避けるよう勧めています。日陰でも、目の詰まったシャツ、長ズボン、日焼け止め、サングラス、つばの広い帽子が日差し対策として必要です。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "세계보건기구(WHO)는 오전 11시부터 오후 4시까지 야외 활동을 피하라고 권장합니다. 햇빛 아래는 물론 그늘에서도 촘촘히 짠 옷, 긴 바지, 자외선 차단제, 선글라스, 챙이 넓은 모자가 필요합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De Wereldgezondheidsorganisatie (WHO) adviseert om tussen 11.00 en 16.00 uur niet buiten te blijven. In de zon en ook in de schaduw horen dichtgeweven kleding, een lange broek, zonnebrandcrème, een zonnebril en een hoed met brede rand bij verantwoord zongedrag."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4609,6 +5569,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "天気データを読み込めませんでした。接続を確認して、もう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "날씨 데이터를 불러올 수 없습니다. 연결을 확인하고 다시 시도하세요."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De weergegevens konden niet worden geladen. Controleer je verbinding en probeer het opnieuw."
           }
         },
         "pt-BR" : {
@@ -4663,6 +5635,18 @@
             "value" : "1940年からのこの日"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1940년부터 이 날"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deze dag sinds 1940"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4714,6 +5698,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "東"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "동"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O"
           }
         },
         "pt-BR" : {
@@ -4790,6 +5786,18 @@
             "value" : "カスタム名"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사용자화 이름"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aangepaste naam"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4840,6 +5848,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "カスタム絵文字"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사용자화 이모지"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aangepaste emoji"
           }
         },
         "pt-BR" : {
@@ -4894,6 +5914,18 @@
             "value" : "挿入"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "삽입"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voeg in"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4946,6 +5978,18 @@
             "value" : "単位"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "단위"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eenheden"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4996,6 +6040,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instellingen"
           }
         },
         "pt-BR" : {
@@ -5078,6 +6134,18 @@
             "value" : "終了"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "종료"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einde"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5128,6 +6196,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "終了"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "종료"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einde"
           }
         },
         "pt-BR" : {
@@ -5211,6 +6291,18 @@
             "value" : "ハンノキ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오리나무"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Els"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5263,6 +6355,18 @@
             "value" : "再試行"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 시도"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opnieuw proberen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5313,6 +6417,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ヨーロッパ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유럽"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Europa"
           }
         },
         "pt-BR" : {
@@ -5368,6 +6484,18 @@
             "value" : "極端"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위험"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extreem"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5419,6 +6547,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "極めて悪い"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "극도로 나쁨"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extreem slecht"
           }
         },
         "pt-BR" : {
@@ -5474,6 +6614,18 @@
             "value" : "健康へのリスクが極めて高く、特別な防護対策が不可欠です。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "건강 위험이 극도로 높습니다. 특별한 보호 조치가 반드시 필요합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extreem gezondheidsrisico; bijzondere beschermingsmaatregelen zijn essentieel."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5524,6 +6676,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "家族"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가족"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Familie"
           }
         },
         "pt-BR" : {
@@ -5578,6 +6742,18 @@
             "value" : "通常より寒い（青）から通常より暖かい（赤）までのカラースケール。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평년보다 추운(파란색)부터 평년보다 따뜻한(빨간색)까지의 색상 스케일."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kleurenschaal van kouder dan normaal (blauw) tot warmer dan normaal (rood)."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5628,6 +6804,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Felix° はこの場所で起動します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix°는 이 장소로 시작합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° opent met deze plaats."
           }
         },
         "pt-BR" : {
@@ -5683,6 +6871,18 @@
             "value" : "完了"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "완료"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gereed"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5733,6 +6933,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "予報"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예보"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwachting"
           }
         },
         "pt-BR" : {
@@ -5787,6 +6999,18 @@
             "value" : "フランスとヨーロッパ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프랑스 및 유럽"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frankrijk en Europa"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5837,6 +7061,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "霜（%@）"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "서리 (%@)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vorst (%@)"
           }
         },
         "pt-BR" : {
@@ -5892,6 +7128,18 @@
             "value" : "現在の期間の花粉データはありません。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 기간의 꽃가루 데이터가 없습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er zijn geen pollengegevens voor de huidige periode."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5943,6 +7191,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "現在の時刻の大気質データはありません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 시간의 대기질 데이터가 없습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er zijn geen luchtkwaliteitsgegevens voor het huidige uur."
           }
         },
         "pt-BR" : {
@@ -5998,6 +7258,18 @@
             "value" : "現在の時刻のUVデータはありません。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 시간의 자외선 데이터가 없습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er zijn geen UV-gegevens voor het huidige uur."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6048,6 +7320,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "この場所の時間別の詳細は現在ありません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 위치의 시간별 상세 정보가 없습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er zijn momenteel geen uurlijkse details beschikbaar voor deze locatie."
           }
         },
         "pt-BR" : {
@@ -6102,6 +7386,18 @@
             "value" : "着氷性の雨"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "어는 비"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "IJzel"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6152,6 +7448,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "体感"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "체감"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voelt als"
           }
         },
         "pt-BR" : {
@@ -6225,6 +7533,18 @@
             "value" : "低い"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "낮음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laag"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6276,6 +7596,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "健康へのリスクは低い"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "건강 위험 낮음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laag gezondheidsrisico"
           }
         },
         "pt-BR" : {
@@ -6331,6 +7663,18 @@
             "value" : "健康への影響"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "건강 영향"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gezondheidsbeoordeling"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6383,6 +7727,18 @@
             "value" : "選択した地点"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택한 지점"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geselecteerd punt"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6433,6 +7789,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "雷雨"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "천둥번개"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onweer"
           }
         },
         "pt-BR" : {
@@ -6523,6 +7891,18 @@
             "value" : "全球0.25°モデル（オープンデータ、約2時間遅延）。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전 지구 0.25° 모델 (오픈 데이터, 약 2시간 지연)."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Globaal 0,25°-model (open data, ca. 2 uur vertraging)."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6575,6 +7955,18 @@
             "value" : "オーストラリア気象局の全球モデル。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오스트레일리아 기상청의 전 지구 모델."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Globaal model van de Australische weerdienst."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6625,6 +8017,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "中国気象局の全球モデル。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "중국 기상청의 전 지구 모델."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Globaal model van de Chinese weerdienst."
           }
         },
         "pt-BR" : {
@@ -6680,6 +8084,18 @@
             "value" : "イネ科"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잔디"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gras"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6730,6 +8146,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "イギリス"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "영국"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verenigd Koninkrijk"
           }
         },
         "pt-BR" : {
@@ -6783,6 +8211,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "良い"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "좋음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Goed"
           }
         },
         "pt-BR" : {
@@ -6874,6 +8314,18 @@
             "value" : "主な汚染物質"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주요 오염 물질"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belangrijkste vervuiler"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6927,6 +8379,18 @@
             "value" : "シャツ、日焼け止め、サングラスで紫外線の浴びすぎを防げます。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "셔츠, 자외선 차단제, 선글라스가 과도한 자외선 노출을 막아줍니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een overhemd, zonnebrandcrème en een zonnebril beschermen tegen te veel uv-straling."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6977,6 +8441,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "vandaag"
           }
         },
         "pt-BR" : {
@@ -7032,6 +8508,18 @@
             "value" : "今日"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vandaag"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7084,6 +8572,18 @@
             "value" : "今日 %@"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘 %@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vandaag %@"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7134,6 +8634,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日 %1$@・平年 %2$@・記録 %3$@（%4$@）"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘 %1$@ · 평년 %2$@ · 기록 %3$@ (%4$@)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vandaag %1$@ · Normaal %2$@ · Record %3$@ (%4$@)"
           }
         },
         "pt-BR" : {
@@ -7189,6 +8701,18 @@
             "value" : "空"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "하늘"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lucht"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7241,6 +8765,18 @@
             "value" : "追加"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추가"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voeg toe"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7291,6 +8827,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "高温（%@）"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "폭염 (%@)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hitte (%@)"
           }
         },
         "pt-BR" : {
@@ -7346,6 +8894,18 @@
             "value" : "高い"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "높음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoog"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7396,6 +8956,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "イタリア向けの高解像度モデル。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이탈리아용 고해상도 모델."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoogresolutiemodel voor Italië."
           }
         },
         "pt-BR" : {
@@ -7450,6 +9022,18 @@
             "value" : "高解像度の地域モデル。ECMWFにより世界各地をカバーします。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "고해상도 지역 모델로, ECMWF가 전 세계를 보완합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoogresolutie regionaal model, wereldwijd aangevuld door ECMWF."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7502,6 +9086,18 @@
             "value" : "縦向き"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "세로 방향"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Staand"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7552,6 +9148,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最高"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최고"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maximum"
           }
         },
         "pt-BR" : {
@@ -7607,6 +9215,18 @@
             "value" : "健康へのリスクが高く、防護対策が必要です。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "건강 위험이 높습니다. 보호 조치가 필요합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoog gezondheidsrisico; beschermingsmaatregelen zijn nodig."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7659,6 +9279,18 @@
             "value" : "上層雲"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "상층운"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoge wolken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7709,6 +9341,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "時"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시간"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uur"
           }
         },
         "pt-BR" : {
@@ -7799,6 +9443,18 @@
             "value" : "日中の範囲内に表示"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일중 범위 안에 표시"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markeer binnen het dagbereik"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7879,6 +9535,18 @@
             "value" : "イタリア"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이탈리아"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Italië"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7931,6 +9599,18 @@
             "value" : "日本"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일본"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Japan"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7981,6 +9661,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "各ストライプは、その年のこの日の日最高気温を平年値（1961〜1990年）と比較したものです。ストライプをタップしてドラッグすると、各年を確認できます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "각 줄무늬는 해당 연도의 이 날짜의 일 최고 기온을 평년값(1961–1990)과 비교한 것입니다. 줄무늬를 탭하고 드래그하면 각 연도를 확인할 수 있습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elke streep is de dagelijkse maximumtemperatuur op deze kalenderdag in een jaar, vergeleken met het normaal (1961–1990). Tik en sleep over de strepen om afzonderlijke jaren te lezen."
           }
         },
         "pt-BR" : {
@@ -8036,6 +9728,18 @@
             "value" : "現在"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지금"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nu"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8086,6 +9790,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%3$@以降のすべての%2$@のうち%1$@より寒い。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%3$@ 이후 모든 %2$@ 중 %1$@보다 추움."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kouder dan %1$@ van alle %2$@ sinds %3$@."
           }
         },
         "pt-BR" : {
@@ -8140,6 +9856,18 @@
             "value" : "最も寒い"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가장 추움"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koudste"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8190,6 +9918,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地図"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaart"
           }
         },
         "pt-BR" : {
@@ -8244,6 +9984,18 @@
             "value" : "地図を閉じる"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도 닫기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sluit kaart"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8296,6 +10048,18 @@
             "value" : "絵文字なし"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이모지 없음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen emoji"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8346,6 +10110,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アイコンなし"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아이콘 없음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen symbool"
           }
         },
         "pt-BR" : {
@@ -8401,6 +10177,18 @@
             "value" : "なし"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "없음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8451,6 +10239,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "花粉なし"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "꽃가루 없음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen pollenbelasting"
           }
         },
         "pt-BR" : {
@@ -8506,6 +10306,18 @@
             "value" : "データなし"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이터 없음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen gegevens"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8556,6 +10368,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アンサンブルデータなし"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앙상블 데이터 없음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen ensemblegegevens"
           }
         },
         "pt-BR" : {
@@ -8611,6 +10435,18 @@
             "value" : "花粉データはありません"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "꽃가루 데이터 없음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen pollengegevens beschikbaar"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8661,6 +10497,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "時間別データなし"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시간별 데이터 없음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen uurlijkse gegevens"
           }
         },
         "pt-BR" : {
@@ -8715,6 +10563,18 @@
             "value" : "指標"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지표"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistieken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8759,6 +10619,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "指標をカスタマイズ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지표 사용자화"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistieken aanpassen"
           }
         },
         "pt-BR" : {
@@ -8813,6 +10685,18 @@
             "value" : "ECMWFのAIベースの気象モデル。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ECMWF의 AI 기반 기상 모델."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op AI gebaseerd weermodel van ECMWF."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8863,6 +10747,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "グラフを折りたたみます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차트를 접습니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klapt de grafiek in"
           }
         },
         "pt-BR" : {
@@ -8917,6 +10813,18 @@
             "value" : "快晴"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "맑음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helder"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8969,6 +10877,18 @@
             "value" : "気候"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기후"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klimaat"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9019,6 +10939,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "気候。%1$@ %2$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기후. %1$@ %2$@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klimaat. %1$@ %2$@"
           }
         },
         "pt-BR" : {
@@ -9095,6 +11027,18 @@
             "value" : "韓国"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대한민국"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Korea"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9145,6 +11089,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "平年より寒い"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평년보다 추움"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "kouder dan normaal"
           }
         },
         "pt-BR" : {
@@ -9199,6 +11155,18 @@
             "value" : "最後の低温記録"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마지막 한파 기록"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laatste kouderecord"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9249,6 +11217,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最後の高温記録"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마지막 폭염 기록"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laatste warmterecord"
           }
         },
         "pt-BR" : {
@@ -9303,6 +11283,18 @@
             "value" : "ライセンス"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "라이선스"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Licentie"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9355,6 +11347,18 @@
             "value" : "場所"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Locatie"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9405,6 +11409,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "削除"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "삭제"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwijder"
           }
         },
         "pt-BR" : {
@@ -9460,6 +11476,18 @@
             "value" : "気圧"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기압"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luchtdruk"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9510,6 +11538,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "湿度"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "습도"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luchtvochtigheid"
           }
         },
         "pt-BR" : {
@@ -9565,6 +11605,18 @@
             "value" : "大気質"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대기질"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luchtkwaliteit"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9615,6 +11667,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "大気質のグラフ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대기질 차트"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luchtkwaliteitsgrafiek"
           }
         },
         "pt-BR" : {
@@ -9681,6 +11745,18 @@
             "value" : "中程度"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "중간"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Matig"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9731,6 +11807,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最高"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최대"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Max"
           }
         },
         "pt-BR" : {
@@ -9785,6 +11873,18 @@
             "value" : "中央値"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "중앙값"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mediaan"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9835,6 +11935,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "その他"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "더 보기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meer"
           }
         },
         "pt-BR" : {
@@ -9889,6 +12001,18 @@
             "value" : "場所は後から追加できます。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나중에 장소를 더 추가할 수 있습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je kunt later meer plaatsen toevoegen."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9939,6 +12063,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "現在地"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 위치"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mijn locatie"
           }
         },
         "pt-BR" : {
@@ -10011,6 +12147,18 @@
             "value" : "最低"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최소"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10061,6 +12209,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "中央ヨーロッパとアルプス"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "중부 유럽 및 알프스"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Midden-Europa en Alpen"
           }
         },
         "pt-BR" : {
@@ -10116,6 +12276,18 @@
             "value" : "健康へのリスクが中程度で、防護対策が必要です。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "건강 위험이 중간입니다. 보호 조치가 필요합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Matig gezondheidsrisico; beschermingsmaatregelen zijn nodig."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10166,6 +12338,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "中層雲"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "중층운"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Middelhoge wolken"
           }
         },
         "pt-BR" : {
@@ -10230,6 +12414,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "明日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내일"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morgen"
           }
         },
         "pt-BR" : {
@@ -10320,6 +12516,18 @@
             "value" : "北"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "북"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10370,6 +12578,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "左へ移動"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "왼쪽으로 이동"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naar links verplaatsen"
           }
         },
         "pt-BR" : {
@@ -10424,6 +12644,18 @@
             "value" : "上へ移動"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위로 이동"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naar boven verplaatsen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10474,6 +12706,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "右へ移動"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오른쪽으로 이동"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naar rechts verplaatsen"
           }
         },
         "pt-BR" : {
@@ -10528,6 +12772,18 @@
             "value" : "下へ移動"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아래로 이동"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naar beneden verplaatsen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10580,6 +12836,18 @@
             "value" : "各国の気象機関"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "국가 기상 기관"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nationale weerdiensten"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10630,6 +12898,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ECMWF直接提供の9kmネイティブ解像度。90時間先まで1時間ごと。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ECMWF에서 직접 제공하는 9km 기본 해상도, 90시간까지 매시간."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Native resolutie van 9 km rechtstreeks van ECMWF, elk uur tot +90 uur."
           }
         },
         "pt-BR" : {
@@ -10685,6 +12965,18 @@
             "value" : "北東"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "북동"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NO"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10735,6 +13027,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "霧"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "안개"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mist"
           }
         },
         "pt-BR" : {
@@ -10789,6 +13093,18 @@
             "value" : "ページにない"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "페이지에 없음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niet op de pagina"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10839,6 +13155,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "オランダと西ヨーロッパ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "네덜란드 및 서유럽"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nederland en West-Europa"
           }
         },
         "pt-BR" : {
@@ -10894,6 +13222,18 @@
             "value" : "降水量"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "강수량"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neerslag"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10947,6 +13287,18 @@
             "value" : "低い"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "낮음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laag"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10997,6 +13349,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "霧雨"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이슬비"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Motregen"
           }
         },
         "pt-BR" : {
@@ -11081,6 +13445,18 @@
             "value" : "保存された場所はまだありません。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장된 장소가 없습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog geen opgeslagen plaatsen."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11131,6 +13507,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "北アメリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "북아메리카"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noord-Amerika"
           }
         },
         "pt-BR" : {
@@ -11185,6 +13573,18 @@
             "value" : "北ヨーロッパ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "북유럽"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noord-Europa"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11235,6 +13635,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "平年値（1961〜1990年）"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평년값 (1961–1990)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Normaal (1961–1990)"
           }
         },
         "pt-BR" : {
@@ -11289,6 +13701,18 @@
             "value" : "平年 %@"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평년 %@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Normaal %@"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11339,6 +13763,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@のみ — 他の場所ではデータが取得できません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@만 — 다른 위치는 데이터를 제공하지 않습니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alleen %1$@ – andere locaties leveren geen gegevens"
           }
         },
         "pt-BR" : {
@@ -11392,6 +13828,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "北西"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "북서"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NW"
           }
         },
         "pt-BR" : {
@@ -11470,6 +13918,18 @@
             "value" : "詳細を開きます"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "상세 정보를 엽니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opent de details"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11508,6 +13968,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定を開きます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정을 엽니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opent de instellingen"
           }
         }
       }
@@ -11550,6 +14022,18 @@
             "value" : "地図を開きます"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도를 엽니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opent de kaart"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11588,6 +14072,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "場所を開きます。長押しすると場所をすばやく切り替えられます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "장소를 엽니다. 길게 눌러 위치를 빠르게 전환합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opent de plaatsen. Houd ingedrukt om snel van locatie te wisselen."
           }
         }
       }
@@ -11628,6 +14124,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "この日の1時間ごとの予報を開きます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 날의 시간별 예보를 엽니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opent de uurlijkse verwachting voor deze dag"
           }
         },
         "pt-BR" : {
@@ -11680,6 +14188,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "気候の詳細を開きます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기후 상세 정보를 엽니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opent klimaatdetails"
           }
         },
         "pt-BR" : {
@@ -11735,6 +14255,18 @@
             "value" : "1時間ごとの環境グラフを開きます"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시간별 환경 차트를 엽니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opent uurlijkse milieugrafieken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11785,6 +14317,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "オープンソース"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오픈 소스"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open source"
           }
         },
         "pt-BR" : {
@@ -11858,6 +14402,18 @@
             "value" : "Open-Meteoは、各国の気象機関のオープンな気象データを集約するオープンソースの天気APIです。Felix°は非営利アプリとしてOpen-Meteoの無料アクセスを利用しつつ、月額5ユーロの寄付でプロジェクトを支援しています。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open-Meteo는 여러 국제 기상 기관의 개방형 기상 데이터를 모으는 오픈 소스 날씨 API입니다. Felix°는 비영리 앱으로 Open-Meteo의 무료 액세스를 사용하며, 매월 5유로를 후원합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open-Meteo is een open-source weer-API die open weergegevens van verschillende internationale weerdiensten verzamelt. Felix° gebruikt als niet-commerciële app de gratis toegang tot Open-Meteo, maar steunt het project met een maandelijkse donatie van vijf euro."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11928,6 +14484,18 @@
             "value" : "%1$@向けに最適化・世界のデータ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@에 최적화 · 전 세계 데이터"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geoptimaliseerd voor %1$@ · wereldwijde gegevens"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11972,6 +14540,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "場所"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Locatie"
           }
         },
         "pt-BR" : {
@@ -12026,6 +14606,18 @@
             "value" : "場所を変更、現在 %1$@"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치 변경, 현재 %1$@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Locatie wijzigen, nu %1$@"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12076,6 +14668,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "場所を検索"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치 검색"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoek een locatie"
           }
         },
         "pt-BR" : {
@@ -12130,6 +14734,18 @@
             "value" : "場所を検索…"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치 검색…"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoek een locatie …"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12174,6 +14790,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "場所を選択"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치 선택"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kies locatie"
           }
         },
         "pt-BR" : {
@@ -12229,6 +14857,18 @@
             "value" : "場所"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Locaties"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12279,6 +14919,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "場所を管理"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치 관리"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Locaties beheren"
           }
         },
         "pt-BR" : {
@@ -12364,6 +15016,18 @@
             "value" : "PM2.5は主に交通、薪の燃焼、産業から発生します。微細な粒子は肺の奥深くまで入り込み、気道や心血管系に負担をかけます。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PM2.5는 주로 교통, 목재 연소, 산업에서 발생합니다. 미세 입자는 폐 깊숙이 침투해 기도와 심혈관계에 부담을 줍니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PM2,5 komt vooral van verkeer, houtstook en industrie. Deze fijne deeltjes dringen diep in de longen door en belasten de luchtwegen en het hart- en vaatstelsel."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12415,6 +15079,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "PM10は主に道路の粉じん、工事現場、農業から発生します。粒子は目や気道を刺激し、敏感な人の症状を悪化させることがあります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PM10은 주로 도로 먼지, 공사 현장, 농업에서 발생합니다. 이 입자는 눈과 기도를 자극하고 민감한 사람의 증상을 악화시킬 수 있습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PM10 komt vaak van straatstof, bouwplaatsen en landbouw. Deze deeltjes irriteren de ogen en luchtwegen en kunnen klachten bij gevoelige mensen verergeren."
           }
         },
         "pt-BR" : {
@@ -12470,6 +15146,18 @@
             "value" : "花粉"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "꽃가루"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pollen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12521,6 +15209,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "花粉/m³"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "꽃가루/m³"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "pollen/m³"
           }
         },
         "pt-BR" : {
@@ -12575,6 +15275,18 @@
             "value" : "花粉のグラフ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "꽃가루 차트"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pollengrafiek"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12625,6 +15337,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "横向き"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가로 방향"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liggend"
           }
         },
         "pt-BR" : {
@@ -12679,6 +15403,18 @@
             "value" : "雨"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "비"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12731,6 +15467,18 @@
             "value" : "降水確率"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "강수 확률"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kans op regen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12781,6 +15529,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "記録 %1$@（%2$@）"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기록 %1$@ (%2$@)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Record %1$@ (%2$@)"
           }
         },
         "pt-BR" : {
@@ -12836,6 +15596,18 @@
             "value" : "南"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "남"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12889,6 +15661,18 @@
             "value" : "現在の汚染物質"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 오염 물질"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vervuilers nu"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12939,6 +15723,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "にわか雨"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소나기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buien"
           }
         },
         "pt-BR" : {
@@ -12994,6 +15790,18 @@
             "value" : "悪い"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나쁨"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slecht"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13045,6 +15853,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "雪"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "눈"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sneeuw"
           }
         },
         "pt-BR" : {
@@ -13099,6 +15919,18 @@
             "value" : "降雪"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "강설"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sneeuwval"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13149,6 +15981,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "学校"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "학교"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "School"
           }
         },
         "pt-BR" : {
@@ -13204,6 +16048,18 @@
             "value" : "二酸化硫黄は主に産業や発電で硫黄を含む燃料を燃やす際に発生します。気道を刺激し、特に喘息のある人に負担をかけます。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이산화황은 주로 산업과 발전소에서 황이 포함된 연료를 태울 때 발생합니다. 기도를 자극하며 특히 천식이 있는 사람에게 부담을 줍니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zwaveldioxide ontstaat vooral bij de verbranding van zwavelhoudende brandstoffen in industrie en energieproductie. Het irriteert de luchtwegen en is extra belastend voor mensen met astma."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13257,6 +16113,18 @@
             "value" : "南東"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "남동"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ZO"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13307,6 +16175,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "セグメント"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "세그먼트"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Segment"
           }
         },
         "pt-BR" : {
@@ -13362,6 +16242,18 @@
             "value" : "非常に高い"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "매우 높음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeer hoog"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13413,6 +16305,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "健康へのリスクが非常に高く、防護対策が不可欠です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "건강 위험이 매우 높습니다. 보호 조치가 반드시 필요합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeer hoog gezondheidsrisico; beschermingsmaatregelen zijn essentieel."
           }
         },
         "pt-BR" : {
@@ -13468,6 +16372,18 @@
             "value" : "非常に悪い"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "매우 나쁨"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeer slecht"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13518,6 +16434,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選択中"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택됨"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geselecteerd"
           }
         },
         "pt-BR" : {
@@ -13572,6 +16500,18 @@
             "value" : "系列"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시리즈"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reeks"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13622,6 +16562,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "確実"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확실"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeker"
           }
         },
         "pt-BR" : {
@@ -13700,6 +16652,18 @@
             "value" : "予報モデルの一致度を示します。帯が狭い場合はほぼすべての計算が同じ結果を示し、広い場合は当日の天気がどちらにも転び得ます。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예보 모델이 얼마나 일치하는지를 보여줍니다. 띠가 좁으면 거의 모든 계산이 같은 결과를, 넓으면 당일 날씨가 어느 쪽으로도 갈 수 있음을 뜻합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoe eensgezind de weermodellen zijn. Bij een smalle band zeggen bijna alle berekeningen hetzelfde; bij een brede kan de dag nog beide kanten op."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13750,6 +16714,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@がこれほど寒かったのは%2$@（%3$@）以来です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@이 이렇게 추웠던 것은 %2$@(%3$@) 이후 처음입니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een %1$@ was voor het laatst zo koel in %2$@ (%3$@)."
           }
         },
         "pt-BR" : {
@@ -13804,6 +16780,18 @@
             "value" : "今日ほど寒かった日は%1$@以来ありません。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ 이후 오늘처럼 추운 적이 없습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Het is sinds %1$@ niet zo koel geweest."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13854,6 +16842,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@がこれほど暖かかったのは%2$@（%3$@）以来です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@이 이렇게 따뜻했던 것은 %2$@(%3$@) 이후 처음입니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een %1$@ was voor het laatst zo warm in %2$@ (%3$@)."
           }
         },
         "pt-BR" : {
@@ -13908,6 +16908,18 @@
             "value" : "今日ほど暖かかった日は%1$@以来ありません。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ 이후 오늘처럼 따뜻한 적이 없습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Het is sinds %1$@ niet zo warm geweest."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13958,6 +16970,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "太陽"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "태양"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zon"
           }
         },
         "pt-BR" : {
@@ -14012,6 +17036,18 @@
             "value" : "日の出から日の入りまで"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일출부터 일몰까지"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Van zonsopkomst tot zonsondergang"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14062,6 +17098,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "後から切り替えたり追加したりできます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나중에 전환하거나 더 추가할 수 있습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je kunt later wisselen of meer toevoegen."
           }
         },
         "pt-BR" : {
@@ -14116,6 +17164,18 @@
             "value" : "デフォルトを解除"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본값 해제"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standaard verwijderen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14166,6 +17226,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "デフォルトに戻す"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본값 복원"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standaard herstellen"
           }
         },
         "pt-BR" : {
@@ -14220,6 +17292,18 @@
             "value" : "デフォルトでは、Felix°が最適な気象モデルを自動的に選択します。上級ユーザーは特定のモデルを強制できます。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본적으로 Felix°는 가장 적합한 기상 모델을 자동으로 선택합니다. 고급 사용자는 특정 모델을 강제로 지정할 수 있습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standaard kiest Felix° automatisch het beste weermodel. Gevorderde gebruikers kunnen een specifiek model forceren."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14270,6 +17354,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "デフォルトでは、Felix°が場所ごとに最適なモデルを自動選択し、複数の気象サービスを組み合わせます。ほとんどのユーザーに推奨されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본적으로 Felix°는 위치마다 가장 적합한 모델을 자동으로 선택하고 여러 기상 서비스를 결합합니다. 대부분의 사용자에게 권장됩니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standaard kiest Felix° voor elke locatie automatisch het beste model en combineert het meerdere weerdiensten. Aanbevolen voor de meeste gebruikers."
           }
         },
         "pt-BR" : {
@@ -14324,6 +17420,18 @@
             "value" : "デフォルトの場所"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본 위치"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standaardlocatie"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14374,6 +17482,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "位置情報"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Locatie"
           }
         },
         "pt-BR" : {
@@ -14428,6 +17548,18 @@
             "value" : "位置情報へのアクセスを許可"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치 정보 접근 허용"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sta locatietoegang toe"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14480,6 +17612,18 @@
             "value" : "位置情報のアイコン"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치 아이콘"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Locatiepictogram"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14530,6 +17674,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開始"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시작"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
           }
         },
         "pt-BR" : {
@@ -14585,6 +17741,18 @@
             "value" : "二酸化窒素は主に道路交通や暖房での燃焼によって発生します。気道を刺激し、喘息などの肺疾患を悪化させることがあります。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이산화질소는 주로 도로 교통과 난방의 연소 과정에서 발생합니다. 기도를 자극하고 천식 등 폐 질환을 악화시킬 수 있습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stikstofdioxide ontstaat vooral bij verbranding in het wegverkeer en bij verwarming. Het irriteert de luchtwegen en kan astma en andere longziekten verergeren."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14635,6 +17803,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "1時間ごと"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "매시간"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "elk uur"
           }
         },
         "pt-BR" : {
@@ -14689,6 +17869,18 @@
             "value" : "1時間ごと"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시간별"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Per uur"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14739,6 +17931,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "1時間ごとの詳細"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시간별 상세"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uurlijkse details"
           }
         },
         "pt-BR" : {
@@ -14793,6 +17997,18 @@
             "value" : "検索に失敗しました"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "검색 실패"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoeken mislukt"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14843,6 +18059,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "場所を検索するか、地図上で地点を選んでください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치를 검색하거나 지도에서 지점을 선택하세요."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoek een locatie of kies een punt op de kaart."
           }
         },
         "pt-BR" : {
@@ -14898,6 +18126,18 @@
             "value" : "南西"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "남서"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ZW"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14948,6 +18188,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アイコン"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아이콘"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pictogram"
           }
         },
         "pt-BR" : {
@@ -15002,6 +18254,18 @@
             "value" : "システム"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시스템"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Systeem"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15052,6 +18316,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "日中の値に限定"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일중 값으로 제한"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beperk tot dagwaarden"
           }
         },
         "pt-BR" : {
@@ -15106,6 +18382,18 @@
             "value" : "毎日"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일별"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagelijks"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15156,6 +18444,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "晴れ時々曇り"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "구름 조금"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Half bewolkt"
           }
         },
         "pt-BR" : {
@@ -15210,6 +18510,18 @@
             "value" : "気温"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기온"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temperatuur"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15260,6 +18572,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "気温 %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기온 %@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temperatuur %@"
           }
         },
         "pt-BR" : {
@@ -15314,6 +18638,18 @@
             "value" : "下層雲"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "하층운"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lage wolken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15364,6 +18700,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最低"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최저"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minimum"
           }
         },
         "pt-BR" : {
@@ -15418,6 +18766,18 @@
             "value" : "時刻"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시간"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tijd"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15468,6 +18828,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地図をタップして場所を追加します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도를 탭하여 장소를 추가합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op de kaart om een locatie toe te voegen."
           }
         },
         "pt-BR" : {
@@ -15522,6 +18894,18 @@
             "value" : "傾向"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추세"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trend"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15572,6 +18956,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "情報"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정보"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Over"
           }
         },
         "pt-BR" : {
@@ -15626,6 +19022,18 @@
             "value" : "概要"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overzicht"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15676,6 +19084,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "内容を理解している場合にのみ、自動選択を上書きしてください。ほとんどのモデルは世界のデータを提供しますが、母国地域に最適化されています。一部のモデルはその地域のみをカバーし、自動選択よりデータが少ない場合があります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "무엇을 하는지 정확히 아는 경우에만 자동 선택을 덮어쓰세요. 대부분의 모델은 전 세계 데이터를 제공하지만 자국의 지역에 최적화되어 있습니다. 일부 모델은 해당 지역만 다루며 자동 선택보다 데이터가 적을 수 있습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overschrijf de automatische selectie alleen als je weet wat je doet. De meeste modellen leveren wereldwijde gegevens, maar zijn geoptimaliseerd voor hun eigen regio. Sommige dekken alleen hun regio en leveren mogelijk minder gegevens dan de automatische selectie."
           }
         },
         "pt-BR" : {
@@ -15731,6 +19151,18 @@
             "value" : "概要"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개요"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overzicht"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15783,6 +19215,18 @@
             "value" : "平年並み（P10〜P90）"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평년 범위 (P10–P90)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gebruikelijk (P10–P90)"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15831,6 +19275,18 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : " "
@@ -15888,6 +19344,18 @@
             "value" : "環境"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "환경"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Milieu"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15939,6 +19407,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "環境の詳細"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "환경 상세"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Milieudetails"
           }
         },
         "pt-BR" : {
@@ -15993,6 +19473,18 @@
             "value" : "不明な場所"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "알 수 없는 위치"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onbekende locatie"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16043,6 +19535,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "不確実"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "불확실"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onzeker"
           }
         },
         "pt-BR" : {
@@ -16097,6 +19601,18 @@
             "value" : "気温の下に表示"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기온 아래에 표시"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onder de temperatuur"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16149,6 +19665,18 @@
             "value" : "休暇"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "휴가"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vakantie"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16199,6 +19727,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アメリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미국"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VS"
           }
         },
         "pt-BR" : {
@@ -16284,6 +19824,18 @@
             "value" : "UV指数"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "자외선 지수"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "UV-index"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16334,6 +19886,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "UV指数 最大%1$lld（%2$@）"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "자외선 지수 최대 %1$lld (%2$@)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "UV-index tot %1$lld (%2$@)"
           }
         },
         "pt-BR" : {
@@ -16388,6 +19952,18 @@
             "value" : "UV指数のグラフ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "자외선 지수 차트"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "UV-indexgrafiek"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16438,6 +20014,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "蒸発量"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "증발량"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verdamping"
           }
         },
         "pt-BR" : {
@@ -16492,6 +20080,18 @@
             "value" : "履歴"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기록"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historie"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16542,6 +20142,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "日最高気温の履歴"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일 최고 기온 기록"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historie dagmaximum"
           }
         },
         "pt-BR" : {
@@ -16596,6 +20208,18 @@
             "value" : "予報"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예보"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwachting"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16648,6 +20272,18 @@
             "value" : "予報を利用できません"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예보를 사용할 수 없음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwachting niet beschikbaar"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16698,6 +20334,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "プレビュー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미리보기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voorbeeld"
           }
         },
         "pt-BR" : {
@@ -16753,6 +20401,18 @@
             "value" : "西"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "서"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16797,6 +20457,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "日別予報の場所を選択してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일별 예보의 장소를 선택하세요."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kies de locatie voor de dagelijkse verwachting."
           }
         },
         "pt-BR" : {
@@ -16851,6 +20523,18 @@
             "value" : "日中の値を日別の値と置き換えるか、24時間の範囲内にマークするかを選択します。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일중 값을 일별 값과 교체할지, 24시간 범위 안에 표시할지 선택합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kies of dagwaarden de dagelijkse waarden vervangen of binnen het bereik van 24 uur worden gemarkeerd."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16901,6 +20585,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "世界中のどの場所でも最適なモデルを自動選択し、複数の気象サービスを組み合わせます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전 세계 어느 위치든 가장 적합한 모델을 자동으로 선택하고 여러 기상 서비스를 결합합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kiest automatisch het beste model voor elke locatie wereldwijd en combineert meerdere weerdiensten."
           }
         },
         "pt-BR" : {
@@ -16955,6 +20651,18 @@
             "value" : "%3$@以降のすべての%2$@のうち%1$@より暖かい。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%3$@ 이후 모든 %2$@ 중 %1$@보다 따뜻함."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warmer dan %1$@ van alle %2$@ sinds %3$@."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17005,6 +20713,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "平年より暖かい"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평년보다 따뜻함"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "warmer dan normaal"
           }
         },
         "pt-BR" : {
@@ -17059,6 +20779,18 @@
             "value" : "最も暖かい"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가장 따뜻함"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warmste"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17109,6 +20841,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ウェブサイト"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "웹사이트"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Website"
           }
         },
         "pt-BR" : {
@@ -17163,6 +20907,18 @@
             "value" : "次へ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "계속"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doorgaan"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17213,6 +20969,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "どの場所？"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "어느 장소인가요?"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welke plaats?"
           }
         },
         "pt-BR" : {
@@ -17267,6 +21035,18 @@
             "value" : "値を置き換え"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "값 교체"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waarden vervangen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17317,6 +21097,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "天気"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "날씨"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weer"
           }
         },
         "pt-BR" : {
@@ -17371,6 +21163,18 @@
             "value" : "天気を利用できません"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "날씨를 사용할 수 없음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weer niet beschikbaar"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17421,6 +21225,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "天気データ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "날씨 데이터"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weergegevens"
           }
         },
         "pt-BR" : {
@@ -17475,6 +21291,18 @@
             "value" : "気象モデル"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기상 모델"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weermodel"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17525,6 +21353,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "風"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "바람"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wind"
           }
         },
         "pt-BR" : {
@@ -17580,6 +21420,18 @@
             "value" : "風速"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "풍속"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Windsnelheid"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17632,6 +21484,18 @@
             "value" : "風向"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "풍향"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Windrichting"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17682,6 +21546,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今どこにいますか？"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지금 어디에 있나요?"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waar ben je nu?"
           }
         },
         "pt-BR" : {
@@ -17737,6 +21613,18 @@
             "value" : "雲"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "구름"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wolken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17787,6 +21675,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "グラフを表示します"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차트를 표시합니다"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toont de grafiek"
           }
         },
         "pt-BR" : {
@@ -17841,6 +21741,18 @@
             "value" : "今後数週間の予報の確実性を示します。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앞으로 몇 주의 예보가 얼마나 확실한지 보여줍니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toont hoe zeker de verwachting voor de komende weken is."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17891,6 +21803,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "時刻表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시간 형식"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tijdnotatie"
           }
         },
         "pt-BR" : {
@@ -17945,6 +21869,18 @@
             "value" : "タイムライン"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "타임라인"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tijdlijn"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17995,6 +21931,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "期間"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "범위"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bereik"
           }
         },
         "pt-BR" : {
@@ -18049,6 +21997,18 @@
             "value" : "ほぼ確実"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "상당히 확실"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redelijk zeker"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18101,6 +22061,18 @@
             "value" : "やや不確実"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "상당히 불확실"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redelijk onzeker"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18151,6 +22123,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "自宅"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "집"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thuis"
           }
         },
         "pt-BR" : {

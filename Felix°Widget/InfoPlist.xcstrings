@@ -86,6 +86,18 @@
             "value" : "Felix° は現在地の天気を表示するために使用します。予報のために、位置情報は約100m単位に丸められて Open-Meteo に送信され、地名は Apple が取得します。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix°는 현재 위치의 날씨를 표시하는 데 사용합니다. 예보를 위해 위치는 약 100m 단위로 반올림되어 Open-Meteo로 전송되며, 지명은 Apple이 확인합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° gebruikt dit om het weer te tonen waar je bent. Voor voorspellingen wordt je locatie afgerond op ongeveer 100 m naar Open-Meteo gestuurd; Apple bepaalt de plaatsnaam."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -137,6 +149,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Felix° は現在地の天気を表示するために使用します。予報のために、位置情報は約100m単位に丸められて Open-Meteo に送信され、地名は Apple が取得します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix°는 현재 위치의 날씨를 표시하는 데 사용합니다. 예보를 위해 위치는 약 100m 단위로 반올림되어 Open-Meteo로 전송되며, 지명은 Apple이 확인합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° gebruikt dit om het weer te tonen waar je bent. Voor voorspellingen wordt je locatie afgerond op ongeveer 100 m naar Open-Meteo gestuurd; Apple bepaalt de plaatsnaam."
           }
         },
         "pt-BR" : {
@@ -192,6 +216,18 @@
             "value" : "Felix° は現在地の天気を表示するために使用します。予報のために、位置情報は約100m単位に丸められて Open-Meteo に送信され、地名は Apple が取得します。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix°는 현재 위치의 날씨를 표시하는 데 사용합니다. 예보를 위해 위치는 약 100m 단위로 반올림되어 Open-Meteo로 전송되며, 지명은 Apple이 확인합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° gebruikt dit om het weer te tonen waar je bent. Voor voorspellingen wordt je locatie afgerond op ongeveer 100 m naar Open-Meteo gestuurd; Apple bepaalt de plaatsnaam."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -243,6 +279,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Felix° は現在地の天気を表示するために使用します。予報のために、位置情報は約100m単位に丸められて Open-Meteo に送信され、地名は Apple が取得します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix°는 현재 위치의 날씨를 표시하는 데 사용합니다. 예보를 위해 위치는 약 100m 단위로 반올림되어 Open-Meteo로 전송되며, 지명은 Apple이 확인합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° gebruikt dit om het weer te tonen waar je bent. Voor voorspellingen wordt je locatie afgerond op ongeveer 100 m naar Open-Meteo gestuurd; Apple bepaalt de plaatsnaam."
           }
         },
         "pt-BR" : {
