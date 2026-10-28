@@ -36,10 +36,11 @@ struct DataSourcesView: View {
 	}
 
 	private static let openSourceLinks: [(title: String, url: String, icon: String, tint: Color)] = [
+		("Oscar° (original app)", "https://github.com/strumswell/oscar-weather", "arrow.triangle.branch", .indigo),
+		("Icons by Hosein Bagheri", "https://ui8.net/hosein_bagheri/products/3d-weather-icons40", "sparkles", .pink),
 		("swift-openapi-generator", "https://github.com/apple/swift-openapi-generator", "swift", .orange),
 		("swift-openapi-runtime", "https://github.com/apple/swift-openapi-runtime", "swift", .orange),
 		("swift-openapi-urlsession", "https://github.com/apple/swift-openapi-urlsession", "swift", .orange),
-		("Icons by Hosein Bagheri", "https://ui8.net/hosein_bagheri/products/3d-weather-icons40", "sparkles", .pink),
 	]
 }
 
