@@ -20,6 +20,12 @@
             "state" : "translated",
             "value" : "%@ mm/h"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ mm/h"
+          }
         }
       }
     },
@@ -84,6 +90,12 @@
             "state" : "translated",
             "value" : "%@ 天"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 天"
+          }
         }
       }
     },
@@ -138,6 +150,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 天"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "7 天"
@@ -206,6 +224,12 @@
             "state" : "translated",
             "value" : "12 小時"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12 小时"
+          }
         }
       }
     },
@@ -266,6 +290,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "13 km · 5 天"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "13 km · 5 天"
@@ -334,6 +364,12 @@
             "state" : "translated",
             "value" : "24 小時"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24 小时"
+          }
         }
       }
     },
@@ -394,6 +430,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25 km · 15 天"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "25 km · 15 天"
@@ -462,6 +504,12 @@
             "state" : "translated",
             "value" : "25 km · 16 天"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25 km · 16 天"
+          }
         }
       }
     },
@@ -522,6 +570,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "26 km · 7.5 天"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "26 km · 7.5 天"
@@ -590,6 +644,12 @@
             "state" : "translated",
             "value" : "50 km · 35 天"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "50 km · 35 天"
+          }
         }
       }
     },
@@ -653,6 +713,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "每 %lld 小時"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每 %lld 小时"
           }
         }
       }
@@ -718,6 +784,12 @@
             "state" : "translated",
             "value" : "澳洲"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "澳大利亚"
+          }
         }
       }
     },
@@ -781,6 +853,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "自動"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自动"
           }
         }
       }
@@ -846,6 +924,12 @@
             "state" : "translated",
             "value" : "陰天"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阴天"
+          }
         }
       }
     },
@@ -909,6 +993,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "自訂"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自定义"
           }
         }
       }
@@ -974,6 +1064,12 @@
             "state" : "translated",
             "value" : "多雲"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "多云"
+          }
         }
       }
     },
@@ -1037,6 +1133,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "中國"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中国"
           }
         }
       }
@@ -1103,6 +1205,12 @@
             "state" : "translated",
             "value" : "東"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "东"
+          }
         }
       }
     },
@@ -1121,6 +1229,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ECMWF"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "ECMWF"
@@ -1189,6 +1303,12 @@
             "state" : "translated",
             "value" : "再試一次"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再试一次"
+          }
         }
       }
     },
@@ -1252,6 +1372,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "歐洲"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "欧洲"
           }
         }
       }
@@ -1317,6 +1443,12 @@
             "state" : "translated",
             "value" : "法國與歐洲"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "法国与欧洲"
+          }
         }
       }
     },
@@ -1381,6 +1513,12 @@
             "state" : "translated",
             "value" : "凍雨"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冻雨"
+          }
         }
       }
     },
@@ -1441,6 +1579,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雷雨"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "雷雨"
@@ -1509,6 +1653,12 @@
             "state" : "translated",
             "value" : "全球 0.25° 模型（開放資料，約延遲 2 小時）。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全球 0.25° 模型（开放数据，约延迟 2 小时）。"
+          }
         }
       }
     },
@@ -1572,6 +1722,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "澳洲氣象局的全球模型。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "澳大利亚气象局的全球模型。"
           }
         }
       }
@@ -1637,6 +1793,12 @@
             "state" : "translated",
             "value" : "中國氣象局的全球模型。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中国气象局的全球模型。"
+          }
         }
       }
     },
@@ -1701,6 +1863,12 @@
             "state" : "translated",
             "value" : "英國"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英国"
+          }
         }
       }
     },
@@ -1761,6 +1929,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "今天"
@@ -1829,6 +2003,12 @@
             "state" : "translated",
             "value" : "義大利的高解析度模型。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "意大利的高分辨率模型。"
+          }
         }
       }
     },
@@ -1892,6 +2072,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "高解析度區域模型，全球範圍由 ECMWF 補充。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高分辨率区域模型，全球范围由 ECMWF 补充。"
           }
         }
       }
@@ -1957,6 +2143,12 @@
             "state" : "translated",
             "value" : "在每日走勢中標示"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在每日走势中标示"
+          }
         }
       }
     },
@@ -2021,6 +2213,12 @@
             "state" : "translated",
             "value" : "義大利"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "意大利"
+          }
         }
       }
     },
@@ -2081,6 +2279,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日本"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日本"
@@ -2149,6 +2353,12 @@
             "state" : "translated",
             "value" : "現在"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "现在"
+          }
         }
       }
     },
@@ -2213,6 +2423,12 @@
             "state" : "translated",
             "value" : "沒有資料"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有数据"
+          }
         }
       }
     },
@@ -2270,6 +2486,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "沒有天氣資料"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有天气数据"
           }
         }
       }
@@ -2335,6 +2557,12 @@
             "state" : "translated",
             "value" : "ECMWF 的 AI 氣象模型。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ECMWF 的 AI 气象模型。"
+          }
         }
       }
     },
@@ -2395,6 +2623,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "晴"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "晴"
@@ -2463,6 +2697,12 @@
             "state" : "translated",
             "value" : "韓國"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "韩国"
+          }
         }
       }
     },
@@ -2523,6 +2763,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的位置"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "我的位置"
@@ -2591,6 +2837,12 @@
             "state" : "translated",
             "value" : "中歐與阿爾卑斯山"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中欧与阿尔卑斯山"
+          }
         }
       }
     },
@@ -2651,6 +2903,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "明天"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "明天"
@@ -2720,6 +2978,12 @@
             "state" : "translated",
             "value" : "北"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "北"
+          }
         }
       }
     },
@@ -2784,6 +3048,12 @@
             "state" : "translated",
             "value" : "各國氣象機構"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "各国气象机构"
+          }
         }
       }
     },
@@ -2847,6 +3117,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "原生 9 公里解析度，直接來自 ECMWF，每小時預報最遠至 +90 小時。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "原生 9 公里分辨率，直接来自 ECMWF，每小时预报最远至 +90 小时。"
           }
         }
       }
@@ -2913,6 +3189,12 @@
             "state" : "translated",
             "value" : "東北"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "东北"
+          }
         }
       }
     },
@@ -2976,6 +3258,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "霧"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雾"
           }
         }
       }
@@ -3041,6 +3329,12 @@
             "state" : "translated",
             "value" : "荷蘭與西歐"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "荷兰与西欧"
+          }
         }
       }
     },
@@ -3101,6 +3395,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毛毛雨"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "毛毛雨"
@@ -3169,6 +3469,12 @@
             "state" : "translated",
             "value" : "北美洲"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "北美洲"
+          }
         }
       }
     },
@@ -3232,6 +3538,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "北歐"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "北欧"
           }
         }
       }
@@ -3298,6 +3610,12 @@
             "state" : "translated",
             "value" : "西北"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "西北"
+          }
         }
       }
     },
@@ -3358,6 +3676,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降雨"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "降雨"
@@ -3427,6 +3751,12 @@
             "state" : "translated",
             "value" : "南"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "南"
+          }
         }
       }
     },
@@ -3491,6 +3821,12 @@
             "state" : "translated",
             "value" : "陣雨"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阵雨"
+          }
         }
       }
     },
@@ -3551,6 +3887,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降雪"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "降雪"
@@ -3620,6 +3962,12 @@
             "state" : "translated",
             "value" : "東南"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "东南"
+          }
         }
       }
     },
@@ -3680,6 +4028,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日出至日落"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日出至日落"
@@ -3748,6 +4102,12 @@
             "state" : "translated",
             "value" : "每小時"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每小时"
+          }
         }
       }
     },
@@ -3812,6 +4172,12 @@
             "state" : "translated",
             "value" : "每小時"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每小时"
+          }
         }
       }
     },
@@ -3873,6 +4239,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "西南"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "西南"
@@ -3941,6 +4313,12 @@
             "state" : "translated",
             "value" : "系統"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "系统"
+          }
         }
       }
     },
@@ -4004,6 +4382,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "局部多雲"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "局部多云"
           }
         }
       }
@@ -4069,6 +4453,12 @@
             "state" : "translated",
             "value" : "時"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时"
+          }
         }
       }
     },
@@ -4133,6 +4523,12 @@
             "state" : "translated",
             "value" : "美國"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美国"
+          }
         }
       }
     },
@@ -4194,6 +4590,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "西"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "西"
@@ -4262,6 +4664,12 @@
             "state" : "translated",
             "value" : "為全球每個地點自動選擇最佳模型，並結合多個氣象服務。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为全球每个地点自动选择最佳模型，并结合多个气象服务。"
+          }
         }
       }
     },
@@ -4325,6 +4733,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "取代數值"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "替换数值"
           }
         }
       }

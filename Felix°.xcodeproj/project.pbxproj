@@ -830,6 +830,7 @@
 				ko,
 				nl,
 				"pt-BR",
+				"zh-Hans",
 				"zh-Hant",
 				Base,
 			);

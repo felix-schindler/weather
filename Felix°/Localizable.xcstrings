@@ -30,6 +30,12 @@
             "state" : "translated",
             "value" : "--°"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "--°"
+          }
         }
       }
     },
@@ -48,6 +54,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "–"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "–"
@@ -116,6 +128,12 @@
             "state" : "translated",
             "value" : "「我的位置」會保持顯示為副標題。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“我的位置”会保持显示为副标题。"
+          }
         }
       }
     },
@@ -161,6 +179,12 @@
             "state" : "translated",
             "value" : "%@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
         }
       }
     },
@@ -189,6 +213,12 @@
             "state" : "translated",
             "value" : "%1$@ %2$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ %2$@"
+          }
         }
       }
     },
@@ -213,6 +243,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ %2$@, %3$lld"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@ %2$@, %3$lld"
@@ -281,6 +317,12 @@
             "state" : "translated",
             "value" : "%@ 天"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 天"
+          }
         }
       }
     },
@@ -309,6 +351,12 @@
             "state" : "translated",
             "value" : "%1$@, %2$lld"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld"
+          }
         }
       }
     },
@@ -333,6 +381,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@%2$@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@%2$@"
@@ -401,6 +455,12 @@
             "state" : "translated",
             "value" : "%@°／十年"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@°/十年"
+          }
         }
       }
     },
@@ -419,6 +479,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -487,6 +553,12 @@
             "state" : "translated",
             "value" : "%1$lld／%2$lld"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld"
+          }
         }
       }
     },
@@ -505,6 +577,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld°"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld°"
@@ -537,6 +615,12 @@
             "state" : "translated",
             "value" : "°C"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "°C"
+          }
         }
       }
     },
@@ -561,6 +645,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "°F"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "°F"
@@ -629,6 +719,12 @@
             "state" : "translated",
             "value" : "8／10"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "8/10"
+          }
         }
       }
     },
@@ -693,6 +789,12 @@
             "state" : "translated",
             "value" : "12 小時"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12 小时"
+          }
         }
       }
     },
@@ -753,6 +855,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "13 km · 5 天"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "13 km · 5 天"
@@ -821,6 +929,12 @@
             "state" : "translated",
             "value" : "15:00"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "15:00"
+          }
         }
       }
     },
@@ -881,6 +995,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "16:00"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "16:00"
@@ -949,6 +1069,12 @@
             "state" : "translated",
             "value" : "17:00"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "17:00"
+          }
         }
       }
     },
@@ -1009,6 +1135,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "18:00"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "18:00"
@@ -1077,6 +1209,12 @@
             "state" : "translated",
             "value" : "22:00"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "22:00"
+          }
         }
       }
     },
@@ -1141,6 +1279,12 @@
             "state" : "translated",
             "value" : "24 小時"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24 小时"
+          }
         }
       }
     },
@@ -1201,6 +1345,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25 km · 15 天"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "25 km · 15 天"
@@ -1269,6 +1419,12 @@
             "state" : "translated",
             "value" : "25 km · 16 天"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25 km · 16 天"
+          }
         }
       }
     },
@@ -1329,6 +1485,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "26 km · 7.5 天"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "26 km · 7.5 天"
@@ -1397,6 +1559,12 @@
             "state" : "translated",
             "value" : "50 km · 35 天"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "50 km · 35 天"
+          }
         }
       }
     },
@@ -1457,6 +1625,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "取消"
@@ -1525,6 +1699,12 @@
             "state" : "translated",
             "value" : "區段"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "区段"
+          }
         }
       }
     },
@@ -1588,6 +1768,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "加入區段"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入区段"
           }
         }
       }
@@ -1671,6 +1857,12 @@
             "state" : "translated",
             "value" : "空氣"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "空气"
+          }
         }
       }
     },
@@ -1734,6 +1926,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "重新整理"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新"
           }
         }
       }
@@ -1800,6 +1998,12 @@
             "state" : "translated",
             "value" : "目前主要污染物"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前主要污染物"
+          }
         }
       }
     },
@@ -1865,6 +2069,12 @@
             "state" : "translated",
             "value" : "目前數值"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前数值"
+          }
         }
       }
     },
@@ -1929,6 +2139,12 @@
             "state" : "translated",
             "value" : "目前位置"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前位置"
+          }
         }
       }
     },
@@ -1990,6 +2206,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚可"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "尚可"
@@ -2058,6 +2280,12 @@
             "state" : "translated",
             "value" : "全部"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部"
+          }
         }
       }
     },
@@ -2121,6 +2349,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "每 %lld 小時"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每 %lld 小时"
           }
         }
       }
@@ -2186,6 +2420,12 @@
             "state" : "translated",
             "value" : "所有區段都已顯示在頁面上。將區段拖曳到這裡即可隱藏。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所有区段都已显示在页面上。将区段拖动到这里即可隐藏。"
+          }
         }
       }
     },
@@ -2246,6 +2486,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一般"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "一般"
@@ -2314,6 +2560,12 @@
             "state" : "translated",
             "value" : "設為預設"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设为默认"
+          }
         }
       }
     },
@@ -2379,6 +2631,12 @@
             "state" : "translated",
             "value" : "豬草"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "豚草"
+          }
         }
       }
     },
@@ -2442,6 +2700,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "檢視"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "视图"
           }
         }
       }
@@ -2507,6 +2771,12 @@
             "state" : "translated",
             "value" : "自訂檢視"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自定义视图"
+          }
         }
       }
     },
@@ -2569,6 +2839,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AQI"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "AQI"
@@ -2637,6 +2913,12 @@
             "state" : "translated",
             "value" : "AQI %lld 至 %lld，最高 %@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AQI %lld 至 %lld，最高 %@"
+          }
         }
       }
     },
@@ -2697,6 +2979,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工作"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "工作"
@@ -2801,6 +3089,12 @@
             "state" : "translated",
             "value" : "四捨五入至約 100 公尺。僅用於天氣。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "四舍五入至约 100 米。仅用于天气。"
+          }
         }
       }
     },
@@ -2864,6 +3158,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "隱藏"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐藏"
           }
         }
       }
@@ -2930,6 +3230,12 @@
             "state" : "translated",
             "value" : "已選取"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已选择"
+          }
         }
       }
     },
@@ -2987,6 +3293,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "已選取的位置"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已选择的位置"
           }
         }
       }
@@ -3052,6 +3364,12 @@
             "state" : "translated",
             "value" : "澳洲"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "澳大利亚"
+          }
         }
       }
     },
@@ -3115,6 +3433,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "取消選取"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消选择"
           }
         }
       }
@@ -3180,6 +3504,12 @@
             "state" : "translated",
             "value" : "超出模型涵蓋範圍"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "超出模型涵盖范围"
+          }
         }
       }
     },
@@ -3243,6 +3573,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "超出模型範圍 – 自動模式已啟用。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "超出模型范围 – 自动模式已激活。"
           }
         }
       }
@@ -3308,6 +3644,12 @@
             "state" : "translated",
             "value" : "自動"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自动"
+          }
         }
       }
     },
@@ -3371,6 +3713,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "編輯"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "编辑"
           }
         }
       }
@@ -3436,6 +3784,12 @@
             "state" : "translated",
             "value" : "陰天"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阴天"
+          }
         }
       }
     },
@@ -3499,6 +3853,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "將最高溫與最低溫限制在某個時段，例如讓日出後的最低溫更有參考價值。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将最高温与最低温限制在某个时段，例如让日出后的最低温更有参考价值。"
           }
         }
       }
@@ -3565,6 +3925,12 @@
             "state" : "translated",
             "value" : "在此紫外線指數下，健康危害很低。通常不需要特別的防護措施。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在此紫外线指数下，健康危害很低。通常不需要特别的防护措施。"
+          }
         }
       }
     },
@@ -3626,6 +3992,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "艾草"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "艾草"
@@ -3694,6 +4066,12 @@
             "state" : "translated",
             "value" : "自訂"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自定义"
+          }
         }
       }
     },
@@ -3757,6 +4135,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "權限"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "权限"
           }
         }
       }
@@ -3822,6 +4206,12 @@
             "state" : "translated",
             "value" : "多雲"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "多云"
+          }
         }
       }
     },
@@ -3886,6 +4276,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "雲量"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "云量"
           }
         }
       }
@@ -3969,6 +4365,12 @@
             "state" : "translated",
             "value" : "樺樹"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "桦树"
+          }
         }
       }
     },
@@ -4032,6 +4434,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "土壤濕度"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "土壤湿度"
           }
         }
       }
@@ -4098,6 +4506,12 @@
             "state" : "translated",
             "value" : "近地面臭氧在強烈日照下由廢氣形成，可能引發咳嗽、刺激與肺功能下降。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "近地面臭氧在强烈日照下由废气形成，可能引发咳嗽、刺激与肺功能下降。"
+          }
         }
       }
     },
@@ -4161,6 +4575,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "土壤溫度"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "土壤温度"
           }
         }
       }
@@ -4227,6 +4647,12 @@
             "state" : "translated",
             "value" : "陣風"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阵风"
+          }
         }
       }
     },
@@ -4287,6 +4713,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "舞台"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "舞台"
@@ -4355,6 +4787,12 @@
             "state" : "translated",
             "value" : "中國"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中国"
+          }
         }
       }
     },
@@ -4417,6 +4855,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$@ 中的 %1$@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%2$@ 中的 %1$@"
@@ -4503,6 +4947,12 @@
             "state" : "translated",
             "value" : "目前小時"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前小时"
+          }
         }
       }
     },
@@ -4566,6 +5016,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "接著，Felix° 會在這裡顯示天氣狀況，並在下雨前通知你。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接着，Felix° 会在这里显示天气状况，并在下雨前通知你。"
           }
         }
       }
@@ -4631,6 +5087,12 @@
             "state" : "translated",
             "value" : "外觀"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "外观"
+          }
         }
       }
     },
@@ -4694,6 +5156,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "這是第 %@ 冷的 %@，可追溯至 %@。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这是第 %@ 冷的 %@，可追溯至 %@。"
           }
         }
       }
@@ -4759,6 +5227,12 @@
             "state" : "translated",
             "value" : "這是第 %@ 暖的 %@，可追溯至 %@。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这是第 %@ 暖的 %@，可追溯至 %@。"
+          }
         }
       }
     },
@@ -4822,6 +5296,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "這是 %@ 最冷的紀錄，可追溯至 %@。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这是 %@ 最冷的记录，可追溯至 %@。"
           }
         }
       }
@@ -4887,6 +5367,12 @@
             "state" : "translated",
             "value" : "這是 %@ 最暖的紀錄，可追溯至 %@。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这是 %@ 最暖的记录，可追溯至 %@。"
+          }
         }
       }
     },
@@ -4950,6 +5436,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "資料基礎為 ERA5 再分析：天氣模型將測站、衛星、飛機與浮標的測量資料，彙整成可回溯至 1940 年、完整無缺的全球紀錄。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数据基础为 ERA5 再分析：天气模型将测站、卫星、飞机与浮标的测量数据，汇整成可回溯至 1940 年、完整无缺的全球记录。"
           }
         }
       }
@@ -5015,6 +5507,12 @@
             "state" : "translated",
             "value" : "資料來源"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数据源"
+          }
         }
       }
     },
@@ -5078,6 +5576,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "資料來源與授權"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数据源与许可"
           }
         }
       }
@@ -5143,6 +5647,12 @@
             "state" : "translated",
             "value" : "偵錯"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "调试"
+          }
         }
       }
     },
@@ -5206,6 +5716,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ 是自 %@ 以來最冷的。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 是自 %@ 以来最冷的。"
           }
         }
       }
@@ -5271,6 +5787,12 @@
             "state" : "translated",
             "value" : "地點名稱會保留為副標題顯示。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地点名称会保留为副标题显示。"
+          }
         }
       }
     },
@@ -5334,6 +5856,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ 是自 %@ 以來最熱的。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 是自 %@ 以来最热的。"
           }
         }
       }
@@ -5400,6 +5928,12 @@
             "state" : "translated",
             "value" : "世界衛生組織（WHO）建議在 11 點至 16 點之間留在室內，其他時間也務必尋找遮蔭處。即使在遮蔭處，編織緊密的襯衫、長褲、防曬乳、太陽眼鏡與寬邊帽仍不可或缺。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "世界卫生组织（WHO）建议在 11 点至 16 点之间留在室内，其他时间也务必寻找阴凉处。即使在阴凉处，编织紧密的衬衫、长裤、防晒霜、太阳镜与宽边帽仍不可或缺。"
+          }
         }
       }
     },
@@ -5464,6 +5998,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "世界衛生組織（WHO）建議正午時尋找遮蔭處。在陽光下需要襯衫、防曬乳、太陽眼鏡與帽子。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "世界卫生组织（WHO）建议正午时寻找阴凉处。在阳光下需要衬衫、防晒霜、太阳镜与帽子。"
           }
         }
       }
@@ -5530,6 +6070,12 @@
             "state" : "translated",
             "value" : "世界衛生組織（WHO）建議在 11 點至 16 點之間避免待在戶外，但即使在遮蔭處，編織緊密的襯衫、長褲、防曬乳、太陽眼鏡與寬邊帽仍是防曬行為的一部分。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "世界卫生组织（WHO）建议在 11 点至 16 点之间避免待在户外，但即使在阴凉处，编织紧密的衬衫、长裤、防晒霜、太阳镜与宽边帽仍是防晒行为的一部分。"
+          }
         }
       }
     },
@@ -5594,6 +6140,12 @@
             "state" : "translated",
             "value" : "無法載入天氣資料。請檢查你的連線，然後再試一次。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法加载天气数据。请检查你的连接，然后再试一次。"
+          }
         }
       }
     },
@@ -5657,6 +6209,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "1940 年以來的這一天"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1940 年以来的这一天"
           }
         }
       }
@@ -5723,6 +6281,12 @@
             "state" : "translated",
             "value" : "東"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "东"
+          }
         }
       }
     },
@@ -5741,6 +6305,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ECMWF"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "ECMWF"
@@ -5809,6 +6379,12 @@
             "state" : "translated",
             "value" : "自訂名稱"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自定义名称"
+          }
         }
       }
     },
@@ -5873,6 +6449,12 @@
             "state" : "translated",
             "value" : "自訂表情符號"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自定义表情符号"
+          }
         }
       }
     },
@@ -5933,6 +6515,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "插入"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "插入"
@@ -6001,6 +6589,12 @@
             "state" : "translated",
             "value" : "單位"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "单位"
+          }
         }
       }
     },
@@ -6065,6 +6659,12 @@
             "state" : "translated",
             "value" : "設定"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置"
+          }
         }
       }
     },
@@ -6092,6 +6692,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "表情符號"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表情符号"
           }
         }
       }
@@ -6157,6 +6763,12 @@
             "state" : "translated",
             "value" : "結束"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "结束"
+          }
         }
       }
     },
@@ -6221,6 +6833,12 @@
             "state" : "translated",
             "value" : "結束"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "结束"
+          }
         }
       }
     },
@@ -6248,6 +6866,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "系集"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "集合"
           }
         }
       }
@@ -6314,6 +6938,12 @@
             "state" : "translated",
             "value" : "赤楊"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "赤杨"
+          }
         }
       }
     },
@@ -6378,6 +7008,12 @@
             "state" : "translated",
             "value" : "再試一次"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再试一次"
+          }
         }
       }
     },
@@ -6441,6 +7077,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "歐洲"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "欧洲"
           }
         }
       }
@@ -6507,6 +7149,12 @@
             "state" : "translated",
             "value" : "極端"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "极端"
+          }
         }
       }
     },
@@ -6571,6 +7219,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "極差"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "极差"
           }
         }
       }
@@ -6637,6 +7291,12 @@
             "state" : "translated",
             "value" : "健康危害極高，特別防護措施不可或缺。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "健康危害极高，特别防护措施不可或缺。"
+          }
         }
       }
     },
@@ -6697,6 +7357,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "家庭"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "家庭"
@@ -6765,6 +7431,12 @@
             "state" : "translated",
             "value" : "色彩刻度從比正常偏冷（藍色）到比正常偏暖（紅色）。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "色彩刻度从比正常偏冷（蓝色）到比正常偏暖（红色）。"
+          }
         }
       }
     },
@@ -6829,6 +7501,12 @@
             "state" : "translated",
             "value" : "Felix° 會以此地點開啟。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° 会以此地点打开。"
+          }
         }
       }
     },
@@ -6890,6 +7568,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "完成"
@@ -6958,6 +7642,12 @@
             "state" : "translated",
             "value" : "預報"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "预报"
+          }
         }
       }
     },
@@ -7022,6 +7712,12 @@
             "state" : "translated",
             "value" : "法國與歐洲"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "法国与欧洲"
+          }
         }
       }
     },
@@ -7085,6 +7781,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "霜凍（%@）"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "霜冻（%@）"
           }
         }
       }
@@ -7151,6 +7853,12 @@
             "state" : "translated",
             "value" : "目前期間沒有花粉資料。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前期间没有花粉数据。"
+          }
         }
       }
     },
@@ -7215,6 +7923,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "目前這一小時沒有空氣品質資料。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前这一小时没有空气质量数据。"
           }
         }
       }
@@ -7281,6 +7995,12 @@
             "state" : "translated",
             "value" : "目前這一小時沒有紫外線資料。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前这一小时没有紫外线数据。"
+          }
         }
       }
     },
@@ -7344,6 +8064,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "此位置目前沒有每小時的詳細資料。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此位置当前没有每小时的详细数据。"
           }
         }
       }
@@ -7409,6 +8135,12 @@
             "state" : "translated",
             "value" : "凍雨"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冻雨"
+          }
         }
       }
     },
@@ -7472,6 +8204,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "體感"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "体感"
           }
         }
       }
@@ -7556,6 +8294,12 @@
             "state" : "translated",
             "value" : "低"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "低"
+          }
         }
       }
     },
@@ -7620,6 +8364,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "健康風險低"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "健康风险低"
           }
         }
       }
@@ -7686,6 +8436,12 @@
             "state" : "translated",
             "value" : "健康評估"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "健康评估"
+          }
         }
       }
     },
@@ -7750,6 +8506,12 @@
             "state" : "translated",
             "value" : "所選點位"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所选位置"
+          }
         }
       }
     },
@@ -7810,6 +8572,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雷雨"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "雷雨"
@@ -7914,6 +8682,12 @@
             "state" : "translated",
             "value" : "全球 0.25° 模型（開放資料，約延遲 2 小時）。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全球 0.25° 模型（开放数据，约延迟 2 小时）。"
+          }
         }
       }
     },
@@ -7978,6 +8752,12 @@
             "state" : "translated",
             "value" : "澳洲氣象局的全球模型。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "澳大利亚气象局的全球模型。"
+          }
         }
       }
     },
@@ -8041,6 +8821,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "中國氣象局的全球模型。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中国气象局的全球模型。"
           }
         }
       }
@@ -8107,6 +8893,12 @@
             "state" : "translated",
             "value" : "草類"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "草类"
+          }
         }
       }
     },
@@ -8171,6 +8963,12 @@
             "state" : "translated",
             "value" : "英國"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英国"
+          }
         }
       }
     },
@@ -8232,6 +9030,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "良好"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "良好"
@@ -8337,6 +9141,12 @@
             "state" : "translated",
             "value" : "主要污染物"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主要污染物"
+          }
         }
       }
     },
@@ -8402,6 +9212,12 @@
             "state" : "translated",
             "value" : "襯衫、防曬乳和太陽眼鏡可防止過度曝曬紫外線。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "衬衫、防晒霜和太阳镜可防止过度曝晒紫外线。"
+          }
         }
       }
     },
@@ -8462,6 +9278,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "今天"
@@ -8531,6 +9353,12 @@
             "state" : "translated",
             "value" : "今天"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天"
+          }
         }
       }
     },
@@ -8591,6 +9419,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天 %@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "今天 %@"
@@ -8659,6 +9493,12 @@
             "state" : "translated",
             "value" : "今天 %@ · 正常值 %@ · 紀錄 %@（%@）"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天 %@ · 正常值 %@ · 记录 %@（%@）"
+          }
         }
       }
     },
@@ -8720,6 +9560,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天空"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "天空"
@@ -8788,6 +9634,12 @@
             "state" : "translated",
             "value" : "加入"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入"
+          }
         }
       }
     },
@@ -8852,6 +9704,12 @@
             "state" : "translated",
             "value" : "高溫（%@）"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高温（%@）"
+          }
         }
       }
     },
@@ -8913,6 +9771,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "高"
@@ -8981,6 +9845,12 @@
             "state" : "translated",
             "value" : "義大利的高解析度模型。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "意大利的高分辨率模型。"
+          }
         }
       }
     },
@@ -9044,6 +9914,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "高解析度區域模型，全球範圍由 ECMWF 補充。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高分辨率区域模型，全球范围由 ECMWF 补充。"
           }
         }
       }
@@ -9109,6 +9985,12 @@
             "state" : "translated",
             "value" : "直式"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "竖版"
+          }
         }
       }
     },
@@ -9169,6 +10051,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最高值"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "最高值"
@@ -9238,6 +10126,12 @@
             "state" : "translated",
             "value" : "健康風險高，需要採取防護措施。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "健康风险高，需要采取防护措施。"
+          }
         }
       }
     },
@@ -9302,6 +10196,12 @@
             "state" : "translated",
             "value" : "高雲"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高云"
+          }
         }
       }
     },
@@ -9365,6 +10265,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "小時"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小时"
           }
         }
       }
@@ -9466,6 +10372,12 @@
             "state" : "translated",
             "value" : "在每日走勢中標示"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在每日走势中标示"
+          }
         }
       }
     },
@@ -9493,6 +10405,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "英吋"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英寸"
           }
         }
       }
@@ -9558,6 +10476,12 @@
             "state" : "translated",
             "value" : "義大利"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "意大利"
+          }
         }
       }
     },
@@ -9618,6 +10542,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日本"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日本"
@@ -9686,6 +10616,12 @@
             "state" : "translated",
             "value" : "每道條紋代表某一年在這一天的每日最高溫，並與正常值（1961–1990）相比。點按並在條紋上拖曳，即可讀取各年份。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每道条纹代表某一年在这一天的每日最高温，并与正常值（1961–1990）相比。点按并在条纹上拖动，即可读取各年份。"
+          }
         }
       }
     },
@@ -9751,6 +10687,12 @@
             "state" : "translated",
             "value" : "現在"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "现在"
+          }
         }
       }
     },
@@ -9815,6 +10757,12 @@
             "state" : "translated",
             "value" : "比 %@ 的所有 %@ 更冷（自 %@ 以來）。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "比 %@ 的所有 %@ 更冷（自 %@ 以来）。"
+          }
         }
       }
     },
@@ -9875,6 +10823,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最冷"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "最冷"
@@ -9943,6 +10897,12 @@
             "state" : "translated",
             "value" : "地圖"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地图"
+          }
         }
       }
     },
@@ -10006,6 +10966,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "關閉地圖"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭地图"
           }
         }
       }
@@ -10071,6 +11037,12 @@
             "state" : "translated",
             "value" : "不使用表情符號"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不使用表情符号"
+          }
         }
       }
     },
@@ -10134,6 +11106,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "不使用圖示"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不使用图标"
           }
         }
       }
@@ -10200,6 +11178,12 @@
             "state" : "translated",
             "value" : "無"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无"
+          }
         }
       }
     },
@@ -10263,6 +11247,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "無花粉負荷"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无花粉负荷"
           }
         }
       }
@@ -10329,6 +11319,12 @@
             "state" : "translated",
             "value" : "沒有資料"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有数据"
+          }
         }
       }
     },
@@ -10392,6 +11388,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "沒有系集資料"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有集合数据"
           }
         }
       }
@@ -10458,6 +11460,12 @@
             "state" : "translated",
             "value" : "沒有可用的花粉資料"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有可用的花粉数据"
+          }
         }
       }
     },
@@ -10521,6 +11529,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "沒有每小時資料"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有每小时数据"
           }
         }
       }
@@ -10586,6 +11600,12 @@
             "state" : "translated",
             "value" : "指標"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "指标"
+          }
         }
       }
     },
@@ -10643,6 +11663,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "自訂指標"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自定义指标"
           }
         }
       }
@@ -10708,6 +11734,12 @@
             "state" : "translated",
             "value" : "ECMWF 的 AI 氣象模型。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ECMWF 的 AI 气象模型。"
+          }
         }
       }
     },
@@ -10772,6 +11804,12 @@
             "state" : "translated",
             "value" : "收合圖表"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "收合图表"
+          }
         }
       }
     },
@@ -10832,6 +11870,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "晴"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "晴"
@@ -10900,6 +11944,12 @@
             "state" : "translated",
             "value" : "氣候"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "气候"
+          }
         }
       }
     },
@@ -10963,6 +12013,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "氣候。%@ %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "气候。%@ %@"
           }
         }
       }
@@ -11050,6 +12106,12 @@
             "state" : "translated",
             "value" : "韓國"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "韩国"
+          }
         }
       }
     },
@@ -11113,6 +12175,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "比平常涼"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "比平常凉"
           }
         }
       }
@@ -11178,6 +12246,12 @@
             "state" : "translated",
             "value" : "上次低溫紀錄"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上次低温记录"
+          }
         }
       }
     },
@@ -11241,6 +12315,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "上次高溫紀錄"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上次高温记录"
           }
         }
       }
@@ -11306,6 +12386,12 @@
             "state" : "translated",
             "value" : "授權"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "许可"
+          }
         }
       }
     },
@@ -11370,6 +12456,12 @@
             "state" : "translated",
             "value" : "地點"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地点"
+          }
         }
       }
     },
@@ -11433,6 +12525,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "刪除"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除"
           }
         }
       }
@@ -11499,6 +12597,12 @@
             "state" : "translated",
             "value" : "氣壓"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "气压"
+          }
         }
       }
     },
@@ -11562,6 +12666,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "濕度"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "湿度"
           }
         }
       }
@@ -11628,6 +12738,12 @@
             "state" : "translated",
             "value" : "空氣品質"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "空气质量"
+          }
         }
       }
     },
@@ -11691,6 +12807,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "空氣品質變化"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "空气质量变化"
           }
         }
       }
@@ -11768,6 +12890,12 @@
             "state" : "translated",
             "value" : "中度"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中度"
+          }
         }
       }
     },
@@ -11828,6 +12956,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最高"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "最高"
@@ -11896,6 +13030,12 @@
             "state" : "translated",
             "value" : "中位數"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中位数"
+          }
         }
       }
     },
@@ -11956,6 +13096,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更多"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "更多"
@@ -12024,6 +13170,12 @@
             "state" : "translated",
             "value" : "之後可以再加入更多地點。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "之后可以再加入更多地点。"
+          }
         }
       }
     },
@@ -12084,6 +13236,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的位置"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "我的位置"
@@ -12170,6 +13328,12 @@
             "state" : "translated",
             "value" : "最低"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最低"
+          }
         }
       }
     },
@@ -12233,6 +13397,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "中歐與阿爾卑斯山"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中欧与阿尔卑斯山"
           }
         }
       }
@@ -12299,6 +13469,12 @@
             "state" : "translated",
             "value" : "中度健康風險，請採取防護措施。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中度健康风险，请采取防护措施。"
+          }
         }
       }
     },
@@ -12362,6 +13538,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "中雲"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中云"
           }
         }
       }
@@ -12435,6 +13617,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "明天"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "明天"
@@ -12539,6 +13727,12 @@
             "state" : "translated",
             "value" : "北"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "北"
+          }
         }
       }
     },
@@ -12599,6 +13793,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向左"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "向左"
@@ -12667,6 +13867,12 @@
             "state" : "translated",
             "value" : "向上"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向上"
+          }
         }
       }
     },
@@ -12727,6 +13933,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向右"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "向右"
@@ -12795,6 +14007,12 @@
             "state" : "translated",
             "value" : "向下"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向下"
+          }
         }
       }
     },
@@ -12859,6 +14077,12 @@
             "state" : "translated",
             "value" : "各國氣象機構"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "各国气象机构"
+          }
         }
       }
     },
@@ -12922,6 +14146,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "原生 9 公里解析度，直接來自 ECMWF，每小時預報最遠至 +90 小時。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "原生 9 公里分辨率，直接来自 ECMWF，每小时预报最远至 +90 小时。"
           }
         }
       }
@@ -12988,6 +14218,12 @@
             "state" : "translated",
             "value" : "東北"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "东北"
+          }
         }
       }
     },
@@ -13051,6 +14287,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "霧"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雾"
           }
         }
       }
@@ -13116,6 +14358,12 @@
             "state" : "translated",
             "value" : "不在頁面上"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不在页面上"
+          }
         }
       }
     },
@@ -13180,6 +14428,12 @@
             "state" : "translated",
             "value" : "荷蘭與西歐"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "荷兰与西欧"
+          }
         }
       }
     },
@@ -13241,6 +14495,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降水"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "降水"
@@ -13310,6 +14570,12 @@
             "state" : "translated",
             "value" : "低"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "低"
+          }
         }
       }
     },
@@ -13374,6 +14640,12 @@
             "state" : "translated",
             "value" : "毛毛雨"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毛毛雨"
+          }
         }
       }
     },
@@ -13400,6 +14672,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NO"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "NO"
@@ -13468,6 +14746,12 @@
             "state" : "translated",
             "value" : "尚未儲存任何地點。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未保存任何地点。"
+          }
         }
       }
     },
@@ -13528,6 +14812,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "北美洲"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "北美洲"
@@ -13596,6 +14886,12 @@
             "state" : "translated",
             "value" : "北歐"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "北欧"
+          }
         }
       }
     },
@@ -13659,6 +14955,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "氣候平均值（1961–1990）"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "气候平均值（1961–1990）"
           }
         }
       }
@@ -13724,6 +15026,12 @@
             "state" : "translated",
             "value" : "氣候平均值 %@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "气候平均值 %@"
+          }
         }
       }
     },
@@ -13787,6 +15095,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "僅 %@ – 其他地點沒有資料"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仅 %@ – 其他地点没有数据"
           }
         }
       }
@@ -13853,6 +15167,12 @@
             "state" : "translated",
             "value" : "西北"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "西北"
+          }
         }
       }
     },
@@ -13879,6 +15199,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "O"
@@ -13941,6 +15267,12 @@
             "state" : "translated",
             "value" : "顯示詳細資訊"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示详细信息"
+          }
         }
       }
     },
@@ -13980,6 +15312,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opent de instellingen"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开设置"
           }
         }
       }
@@ -14045,6 +15383,12 @@
             "state" : "translated",
             "value" : "開啟地圖"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开地图"
+          }
         }
       }
     },
@@ -14084,6 +15428,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opent de plaatsen. Houd ingedrukt om snel van locatie te wisselen."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开地点。按住可快速切换地点。"
           }
         }
       }
@@ -14149,6 +15499,12 @@
             "state" : "translated",
             "value" : "開啟這一天的每小時預報"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开这一天的每小时预报"
+          }
         }
       }
     },
@@ -14212,6 +15568,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "顯示氣候詳細資訊"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示气候详细信息"
           }
         }
       }
@@ -14278,6 +15640,12 @@
             "state" : "translated",
             "value" : "開啟每小時環境圖表"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开每小时环境图表"
+          }
         }
       }
     },
@@ -14341,6 +15709,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開源"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开源"
           }
         }
       }
@@ -14425,6 +15799,12 @@
             "state" : "translated",
             "value" : "Open-Meteo 是一套開源天氣 API，彙整來自各國際氣象機構的開放天氣資料。Felix° 身為非商業應用程式，使用 Open-Meteo 的免費存取服務，並以每月五歐元的捐款支持該專案。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open-Meteo 是一套开源天气 API，汇整来自各国际气象机构的开放天气数据。Felix° 身为非商业应用程序，使用 Open-Meteo 的免费访问服务，并以每月五欧元的捐款支持该项目。"
+          }
         }
       }
     },
@@ -14507,6 +15887,12 @@
             "state" : "translated",
             "value" : "為 %@ 最佳化 · 全球資料"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为 %@ 优化 · 全球数据"
+          }
         }
       }
     },
@@ -14564,6 +15950,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地點"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地点"
           }
         }
       }
@@ -14629,6 +16021,12 @@
             "state" : "translated",
             "value" : "更改地點，目前為 %@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更改地点，当前为 %@"
+          }
         }
       }
     },
@@ -14692,6 +16090,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "自行搜尋地點"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自行搜索地点"
           }
         }
       }
@@ -14757,6 +16161,12 @@
             "state" : "translated",
             "value" : "搜尋地點…"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索地点…"
+          }
         }
       }
     },
@@ -14814,6 +16224,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選擇地點"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择地点"
           }
         }
       }
@@ -14880,6 +16296,12 @@
             "state" : "translated",
             "value" : "地點"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地点"
+          }
         }
       }
     },
@@ -14944,6 +16366,12 @@
             "state" : "translated",
             "value" : "管理地點"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理地点"
+          }
         }
       }
     },
@@ -14970,6 +16398,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PM"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "PM"
@@ -15039,6 +16473,12 @@
             "state" : "translated",
             "value" : "PM2.5 主要來自交通、燃燒木材與工業。這些細微粒子會深入肺部，對呼吸道與心血管系統造成負擔。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PM2.5 主要来自交通、燃烧木材与工业。这些细微粒子会深入肺部，对呼吸道与心血管系统造成负担。"
+          }
         }
       }
     },
@@ -15104,6 +16544,12 @@
             "state" : "translated",
             "value" : "PM10 通常來自道路揚塵、工地與農業。這些微粒會刺激眼睛與呼吸道，並可能加重敏感族群的症狀。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PM10 通常来自道路扬尘、工地与农业。这些微粒会刺激眼睛与呼吸道，并可能加重敏感人群的症状。"
+          }
         }
       }
     },
@@ -15165,6 +16611,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "花粉"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "花粉"
@@ -15234,6 +16686,12 @@
             "state" : "translated",
             "value" : "花粉/m³"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "花粉/m³"
+          }
         }
       }
     },
@@ -15297,6 +16755,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "花粉變化"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "花粉变化"
           }
         }
       }
@@ -15362,6 +16826,12 @@
             "state" : "translated",
             "value" : "橫向"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "横版"
+          }
         }
       }
     },
@@ -15422,6 +16892,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降雨"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "降雨"
@@ -15490,6 +16966,12 @@
             "state" : "translated",
             "value" : "降雨機率"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降雨概率"
+          }
         }
       }
     },
@@ -15554,6 +17036,12 @@
             "state" : "translated",
             "value" : "紀錄 %@（%@）"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "记录 %@（%@）"
+          }
         }
       }
     },
@@ -15615,6 +17103,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "南"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "南"
@@ -15684,6 +17178,12 @@
             "state" : "translated",
             "value" : "目前汙染物"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前污染物"
+          }
         }
       }
     },
@@ -15748,6 +17248,12 @@
             "state" : "translated",
             "value" : "陣雨"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阵雨"
+          }
         }
       }
     },
@@ -15809,6 +17315,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "差"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "差"
@@ -15878,6 +17390,12 @@
             "state" : "translated",
             "value" : "雪"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雪"
+          }
         }
       }
     },
@@ -15938,6 +17456,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降雪"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "降雪"
@@ -16006,6 +17530,12 @@
             "state" : "translated",
             "value" : "學校"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "学校"
+          }
         }
       }
     },
@@ -16070,6 +17600,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "二氧化硫主要來自工業與發電時燃燒含硫燃料。它會刺激呼吸道，對氣喘患者造成特別大的負擔。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二氧化硫主要来自工业与发电时燃烧含硫燃料。它会刺激呼吸道，对哮喘患者造成特别大的负担。"
           }
         }
       }
@@ -16136,6 +17672,12 @@
             "state" : "translated",
             "value" : "東南"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "东南"
+          }
         }
       }
     },
@@ -16200,6 +17742,12 @@
             "state" : "translated",
             "value" : "區段"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "区段"
+          }
         }
       }
     },
@@ -16261,6 +17809,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "非常高"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "非常高"
@@ -16330,6 +17884,12 @@
             "state" : "translated",
             "value" : "健康危害非常高，務必採取防護措施。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "健康危害非常高，务必采取防护措施。"
+          }
         }
       }
     },
@@ -16391,6 +17951,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "非常差"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "非常差"
@@ -16459,6 +18025,12 @@
             "state" : "translated",
             "value" : "已選取"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已选择"
+          }
         }
       }
     },
@@ -16519,6 +18091,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "序列"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "序列"
@@ -16587,6 +18165,12 @@
             "state" : "translated",
             "value" : "確定"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "确定"
+          }
         }
       }
     },
@@ -16613,6 +18197,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SO"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "SO"
@@ -16674,6 +18264,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "預報模型的一致性。帶狀範圍窄時，幾乎所有運算結果都相同；範圍寬時，當天天氣仍可能有不同結果。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "预报模型的一致性。带状范围窄时，几乎所有运算结果都相同；范围宽时，当天天气仍可能有不同结果。"
           }
         }
       }
@@ -16739,6 +18335,12 @@
             "state" : "translated",
             "value" : "上一次這麼涼的 %@ 是在 %@（%@）。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上一次这么凉的 %@ 是在 %@（%@）。"
+          }
         }
       }
     },
@@ -16802,6 +18404,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "自 %@ 以來從未這麼涼過。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自 %@ 以来从未这么凉过。"
           }
         }
       }
@@ -16867,6 +18475,12 @@
             "state" : "translated",
             "value" : "上一次這麼暖的 %@ 是在 %@（%@）。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上一次这么暖的 %@ 是在 %@（%@）。"
+          }
         }
       }
     },
@@ -16930,6 +18544,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "自 %@ 以來從未這麼暖過。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自 %@ 以来从未这么暖过。"
           }
         }
       }
@@ -16995,6 +18615,12 @@
             "state" : "translated",
             "value" : "陽光"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阳光"
+          }
         }
       }
     },
@@ -17055,6 +18681,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日出至日落"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日出至日落"
@@ -17123,6 +18755,12 @@
             "state" : "translated",
             "value" : "之後可以切換，或再加入其他項目。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "之后可以切换，或再加入其他项目。"
+          }
         }
       }
     },
@@ -17186,6 +18824,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "移除預設值"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移除默认值"
           }
         }
       }
@@ -17251,6 +18895,12 @@
             "state" : "translated",
             "value" : "回復預設值"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复默认值"
+          }
         }
       }
     },
@@ -17314,6 +18964,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "預設情況下，Felix° 會自動選擇最佳天氣模型。進階使用者可強制指定特定模型。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "默认情况下，Felix° 会自动选择最佳天气模型。高级用户可强制指定特定模型。"
           }
         }
       }
@@ -17379,6 +19035,12 @@
             "state" : "translated",
             "value" : "預設情況下，Felix° 會為每個地點自動選擇最佳模型，並結合多個氣象服務。推薦大多數使用者使用。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "默认情况下，Felix° 会为每个地点自动选择最佳模型，并结合多个气象服务。推荐大多数用户使用。"
+          }
         }
       }
     },
@@ -17443,6 +19105,12 @@
             "state" : "translated",
             "value" : "預設地點"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "默认地点"
+          }
         }
       }
     },
@@ -17503,6 +19171,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "位置"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "位置"
@@ -17571,6 +19245,12 @@
             "state" : "translated",
             "value" : "允許取用位置"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "允许使用位置"
+          }
         }
       }
     },
@@ -17635,6 +19315,12 @@
             "state" : "translated",
             "value" : "位置圖示"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "位置图标"
+          }
         }
       }
     },
@@ -17698,6 +19384,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開始"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始"
           }
         }
       }
@@ -17764,6 +19456,12 @@
             "state" : "translated",
             "value" : "二氧化氮主要來自道路交通與暖氣燃燒過程。它會刺激呼吸道，並可能使氣喘及其他肺部疾病惡化。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二氧化氮主要来自道路交通与暖气燃烧过程。它会刺激呼吸道，并可能使哮喘及其他肺部疾病恶化。"
+          }
         }
       }
     },
@@ -17827,6 +19525,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "每小時"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每小时"
           }
         }
       }
@@ -17892,6 +19596,12 @@
             "state" : "translated",
             "value" : "每小時"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每小时"
+          }
         }
       }
     },
@@ -17955,6 +19665,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "每小時詳情"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每小时详情"
           }
         }
       }
@@ -18020,6 +19736,12 @@
             "state" : "translated",
             "value" : "搜尋失敗"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索失败"
+          }
         }
       }
     },
@@ -18084,6 +19806,12 @@
             "state" : "translated",
             "value" : "搜尋地點，或在地圖上選擇一個點。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索地点，或在地图上选择一个点。"
+          }
         }
       }
     },
@@ -18145,6 +19873,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "西南"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "西南"
@@ -18213,6 +19947,12 @@
             "state" : "translated",
             "value" : "圖示"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图标"
+          }
         }
       }
     },
@@ -18276,6 +20016,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "系統"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "系统"
           }
         }
       }
@@ -18341,6 +20087,12 @@
             "state" : "translated",
             "value" : "限制每日數值"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "限制每日数值"
+          }
         }
       }
     },
@@ -18401,6 +20153,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每日"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "每日"
@@ -18469,6 +20227,12 @@
             "state" : "translated",
             "value" : "局部多雲"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "局部多云"
+          }
         }
       }
     },
@@ -18532,6 +20296,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "溫度"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "温度"
           }
         }
       }
@@ -18597,6 +20367,12 @@
             "state" : "translated",
             "value" : "溫度 %@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "温度 %@"
+          }
         }
       }
     },
@@ -18661,6 +20437,12 @@
             "state" : "translated",
             "value" : "低雲"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "低云"
+          }
         }
       }
     },
@@ -18721,6 +20503,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最低值"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "最低值"
@@ -18789,6 +20577,12 @@
             "state" : "translated",
             "value" : "時間"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时间"
+          }
         }
       }
     },
@@ -18852,6 +20646,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "點一下地圖即可新增地點。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "点一下地图即可添加地点。"
           }
         }
       }
@@ -18917,6 +20717,12 @@
             "state" : "translated",
             "value" : "趨勢"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "趋势"
+          }
         }
       }
     },
@@ -18980,6 +20786,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "關於"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关于"
           }
         }
       }
@@ -19045,6 +20857,12 @@
             "state" : "translated",
             "value" : "概觀"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "概览"
+          }
         }
       }
     },
@@ -19108,6 +20926,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "只在確切了解後果時，才手動覆寫自動選擇。大多數模型提供全球資料，但針對其原生地區最佳化。有些僅涵蓋自身地區，提供的資料可能少於自動選擇。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只在确切了解后果时，才手动覆盖自动选择。大多数模型提供全球数据，但针对其原生地区优化。有些仅涵盖自身地区，提供的数据可能少于自动选择。"
           }
         }
       }
@@ -19174,6 +20998,12 @@
             "state" : "translated",
             "value" : "總覽"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "总览"
+          }
         }
       }
     },
@@ -19234,6 +21064,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通常（P10–P90）"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "通常（P10–P90）"
@@ -19303,6 +21139,12 @@
             "state" : "translated",
             "value" : "時"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时"
+          }
         }
       }
     },
@@ -19366,6 +21208,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "環境"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "环境"
           }
         }
       }
@@ -19432,6 +21280,12 @@
             "state" : "translated",
             "value" : "環境詳細資訊"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "环境详细信息"
+          }
         }
       }
     },
@@ -19495,6 +21349,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "未知地點"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未知地点"
           }
         }
       }
@@ -19560,6 +21420,12 @@
             "state" : "translated",
             "value" : "不確定"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不确定"
+          }
         }
       }
     },
@@ -19624,6 +21490,12 @@
             "state" : "translated",
             "value" : "溫度下方"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "温度下方"
+          }
         }
       }
     },
@@ -19684,6 +21556,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "假期"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "假期"
@@ -19752,6 +21630,12 @@
             "state" : "translated",
             "value" : "美國"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美国"
+          }
         }
       }
     },
@@ -19778,6 +21662,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "UV"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "UV"
@@ -19847,6 +21737,12 @@
             "state" : "translated",
             "value" : "紫外線指數"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "紫外线指数"
+          }
         }
       }
     },
@@ -19910,6 +21806,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "紫外線指數最高 %lld（%@）"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "紫外线指数最高 %lld（%@）"
           }
         }
       }
@@ -19975,6 +21877,12 @@
             "state" : "translated",
             "value" : "紫外線指數變化圖"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "紫外线指数变化图"
+          }
         }
       }
     },
@@ -20038,6 +21946,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "蒸發"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "蒸发"
           }
         }
       }
@@ -20103,6 +22017,12 @@
             "state" : "translated",
             "value" : "歷程"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "历程"
+          }
         }
       }
     },
@@ -20166,6 +22086,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "每日最高溫歷程"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每日最高温变化"
           }
         }
       }
@@ -20231,6 +22157,12 @@
             "state" : "translated",
             "value" : "預報"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "预报"
+          }
         }
       }
     },
@@ -20295,6 +22227,12 @@
             "state" : "translated",
             "value" : "預報無法使用"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "预报无法使用"
+          }
         }
       }
     },
@@ -20358,6 +22296,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "預覽"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "预览"
           }
         }
       }
@@ -20424,6 +22368,12 @@
             "state" : "translated",
             "value" : "西"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "西"
+          }
         }
       }
     },
@@ -20481,6 +22431,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選擇每日預報的地點。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择每日预报的地点。"
           }
         }
       }
@@ -20546,6 +22502,12 @@
             "state" : "translated",
             "value" : "選擇每日數值要直接取代，或在 24 小時範圍內標示。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择每日数值要直接替换，或在 24 小时范围内标示。"
+          }
         }
       }
     },
@@ -20609,6 +22571,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "為全球每個地點自動選擇最佳模型，並結合多個氣象服務。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为全球每个地点自动选择最佳模型，并结合多个气象服务。"
           }
         }
       }
@@ -20674,6 +22642,12 @@
             "state" : "translated",
             "value" : "比 %@ 的所有 %@ 更溫暖，可追溯至 %@。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "比 %@ 的所有 %@ 更温暖，可追溯至 %@。"
+          }
         }
       }
     },
@@ -20734,6 +22708,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "比平常暖"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "比平常暖"
@@ -20802,6 +22782,12 @@
             "state" : "translated",
             "value" : "最暖"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最暖"
+          }
         }
       }
     },
@@ -20865,6 +22851,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "網站"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "网站"
           }
         }
       }
@@ -20930,6 +22922,12 @@
             "state" : "translated",
             "value" : "繼續"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "继续"
+          }
         }
       }
     },
@@ -20993,6 +22991,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "哪個地點？"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "哪个地点？"
           }
         }
       }
@@ -21058,6 +23062,12 @@
             "state" : "translated",
             "value" : "取代數值"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "替换数值"
+          }
         }
       }
     },
@@ -21121,6 +23131,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "天氣"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天气"
           }
         }
       }
@@ -21186,6 +23202,12 @@
             "state" : "translated",
             "value" : "天氣無法使用"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天气无法使用"
+          }
         }
       }
     },
@@ -21249,6 +23271,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "天氣資料"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天气数据"
           }
         }
       }
@@ -21314,6 +23342,12 @@
             "state" : "translated",
             "value" : "天氣模型"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天气模型"
+          }
         }
       }
     },
@@ -21377,6 +23411,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "風"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "风"
           }
         }
       }
@@ -21443,6 +23483,12 @@
             "state" : "translated",
             "value" : "風速"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "风速"
+          }
         }
       }
     },
@@ -21507,6 +23553,12 @@
             "state" : "translated",
             "value" : "風向"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "风向"
+          }
         }
       }
     },
@@ -21570,6 +23622,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "你現在在哪裡？"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你现在在哪里？"
           }
         }
       }
@@ -21636,6 +23694,12 @@
             "state" : "translated",
             "value" : "雲"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "云"
+          }
         }
       }
     },
@@ -21699,6 +23763,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "顯示圖表"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示图表"
           }
         }
       }
@@ -21764,6 +23834,12 @@
             "state" : "translated",
             "value" : "顯示接下來幾週預報的確定程度"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示接下来几周预报的确定程度"
+          }
         }
       }
     },
@@ -21827,6 +23903,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "時間格式"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时间格式"
           }
         }
       }
@@ -21892,6 +23974,12 @@
             "state" : "translated",
             "value" : "時間軸"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时间轴"
+          }
         }
       }
     },
@@ -21955,6 +24043,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "範圍"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "范围"
           }
         }
       }
@@ -22020,6 +24114,12 @@
             "state" : "translated",
             "value" : "相當確定"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "相当确定"
+          }
         }
       }
     },
@@ -22084,6 +24184,12 @@
             "state" : "translated",
             "value" : "相當不確定"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "相当不确定"
+          }
         }
       }
     },
@@ -22147,6 +24253,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "住家"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "家"
           }
         }
       }

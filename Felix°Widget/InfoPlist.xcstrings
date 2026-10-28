@@ -22,6 +22,12 @@
             "value" : "Felix°"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix°"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -109,6 +115,12 @@
             "state" : "translated",
             "value" : "Felix° 會使用你的位置，顯示你目前所在地的天氣。為了提供天氣預報，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo；地點名稱由 Apple 判斷。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° 会使用你的位置，显示你当前所在地的天气。为了提供天气预报，你的位置会先四舍五入至约 100 米，再发送至 Open-Meteo；地点名称由 Apple 判断。"
+          }
         }
       }
     },
@@ -173,6 +185,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Felix° 會使用你的位置，顯示你目前所在地的天氣。為了提供天氣預報，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo；地點名稱由 Apple 判斷。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° 会使用你的位置，显示你当前所在地的天气。为了提供天气预报，你的位置会先四舍五入至约 100 米，再发送至 Open-Meteo；地点名称由 Apple 判断。"
           }
         }
       }
@@ -239,6 +257,12 @@
             "state" : "translated",
             "value" : "Felix° 會使用你的位置，顯示你目前所在地的天氣。為了提供天氣預報，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo；地點名稱由 Apple 判斷。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° 会使用你的位置，显示你当前所在地的天气。为了提供天气预报，你的位置会先四舍五入至约 100 米，再发送至 Open-Meteo；地点名称由 Apple 判断。"
+          }
         }
       }
     },
@@ -303,6 +327,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Felix° 會使用你的位置，顯示你目前所在地的天氣。為了提供天氣預報，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo；地點名稱由 Apple 判斷。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° 会使用你的位置，显示你当前所在地的天气。为了提供天气预报，你的位置会先四舍五入至约 100 米，再发送至 Open-Meteo；地点名称由 Apple 判断。"
           }
         }
       }
