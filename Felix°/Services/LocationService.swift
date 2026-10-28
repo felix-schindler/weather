@@ -31,8 +31,7 @@ final class LocationService: NSObject, @preconcurrency CLLocationManagerDelegate
 	private var lastGeocoded:
 		(
 			coordinate: CLLocationCoordinate2D,
-			name: String,
-			countryCode: String?
+			name: String
 		)?
 
 	private override init() {
@@ -130,14 +129,14 @@ final class LocationService: NSObject, @preconcurrency CLLocationManagerDelegate
 	}
 
 	func getLocationName() async -> String {
-		await getPlacemarkInfo().name
+		await getPlacemarkInfo()
 	}
 
-	func getPlacemarkInfo() async -> (name: String, countryCode: String?) {
+	func getPlacemarkInfo() async -> String {
 		let selectedCity = city.getSelectedCity()
 
 		if let selectedCity {
-			return (selectedCity.label ?? "", nil)
+			return selectedCity.label ?? ""
 		}
 
 		let coordinates = gpsLocation
@@ -151,12 +150,12 @@ final class LocationService: NSObject, @preconcurrency CLLocationManagerDelegate
 				longitude: lastGeocoded.coordinate.longitude
 			)
 			if currentLocation.distance(from: cachedLocation) < 2_000 {
-				return (lastGeocoded.name, lastGeocoded.countryCode)
+				return lastGeocoded.name
 			}
 		}
 
 		if let override = LocationService.localityOverride(for: coordinates) {
-			return (override, nil)
+			return override
 		}
 
 		let latitude = coordinates.latitude
@@ -169,29 +168,28 @@ final class LocationService: NSObject, @preconcurrency CLLocationManagerDelegate
 				#else
 					let placemarks = try await reverseGeocode(location)
 					guard let placemark = placemarks.first else {
-						return (name: "", countryCode: String?.none)
+						return ""
 					}
-					return (name: placemark.locality ?? "", countryCode: placemark.isoCountryCode)
+					return placemark.locality ?? ""
 				#endif
 			}
-			if !geocoded.name.isEmpty {
-				lastGeocoded = (coordinates, geocoded.name, geocoded.countryCode)
+			if !geocoded.isEmpty {
+				lastGeocoded = (coordinates, geocoded)
 			}
-			return (geocoded.name, geocoded.countryCode)
+			return geocoded
 		} catch {
 			Self.logger.error("Error reverse geocoding: \(error.localizedDescription, privacy: .public)")
 		}
 
-		return ("", nil)
+		return ""
 	}
 
 	func getLocation() async -> Location {
 		let coordinates = getCoordinates()
-		let info = await getPlacemarkInfo()
 
 		let location = Location()
 		location.coordinates = coordinates
-		location.name = info.name
+		location.name = await getPlacemarkInfo()
 
 		return location
 	}
@@ -240,18 +238,17 @@ final class LocationService: NSObject, @preconcurrency CLLocationManagerDelegate
 		let request: MKReverseGeocodingRequest?
 	}
 
-	private func mapKitReverseGeocode(_ location: CLLocation) async throws -> (name: String, countryCode: String?) {
+	private func mapKitReverseGeocode(_ location: CLLocation) async throws -> String {
 		let box = SendableGeocodingRequest(request: MKReverseGeocodingRequest(location: location))
 		guard let request = box.request else {
-			return ("", nil)
+			return ""
 		}
 		return try await withTaskCancellationHandler {
 			let mapItems = try await request.mapItems
 			guard let item = mapItems.first else {
-				return ("", String?.none)
+				return ""
 			}
-			let name = item.addressRepresentations?.cityName ?? item.name ?? ""
-			return (name, item.addressRepresentations?.region?.identifier)
+			return item.addressRepresentations?.cityName ?? item.name ?? ""
 		} onCancel: {
 			box.request?.cancel()
 		}

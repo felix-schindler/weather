@@ -116,10 +116,10 @@ extension Weather {
 		}
 
 		locationService.update()
-		let info = await locationService.getPlacemarkInfo()
+		let name = await locationService.getPlacemarkInfo()
 		location.coordinates = locationService.getCoordinates()
-		if !info.name.isEmpty || location.name.isEmpty {
-			location.name = info.name
+		if !name.isEmpty || location.name.isEmpty {
+			location.name = name
 		}
 
 		let coordinates = location.coordinates

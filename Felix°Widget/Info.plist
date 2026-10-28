@@ -28,13 +28,13 @@
 		<string>com.apple.widgetkit-extension</string>
 	</dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und amtliche Warnungen wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Environment Canada gesendet, den Ortsnamen ermittelt Apple.</string>
+	<string>Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für die Vorhersage wird dein Standort auf ca. 100 m gerundet an Open-Meteo gesendet, den Ortsnamen ermittelt Apple.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und amtliche Warnungen wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Environment Canada gesendet, den Ortsnamen ermittelt Apple.</string>
+	<string>Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für die Vorhersage wird dein Standort auf ca. 100 m gerundet an Open-Meteo gesendet, den Ortsnamen ermittelt Apple.</string>
 	<key>NSLocationUsageDescription</key>
-	<string>Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und amtliche Warnungen wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Environment Canada gesendet, den Ortsnamen ermittelt Apple.</string>
+	<string>Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für die Vorhersage wird dein Standort auf ca. 100 m gerundet an Open-Meteo gesendet, den Ortsnamen ermittelt Apple.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und amtliche Warnungen wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Environment Canada gesendet, den Ortsnamen ermittelt Apple.</string>
+	<string>Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für die Vorhersage wird dein Standort auf ca. 100 m gerundet an Open-Meteo gesendet, den Ortsnamen ermittelt Apple.</string>
 	<key>NSWidgetWantsLocation</key>
 	<true/>
 </dict>

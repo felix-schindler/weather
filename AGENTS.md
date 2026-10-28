@@ -11,7 +11,7 @@ Guide for agents working in this repo — Felix°, a SwiftUI weather app (iOS + 
 
 ## OpenAPI network code is generated
 
-`Felix°/Networking/openapi.yml` is the source of truth for the API client (Open-Meteo and Environment Canada). swift-openapi-generator is an Xcode **build plugin** — generated types are not committed. Never edit generated files; edit `openapi.yml` and the code regenerates on the next build. "file not found: client types" style errors usually mean a stale build — ask the human to build again.
+`Felix°/Networking/openapi.yml` is the source of truth for the API client (Open-Meteo). swift-openapi-generator is an Xcode **build plugin** — generated types are not committed. Never edit generated files; edit `openapi.yml` and the code regenerates on the next build. "file not found: client types" style errors usually mean a stale build — ask the human to build again.
 
 ## Never build or run the app
 

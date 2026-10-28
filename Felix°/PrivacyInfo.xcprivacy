@@ -36,7 +36,7 @@
 	     precise location (3 or more decimal places). -->
 	<key>NSPrivacyCollectedDataTypes</key>
 	<array>
-		<!-- Forecast requests to Open-Meteo and Canadian weather alert requests to Environment Canada. -->
+		<!-- Forecast requests to Open-Meteo. -->
 		<dict>
 			<key>NSPrivacyCollectedDataType</key>
 			<string>NSPrivacyCollectedDataTypePreciseLocation</string>

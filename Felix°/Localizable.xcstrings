@@ -1963,35 +1963,6 @@
         }
       }
     },
-    "Aktive Warngebiete (DWD, MeteoAlarm)" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktive Warngebiete (DWD, MeteoAlarm)"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Active warning areas (DWD, MeteoAlarm)"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Áreas de alerta ativas (DWD, MeteoAlarm)"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "作用中的警報區域（DWD、MeteoAlarm）"
-          }
-        }
-      }
-    },
     "Aktualisieren" : {
       "localizations" : {
         "de" : {
@@ -2329,64 +2300,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "豬草"
-          }
-        }
-      }
-    },
-    "Amtliche Warnungen für deinen Ort." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Amtliche Warnungen für deinen Ort."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Official warnings for your location."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alertas oficiais para sua localização."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "你所在位置的官方警報。"
-          }
-        }
-      }
-    },
-    "Amtliche Warnungen in Europa (DWD, MeteoAlarm), den USA (NWS), Kanada (ECCC) und Taiwan (CWA)." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Amtliche Warnungen in Europa (DWD, MeteoAlarm), den USA (NWS), Kanada (ECCC) und Taiwan (CWA)."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Official warnings in Europe (DWD, MeteoAlarm), the US (NWS), Canada (ECCC), and Taiwan (CWA)."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alertas oficiais na Europa (DWD, MeteoAlarm), nos EUA (NWS), no Canadá (ECCC) e em Taiwan (CWA)."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "歐洲（DWD、MeteoAlarm）、美國（NWS）、加拿大（ECCC）與台灣（CWA）的官方警報。"
           }
         }
       }
@@ -5302,35 +5215,6 @@
         }
       }
     },
-    "Extreme Unwetterwarnung" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Extreme Unwetterwarnung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Extreme Weather Warning"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alerta extremo de tempo severo"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "極端天氣警報"
-          }
-        }
-      }
-    },
     "Extremer Schauer" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -5527,64 +5411,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Felix° 會以此地點開啟。"
-          }
-        }
-      }
-    },
-    "Felix° verwendet das europäische Radarkomposit des OPERA-Programms von EUMETNET, dem Zusammenschluss der europäischen Wetterdienste, für das Regenradar in Europa außerhalb Zentraleuropas, amtliche Warnmeldungen der europäischen Warnplattform Meteoalarm sowie Messwerte europäischer Wetterstationen aus dem Datenhub E-SOH. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu EUMETNET dar." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° verwendet das europäische Radarkomposit des OPERA-Programms von EUMETNET, dem Zusammenschluss der europäischen Wetterdienste, für das Regenradar in Europa außerhalb Zentraleuropas, amtliche Warnmeldungen der europäischen Warnplattform Meteoalarm sowie Messwerte europäischer Wetterstationen aus dem Datenhub E-SOH. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu EUMETNET dar."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° uses the European radar composite from EUMETNET's OPERA program, the network of European meteorological services, for the rain radar in Europe outside Central Europe, official warnings from the European alerting platform Meteoalarm, and readings from European weather stations via the E-SOH data hub. Use does not imply endorsement by or official affiliation with EUMETNET."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° usa o composto de radar europeu do programa OPERA da EUMETNET, a associação dos serviços meteorológicos europeus, para o radar de chuva na Europa fora da Europa Central, avisos oficiais da plataforma europeia de alertas Meteoalarm e leituras de estações meteorológicas europeias do hub de dados E-SOH. O uso não implica endosso nem vínculo oficial com a EUMETNET."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° 使用 EUMETNET（歐洲各氣象局組成的聯合組織）OPERA 計畫的歐洲雷達合成圖，用於中歐以外歐洲地區的降雨雷達；同時使用歐洲警報平台 Meteoalarm 的官方警報，以及透過 E-SOH 資料中心取得的歐洲氣象站觀測值。此使用行為不代表 EUMETNET 的背書，也不代表與 EUMETNET 有官方關係。"
-          }
-        }
-      }
-    },
-    "Felix° verwendet Daten der Central Weather Administration (CWA), der Wetterbehörde Taiwans: das QPESUMS-Radarkomposit für das Regenradar über Taiwan sowie amtliche Warnungen auf Landkreisebene. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zur CWA dar." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° verwendet Daten der Central Weather Administration (CWA), der Wetterbehörde Taiwans: das QPESUMS-Radarkomposit für das Regenradar über Taiwan sowie amtliche Warnungen auf Landkreisebene. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zur CWA dar."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° uses data from the Central Weather Administration (CWA), Taiwan's weather agency: the QPESUMS radar composite for the rain radar over Taiwan and official county-level warnings. Use does not imply endorsement by or official affiliation with the CWA."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° usa dados da Central Weather Administration (CWA), agência meteorológica de Taiwan: o composto de radar QPESUMS para o radar de chuva sobre Taiwan e avisos oficiais por condado. O uso não implica endosso nem vínculo oficial com a CWA."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° 使用台灣氣象機關中央氣象署（CWA）的資料：台灣降雨雷達採用 QPESUMS 雷達合成圖，以及官方縣市層級警報。此使用行為不代表 CWA 的背書，也不代表與 CWA 有官方關係。"
           }
         }
       }
@@ -8954,35 +8780,6 @@
       },
       "shouldTranslate" : false
     },
-    "Markante Wetterwarnung" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Markante Wetterwarnung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Significant Weather Warning"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alerta meteorológico significativo"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "顯著天氣警報"
-          }
-        }
-      }
-    },
     "Mäßig" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -12129,58 +11926,6 @@
         }
       }
     },
-    "Regenwarnungen" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rain Warnings"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alertas de chuva"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "降雨警報"
-          }
-        }
-      }
-    },
-    "Regenwarnungen per Radar in Europa, den USA, Taiwan, Brasilien und auf den Kanaren." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Regenwarnungen per Radar in Europa, den USA, Taiwan, Brasilien und auf den Kanaren."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rain warnings via radar in Europe, the US, Taiwan, Brazil, and the Canary Islands."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alertas de chuva por radar na Europa, nos EUA, em Taiwan, no Brasil e nas Ilhas Canárias."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "透過雷達提供的降雨警報，涵蓋歐洲、美國、台灣、巴西與加那利群島。"
-          }
-        }
-      }
-    },
     "Regenzelle" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -14820,35 +14565,6 @@
         }
       }
     },
-    "Unwetterwarnung" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unwetterwarnung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Severe Weather Warning"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alerta de tempo severo"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "劇烈天氣警報"
-          }
-        }
-      }
-    },
     "Urlaub" : {
       "localizations" : {
         "de" : {
@@ -15537,35 +15253,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最暖"
-          }
-        }
-      }
-    },
-    "Warnungen" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Warnungen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Warnings"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alertas"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "警報"
           }
         }
       }

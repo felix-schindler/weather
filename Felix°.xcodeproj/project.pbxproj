@@ -998,8 +998,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Felix°";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und amtliche Warnungen wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Environment Canada gesendet, den Ortsnamen ermittelt Apple.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und amtliche Warnungen wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Environment Canada gesendet, den Ortsnamen ermittelt Apple.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für die Vorhersage wird dein Standort auf ca. 100 m gerundet an Open-Meteo gesendet, den Ortsnamen ermittelt Apple.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für die Vorhersage wird dein Standort auf ca. 100 m gerundet an Open-Meteo gesendet, den Ortsnamen ermittelt Apple.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.schindlerfelix.weather;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1031,8 +1031,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Felix°";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und amtliche Warnungen wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Environment Canada gesendet, den Ortsnamen ermittelt Apple.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und amtliche Warnungen wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Environment Canada gesendet, den Ortsnamen ermittelt Apple.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für die Vorhersage wird dein Standort auf ca. 100 m gerundet an Open-Meteo gesendet, den Ortsnamen ermittelt Apple.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für die Vorhersage wird dein Standort auf ca. 100 m gerundet an Open-Meteo gesendet, den Ortsnamen ermittelt Apple.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.schindlerfelix.weather;
 				LD_RUNPATH_SEARCH_PATHS = (
