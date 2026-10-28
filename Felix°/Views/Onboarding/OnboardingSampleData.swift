@@ -90,40 +90,4 @@ enum OnboardingSampleData {
 	}
 
 	static let dailyTemperatureBounds = (min: 10.0, max: 30.0)
-
-	static let ensembleDays: [EnsembleDay] = {
-		let highs: [Double] = [16, 19, 22, 24, 26, 25, 21, 24, 27, 25, 23, 22, 24, 26, 27, 25]
-		let lows: [Double] = [13, 12, 13, 14, 15, 16, 14, 13, 15, 16, 14, 13, 14, 15, 16, 15]
-		let rain: [Double] = [32, 9, 0.5, 0, 0, 0.3, 5, 0, 0, 1, 3, 6, 2, 0, 0, 4]
-		let winds: [Double] = [30, 22, 14, 10, 9, 12, 18, 11, 9, 13, 15, 17, 12, 10, 11, 14]
-		let runs = 1...30
-		let today = Calendar.current.startOfDay(for: .now)
-
-		return highs.indices.map { day in
-			func spread(_ base: Double, _ width: Double) -> [Double] {
-				runs.map { run in base + sin(Double(run) * 1.7 + Double(day) * 0.9) * width }
-			}
-			let width = 0.7 + Double(day) * 0.38
-			let precipitation = runs.map { run in
-				let phase = Double(run) * 1.7
-				return max(0, rain[day] * (1 + sin(phase) * 0.25) + sin(phase + Double(day) * 0.9) * (0.4 + Double(day) * 0.9))
-			}
-			let codes = zip(runs, precipitation).map { run, mm in
-				mm >= 5 ? 63 : mm >= 1 ? 61 : mm >= 0.2 ? 51 : [0, 2, 3][(run + day) % 3]
-			}
-			return EnsembleDay(
-				id: day,
-				noon: today.addingTimeInterval(Double(day) * 86_400 + 12 * 3600).timeIntervalSince1970,
-				runs: runs.count,
-				high: EnsembleSpread(spread(highs[day], width)),
-				low: EnsembleSpread(spread(lows[day], width * 0.8)),
-				precipitation: EnsembleSpread(precipitation),
-				wind: EnsembleSpread(spread(winds[day], 1.2 + Double(day) * 0.35).map { max(4, $0) }),
-				snowfall: 0,
-				cloudCover: nil,
-				sky: EnsembleSkyMix(codes: codes)
-			)
-		}
-	}()
-
 }

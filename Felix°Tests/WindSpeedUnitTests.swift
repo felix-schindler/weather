@@ -54,13 +54,6 @@ struct BeaufortScaleTests {
 	}
 
 	@Test
-	func entryForForceClampsOutOfRange() {
-		#expect(BeaufortScale.entry(forForce: -3).force == 0)
-		#expect(BeaufortScale.entry(forForce: 99).force == 12)
-		#expect(BeaufortScale.entry(forForce: 5).force == 5)
-	}
-
-	@Test
 	func valueForNilSpeedIsNil() {
 		#expect(BeaufortScale.value(forKilometersPerHour: nil) == nil)
 		#expect(BeaufortScale.value(forKilometersPerHour: 50) == 7.0)

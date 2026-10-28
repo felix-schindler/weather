@@ -5,8 +5,7 @@ struct EnvironmentDetailView: View {
 	@Environment(\.dismiss) private var dismiss
 
 	@State private var selectedSection: EnvironmentDetailSection
-	@State private var chartScrollSynchronizer = ChartScrollSynchronizer()
-	@State private var chartTimelineVersion = 0
+	@State private var chartScrollX: Date?
 
 	init(scrollTo: EnvironmentDetailSection) {
 		_selectedSection = State(initialValue: scrollTo)
@@ -31,6 +30,13 @@ struct EnvironmentDetailView: View {
 	private var referenceDate: Date {
 		guard let currentIndex else { return Date.now }
 		return Date(timeIntervalSince1970: time[currentIndex])
+	}
+
+	private var chartScrollPosition: Binding<Date> {
+		Binding(
+			get: { chartScrollX ?? initialChartScrollPosition },
+			set: { chartScrollX = $0 }
+		)
 	}
 
 	private var initialChartScrollPosition: Date {
@@ -138,7 +144,7 @@ struct EnvironmentDetailView: View {
 	var body: some View {
 		NavigationStack {
 			VStack(spacing: 0) {
-				DetailSectionPicker(label: "Umweltdetails", selection: $selectedSection)
+				EnvironmentDetailSectionPicker(selection: $selectedSection)
 
 				TabView(selection: $selectedSection) {
 					ForEach(EnvironmentDetailSection.allCases) { section in
@@ -156,8 +162,7 @@ struct EnvironmentDetailView: View {
 				}
 			}
 			.onChange(of: time) { _, _ in
-				chartScrollSynchronizer.reset()
-				chartTimelineVersion &+= 1
+				chartScrollX = nil
 			}
 		}
 	}
@@ -192,9 +197,7 @@ struct EnvironmentDetailView: View {
 				so2: weather.air.hourly?.european_aqi_so2 ?? [],
 				maxTimeRange: maxTimeRange,
 				referenceDate: referenceDate,
-				initialChartScrollPosition: initialChartScrollPosition,
-				chartScrollSynchronizer: chartScrollSynchronizer,
-				chartTimelineVersion: chartTimelineVersion
+				chartScrollPosition: chartScrollPosition
 			)
 		case .uv:
 			EnvironmentUVSectionView(
@@ -207,9 +210,7 @@ struct EnvironmentDetailView: View {
 				time: time,
 				maxTimeRange: maxTimeRange,
 				referenceDate: referenceDate,
-				initialChartScrollPosition: initialChartScrollPosition,
-				chartScrollSynchronizer: chartScrollSynchronizer,
-				chartTimelineVersion: chartTimelineVersion
+				chartScrollPosition: chartScrollPosition
 			)
 		case .pollen:
 			EnvironmentPollenSectionView(
@@ -224,9 +225,7 @@ struct EnvironmentDetailView: View {
 				ragweed: weather.air.hourly?.ragweed_pollen ?? [],
 				maxTimeRange: maxTimeRange,
 				referenceDate: referenceDate,
-				initialChartScrollPosition: initialChartScrollPosition,
-				chartScrollSynchronizer: chartScrollSynchronizer,
-				chartTimelineVersion: chartTimelineVersion
+				chartScrollPosition: chartScrollPosition
 			)
 		}
 	}

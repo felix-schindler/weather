@@ -69,8 +69,6 @@ enum NowSection: String, CaseIterable, Identifiable, Codable {
 enum WideForecast {
 	static let minWidth: CGFloat = 760
 	static let defaultStage: Set<NowSection> = []
-
-	static let maxColumnWidth: CGFloat = 720
 }
 
 enum LayoutForm: String, CaseIterable {

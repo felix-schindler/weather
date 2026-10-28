@@ -1,88 +1,53 @@
 import Foundation
 
 extension SettingService {
-	nonisolated private static let formatterLock = NSLock()
-	nonisolated(unsafe) private static var formatterCache: [String: DateFormatter] = [:]
-
 	nonisolated static func formattedTime(
 		_ date: Date,
 		timeZone: TimeZone? = nil,
 		showsMinutes: Bool = true
 	) -> String {
-		let mode = resolvedTimeFormatPreference
-		let key = "time|\(mode.rawValue)|\(showsMinutes)|\(timeZone?.identifier ?? "local")"
-		return format(date, key: key) {
-			$0.locale = .autoupdatingCurrent
-			$0.timeZone = timeZone
-			switch mode {
-			case .system:
-				$0.dateStyle = .none
-				$0.timeStyle = showsMinutes ? .short : .none
-				if !showsMinutes {
-					$0.dateFormat = DateFormatter.dateFormat(
-						fromTemplate: "j",
-						options: 0,
-						locale: .autoupdatingCurrent
-					)
-				}
-			case .h24:
-				$0.dateFormat = showsMinutes ? "HH:mm" : "HH"
-			case .h12:
-				$0.dateFormat = showsMinutes ? "h:mm a" : "h a"
-			}
-		}
-	}
-
-	nonisolated static func formattedDateTime(_ date: Date, timeZone: TimeZone? = nil) -> String {
-		let key = "date|\(timeZone?.identifier ?? "local")"
-		let dateString = format(date, key: key) {
-			$0.locale = .autoupdatingCurrent
-			$0.timeZone = timeZone
-			$0.dateStyle = .short
-			$0.timeStyle = .none
-		}
-		return "\(dateString), \(formattedTime(date, timeZone: timeZone))"
+		date.formatted(style(timeStyle(showsMinutes: showsMinutes), in: timeZone))
 	}
 
 	nonisolated static func formattedWeekday(_ date: Date, timeZone: TimeZone) -> String {
-		format(date, key: "weekday|\(timeZone.identifier)") {
-			$0.locale = .autoupdatingCurrent
-			$0.timeZone = timeZone
-			$0.dateFormat = "EEEE"
-		}
+		date.formatted(style(.dateTime.weekday(.wide), in: timeZone))
 	}
 
 	nonisolated static func formattedDayMonth(_ date: Date, timeZone: TimeZone) -> String {
-		format(date, key: "dayMonth|\(timeZone.identifier)") {
-			$0.locale = .autoupdatingCurrent
-			$0.timeZone = timeZone
-			$0.setLocalizedDateFormatFromTemplate("d MMM")
-		}
+		date.formatted(style(.dateTime.month(.abbreviated).day(), in: timeZone))
 	}
 
 	nonisolated static func formattedShortWeekday(_ date: Date, timeZone: TimeZone) -> String {
-		format(date, key: "shortWeekday|\(timeZone.identifier)") {
-			$0.locale = .autoupdatingCurrent
-			$0.timeZone = timeZone
-			$0.dateFormat = "EEE"
-		}
+		date.formatted(style(.dateTime.weekday(.abbreviated), in: timeZone))
 	}
 
-	nonisolated private static func format(
-		_ date: Date,
-		key: String,
-		configure: (DateFormatter) -> Void
-	) -> String {
-		formatterLock.withLock {
-			let formatter: DateFormatter
-			if let cached = formatterCache[key] {
-				formatter = cached
-			} else {
-				formatter = DateFormatter()
-				configure(formatter)
-				formatterCache[key] = formatter
-			}
-			return formatter.string(from: date)
+	nonisolated private static func style(
+		_ style: Date.FormatStyle,
+		in timeZone: TimeZone?
+	) -> Date.FormatStyle {
+		var style = style
+		style.locale = .autoupdatingCurrent
+		style.timeZone = timeZone ?? .autoupdatingCurrent
+		return style
+	}
+
+	nonisolated private static func timeStyle(showsMinutes: Bool) -> Date.FormatStyle {
+		switch resolvedTimeFormatPreference {
+		case .system:
+			return
+				showsMinutes
+				? Date.FormatStyle(date: .omitted, time: .shortened)
+				: .dateTime.hour(.defaultDigits(amPM: .abbreviated))
+		case .h24:
+			return
+				showsMinutes
+				? .dateTime.hour(.twoDigits(amPM: .omitted)).minute(.twoDigits)
+				: .dateTime.hour(.twoDigits(amPM: .omitted))
+		case .h12:
+			return
+				showsMinutes
+				? .dateTime.hour(.defaultDigits(amPM: .abbreviated)).minute(.twoDigits)
+				: .dateTime.hour(.defaultDigits(amPM: .abbreviated))
 		}
 	}
 }

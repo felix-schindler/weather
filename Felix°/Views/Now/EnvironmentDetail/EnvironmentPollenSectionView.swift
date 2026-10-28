@@ -1,3 +1,4 @@
+import Charts
 import SwiftUI
 
 struct EnvironmentPollenSectionView: View {
@@ -12,9 +13,7 @@ struct EnvironmentPollenSectionView: View {
 	let ragweed: [Double?]
 	let maxTimeRange: ClosedRange<Date>
 	let referenceDate: Date
-	let initialChartScrollPosition: Date
-	let chartScrollSynchronizer: ChartScrollSynchronizer
-	let chartTimelineVersion: Int
+	let chartScrollPosition: Binding<Date>
 
 	var body: some View {
 		VStack(alignment: .leading, spacing: 16) {
@@ -41,11 +40,7 @@ struct EnvironmentPollenSectionView: View {
 						maxTimeRange: maxTimeRange,
 						referenceDate: referenceDate
 					)
-					.synchronizedChartScroll(
-						initialX: initialChartScrollPosition,
-						using: chartScrollSynchronizer
-					)
-					.id(chartTimelineVersion)
+					.chartScrollPosition(x: chartScrollPosition)
 				}
 
 				DetailCard {

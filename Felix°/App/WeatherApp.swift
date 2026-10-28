@@ -24,7 +24,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 			Task { @MainActor in
 				await CacheStore.shared.dropMemory()
 				await ClimateArchiveStore.shared.dropMemory()
-				await DailyEnsembleForecastCache.shared.dropMemory()
+				await APIClient.ensembleCache.dropMemory()
 			}
 		}
 		return true
@@ -86,9 +86,6 @@ struct WeatherApp: App {
 			.environment(weather)
 			.environment(location)
 			.task {
-				#if DEBUG
-					await ScreenshotMode.stageOnAppear()
-				#endif
 				hydrateFromCache()
 				await weather.refresh(location: location)
 			}

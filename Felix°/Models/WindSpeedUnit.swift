@@ -41,59 +41,6 @@ enum WindSpeedUnit: String {
 }
 
 enum BeaufortScale {
-	struct Entry: Identifiable {
-		let force: Int
-		let name: String
-		let range: String
-		let landMeaning: String
-		let colorHex: Int
-
-		var id: Int { force }
-		var title: String { "\(force) Bft · \(name)" }
-	}
-
-	static let entries: [Entry] = [
-		Entry(
-			force: 0, name: String(localized: "Windstille"), range: "< 1 km/h", landMeaning: String(localized: "Rauch steigt fast senkrecht auf."),
-			colorHex: 0xFFFFFF),
-		Entry(
-			force: 1, name: String(localized: "Leiser Zug"), range: "1-5 km/h",
-			landMeaning: String(localized: "Rauch driftet leicht, Windfahnen bleiben ruhig."), colorHex: 0xAEF1F9),
-		Entry(
-			force: 2, name: String(localized: "Leichte Brise"), range: "6-11 km/h",
-			landMeaning: String(localized: "Blätter rascheln, Wind ist im Gesicht spürbar."), colorHex: 0x96F7DC),
-		Entry(
-			force: 3, name: String(localized: "Schwache Brise"), range: "12-19 km/h",
-			landMeaning: String(localized: "Dünne Zweige bewegen sich, Wimpel strecken sich."), colorHex: 0x96F7B4),
-		Entry(
-			force: 4, name: String(localized: "Mäßige Brise"), range: "20-28 km/h",
-			landMeaning: String(localized: "Zweige bewegen sich, loses Papier hebt ab."), colorHex: 0x6FF46F),
-		Entry(
-			force: 5, name: String(localized: "Frische Brise"), range: "29-38 km/h",
-			landMeaning: String(localized: "Größere Zweige und kleine Bäume bewegen sich."), colorHex: 0x73ED12),
-		Entry(
-			force: 6, name: String(localized: "Starker Wind"), range: "39-49 km/h",
-			landMeaning: String(localized: "Dicke Äste bewegen sich, Drähte können pfeifen."), colorHex: 0xA4ED12),
-		Entry(
-			force: 7, name: String(localized: "Steifer Wind"), range: "50-61 km/h",
-			landMeaning: String(localized: "Bäume schwanken, Gehen gegen den Wind wird mühsam."), colorHex: 0xDAED12),
-		Entry(
-			force: 8, name: String(localized: "Stürmischer Wind"), range: "62-74 km/h",
-			landMeaning: String(localized: "Große Bäume bewegen sich, Zweige können brechen."), colorHex: 0xEDC212),
-		Entry(
-			force: 9, name: String(localized: "Sturm"), range: "75-88 km/h", landMeaning: String(localized: "Äste brechen, kleinere Schäden sind möglich."),
-			colorHex: 0xED8F12),
-		Entry(
-			force: 10, name: String(localized: "Schwerer Sturm"), range: "89-102 km/h",
-			landMeaning: String(localized: "Bäume können entwurzelt werden, Gebäude können Schaden nehmen."), colorHex: 0xED6312),
-		Entry(
-			force: 11, name: String(localized: "Orkanartiger Sturm"), range: "103-117 km/h",
-			landMeaning: String(localized: "Schwere Sturmschäden, im Binnenland selten."), colorHex: 0xED2912),
-		Entry(
-			force: 12, name: String(localized: "Orkan"), range: ">= 118 km/h",
-			landMeaning: String(localized: "Schwere Verwüstungen, sehr selten im Landesinneren."), colorHex: 0xD5102D),
-	]
-
 	static func force(forKilometersPerHour speed: Double) -> Int {
 		switch max(0, speed) {
 		case ..<1:
@@ -128,15 +75,6 @@ enum BeaufortScale {
 	static func value(forKilometersPerHour speed: Double?) -> Double? {
 		guard let speed else { return nil }
 		return Double(force(forKilometersPerHour: speed))
-	}
-
-	static func entry(forKilometersPerHour speed: Double?) -> Entry? {
-		guard let speed else { return nil }
-		return entry(forForce: force(forKilometersPerHour: speed))
-	}
-
-	static func entry(forForce force: Int) -> Entry {
-		entries[min(max(force, 0), 12)]
 	}
 
 	static func convertedValues(fromKilometersPerHour values: [Double]) -> [Double] {

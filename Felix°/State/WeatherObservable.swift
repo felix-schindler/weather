@@ -9,26 +9,6 @@ import CoreLocation
 import Foundation
 import SwiftUI
 
-enum WeatherLoadingQuery: String, CaseIterable, Comparable {
-	case forecast
-	case airQuality
-
-	var displayName: String {
-		switch self {
-		case .forecast:
-			return "Forecast"
-		case .airQuality:
-			return "Air quality"
-		}
-	}
-
-	static func < (lhs: WeatherLoadingQuery, rhs: WeatherLoadingQuery) -> Bool {
-		let lhsIndex = allCases.firstIndex(of: lhs) ?? allCases.endIndex
-		let rhsIndex = allCases.firstIndex(of: rhs) ?? allCases.endIndex
-		return lhsIndex < rhsIndex
-	}
-}
-
 enum WeatherLoadState {
 	case idle
 	case loading
@@ -43,7 +23,6 @@ final class Weather {
 	var loadState: WeatherLoadState = .idle
 	@ObservationIgnored private var isRefreshing = false
 	@ObservationIgnored private var refreshRequestedWhileBusy = false
-	var loadingQueries: Set<WeatherLoadingQuery> = []
 	var forecast: Operations.getForecast.Output.Ok.Body.jsonPayload
 	var air: Operations.getAirQuality.Output.Ok.Body.jsonPayload
 	var time: Double
@@ -68,18 +47,6 @@ final class Weather {
 	func updateTime() {
 		let dayBegin = self.forecast.hourly?.time.first ?? 0
 		self.time = (Date.now.timeIntervalSince1970 - dayBegin) / 86400.0
-	}
-
-	func markLoading(_ query: WeatherLoadingQuery) {
-		loadingQueries.insert(query)
-	}
-
-	func markFinished(_ query: WeatherLoadingQuery) {
-		loadingQueries.remove(query)
-	}
-
-	func clearLoadingQueries() {
-		loadingQueries.removeAll()
 	}
 }
 
@@ -108,11 +75,9 @@ extension Weather {
 		isLoading = true
 		error = ""
 		if loadState == .idle { loadState = .loading }
-		clearLoadingQueries()
 		defer {
 			isRefreshing = false
 			isLoading = false
-			clearLoadingQueries()
 		}
 
 		locationService.update()
@@ -129,12 +94,10 @@ extension Weather {
 			var airQualityResponse: Operations.getAirQuality.Output.Ok.Body.jsonPayload?
 
 			try await withThrowingTaskGroup(of: UpdateResponse.self) { group in
-				markLoading(.forecast)
 				group.addTask {
 					.forecast(try await client.getForecast(coordinates: coordinates))
 				}
 
-				markLoading(.airQuality)
 				group.addTask {
 					.airQuality(try await client.getAirQuality(coordinates: coordinates))
 				}
@@ -143,10 +106,8 @@ extension Weather {
 					switch response {
 					case .forecast(let response):
 						forecastResponse = response
-						markFinished(.forecast)
 					case .airQuality(let response):
 						airQualityResponse = response
-						markFinished(.airQuality)
 					}
 				}
 			}

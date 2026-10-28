@@ -184,16 +184,6 @@ final class LocationService: NSObject, @preconcurrency CLLocationManagerDelegate
 		return ""
 	}
 
-	func getLocation() async -> Location {
-		let coordinates = getCoordinates()
-
-		let location = Location()
-		location.coordinates = coordinates
-		location.name = await getPlacemarkInfo()
-
-		return location
-	}
-
 	private func applyManagerAuthorizationStatus() {
 		#if DEBUG
 			if UserDefaults.standard.string(forKey: "screenshotScene") != nil { return }

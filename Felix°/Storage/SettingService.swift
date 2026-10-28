@@ -171,10 +171,6 @@ final class SettingService {
 		defaults.set(stored.precipitationUnit ?? "mm", forKey: precipitationUnitKey)
 	}
 
-	nonisolated static var resolvedTimeFormatAPIValue: String {
-		resolvedTimeFormatPreference.resolvedAPIValue
-	}
-
 	nonisolated static var resolvedTimeFormatPreference: TimeFormatPreference {
 		let rawValue = defaults.string(forKey: timeFormatPreferenceKey)
 		return TimeFormatPreference(rawValue: rawValue ?? "") ?? .system

@@ -18,6 +18,18 @@ extension Binding where Value == Date? {
 	}
 }
 
+enum ChartScale {
+	/// Rounds a raw axis step up to the next 1/2/5 × 10ⁿ, the usual "nice" gridline.
+	static func niceStep(_ raw: Double) -> Double {
+		let magnitude = pow(10, floor(log10(max(raw, 0.0001))))
+		let normalized = raw / magnitude
+		if normalized < 1.5 { return magnitude }
+		if normalized < 3.5 { return 2 * magnitude }
+		if normalized < 7.5 { return 5 * magnitude }
+		return 10 * magnitude
+	}
+}
+
 enum HourlyChartUtilities {
 	static func dayChangeIndices(time: [Double], calendar: Calendar = .current) -> [Int] {
 		guard time.count > 1 else { return [] }

@@ -16,7 +16,6 @@ struct WatchDailyView: View {
 		let scale = temperatureScale(daily, count: count)
 		let unit = weather.forecast.daily_units?.temperature_2m_min ?? "°C"
 		let timeZone = weather.forecast.locationTimeZone
-		let weekdayFormatter = Self.weekdayFormatter(timeZone: timeZone)
 
 		ScrollView {
 			LazyVStack(alignment: .leading, spacing: 4) {
@@ -35,7 +34,7 @@ struct WatchDailyView: View {
 							daily: daily,
 							scale: scale,
 							unit: unit,
-							weekdayFormatter: weekdayFormatter
+							timeZone: timeZone
 						)
 					}
 				}
@@ -49,14 +48,14 @@ struct WatchDailyView: View {
 		daily: Components.Schemas.DailyResponse?,
 		scale: (min: Double, max: Double),
 		unit: String,
-		weekdayFormatter: DateFormatter
+		timeZone: TimeZone
 	) -> some View {
 		let low = daily?.temperature_2m_min?[day] ?? 0
 		let high = daily?.temperature_2m_max?[day] ?? 0
 		let date = Date(timeIntervalSince1970: daily?.time[day] ?? 0)
 
 		return HStack(spacing: 6) {
-			Text(day == 0 ? String(localized: "Heute") : weekdayFormatter.string(from: date))
+			Text(day == 0 ? String(localized: "Heute") : SettingService.formattedShortWeekday(date, timeZone: timeZone))
 				.font(.system(size: 15, weight: .medium, design: .rounded))
 				.frame(width: 42, alignment: .leading)
 				.lineLimit(1)
@@ -118,14 +117,6 @@ struct WatchDailyView: View {
 			return (0, 1)
 		}
 		return (min, max)
-	}
-
-	private static func weekdayFormatter(timeZone: TimeZone) -> DateFormatter {
-		let formatter = DateFormatter()
-		formatter.locale = .autoupdatingCurrent
-		formatter.timeZone = timeZone
-		formatter.setLocalizedDateFormatFromTemplate("E")
-		return formatter
 	}
 
 	private func weatherIcon(for code: Double?) -> String {

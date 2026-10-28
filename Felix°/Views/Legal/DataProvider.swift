@@ -48,16 +48,5 @@ extension DataProvider {
 				DataProviderLink(title: "COSMO 2I & 5M - AM ARPAE ARPAP", url: URL(string: "https://www.arpae.it/it")!),
 			]
 		),
-		DataProvider(
-			id: "dwd", name: "Deutscher Wetterdienst (DWD)", nameIsLocalized: true,
-			title: "DWD", titleIsLocalized: true,
-			systemImage: "cloud.rain.fill", tint: .blue,
-			about:
-				"Felix° verwendet Prognosedaten aus dem ICON-Modell des Deutschen Wetterdienstes (DWD), bezogen über Open-Meteo. Die Daten werden unter den Open-Data-Nutzungsbedingungen des DWD bereitgestellt.",
-			links: [
-				DataProviderLink(title: "dwd.de", url: URL(string: "https://www.dwd.de/")!),
-				DataProviderLink(title: "DWD Open Data", url: URL(string: "https://opendata.dwd.de/")!),
-			]
-		),
 	]
 }

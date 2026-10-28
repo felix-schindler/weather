@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum EnvironmentDetailSection: String, DetailSection {
+enum EnvironmentDetailSection: String, CaseIterable, Identifiable {
 	case aqi
 	case uv
 	case pollen
@@ -16,5 +16,20 @@ enum EnvironmentDetailSection: String, DetailSection {
 		case .pollen:
 			"Pollen"
 		}
+	}
+}
+
+struct EnvironmentDetailSectionPicker: View {
+	@Binding var selection: EnvironmentDetailSection
+
+	var body: some View {
+		Picker("Umweltdetails", selection: $selection) {
+			ForEach(EnvironmentDetailSection.allCases) { section in
+				Text(section.title).tag(section)
+			}
+		}
+		.pickerStyle(.segmented)
+		.padding(.horizontal)
+		.padding(.vertical, 8)
 	}
 }

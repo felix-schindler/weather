@@ -95,14 +95,6 @@ enum ScreenshotMode {
 			settings.forecastModelPreference = scene == .settingsForecast ? .dwdICON : .bestMatch
 			settings.dailyForecastDaytimeTemperaturesEnabled = scene == .settingsForecast
 		}
-
-		@MainActor
-		static func stageOnAppear() async {}
 	#endif
 }
 
-extension ScreenshotScene {
-	var isSettings: Bool {
-		self == .settingsForecast
-	}
-}

@@ -80,14 +80,9 @@ final class HourlyTimelineModel {
 
 	var windowStart: Double { dayWindow?.lowerBound ?? scrubTime - windowSeconds / 2 }
 
-	var stageDate: Date { Date(timeIntervalSince1970: stageTime) }
-	var isGliding: Bool { glide != nil }
-
 	private var panStartTime: Double?
-	private var glide: (from: Double, to: Double, start: TimeInterval, duration: TimeInterval, easeOut: Bool)?
 	@ObservationIgnored private var stagePushTask: Task<Void, Never>?
 	@ObservationIgnored private var lastStagePush: TimeInterval = 0
-	private var ticker: Task<Void, Never>?
 
 	// MARK: - Data
 
@@ -148,7 +143,6 @@ final class HourlyTimelineModel {
 	}
 
 	func show(day: ClosedRange<Double>, at time: Double) {
-		glide = nil
 		panStartTime = nil
 		dayWindow = day
 		setScrub(time)
@@ -229,7 +223,6 @@ final class HourlyTimelineModel {
 	// MARK: - Scrubbing
 
 	func beginPan() {
-		glide = nil
 		panStartTime = scrubTime
 	}
 
@@ -249,7 +242,6 @@ final class HourlyTimelineModel {
 	}
 
 	func scrub(to time: Double) {
-		glide = nil
 		setScrub(time)
 	}
 
@@ -270,8 +262,9 @@ final class HourlyTimelineModel {
 			easeOut
 			? min(1.2, 0.35 + distanceHours * 0.015)
 			: min(2.2, 0.6 + distanceHours * 0.02)
-		glide = (scrubTime, target, CACurrentMediaTime(), duration, easeOut)
-		startTickerIfNeeded()
+		withAnimation(easeOut ? .easeOut(duration: duration) : .easeInOut(duration: duration)) {
+			setScrub(target)
+		}
 	}
 
 	private func setScrub(_ time: Double) {
@@ -310,43 +303,6 @@ final class HourlyTimelineModel {
 
 	private func quantized(_ time: Double) -> Double {
 		(time / 120).rounded() * 120
-	}
-
-	// MARK: - Ticker
-
-	private func startTickerIfNeeded() {
-		guard ticker == nil else { return }
-		ticker = Task { [weak self] in
-			while !Task.isCancelled {
-				try? await Task.sleep(for: .milliseconds(16))
-				guard let self else { return }
-				if !self.tick() {
-					self.ticker = nil
-					return
-				}
-			}
-		}
-	}
-
-	private func tick() -> Bool {
-		if let glide {
-			let progress = min(1, (CACurrentMediaTime() - glide.start) / max(glide.duration, 0.01))
-			let eased: Double
-			if glide.easeOut {
-				eased = 1 - pow(1 - progress, 3)
-			} else {
-				eased =
-					progress < 0.5
-					? 4 * pow(progress, 3)
-					: 1 - pow(-2 * progress + 2, 3) / 2
-			}
-			setScrub(glide.from + (glide.to - glide.from) * eased)
-			if progress >= 1 {
-				self.glide = nil
-			}
-		}
-
-		return glide != nil
 	}
 
 }

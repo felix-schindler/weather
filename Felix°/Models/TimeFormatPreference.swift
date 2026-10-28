@@ -7,17 +7,6 @@ enum TimeFormatPreference: String, CaseIterable, Identifiable {
 
 	var id: String { rawValue }
 
-	var resolvedAPIValue: String {
-		switch self {
-		case .system:
-			return Self.systemResolvedAPIValue
-		case .h24:
-			return "h24"
-		case .h12:
-			return "h12"
-		}
-	}
-
 	var label: LocalizedStringKey {
 		switch self {
 		case .system:
@@ -27,15 +16,5 @@ enum TimeFormatPreference: String, CaseIterable, Identifiable {
 		case .h12:
 			return "12 Stunden"
 		}
-	}
-
-	static var systemResolvedAPIValue: String {
-		let dateFormat =
-			DateFormatter.dateFormat(
-				fromTemplate: "j",
-				options: 0,
-				locale: .autoupdatingCurrent
-			) ?? ""
-		return dateFormat.contains("a") ? "h12" : "h24"
 	}
 }

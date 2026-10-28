@@ -163,7 +163,7 @@ struct HourlyTimelineStrip: View {
 		var labelRects: [CGRect] = []
 
 		if layout.bands.isEmpty {
-			let step = Self.niceStep(span / 3)
+			let step = ChartScale.niceStep(span / 3)
 			let gridFont = Font.system(size: 9.5, weight: .medium)
 			var value = (domain.lowerBound / step).rounded(.up) * step
 			while value <= domain.upperBound {
@@ -469,14 +469,5 @@ struct HourlyTimelineStrip: View {
 		let pad = max((high - low) * 0.1, (layout.domain.upperBound - layout.domain.lowerBound) * 0.05)
 		let lower = layout.domain.lowerBound == 0 ? 0 : low - pad
 		return lower...(high + pad)
-	}
-
-	private static func niceStep(_ raw: Double) -> Double {
-		let magnitude = pow(10, floor(log10(max(raw, 0.0001))))
-		let normalized = raw / magnitude
-		if normalized < 1.5 { return magnitude }
-		if normalized < 3.5 { return 2 * magnitude }
-		if normalized < 7.5 { return 5 * magnitude }
-		return 10 * magnitude
 	}
 }

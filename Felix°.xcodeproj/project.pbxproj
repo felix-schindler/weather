@@ -176,9 +176,6 @@
 				Views/Locations/LocationsEmptyHint.swift,
 				Views/Locations/LocationsView.swift,
 				Views/Now/Charts/HourlyChartUtilities.swift,
-				Views/Now/Charts/ScrollSynchronization/ChartScrollSynchronizer.swift,
-				Views/Now/Charts/ScrollSynchronization/ChartScrollViewLocator.swift,
-				Views/Now/Charts/ScrollSynchronization/SynchronizedChartScroll.swift,
 				Views/Now/Climate/ClimateCopy.swift,
 				Views/Now/Climate/ClimateDetailView.swift,
 				Views/Now/Climate/ClimateLegend.swift,
@@ -195,7 +192,6 @@
 				Views/Now/Daily/DayDetailView.swift,
 				Views/Now/DetailCard.swift,
 				Views/Now/DetailDeck.swift,
-				Views/Now/DetailSectionPicker.swift,
 				Views/Now/Ensemble/EnsembleChart.swift,
 				Views/Now/Ensemble/EnsembleLens.swift,
 				Views/Now/Ensemble/EnsembleRail.swift,
@@ -310,9 +306,6 @@
 				Views/Locations/LocationsEmptyHint.swift,
 				Views/Locations/LocationsView.swift,
 				Views/Now/Charts/HourlyChartUtilities.swift,
-				Views/Now/Charts/ScrollSynchronization/ChartScrollSynchronizer.swift,
-				Views/Now/Charts/ScrollSynchronization/ChartScrollViewLocator.swift,
-				Views/Now/Charts/ScrollSynchronization/SynchronizedChartScroll.swift,
 				Views/Now/Climate/ClimateCopy.swift,
 				Views/Now/Climate/ClimateDetailView.swift,
 				Views/Now/Climate/ClimateLegend.swift,
@@ -329,7 +322,6 @@
 				Views/Now/Daily/DayDetailView.swift,
 				Views/Now/DetailCard.swift,
 				Views/Now/DetailDeck.swift,
-				Views/Now/DetailSectionPicker.swift,
 				Views/Now/Ensemble/EnsembleChart.swift,
 				Views/Now/Ensemble/EnsembleLens.swift,
 				Views/Now/Ensemble/EnsembleRail.swift,
@@ -439,9 +431,6 @@
 				Views/Locations/LocationsEmptyHint.swift,
 				Views/Locations/LocationsView.swift,
 				Views/Now/Charts/HourlyChartUtilities.swift,
-				Views/Now/Charts/ScrollSynchronization/ChartScrollSynchronizer.swift,
-				Views/Now/Charts/ScrollSynchronization/ChartScrollViewLocator.swift,
-				Views/Now/Charts/ScrollSynchronization/SynchronizedChartScroll.swift,
 				Views/Now/Climate/ClimateCopy.swift,
 				Views/Now/Climate/ClimateDetailView.swift,
 				Views/Now/Climate/ClimateLegend.swift,
@@ -459,7 +448,6 @@
 				Views/Now/Daily/TemperatureRangeView.swift,
 				Views/Now/DetailCard.swift,
 				Views/Now/DetailDeck.swift,
-				Views/Now/DetailSectionPicker.swift,
 				Views/Now/Ensemble/EnsembleChart.swift,
 				Views/Now/Ensemble/EnsembleLens.swift,
 				Views/Now/Ensemble/EnsembleRail.swift,
@@ -1263,6 +1251,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.schindlerfelix.weather;
 				PRODUCT_MODULE_NAME = Felix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1293,6 +1282,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.schindlerfelix.weather;
 				PRODUCT_MODULE_NAME = Felix;
 				PRODUCT_NAME = "$(TARGET_NAME)";

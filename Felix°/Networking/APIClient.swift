@@ -7,6 +7,7 @@
 
 import CoreLocation
 import Foundation
+import HTTPTypes
 import OpenAPIRuntime
 import OpenAPIURLSession
 
@@ -38,14 +39,28 @@ final class APIClient: Sendable {
 		}
 	}
 
-	nonisolated(unsafe) static var stagingMiddlewares: [any ClientMiddleware] = []
-	nonisolated(unsafe) static var stagedFetch: (@Sendable (URLRequest) -> (Data, HTTPURLResponse)?)?
+	static let ensembleCache = CacheStore(
+		cacheDirectory: (FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first
+			?? FileManager.default.temporaryDirectory)
+			.appendingPathComponent("DailyEnsembleAPICache", isDirectory: true),
+		persistentEntryLifetime: 43_200,
+		maxEntryCount: 50
+	)
+
+	#if DEBUG
+		nonisolated(unsafe) static var stagingMiddlewares: [any ClientMiddleware] = []
+		nonisolated(unsafe) static var stagedFetch: (@Sendable (URLRequest) -> (Data, HTTPURLResponse)?)?
+
+		private static var debugMiddlewares: [any ClientMiddleware] { stagingMiddlewares }
+	#else
+		private static var debugMiddlewares: [any ClientMiddleware] { [] }
+	#endif
 
 	class func get(url: URL, prepending middlewares: [any ClientMiddleware] = []) -> Client {
 		return Client(
 			serverURL: url,
 			transport: URLSessionTransport(),
-			middlewares: Self.stagingMiddlewares + middlewares + [
+			middlewares: Self.debugMiddlewares + middlewares + [
 				CachingMiddleware(cacheTime: 60),
 				ContactIdentityMiddleware(),
 				RetryingMiddleware(
@@ -261,7 +276,8 @@ final class APIClient: Sendable {
 		)
 
 		let decoder = JSONDecoder()
-		if let cachedData = await DailyEnsembleForecastCache.shared.data(for: cacheKey),
+		if let (timestamp, _, cachedData) = await Self.ensembleCache.get(cacheKey),
+			Date.now.timeIntervalSince(timestamp) < 43_200,
 			let cached = try? decoder.decode(Components.Schemas.EnsembleForecastResponse.self, from: cachedData)
 		{
 			return DailyEnsembleForecastResponse(cached)
@@ -294,7 +310,10 @@ final class APIClient: Sendable {
 			switch response.body {
 			case .json(let payload):
 				if let data = try? JSONEncoder().encode(payload) {
-					await DailyEnsembleForecastCache.shared.set(data, for: cacheKey)
+					await Self.ensembleCache.set(
+						cacheKey,
+						value: (Date(), HTTPResponse(status: .ok, headerFields: [:]), data)
+					)
 				}
 				return DailyEnsembleForecastResponse(payload)
 			}
@@ -369,7 +388,9 @@ final class APIClient: Sendable {
 	static func fetchWithRetry(
 		_ request: URLRequest, attempts: Int = 3
 	) async throws -> (Data, HTTPURLResponse) {
-		if let staged = Self.stagedFetch?(request) { return staged }
+		#if DEBUG
+			if let staged = Self.stagedFetch?(request) { return staged }
+		#endif
 		var lastError: Error = URLError(.unknown)
 		for attempt in 0..<attempts {
 			if attempt > 0 {
