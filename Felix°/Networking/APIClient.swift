@@ -17,7 +17,6 @@ final class APIClient: Sendable {
 	let openMeteoAqi: Client
 	let openMeteoGeo: Client
 	let openMeteoArchive: Client
-	let canadaWeather: Client
 
 	init() {
 		openMeteo = APIClient.get(
@@ -26,8 +25,7 @@ final class APIClient: Sendable {
 		)
 		openMeteoAqi = APIClient.get(url: Self.serverURL(Servers.server2))
 		openMeteoGeo = APIClient.get(url: Self.serverURL(Servers.server3))
-		openMeteoArchive = APIClient.get(url: Self.serverURL(Servers.server5))
-		canadaWeather = APIClient.get(url: Self.serverURL(Servers.server4))
+		openMeteoArchive = APIClient.get(url: Self.serverURL(Servers.server4))
 	}
 
 	private static func serverURL(_ make: () throws -> URL) -> URL {

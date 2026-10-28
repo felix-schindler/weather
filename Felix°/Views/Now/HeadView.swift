@@ -145,22 +145,8 @@ struct HeadView: View {
 				.accessibilityActions {
 					Button("Kennzahlen anpassen") { presentation.present(.layout) }
 				}
-
-				if hasWeatherAlerts() {
-					AlertView()
-						.padding(.top, 14)
-				}
 			}
 		}
 	}
 
-}
-
-extension HeadView {
-	func hasWeatherAlerts() -> Bool {
-		switch weather.alerts {
-		case .canadian(let canadianAlerts):
-			return canadianAlerts.contains { $0.alert?.alerts?.isEmpty == false }
-		}
-	}
 }

@@ -59,12 +59,5 @@ extension DataProvider {
 				DataProviderLink(title: "DWD Open Data", url: URL(string: "https://opendata.dwd.de/")!),
 			]
 		),
-		DataProvider(
-			id: "eccc", name: "Environment and Climate Change Canada", title: "ECCC",
-			systemImage: "snowflake", tint: .cyan,
-			about:
-				"Felix° verwendet amtliche Wetterwarnungen von Environment and Climate Change Canada (ECCC) für Kanada. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu ECCC dar.",
-			links: [DataProviderLink(title: "weather.gc.ca", url: URL(string: "https://weather.gc.ca/")!)]
-		),
 	]
 }

@@ -30,13 +30,6 @@ struct NowSheetView: View {
 		case .climate(let summary):
 			ClimateDetailView(summary: summary)
 				.presentationSizing(.page)
-		case .alerts:
-			// Matches the alert sheet; no .presentationBackground
-			// override — an explicit background would kill the glass.
-			AlertListView()
-				.presentationDetents([.medium, .large])
-				.presentationBackgroundInteraction(.enabled(upThrough: .medium))
-				.presentationDragIndicator(.hidden)
 		case .places:
 			LocationsView()
 				.presentationSizing(.page)

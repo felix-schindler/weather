@@ -65,25 +65,25 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und amtliche Warnungen wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Environment Canada gesendet, den Ortsnamen ermittelt Apple."
+            "value" : "Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für die Vorhersage wird dein Standort auf ca. 100 m gerundet an Open-Meteo gesendet, den Ortsnamen ermittelt Apple."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Felix° uses it to show the weather where you are. For forecasts and weather alerts, your location is sent to Open-Meteo and Environment Canada, rounded to about 100 m; Apple determines the place name."
+            "value" : "Felix° uses it to show the weather where you are. For forecasts, your location is sent to Open-Meteo, rounded to about 100 m; Apple determines the place name."
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Felix° 會使用你的位置，顯示你目前所在地的天氣。為了提供預報與天氣警報，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo 和加拿大環境部；地點名稱由 Apple 判斷。"
+            "value" : "Felix° 會使用你的位置，顯示你目前所在地的天氣。為了提供天氣預報，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo；地點名稱由 Apple 判斷。"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Felix° usa sua localização para mostrar o clima onde você está. Para previsões e alertas meteorológicos, sua localização é enviada ao Open-Meteo e à Environment Canada, arredondada para cerca de 100 m; a Apple determina o nome do local."
+            "value" : "Felix° usa sua localização para mostrar o clima onde você está. Para previsões, sua localização é enviada ao Open-Meteo, arredondada para cerca de 100 m; a Apple determina o nome do local."
           }
         }
       }
@@ -94,25 +94,25 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für Vorhersage und amtliche Warnungen wird dein Standort auf ca. 100 m gerundet an Open-Meteo und Environment Canada gesendet, den Ortsnamen ermittelt Apple."
+            "value" : "Felix° zeigt dir damit das Wetter da, wo du gerade bist. Für die Vorhersage wird dein Standort auf ca. 100 m gerundet an Open-Meteo gesendet, den Ortsnamen ermittelt Apple."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Felix° uses it to show the weather where you are. For forecasts and weather alerts, your location is sent to Open-Meteo and Environment Canada, rounded to about 100 m; Apple determines the place name."
+            "value" : "Felix° uses it to show the weather where you are. For forecasts, your location is sent to Open-Meteo, rounded to about 100 m; Apple determines the place name."
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Felix° 會使用你的位置，顯示你目前所在地的天氣。為了提供預報與天氣警報，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo 和加拿大環境部；地點名稱由 Apple 判斷。"
+            "value" : "Felix° 會使用你的位置，顯示你目前所在地的天氣。為了提供天氣預報，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo；地點名稱由 Apple 判斷。"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Felix° usa sua localização para mostrar o clima onde você está. Para previsões e alertas meteorológicos, sua localização é enviada ao Open-Meteo e à Environment Canada, arredondada para cerca de 100 m; a Apple determina o nome do local."
+            "value" : "Felix° usa sua localização para mostrar o clima onde você está. Para previsões, sua localização é enviada ao Open-Meteo, arredondada para cerca de 100 m; a Apple determina o nome do local."
           }
         }
       }

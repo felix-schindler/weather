@@ -1810,34 +1810,6 @@
         }
       }
     },
-    "Ab %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ab %@"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "From %@"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A partir de %@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "從 %@ 起"
-          }
-        }
-      }
-    },
     "Abbrechen" : {
       "localizations" : {
         "de" : {
@@ -2159,62 +2131,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "尚可"
-          }
-        }
-      }
-    },
-    "Alert" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Warnung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Warning"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alerta"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "警報"
-          }
-        }
-      }
-    },
-    "Alerts" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Warnungen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Warnings"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alertas"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "警報"
           }
         }
       }
@@ -3507,34 +3423,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "樺樹"
-          }
-        }
-      }
-    },
-    "Bis %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bis %@"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Until %@"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Até %@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "直到 %@"
           }
         }
       }
@@ -5057,35 +4945,6 @@
         }
       }
     },
-    "Environment Canada" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Environment Canada"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Environment Canada"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Environment Canada"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Environment Canada"
-          }
-        }
-      }
-    },
     "Erlaube Live-Aktivitäten in den iOS-Einstellungen." : {
       "extractionState" : "stale",
       "localizations" : {
@@ -5414,34 +5273,6 @@
         }
       }
     },
-    "Extreme" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Extrem"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Extreme"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Extremo"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "極端"
-          }
-        }
-      }
-    },
     "Extreme gesundheitliche Gefährdung, Besondere Schutzmaßnahmen sind ein Muss." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -5696,35 +5527,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Felix° 會以此地點開啟。"
-          }
-        }
-      }
-    },
-    "Felix° verwendet amtliche Wetterwarnungen von Environment and Climate Change Canada (ECCC) für Kanada. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu ECCC dar." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° verwendet amtliche Wetterwarnungen von Environment and Climate Change Canada (ECCC) für Kanada. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu ECCC dar."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° uses official weather warnings from Environment and Climate Change Canada (ECCC) for Canada. Use does not imply endorsement by or official affiliation with ECCC."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° usa avisos meteorológicos oficiais da Environment and Climate Change Canada (ECCC) para o Canadá. O uso não implica endosso nem vínculo oficial com a ECCC."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° 使用加拿大環境與氣候變遷部（ECCC）針對加拿大的官方天氣警報。此使用行為不代表 ECCC 的背書，也不代表與 ECCC 有官方關係。"
           }
         }
       }
@@ -9586,34 +9388,6 @@
         }
       }
     },
-    "Minor" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gering"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Minor"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Leve"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "輕微"
-          }
-        }
-      }
-    },
     "Mit %@ fortsetzen" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -9877,34 +9651,6 @@
         }
       },
       "shouldTranslate" : false
-    },
-    "Moderate" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mäßig"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Moderate"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Moderado"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "中度"
-          }
-        }
-      }
     },
     "Morgen" : {
       "extractionState" : "manual",
@@ -11008,34 +10754,6 @@
         }
       }
     },
-    "Öffnet die Wetterwarnungen" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Öffnet die Wetterwarnungen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Opens the weather warnings"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abre os alertas meteorológicos"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "開啟天氣警報"
-          }
-        }
-      }
-    },
     "Öffnet Karten" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -11828,34 +11546,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "降水"
-          }
-        }
-      }
-    },
-    "Quelle: %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quelle: %@"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Source: %@"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fonte: %@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "來源：%@"
           }
         }
       }
@@ -13338,34 +13028,6 @@
         }
       }
     },
-    "Severe" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Schwer"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Severe"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Severo"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "嚴重"
-          }
-        }
-      }
-    },
     "Sicher" : {
       "localizations" : {
         "de" : {
@@ -14114,34 +13776,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "背景地圖樣式"
-          }
-        }
-      }
-    },
-    "Stufe %lld" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stufe %lld"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Level %lld"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nível %lld"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "等級 %lld"
           }
         }
       }
@@ -16533,62 +16167,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "天氣雷達測量目前正在下雨或下雪的位置。Felix° 會根據最近幾張影像的移動，推算接下來 1.5 至 2 小時的變化。即時標記之後的內容都屬於這段短期預報。期間新形成或消散的陣雨不會被納入。"
-          }
-        }
-      }
-    },
-    "Wetterwarnung" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wetterwarnung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weather Warning"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alerta meteorológico"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "天氣警報"
-          }
-        }
-      }
-    },
-    "Wetterwarnungen" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wetterwarnungen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weather Warnings"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alertas meteorológicos"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "天氣警報"
           }
         }
       }

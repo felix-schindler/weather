@@ -12,7 +12,6 @@ import SwiftUI
 enum WeatherLoadingQuery: String, CaseIterable, Comparable {
 	case forecast
 	case airQuality
-	case alerts
 
 	var displayName: String {
 		switch self {
@@ -20,8 +19,6 @@ enum WeatherLoadingQuery: String, CaseIterable, Comparable {
 			return "Forecast"
 		case .airQuality:
 			return "Air quality"
-		case .alerts:
-			return "Alerts"
 		}
 	}
 
@@ -48,7 +45,6 @@ final class Weather {
 	@ObservationIgnored private var refreshRequestedWhileBusy = false
 	var loadingQueries: Set<WeatherLoadingQuery> = []
 	var forecast: Operations.getForecast.Output.Ok.Body.jsonPayload
-	var alerts: AlertResponse
 	var air: Operations.getAirQuality.Output.Ok.Body.jsonPayload
 	var time: Double
 	var error: String = ""
@@ -66,7 +62,6 @@ final class Weather {
 			longitude: 0.0,
 			current: .init(cloudcover: 0.0, time: 0.0, temperature: 20.0, windspeed: 0.0, wind_direction_10m: 0.0, weathercode: 0.0)
 		)
-		alerts = .canadian([])
 		air = Operations.getAirQuality.Output.Ok.Body.jsonPayload.init(latitude: 0, longitude: 0, hourly: nil)
 	}
 
@@ -126,7 +121,6 @@ extension Weather {
 		if !info.name.isEmpty || location.name.isEmpty {
 			location.name = info.name
 		}
-		location.countryCode = info.countryCode
 
 		let coordinates = location.coordinates
 
@@ -180,19 +174,6 @@ extension Weather {
 					WeatherSnapshotStore.save(snapshot)
 				}
 			}
-
-			markLoading(.alerts)
-			do {
-				alerts = try await client.getAlerts(
-					coordinates: coordinates,
-					countryCode: location.countryCode
-				)
-			} catch is CancellationError {
-				throw CancellationError()
-			} catch {
-				alerts = .canadian([])
-			}
-			markFinished(.alerts)
 		} catch is CancellationError {
 		} catch let error as URLError where error.code == .cancelled {
 		} catch {
@@ -265,7 +246,6 @@ extension Weather {
 		)
 
 		mockWeather.time = 0.5
-		mockWeather.alerts = .canadian([])
 		mockWeather.air = Operations.getAirQuality.Output.Ok.Body.jsonPayload(latitude: 51.34, longitude: 12.379999, hourly: nil)
 
 		return mockWeather

@@ -192,7 +192,6 @@ final class LocationService: NSObject, @preconcurrency CLLocationManagerDelegate
 		let location = Location()
 		location.coordinates = coordinates
 		location.name = info.name
-		location.countryCode = info.countryCode
 
 		return location
 	}
