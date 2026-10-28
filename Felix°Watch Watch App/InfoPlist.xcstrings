@@ -74,16 +74,40 @@
             "value" : "Felix° uses it to show the weather where you are. For forecasts, your location is sent to Open-Meteo, rounded to about 100 m; Apple determines the place name."
           }
         },
-        "zh-Hant" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Felix° 會使用你的位置，顯示你目前所在地的天氣。為了提供天氣預報，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo；地點名稱由 Apple 判斷。"
+            "value" : "Felix° lo usa para mostrarte el tiempo donde estás. Para las previsiones, tu ubicación se envía a Open-Meteo redondeada a unos 100 m; Apple determina el nombre del lugar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° l’utilise pour afficher la météo là où vous êtes. Pour les prévisions, votre position est envoyée à Open-Meteo, arrondie à environ 100 m ; Apple détermine le nom du lieu."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° lo usa per mostrarti il meteo dove ti trovi. Per le previsioni, la tua posizione viene inviata a Open-Meteo arrotondata a circa 100 m; il nome del luogo è determinato da Apple."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° は現在地の天気を表示するために使用します。予報のために、位置情報は約100m単位に丸められて Open-Meteo に送信され、地名は Apple が取得します。"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Felix° usa sua localização para mostrar o clima onde você está. Para previsões, sua localização é enviada ao Open-Meteo, arredondada para cerca de 100 m; a Apple determina o nome do local."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° 會使用你的位置，顯示你目前所在地的天氣。為了提供天氣預報，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo；地點名稱由 Apple 判斷。"
           }
         }
       }
@@ -103,16 +127,40 @@
             "value" : "Felix° uses it to show the weather where you are. For forecasts, your location is sent to Open-Meteo, rounded to about 100 m; Apple determines the place name."
           }
         },
-        "zh-Hant" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Felix° 會使用你的位置，顯示你目前所在地的天氣。為了提供天氣預報，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo；地點名稱由 Apple 判斷。"
+            "value" : "Felix° lo usa para mostrarte el tiempo donde estás. Para las previsiones, tu ubicación se envía a Open-Meteo redondeada a unos 100 m; Apple determina el nombre del lugar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° l’utilise pour afficher la météo là où vous êtes. Pour les prévisions, votre position est envoyée à Open-Meteo, arrondie à environ 100 m ; Apple détermine le nom du lieu."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° lo usa per mostrarti il meteo dove ti trovi. Per le previsioni, la tua posizione viene inviata a Open-Meteo arrotondata a circa 100 m; il nome del luogo è determinato da Apple."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° は現在地の天気を表示するために使用します。予報のために、位置情報は約100m単位に丸められて Open-Meteo に送信され、地名は Apple が取得します。"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Felix° usa sua localização para mostrar o clima onde você está. Para previsões, sua localização é enviada ao Open-Meteo, arredondada para cerca de 100 m; a Apple determina o nome do local."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° 會使用你的位置，顯示你目前所在地的天氣。為了提供天氣預報，你的位置會先四捨五入至約 100 公尺，再傳送至 Open-Meteo；地點名稱由 Apple 判斷。"
           }
         }
       }

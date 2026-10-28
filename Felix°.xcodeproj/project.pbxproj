@@ -823,6 +823,10 @@
 			knownRegions = (
 				de,
 				en,
+				es,
+				fr,
+				it,
+				ja,
 				"pt-BR",
 				"zh-Hant",
 				Base,
