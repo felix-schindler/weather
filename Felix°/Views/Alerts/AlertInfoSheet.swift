@@ -2,19 +2,10 @@
 //  AlertInfoSheet.swift
 //  Felix°
 //
-//  Warning sheet for tapped alert polygons (models: WeatherAlertInfo).
+//  Warning sheet listing the active Environment Canada alerts.
 //
 
-import CoreLocation
 import SwiftUI
-import UIKit
-import simd
-
-// MARK: - Models
-
-// MARK: - DWD severity styling
-
-// MARK: - Warning sheet
 
 struct AlertInfoSheet: View {
 	let alerts: [WeatherAlertInfo]
@@ -26,11 +17,6 @@ struct AlertInfoSheet: View {
 				VStack(spacing: 14) {
 					ForEach(alerts) { alert in
 						AlertInfoCard(alert: alert)
-					}
-					if alerts.contains(where: { $0.source != "ec" }) {
-						PoweredByOscarServer(lockupHeight: 30)
-							.foregroundStyle(.tertiary)
-							.padding(.top, 2)
 					}
 				}
 				.padding(.horizontal, 20)
@@ -53,7 +39,7 @@ private struct AlertInfoCard: View {
 	let alert: WeatherAlertInfo
 
 	private var severityColor: Color {
-		AlertSeverityStyle.color(rank: alert.severityRank, source: alert.source)
+		AlertSeverityStyle.color(rank: alert.severityRank)
 	}
 
 	var body: some View {
@@ -62,7 +48,7 @@ private struct AlertInfoCard: View {
 				HStack(spacing: 5) {
 					Image(systemName: "exclamationmark.triangle.fill")
 						.font(.system(size: 10, weight: .bold))
-					Text(AlertSeverityStyle.label(rank: alert.severityRank, source: alert.source))
+					Text(AlertSeverityStyle.label(rank: alert.severityRank))
 						.font(.caption.weight(.semibold))
 				}
 				.foregroundStyle(severityColor)
@@ -99,14 +85,9 @@ private struct AlertInfoCard: View {
 					.fixedSize(horizontal: false, vertical: true)
 			}
 
-			HStack(spacing: 6) {
-				if let logo = AlertSeverityStyle.sourceLogo(alert.source) {
-					ProviderLogo(asset: logo, height: 18)
-				}
-				Text("Quelle: \(AlertSeverityStyle.sourceName(alert.source, senderName: alert.senderName))")
-					.font(.caption2)
-			}
-			.foregroundStyle(.tertiary)
+			Text("Quelle: \(AlertSeverityStyle.sourceName)")
+				.font(.caption2)
+				.foregroundStyle(.tertiary)
 		}
 		.padding(16)
 		.frame(maxWidth: .infinity, alignment: .leading)
@@ -126,5 +107,3 @@ private struct AlertInfoCard: View {
 		}
 	}
 }
-
-// MARK: - Storm cell sheet

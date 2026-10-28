@@ -51,10 +51,6 @@
 			{ url in (try JSONSerialization.data(withJSONObject: make(url)), "application/json") }
 		}
 
-		private static func radarImage(_ make: @escaping (URL) -> Data) -> Route {
-			{ url in (make(url), "image/webp") }
-		}
-
 		private static func isBatchForecast(_ url: URL) -> Bool {
 			URLComponents(url: url, resolvingAgainstBaseURL: false)?
 				.queryItems?.first { $0.name == "latitude" }?.value?.contains(",") == true
@@ -80,52 +76,6 @@
 				return json { _ in ScreenshotFixtures.ensembleJSON() }
 			case "archive-api.open-meteo.com":
 				return json { url in ScreenshotFixtures.archiveJSON(for: url) }
-			default:
-				break
-			}
-
-			guard url.absoluteString.hasPrefix(radarBaseURL) else { return nil }
-
-			if path.hasPrefix("/radar/series") {
-				return json { url in ScreenshotFixtures.precipSeriesJSON(for: url) }
-			}
-			if path.hasPrefix("/stations/nearby") {
-				return json { _ in ScreenshotFixtures.stationsJSON() }
-			}
-			if path.hasPrefix("/webcams") {
-				return json { _ in ["webcams": [Any]()] }
-			}
-			if path.hasPrefix("/weather-alerts/point") {
-				return json { _ in ScreenshotFixtures.alertsJSON() }
-			}
-			// The notifications scene must never register against the real backend.
-			if path.hasPrefix("/notifications") {
-				return json { _ in
-					["subscriptionId": "screenshot-subscription", "apiKey": "screenshot-key"]
-				}
-			}
-
-			let parts = path.split(separator: "/").map(String.init)
-			guard parts.first == "radar" || parts.first == "clouds", parts.count >= 3 else { return nil }
-			let isClouds = parts.first == "clouds"
-
-			switch (parts.count, parts[2]) {
-			case (3, "frames"):
-				return json { _ in SyntheticRadar.framesJSON() }
-			case (3, "motion"):
-				return json { _ in SyntheticRadar.motionJSON() }
-			case (3, "cells"):
-				return json { _ in SyntheticRadar.cellsJSON() }
-			case (5, "frames") where parts[4] == "grid":
-				let key = parts[3]
-				if isClouds {
-					return radarImage { _ in SyntheticRadar.cloudGridPNG(frameKey: key) }
-				}
-				return radarImage { _ in SyntheticRadar.gridPNG(frameKey: key) }
-			case (8, "frames") where parts[4] == "tiles":
-				let key = parts[3]
-				guard let z = Int(parts[5]), let x = Int(parts[6]), let y = Int(parts[7]) else { return nil }
-				return radarImage { _ in SyntheticRadar.tilePNG(frameKey: key, z: z, x: x, y: y) }
 			default:
 				return nil
 			}

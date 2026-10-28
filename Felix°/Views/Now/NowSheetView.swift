@@ -30,11 +30,8 @@ struct NowSheetView: View {
 		case .climate(let summary):
 			ClimateDetailView(summary: summary)
 				.presentationSizing(.page)
-		case .stations(let id):
-			StationDetailView(initialID: id)
-				.presentationSizing(.page)
 		case .alerts:
-			// Matches the map's polygon tap sheet; no .presentationBackground
+			// Matches the alert sheet; no .presentationBackground
 			// override — an explicit background would kill the glass.
 			AlertListView()
 				.presentationDetents([.medium, .large])

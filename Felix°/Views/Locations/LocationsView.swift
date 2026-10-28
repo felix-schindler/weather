@@ -254,10 +254,8 @@ struct LocationsView: View {
 		returnToNow()
 	}
 
-	/// Hands control back to the now view: closes the Orte sheet and makes
-	/// sure the forecast tab is the one underneath.
+	/// Hands control back to the now view: closes the Orte sheet.
 	private func returnToNow() {
-		presentation.selectedTab = .forecast
 		presentation.sheet = nil
 	}
 

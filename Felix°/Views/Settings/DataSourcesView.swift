@@ -16,29 +16,6 @@ struct DataSourcesView: View {
 						ProviderRow(provider: provider)
 					}
 				}
-
-				SettingsExternalLink(destination: URL(string: "https://www.openstreetmap.org/copyright")!) {
-					Label("Kartendaten © OpenStreetMap", systemImage: "map.fill")
-						.labelStyle(.settingsIcon(.teal))
-				}
-
-				SettingsExternalLink(destination: URL(string: "https://openfreemap.org")!) {
-					Label {
-						Text("Kartenkacheln: OpenFreeMap")
-					} icon: {
-						Image(systemName: "square.grid.3x3.fill")
-					}
-					.labelStyle(.settingsIcon(.cyan))
-				}
-
-				SettingsExternalLink(destination: URL(string: "https://www.windy.com/webcams")!) {
-					Label {
-						Text(verbatim: "Webcams provided by windy.com")
-					} icon: {
-						Image(systemName: "web.camera.fill")
-					}
-					.labelStyle(.settingsIcon(.blue))
-				}
 			}
 
 			Section("Open Source") {

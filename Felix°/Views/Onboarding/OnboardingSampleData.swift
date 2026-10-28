@@ -126,32 +126,4 @@ enum OnboardingSampleData {
 		}
 	}()
 
-	private static let stagedNow: Date = {
-		let tenMinutes = 10.0 * 60
-		return Date(timeIntervalSinceReferenceDate: (Date.now.timeIntervalSinceReferenceDate / tenMinutes).rounded(.down) * tenMinutes)
-	}()
-
-	static let showerPoints: [PrecipChartPoint] = (0...24).map { step in
-		let progress = Double(step) / 24
-		return PrecipChartPoint(
-			date: stagedNow.addingTimeInterval(Double(step) * 300),
-			value: 2.4 * exp(-pow((progress - 0.4) / 0.18, 2))
-		)
-	}
-
-	static let stations: [Components.Schemas.NearbyStation] = [
-		("Leipzig/Halle", 14.2, 302.0, 0.0),
-		("Leipzig-Holzhausen", 6.1, 118.0, -1.1),
-		("Oschatz", 47.9, 81.0, -2.0),
-	].map { name, distance, bearing, offset in
-		let end = stagedNow
-		let history = (0...24).map { hour in
-			Components.Schemas.StationReading(
-				time: end.addingTimeInterval(Double(hour - 24) * 3600),
-				temperature_c: 13 + offset - 6 * cos(Double(hour + 3) / 24 * 2 * .pi))
-		}
-		return Components.Schemas.NearbyStation(
-			id: name, name: name, source: "esoh", latitude: 51.34, longitude: 12.37,
-			distance_km: distance, bearing_deg: bearing, last_report_at: end, current: history[24], history: history)
-	}
 }

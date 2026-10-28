@@ -9,7 +9,6 @@ import CoreLocation
 import Foundation
 import SwiftUI
 import WidgetKit
-import simd
 
 struct HomeEntry: TimelineEntry {
 	let date: Date
@@ -36,7 +35,7 @@ final class HomeProvider: TimelineProvider, Sendable {
 		runWidgetTimeline(refreshMinutes: 30, completion: completion) { coordinates in
 			let locationName = await LocationService.shared.getLocationName()
 
-			async let weatherRequest = self.client.getForecast(
+			let weather = try await self.client.getForecast(
 				coordinates: coordinates,
 				forecastDays: ._1,
 				hourly: [
@@ -44,28 +43,24 @@ final class HomeProvider: TimelineProvider, Sendable {
 					.precipitation, .snowfall, .windspeed_10m, .winddirection_10m,
 				]
 			)
-			async let radarRequest = self.client.getRadarSeries(coordinates: coordinates)
-			let weather = try await weatherRequest
-			let precipSeries = try? await radarRequest
 
 			let temperatureMin = weather.daily?.temperature_2m_min?.first ?? 0
 			let temperatureMax = weather.daily?.temperature_2m_max?.first ?? 0
 			let temperatureNow = weather.current?.temperature ?? 0
 			let weathercode = weather.current?.weathercode ?? 0
 			let isDay = weather.current?.is_day ?? 0
-			let modelPrecipitation = weather.current?.precipitation ?? 0
+			let precipitation = weather.current?.precipitation ?? 0
 
-			return nowcastEntryDates(refreshMinutes: 30).map { date in
-				let precipitation = precipSeries?.rate(at: date) ?? modelPrecipitation
-				return HomeEntry(
-					date: date,
+			return [
+				HomeEntry(
+					date: Date(),
 					location: locationName,
 					temperatureMin: temperatureMin,
 					temperatureMax: temperatureMax,
 					temperatureNow: temperatureNow,
 					icon: WeatherSymbol.sfSymbol(weathercode: weathercode, isDay: isDay, isRaining: precipitation > 0, precipitation: precipitation)
 				)
-			}
+			]
 		}
 	}
 }

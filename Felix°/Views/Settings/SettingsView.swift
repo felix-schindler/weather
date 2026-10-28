@@ -9,21 +9,12 @@ import SwiftUI
 
 struct SettingsView: View {
 	@Environment(\.dismiss) private var dismiss
-	@Environment(\.scenePhase) private var scenePhase
 	@Bindable private var settingsService = SettingService.shared
 
 	var body: some View {
 		NavigationStack {
 			List {
 				Section("Wetter") {
-					NavigationLink {
-						NotificationSettingsView()
-					} label: {
-						Label("Mitteilungen", systemImage: "bell.badge.fill")
-							.labelStyle(.settingsIcon(.red))
-					}
-					.accessibilityIdentifier("settings.alerts")
-
 					NavigationLink {
 						ForecastSettingsView()
 					} label: {
@@ -85,13 +76,6 @@ struct SettingsView: View {
 						dismiss()
 					}
 				}
-			}
-			.task {
-				await NotificationSettingsManager.shared.reloadNotificationStatus()
-			}
-			.onChange(of: scenePhase) { _, newPhase in
-				guard newPhase == .active else { return }
-				Task { await NotificationSettingsManager.shared.reloadNotificationStatus() }
 			}
 		}
 	}

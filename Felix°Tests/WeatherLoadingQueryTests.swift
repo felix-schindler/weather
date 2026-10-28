@@ -12,15 +12,14 @@ import Testing
 struct WeatherLoadingQueryTests {
 	@Test
 	func sortOrderFollowsDeclarationOrder() {
-		let shuffled: [WeatherLoadingQuery] = [.alerts, .rainRadar, .forecast, .airQuality]
-		#expect(shuffled.sorted() == [.forecast, .airQuality, .rainRadar, .alerts])
+		let shuffled: [WeatherLoadingQuery] = [.alerts, .forecast, .airQuality]
+		#expect(shuffled.sorted() == [.forecast, .airQuality, .alerts])
 	}
 
 	@Test
 	func comparablePairsAreOrdered() {
 		#expect(WeatherLoadingQuery.forecast < .airQuality)
-		#expect(WeatherLoadingQuery.airQuality < .rainRadar)
-		#expect(WeatherLoadingQuery.rainRadar < .alerts)
+		#expect(WeatherLoadingQuery.airQuality < .alerts)
 	}
 
 	@Test

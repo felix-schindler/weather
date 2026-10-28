@@ -15,7 +15,7 @@ struct AlertView: View {
 		let alerts = weather.alerts.displayInfos
 		let tint =
 			alerts.first.map {
-				AlertSeverityStyle.color(rank: $0.severityRank, source: $0.source)
+				AlertSeverityStyle.color(rank: $0.severityRank)
 			} ?? .orange
 		if let top = alerts.first {
 			Button {

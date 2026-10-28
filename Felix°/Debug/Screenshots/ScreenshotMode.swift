@@ -12,30 +12,20 @@
 import CoreLocation
 import Foundation
 import SwiftUI
-import UserNotifications
 
 enum ScreenshotScene: String {
 	case nowRain
 	case nowClear
 	case nowForecast
-	case mapRadar
-	case mapTemp
-	case mapWind
-	case mapPressure
 	case ensemble
 	case airQuality
 	case climate
 	case customization
 	case widgets
-	case notifications
 	case hourlyDetail
-	case mapLayers
 	case places
-	case settingsNotifications
 	case settingsForecast
 	case onboarding
-	case lockNotifications
-	case lockLiveActivity
 }
 
 enum ScreenshotMode {
@@ -104,43 +94,15 @@ enum ScreenshotMode {
 			let settings = SettingService.shared
 			settings.forecastModelPreference = scene == .settingsForecast ? .dwdICON : .bestMatch
 			settings.dailyForecastDaytimeTemperaturesEnabled = scene == .settingsForecast
-			if scene == .settingsNotifications {
-				NotificationSettingsManager.shared.stageForScreenshots()
-			}
 		}
 
 		@MainActor
-		static func stageOnAppear() async {
-			guard let scene else { return }
-			await RainRadarLiveActivityManager.shared.endAll()
-			UNUserNotificationCenter.current().removeAllDeliveredNotifications()
-			switch scene {
-			case .lockLiveActivity:
-				let phase =
-					UserDefaults.standard.string(forKey: "screenshotLiveActivityPhase")
-					.flatMap(RainRadarActivityAttributes.ContentState.Phase.init) ?? .raining
-				try? RainRadarLiveActivityManager.shared.startPreview(phase: phase)
-			case .lockNotifications:
-				await ScreenshotLockScreenNotifications.schedule()
-			default:
-				break
-			}
-		}
-
-		@MainActor private static var wasBackgrounded = false
-
-		@MainActor
-		static func scenePhaseDidChange(_ phase: ScenePhase) {
-			guard scene == .lockLiveActivity else { return }
-			if phase == .background { wasBackgrounded = true }
-			guard phase == .active, wasBackgrounded else { return }
-			Task { await RainRadarLiveActivityManager.shared.endAll() }
-		}
+		static func stageOnAppear() async {}
 	#endif
 }
 
 extension ScreenshotScene {
 	var isSettings: Bool {
-		self == .settingsNotifications || self == .settingsForecast
+		self == .settingsForecast
 	}
 }

@@ -76,7 +76,6 @@ struct NowView: View {
 			ForEach(sections) { section in
 				Section {
 					section.view(
-						openRadarMap: openRadarMap,
 						isWide: form.isWide,
 						hourlyDayLabel: $hourlyDayLabel
 					)
@@ -124,9 +123,6 @@ struct NowView: View {
 			Text("Air")
 				.padding(.top, 20)
 			Text(String(reflecting: weather.air))
-			Text("Radar")
-				.padding(.top, 20)
-			Text(String(reflecting: weather.precipSeries))
 			Text("Alerts")
 				.padding(.top, 20)
 			Text(String(reflecting: weather.alerts))
@@ -217,24 +213,8 @@ extension NowView {
 		Haptics.impact()
 	}
 
-	private func openMaps() {
-		Haptics.impact()
-		presentation.selectedTab = .maps
-	}
-
-	private func openRadarMap() {
-		settingsService.activeTileLayer = nil
-		settingsService.oscarRadarLayer = true
-		Haptics.impact()
-		presentation.selectedTab = .maps
-	}
-
 	private func moreAction(for section: NowSection) -> (() -> Void)? {
 		switch section {
-		case .map:
-			return openMaps
-		case .radar:
-			return openRadarMap
 		case .hourly:
 			guard HourlyForecastBuilder.hasHourlyDetailData(forecast: weather.forecast) else { return nil }
 			return { presentation.present(.hourly(nil)) }
@@ -243,9 +223,6 @@ extension NowView {
 			return { presentation.present(destination) }
 		case .environment:
 			return { presentation.present(.environment(.aqi)) }
-		case .stations:
-			guard let id = weather.stations.first?.id else { return nil }
-			return { presentation.present(.stations(id)) }
 		case .climate:
 			return nil
 		}

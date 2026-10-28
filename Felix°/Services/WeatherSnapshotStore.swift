@@ -4,10 +4,23 @@ import Foundation
 struct WeatherSnapshot: Codable {
 	let forecast: Operations.getForecast.Output.Ok.Body.jsonPayload
 	let air: Operations.getAirQuality.Output.Ok.Body.jsonPayload
-	let precipSeries: PrecipSeriesResponse?
 	let coordinates: CodableCoordinate
 	let locationName: String
 	let savedAt: Date
+}
+
+struct CodableCoordinate: Codable {
+	let latitude: Double
+	let longitude: Double
+
+	init(_ coordinate: CLLocationCoordinate2D) {
+		latitude = coordinate.latitude
+		longitude = coordinate.longitude
+	}
+
+	var coordinate: CLLocationCoordinate2D {
+		CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+	}
 }
 
 enum WeatherSnapshotStore {

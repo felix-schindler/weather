@@ -261,7 +261,7 @@ struct NowLayoutCanvas: View {
 		if dockRect.contains(point) { return .dock }
 		guard let hit = columnHit(at: point) else { return nil }
 		let column = hit.column
-		guard section.renders(wide: frames[column.frame].isWide), section != .map || column.side == .stage else { return nil }
+		guard section.renders(wide: frames[column.frame].isWide) else { return nil }
 		let others = sections(in: column).filter { $0 != section }.compactMap { blockRects[BlockID(column: column, section: $0)] }
 		return .column(column, index: others.count { $0.midY < hit.y })
 	}
@@ -337,7 +337,7 @@ struct NowLayoutCanvas: View {
 		if index < run.count - 1 {
 			Button("Nach unten") { place(section, at: index + 1, in: column) }
 		}
-		if column.side == .stage, section != .map {
+		if column.side == .stage {
 			Button("Nach rechts") { place(section, at: .max, in: ColumnID(frame: column.frame, side: .feed)) }
 		}
 		if column.side == .feed {
@@ -350,7 +350,7 @@ struct NowLayoutCanvas: View {
 
 	private func insertFromDock(_ section: NowSection) {
 		for frame in frames where section.renders(wide: frame.isWide) && arrangement(for: frame).hidden.contains(section) {
-			let side: ColumnID.Side = frame.isWide ? (section == .map ? .stage : .feed) : .page
+			let side: ColumnID.Side = frame.isWide ? .feed : .page
 			place(section, at: .max, in: ColumnID(frame: frame.id, side: side))
 		}
 	}
@@ -452,13 +452,11 @@ private struct SectionBlock: View {
 
 	var body: some View {
 		VStack(alignment: .leading, spacing: 8) {
-			if section != .map {
-				Text(section.title)
-					.font(.footnote.weight(.semibold))
-					.textCase(.uppercase)
-					.foregroundStyle(.secondary)
-					.padding(.leading)
-			}
+			Text(section.title)
+				.font(.footnote.weight(.semibold))
+				.textCase(.uppercase)
+				.foregroundStyle(.secondary)
+				.padding(.leading)
 			card
 		}
 		.accessibilityElement(children: .ignore)
@@ -468,17 +466,6 @@ private struct SectionBlock: View {
 	@ViewBuilder
 	private var card: some View {
 		switch section {
-		case .map:
-			Color.clear
-				.frame(height: 260)
-				.background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 12))
-				.padding(.horizontal)
-		case .radar:
-			PrecipitationSeriesChart(points: OnboardingSampleData.showerPoints, timeZone: .current)
-				.padding(16)
-				.frame(height: 120)
-				.background(Color(uiColor: .secondarySystemGroupedBackground), in: .rect(cornerRadius: 12))
-				.padding(.horizontal)
 		case .hourly:
 			strip(spacing: 12) {
 				ForEach(OnboardingSampleData.hourlyItems.prefix(5)) { HourlyForecastCard(item: $0) }
@@ -486,10 +473,6 @@ private struct SectionBlock: View {
 		case .daily:
 			CollageDailyCard(dayCount: 3)
 				.padding(.horizontal)
-		case .stations:
-			StationsCard(stations: Array(OnboardingSampleData.stations.prefix(1)), timeZone: .current) { _ in }
-				.padding(.horizontal)
-				.padding(.vertical, 12)
 		case .environment:
 			strip(spacing: 14) {
 				ForEach(OnboardingSampleData.gauges) { AQIGaugeCard(metric: $0) }

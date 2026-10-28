@@ -22,10 +22,8 @@ struct WatchNowView: View {
 	private var conditions: some View {
 		let current = weather.forecast.current
 		let daily = weather.forecast.daily
-		let radarRate = weather.precipSeries?.currentRate
-		let forecastPrecipitation = current?.precipitation ?? 0
-		let isRaining = (radarRate ?? forecastPrecipitation) > 0
-		let rainRate = radarRate ?? forecastPrecipitation
+		let rainRate = current?.precipitation ?? 0
+		let isRaining = rainRate > 0
 
 		return VStack(spacing: 0) {
 			Text(location.name.isEmpty ? String(localized: "Mein Standort") : location.name)

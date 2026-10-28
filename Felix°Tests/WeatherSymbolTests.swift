@@ -20,14 +20,14 @@ struct WeatherSymbolTests {
 	}
 
 	@Test
-	func radarRainLiftsADrySkyCode() {
+	func rainLiftsADrySkyCode() {
 		#expect(WeatherSymbol.sfSymbol(weathercode: 0, isDay: 1, isRaining: true, precipitation: 0) == "cloud.drizzle.fill")
 		#expect(WeatherSymbol.sfSymbol(weathercode: 0, isDay: 1, isRaining: false, precipitation: 0.3) == "cloud.drizzle.fill")
 		#expect(WeatherSymbol.sfSymbol(weathercode: 0, isDay: 0, isRaining: false, precipitation: 0) == "moon.stars.fill")
 	}
 
 	@Test
-	func dryRadarKeepsSnowAndThunderCodesPlain() {
+	func dryConditionsKeepSnowAndThunderCodesPlain() {
 		#expect(WeatherSymbol.sfSymbol(weathercode: 73, isDay: 1, isRaining: false, precipitation: 0) == "cloud.fill")
 		#expect(WeatherSymbol.sfSymbol(weathercode: 73, isDay: 1, isRaining: true, precipitation: 0) == "cloud.snow.fill")
 		#expect(WeatherSymbol.sfSymbol(weathercode: 95, isDay: 1, isRaining: true, precipitation: 0) == "cloud.bolt.rain.fill")

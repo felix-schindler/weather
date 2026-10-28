@@ -20,10 +20,6 @@ struct TemperatureLockScreenEntry: TimelineEntry {
 	let precipitationProbability: Int
 }
 
-func nowcastEntryDates(refreshMinutes: Int, now: Date = Date()) -> [Date] {
-	stride(from: 0, to: refreshMinutes, by: 5).map { now.addingTimeInterval(Double($0) * 60) }
-}
-
 func runWidgetTimeline<Entry: TimelineEntry>(
 	refreshMinutes: Int,
 	retryMinutes: Int = 15,
@@ -62,14 +58,11 @@ struct LockscreenProvider: TimelineProvider {
 
 	func getTimeline(in context: Context, completion: @escaping @Sendable (Timeline<TemperatureLockScreenEntry>) -> Void) {
 		runWidgetTimeline(refreshMinutes: 30, completion: completion) { coordinates in
-			async let weatherRequest = client.getForecast(
+			let weather = try await client.getForecast(
 				coordinates: coordinates,
 				forecastDays: ._1,
 				hourly: [.precipitation_probability]
 			)
-			async let radarRequest = client.getRadarSeries(coordinates: coordinates)
-			let weather = try await weatherRequest
-			let precipSeries = try? await radarRequest
 
 			let reportedMin = weather.daily?.temperature_2m_min?.first
 			let reportedMax = weather.daily?.temperature_2m_max?.first
@@ -81,18 +74,17 @@ struct LockscreenProvider: TimelineProvider {
 			let weathercode = weather.current?.weathercode ?? 0
 			let isDay = weather.current?.is_day ?? 0
 
-			let modelPrecipitation = weather.current?.precipitation ?? 0
+			let precipitation = weather.current?.precipitation ?? 0
 			let probabilities = weather.hourly?.precipitation_probability ?? []
 			let hourIndex = getLocalizedHourIndex(weather: weather)
 			let precipitationProbability = probabilities.indices.contains(hourIndex) ? probabilities[hourIndex] : nil
 
-			return nowcastEntryDates(refreshMinutes: 30).map { date in
-				let precipitation = precipSeries?.rate(at: date) ?? modelPrecipitation
-				let icon = WeatherSymbol.sfSymbol(weathercode: weathercode, isDay: isDay, isRaining: precipitation > 0, precipitation: precipitation)
-				return TemperatureLockScreenEntry(
-					date: date, temperatureMin: temperatureMin, temperatureMax: temperatureMax, temperatureNow: temperatureNow, icon: icon,
+			let icon = WeatherSymbol.sfSymbol(weathercode: weathercode, isDay: isDay, isRaining: precipitation > 0, precipitation: precipitation)
+			return [
+				TemperatureLockScreenEntry(
+					date: Date(), temperatureMin: temperatureMin, temperatureMax: temperatureMax, temperatureNow: temperatureNow, icon: icon,
 					precipitation: precipitation, precipitationProbability: Int(precipitationProbability ?? 0))
-			}
+			]
 		}
 	}
 

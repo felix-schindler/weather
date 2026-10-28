@@ -54,14 +54,6 @@ struct HeadView: View {
 		return status == .authorizedWhenInUse || status == .authorizedAlways
 	}
 
-	private var cloudTrendAnnotation: (arrow: String, time: String)? {
-		guard let trend = weather.cloudSeries?.trend() else { return nil }
-		return (
-			trend.direction == .clearing ? "arrow.down.right" : "arrow.up.right",
-			SettingService.formattedTime(trend.at, timeZone: weather.forecast.locationTimeZone)
-		)
-	}
-
 	private var locationHeader: some View {
 		VStack(spacing: 4) {
 			if let eyebrow {
@@ -132,28 +124,9 @@ struct HeadView: View {
 				HStack(spacing: 18) {
 					ForEach(settingsService.headMetrics) { metric in
 						if let value = metric.value(in: weather) {
-							let item = HStack(spacing: 6) {
+							HStack(spacing: 6) {
 								Image(systemName: metric.systemImage)
 								Text(value)
-								if metric == .cloudCover, let annotation = cloudTrendAnnotation {
-									HStack(spacing: 2) {
-										Image(systemName: annotation.arrow)
-											.font(.system(size: 9, weight: .bold))
-										Text(annotation.time)
-											.font(.caption2.weight(.medium))
-									}
-									.foregroundStyle(.secondary)
-								}
-							}
-							if metric == .measured, let id = weather.headStation?.id {
-								Button {
-									presentation.present(.stations(id))
-								} label: {
-									item
-								}
-								.buttonStyle(.plain)
-							} else {
-								item
 							}
 						}
 					}
@@ -170,9 +143,6 @@ struct HeadView: View {
 				.accessibilityIdentifier("now.metrics")
 				.accessibilityLabel(Text(metricsDescription))
 				.accessibilityActions {
-					if settingsService.headMetrics.contains(.measured), let id = weather.headStation?.id {
-						Button("Messstationen") { presentation.present(.stations(id)) }
-					}
 					Button("Kennzahlen anpassen") { presentation.present(.layout) }
 				}
 
@@ -191,8 +161,6 @@ extension HeadView {
 		switch weather.alerts {
 		case .canadian(let canadianAlerts):
 			return canadianAlerts.contains { $0.alert?.alerts?.isEmpty == false }
-		case .oscar(let oscarAlerts):
-			return !oscarAlerts.alerts.isEmpty
 		}
 	}
 }

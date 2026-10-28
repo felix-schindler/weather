@@ -31,30 +31,3 @@ extension Operations.getForecast.Output.Ok.Body.jsonPayload {
 			?? .current
 	}
 }
-
-extension PrecipSeriesResponse {
-	private static let freshnessWindow: TimeInterval = 20 * 60
-
-	func rate(at date: Date) -> Double? {
-		guard
-			let nearest = series.min(by: {
-				abs($0.timestamp.timeIntervalSince(date)) < abs($1.timestamp.timeIntervalSince(date))
-			}), abs(nearest.timestamp.timeIntervalSince(date)) <= Self.freshnessWindow
-		else {
-			return nil
-		}
-		return nearest.precipitation
-	}
-
-	var currentRate: Double? {
-		rate(at: Date())
-	}
-
-	var currentPrecipitation: Double {
-		currentRate ?? 0
-	}
-
-	func isRaining() -> Bool {
-		currentPrecipitation > 0
-	}
-}

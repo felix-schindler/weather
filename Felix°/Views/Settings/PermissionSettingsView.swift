@@ -6,12 +6,10 @@
 import CoreLocation
 import SwiftUI
 import UIKit
-import UserNotifications
 
 struct PermissionSettingsView: View {
 	@Environment(\.openURL) private var openURL
 	private let locationService = LocationService.shared
-	private let notificationManager = NotificationSettingsManager.shared
 
 	var body: some View {
 		Form {
@@ -22,8 +20,6 @@ struct PermissionSettingsView: View {
 				let locationUndetermined =
 					locationService.authStatus == .notDetermined
 					|| locationService.authStatus == nil
-				let notificationsAuthorized = isNotificationsAuthorized
-				let notificationsUndetermined = notificationManager.authorizationStatus == .notDetermined
 
 				Toggle(
 					isOn: permissionBinding(
@@ -36,32 +32,10 @@ struct PermissionSettingsView: View {
 					Label("Standort", systemImage: "location.fill")
 						.labelStyle(.settingsIcon(.blue))
 				}
-
-				Toggle(
-					isOn: permissionBinding(
-						currentValue: notificationsAuthorized,
-						canPrompt: notificationsUndetermined,
-						request: { Task { await notificationManager.requestPermissionOnly() } },
-						settingsURL: URL(string: UIApplication.openNotificationSettingsURLString)
-					)
-				) {
-					Label("Mitteilungen", systemImage: "app.badge.fill")
-						.labelStyle(.settingsIcon(.red))
-				}
 			}
 		}
 		.navigationTitle("Berechtigungen")
 		.navigationBarTitleDisplayMode(.inline)
-		.task {
-			await notificationManager.reloadNotificationStatus()
-		}
-	}
-
-	private var isNotificationsAuthorized: Bool {
-		switch notificationManager.authorizationStatus {
-		case .authorized, .provisional, .ephemeral: true
-		default: false
-		}
 	}
 
 	private func permissionBinding(

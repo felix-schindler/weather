@@ -9,13 +9,13 @@
             "value" : "%@ mm/h"
           }
         },
-        "zh-Hant" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ mm/h"
           }
         },
-        "pt-BR" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ mm/h"
@@ -25,28 +25,28 @@
     },
     "%@ Tage" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ days"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Tage"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ 天"
+            "value" : "%@ days"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ dias"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 天"
           }
         }
       }
@@ -59,38 +59,32 @@
             "value" : "7 Days"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "7 天"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "7 dias"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 天"
           }
         }
       }
     },
     "12 Stunden" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "12-hour"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "12 Stunden"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "12 小時"
+            "value" : "12-hour"
           }
         },
         "pt-BR" : {
@@ -98,27 +92,27 @@
             "state" : "translated",
             "value" : "12 horas"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12 小時"
+          }
         }
       }
     },
     "13 km · 5 Tage" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "13 km · 5 days"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "13 km · 5 Tage"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "13 km · 5 天"
+            "value" : "13 km · 5 days"
           }
         },
         "pt-BR" : {
@@ -126,27 +120,27 @@
             "state" : "translated",
             "value" : "13 km · 5 dias"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "13 km · 5 天"
+          }
         }
       }
     },
     "24 Stunden" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "24-hour"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "24 Stunden"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "24 小時"
+            "value" : "24-hour"
           }
         },
         "pt-BR" : {
@@ -154,27 +148,27 @@
             "state" : "translated",
             "value" : "24 horas"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24 小時"
+          }
         }
       }
     },
     "25 km · 15 Tage" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "25 km · 15 days"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "25 km · 15 Tage"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "25 km · 15 天"
+            "value" : "25 km · 15 days"
           }
         },
         "pt-BR" : {
@@ -182,27 +176,27 @@
             "state" : "translated",
             "value" : "25 km · 15 dias"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25 km · 15 天"
+          }
         }
       }
     },
     "25 km · 16 Tage" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "25 km · 16 days"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "25 km · 16 Tage"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "25 km · 16 天"
+            "value" : "25 km · 16 days"
           }
         },
         "pt-BR" : {
@@ -210,27 +204,27 @@
             "state" : "translated",
             "value" : "25 km · 16 dias"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "25 km · 16 天"
+          }
         }
       }
     },
     "26 km · 7,5 Tage" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "26 km · 7.5 days"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "26 km · 7,5 Tage"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "26 km · 7.5 天"
+            "value" : "26 km · 7.5 days"
           }
         },
         "pt-BR" : {
@@ -238,27 +232,27 @@
             "state" : "translated",
             "value" : "26 km · 7,5 dias"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "26 km · 7.5 天"
+          }
         }
       }
     },
     "50 km · 35 Tage" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "50 km · 35 days"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "50 km · 35 Tage"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "50 km · 35 天"
+            "value" : "50 km · 35 days"
           }
         },
         "pt-BR" : {
@@ -266,27 +260,27 @@
             "state" : "translated",
             "value" : "50 km · 35 dias"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "50 km · 35 天"
+          }
         }
       }
     },
     "alle %lld Std." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "every %lld h"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "alle %lld Std."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "每 %lld 小時"
+            "value" : "every %lld h"
           }
         },
         "pt-BR" : {
@@ -294,27 +288,27 @@
             "state" : "translated",
             "value" : "a cada %lld h"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每 %lld 小時"
+          }
         }
       }
     },
     "Äste brechen, kleinere Schäden sind möglich." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Branches break and minor damage is possible."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Äste brechen, kleinere Schäden sind möglich."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "樹枝斷裂，可能造成較輕微的損害。"
+            "value" : "Branches break and minor damage is possible."
           }
         },
         "pt-BR" : {
@@ -322,27 +316,27 @@
             "state" : "translated",
             "value" : "Galhos se quebram e danos menores são possíveis."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "樹枝斷裂，可能造成較輕微的損害。"
+          }
         }
       }
     },
     "Australien" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Australia"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Australien"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "澳洲"
+            "value" : "Australia"
           }
         },
         "pt-BR" : {
@@ -350,27 +344,27 @@
             "state" : "translated",
             "value" : "Austrália"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "澳洲"
+          }
         }
       }
     },
     "Automatisch" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Automatic"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Automatisch"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "自動"
+            "value" : "Automatic"
           }
         },
         "pt-BR" : {
@@ -378,27 +372,55 @@
             "state" : "translated",
             "value" : "Automático"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自動"
+          }
+        }
+      }
+    },
+    "Bäume können entwurzelt werden, Gebäude können Schaden nehmen." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bäume können entwurzelt werden, Gebäude können Schaden nehmen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trees can be uprooted and buildings can be damaged."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Árvores podem ser arrancadas e edifícios podem sofrer danos."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "樹木可能被連根拔起，建築物可能受損。"
+          }
         }
       }
     },
     "Bäume schwanken, Gehen gegen den Wind wird mühsam." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trees sway and walking into the wind becomes difficult."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bäume schwanken, Gehen gegen den Wind wird mühsam."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "樹木搖晃，逆風行走變得吃力。"
+            "value" : "Trees sway and walking into the wind becomes difficult."
           }
         },
         "pt-BR" : {
@@ -406,27 +428,27 @@
             "state" : "translated",
             "value" : "As árvores balançam e caminhar contra o vento fica penoso."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "樹木搖晃，逆風行走變得吃力。"
+          }
         }
       }
     },
     "Bedeckt" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Overcast"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bedeckt"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "陰天"
+            "value" : "Overcast"
           }
         },
         "pt-BR" : {
@@ -434,27 +456,27 @@
             "state" : "translated",
             "value" : "Encoberto"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陰天"
+          }
         }
       }
     },
     "Benutzerdefiniert" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Custom"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Benutzerdefiniert"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "自訂"
+            "value" : "Custom"
           }
         },
         "pt-BR" : {
@@ -462,27 +484,27 @@
             "state" : "translated",
             "value" : "Personalizado"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自訂"
+          }
         }
       }
     },
     "Bewölkt" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cloudy"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bewölkt"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "多雲"
+            "value" : "Cloudy"
           }
         },
         "pt-BR" : {
@@ -490,27 +512,27 @@
             "state" : "translated",
             "value" : "Nublado"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "多雲"
+          }
         }
       }
     },
     "Blätter rascheln, Wind ist im Gesicht spürbar." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Leaves rustle and the wind is felt on the face."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Blätter rascheln, Wind ist im Gesicht spürbar."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "樹葉沙沙作響，臉上能感受到風。"
+            "value" : "Leaves rustle and the wind is felt on the face."
           }
         },
         "pt-BR" : {
@@ -518,18 +540,30 @@
             "state" : "translated",
             "value" : "As folhas farfalham e o vento é sentido no rosto."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "樹葉沙沙作響，臉上能感受到風。"
+          }
         }
       }
     },
     "China" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "China"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "China"
           }
         },
-        "de" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "China"
@@ -540,33 +574,21 @@
             "state" : "translated",
             "value" : "中國"
           }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "China"
-          }
         }
       }
     },
     "Dicke Äste bewegen sich, Drähte können pfeifen." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thick branches move and wires can whistle."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dicke Äste bewegen sich, Drähte können pfeifen."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "粗樹枝擺動，電線可能發出呼嘯聲。"
+            "value" : "Thick branches move and wires can whistle."
           }
         },
         "pt-BR" : {
@@ -574,27 +596,28 @@
             "state" : "translated",
             "value" : "Galhos grossos se movem e os fios podem assobiar."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "粗樹枝擺動，電線可能發出呼嘯聲。"
+          }
         }
       }
     },
     "Dunkel" : {
+      "extractionState" : "stale",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dark"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dunkel"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "深色"
+            "value" : "Dark"
           }
         },
         "pt-BR" : {
@@ -602,33 +625,39 @@
             "state" : "translated",
             "value" : "Escuro"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "深色"
+          }
         }
       }
     },
     "Dünne Zweige bewegen sich, Wimpel strecken sich." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thin twigs move and pennants extend."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dünne Zweige bewegen sich, Wimpel strecken sich."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "細樹枝擺動，旗幟伸直。"
+            "value" : "Thin twigs move and pennants extend."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Galhos finos se movem e as bandeirolas se esticam."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "細樹枝擺動，旗幟伸直。"
           }
         }
       }
@@ -648,16 +677,16 @@
             "value" : "E"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "東"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "L"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "東"
           }
         }
       }
@@ -670,13 +699,13 @@
             "value" : "ECMWF"
           }
         },
-        "zh-Hant" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "ECMWF"
           }
         },
-        "pt-BR" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "ECMWF"
@@ -686,22 +715,16 @@
     },
     "Erneut versuchen" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Try again"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Erneut versuchen"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "再試一次"
+            "value" : "Try again"
           }
         },
         "pt-BR" : {
@@ -709,18 +732,30 @@
             "state" : "translated",
             "value" : "Tentar novamente"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再試一次"
+          }
         }
       }
     },
     "Europa" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Europa"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Europe"
           }
         },
-        "de" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Europa"
@@ -731,36 +766,31 @@
             "state" : "translated",
             "value" : "歐洲"
           }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Europa"
-          }
         }
       }
     },
     "Fiord" : {
+      "extractionState" : "stale",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fiord"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fiord"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fiord"
           }
         },
         "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fiord"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fiord"
@@ -770,22 +800,16 @@
     },
     "Frankreich & Europa" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "France & Europe"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Frankreich & Europa"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "法國與歐洲"
+            "value" : "France & Europe"
           }
         },
         "pt-BR" : {
@@ -793,27 +817,27 @@
             "state" : "translated",
             "value" : "França e Europa"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "法國與歐洲"
+          }
         }
       }
     },
     "Frische Brise" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fresh breeze"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Frische Brise"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "清風"
+            "value" : "Fresh breeze"
           }
         },
         "pt-BR" : {
@@ -821,27 +845,27 @@
             "state" : "translated",
             "value" : "Brisa fresca"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清風"
+          }
         }
       }
     },
     "Gefrierender Regen" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Freezing rain"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gefrierender Regen"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "凍雨"
+            "value" : "Freezing rain"
           }
         },
         "pt-BR" : {
@@ -849,27 +873,27 @@
             "state" : "translated",
             "value" : "Chuva congelante"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "凍雨"
+          }
         }
       }
     },
     "Gewitter" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thunderstorm"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gewitter"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "雷雨"
+            "value" : "Thunderstorm"
           }
         },
         "pt-BR" : {
@@ -877,27 +901,27 @@
             "state" : "translated",
             "value" : "Tempestade"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雷雨"
+          }
         }
       }
     },
     "Globales 0,25°-Modell (Open-Data, ca. 2 Std. Verzögerung)." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Global 0.25° model (open data, approx. 2 h delay)."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Globales 0,25°-Modell (Open-Data, ca. 2 Std. Verzögerung)."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "全球 0.25° 模型（開放資料，約延遲 2 小時）。"
+            "value" : "Global 0.25° model (open data, approx. 2 h delay)."
           }
         },
         "pt-BR" : {
@@ -905,27 +929,27 @@
             "state" : "translated",
             "value" : "Modelo global de 0,25° (dados abertos, atraso de cerca de 2 h)."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全球 0.25° 模型（開放資料，約延遲 2 小時）。"
+          }
         }
       }
     },
     "Globales Modell des australischen Wetterdienstes." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Global model from the Australian weather service."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Globales Modell des australischen Wetterdienstes."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "澳洲氣象局的全球模型。"
+            "value" : "Global model from the Australian weather service."
           }
         },
         "pt-BR" : {
@@ -933,27 +957,27 @@
             "state" : "translated",
             "value" : "Modelo global do serviço meteorológico australiano."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "澳洲氣象局的全球模型。"
+          }
         }
       }
     },
     "Globales Modell des chinesischen Wetterdienstes." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Global model from the Chinese weather service."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Globales Modell des chinesischen Wetterdienstes."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "中國氣象局的全球模型。"
+            "value" : "Global model from the Chinese weather service."
           }
         },
         "pt-BR" : {
@@ -961,55 +985,27 @@
             "state" : "translated",
             "value" : "Modelo global do serviço meteorológico chinês."
           }
-        }
-      }
-    },
-    "Großbritannien" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "United Kingdom"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Großbritannien"
-          }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "英國"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reino Unido"
+            "value" : "中國氣象局的全球模型。"
           }
         }
       }
     },
     "Größere Zweige und kleine Bäume bewegen sich." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Larger branches and small trees move."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Größere Zweige und kleine Bäume bewegen sich."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "較大的樹枝和小樹會搖動。"
+            "value" : "Larger branches and small trees move."
           }
         },
         "pt-BR" : {
@@ -1017,27 +1013,55 @@
             "state" : "translated",
             "value" : "Galhos maiores e árvores pequenas se movem."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "較大的樹枝和小樹會搖動。"
+          }
+        }
+      }
+    },
+    "Großbritannien" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Großbritannien"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "United Kingdom"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reino Unido"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英國"
+          }
         }
       }
     },
     "Große Bäume bewegen sich, Zweige können brechen." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Large trees move and branches can break."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Große Bäume bewegen sich, Zweige können brechen."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "大樹會搖動，樹枝可能斷裂。"
+            "value" : "Large trees move and branches can break."
           }
         },
         "pt-BR" : {
@@ -1045,27 +1069,28 @@
             "state" : "translated",
             "value" : "Árvores grandes se movem e galhos podem quebrar."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大樹會搖動，樹枝可能斷裂。"
+          }
         }
       }
     },
     "Hell" : {
+      "extractionState" : "stale",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Light"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hell"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "明亮"
+            "value" : "Light"
           }
         },
         "pt-BR" : {
@@ -1073,27 +1098,27 @@
             "state" : "translated",
             "value" : "Claro"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "明亮"
+          }
         }
       }
     },
     "Heute" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Today"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Heute"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "今天"
+            "value" : "Today"
           }
         },
         "pt-BR" : {
@@ -1101,27 +1126,27 @@
             "state" : "translated",
             "value" : "Hoje"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天"
+          }
         }
       }
     },
     "Hochauflösendes Modell für Italien." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "High-resolution model for Italy."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hochauflösendes Modell für Italien."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "義大利的高解析度模型。"
+            "value" : "High-resolution model for Italy."
           }
         },
         "pt-BR" : {
@@ -1129,27 +1154,27 @@
             "state" : "translated",
             "value" : "Modelo de alta resolução para a Itália."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "義大利的高解析度模型。"
+          }
         }
       }
     },
     "Hochauflösendes Regionalmodell, weltweit durch ECMWF ergänzt." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "High-resolution regional model, extended worldwide by ECMWF."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hochauflösendes Regionalmodell, weltweit durch ECMWF ergänzt."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "高解析度區域模型，全球範圍由 ECMWF 補充。"
+            "value" : "High-resolution regional model, extended worldwide by ECMWF."
           }
         },
         "pt-BR" : {
@@ -1157,27 +1182,27 @@
             "state" : "translated",
             "value" : "Modelo regional de alta resolução, complementado mundialmente pelo ECMWF."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高解析度區域模型，全球範圍由 ECMWF 補充。"
+          }
         }
       }
     },
     "Im Tagesverlauf markieren" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mark within the daily range"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Im Tagesverlauf markieren"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在每日走勢中標示"
+            "value" : "Mark within the daily range"
           }
         },
         "pt-BR" : {
@@ -1185,27 +1210,27 @@
             "state" : "translated",
             "value" : "Marcar ao longo do dia"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在每日走勢中標示"
+          }
         }
       }
     },
     "Italien" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Italy"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Italien"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "義大利"
+            "value" : "Italy"
           }
         },
         "pt-BR" : {
@@ -1213,27 +1238,27 @@
             "state" : "translated",
             "value" : "Itália"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "義大利"
+          }
         }
       }
     },
     "Japan" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Japan"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Japan"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "日本"
+            "value" : "Japan"
           }
         },
         "pt-BR" : {
@@ -1241,27 +1266,27 @@
             "state" : "translated",
             "value" : "Japão"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日本"
+          }
         }
       }
     },
     "Jetzt" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Now"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jetzt"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "現在"
+            "value" : "Now"
           }
         },
         "pt-BR" : {
@@ -1269,10 +1294,17 @@
             "state" : "translated",
             "value" : "Agora"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在"
+          }
         }
       }
     },
     "Kein Regen in Sicht" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1280,38 +1312,32 @@
             "value" : "No rain in sight"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "暫時無雨"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sem chuva à vista"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暫時無雨"
           }
         }
       }
     },
     "Keine Daten" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No data"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Keine Daten"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "沒有資料"
+            "value" : "No data"
           }
         },
         "pt-BR" : {
@@ -1319,10 +1345,17 @@
             "state" : "translated",
             "value" : "Sem dados"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有資料"
+          }
         }
       }
     },
     "Keine Radardaten" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1330,16 +1363,16 @@
             "value" : "No radar data"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "沒有雷達資料"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sem dados de radar"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有雷達資料"
           }
         }
       }
@@ -1352,38 +1385,32 @@
             "value" : "No weather data"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "沒有天氣資料"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sem dados meteorológicos"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有天氣資料"
           }
         }
       }
     },
     "KI-basiertes Wettermodell von ECMWF." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "AI-based weather model from ECMWF."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "KI-basiertes Wettermodell von ECMWF."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ECMWF 的 AI 氣象模型。"
+            "value" : "AI-based weather model from ECMWF."
           }
         },
         "pt-BR" : {
@@ -1391,27 +1418,27 @@
             "state" : "translated",
             "value" : "Modelo meteorológico baseado em IA do ECMWF."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ECMWF 的 AI 氣象模型。"
+          }
         }
       }
     },
     "Klar" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clear"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klar"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "晴"
+            "value" : "Clear"
           }
         },
         "pt-BR" : {
@@ -1419,27 +1446,27 @@
             "state" : "translated",
             "value" : "Limpo"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "晴"
+          }
         }
       }
     },
     "Korea" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Korea"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Korea"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "韓國"
+            "value" : "Korea"
           }
         },
         "pt-BR" : {
@@ -1447,27 +1474,27 @@
             "state" : "translated",
             "value" : "Coreia"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "韓國"
+          }
         }
       }
     },
     "Leichte Brise" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Light breeze"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leichte Brise"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "微風"
+            "value" : "Light breeze"
           }
         },
         "pt-BR" : {
@@ -1475,27 +1502,27 @@
             "state" : "translated",
             "value" : "Brisa leve"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "微風"
+          }
         }
       }
     },
     "Leiser Zug" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Light air"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leiser Zug"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "軟風"
+            "value" : "Light air"
           }
         },
         "pt-BR" : {
@@ -1503,27 +1530,27 @@
             "state" : "translated",
             "value" : "Brisa muito leve"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "軟風"
+          }
         }
       }
     },
     "Mäßige Brise" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Moderate breeze"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mäßige Brise"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "和風"
+            "value" : "Moderate breeze"
           }
         },
         "pt-BR" : {
@@ -1531,27 +1558,27 @@
             "state" : "translated",
             "value" : "Brisa moderada"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "和風"
+          }
         }
       }
     },
     "Mein Standort" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "My Location"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mein Standort"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我的位置"
+            "value" : "My Location"
           }
         },
         "pt-BR" : {
@@ -1559,27 +1586,27 @@
             "state" : "translated",
             "value" : "Minha localização"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的位置"
+          }
         }
       }
     },
     "Mitteleuropa & Alpen" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Central Europe & Alps"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mitteleuropa & Alpen"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "中歐與阿爾卑斯山"
+            "value" : "Central Europe & Alps"
           }
         },
         "pt-BR" : {
@@ -1587,33 +1614,39 @@
             "state" : "translated",
             "value" : "Europa Central e Alpes"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中歐與阿爾卑斯山"
+          }
         }
       }
     },
     "Morgen" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tomorrow"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Morgen"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "明天"
+            "value" : "Tomorrow"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Amanhã"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "明天"
           }
         }
       }
@@ -1633,38 +1666,32 @@
             "value" : "N"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "北"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "N"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "北"
           }
         }
       }
     },
     "Nationale Wetterdienste" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "National weather services"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nationale Wetterdienste"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "各國氣象機構"
+            "value" : "National weather services"
           }
         },
         "pt-BR" : {
@@ -1672,33 +1699,39 @@
             "state" : "translated",
             "value" : "Serviços meteorológicos nacionais"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "各國氣象機構"
+          }
         }
       }
     },
     "Native 9-km-Auflösung direkt von ECMWF, stündlich bis +90 Std." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Native 9 km resolution directly from ECMWF, hourly up to +90 h."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Native 9-km-Auflösung direkt von ECMWF, stündlich bis +90 Std."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "原生 9 公里解析度，直接來自 ECMWF，每小時預報最遠至 +90 小時。"
+            "value" : "Native 9 km resolution directly from ECMWF, hourly up to +90 h."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Resolução nativa de 9 km diretamente do ECMWF, de hora em hora até +90 h."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "原生 9 公里解析度，直接來自 ECMWF，每小時預報最遠至 +90 小時。"
           }
         }
       }
@@ -1718,38 +1751,32 @@
             "value" : "NE"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "東北"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "NE"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "東北"
           }
         }
       }
     },
     "Nebel" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fog"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nebel"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "霧"
+            "value" : "Fog"
           }
         },
         "pt-BR" : {
@@ -1757,27 +1784,27 @@
             "state" : "translated",
             "value" : "Neblina"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "霧"
+          }
         }
       }
     },
     "Niederlande & Westeuropa" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Netherlands & Western Europe"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Niederlande & Westeuropa"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "荷蘭與西歐"
+            "value" : "Netherlands & Western Europe"
           }
         },
         "pt-BR" : {
@@ -1785,27 +1812,27 @@
             "state" : "translated",
             "value" : "Países Baixos e Europa Ocidental"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "荷蘭與西歐"
+          }
         }
       }
     },
     "Nieselregen" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Drizzle"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nieselregen"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "毛毛雨"
+            "value" : "Drizzle"
           }
         },
         "pt-BR" : {
@@ -1813,27 +1840,27 @@
             "state" : "translated",
             "value" : "Garoa"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毛毛雨"
+          }
         }
       }
     },
     "Nordamerika" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "North America"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nordamerika"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "北美洲"
+            "value" : "North America"
           }
         },
         "pt-BR" : {
@@ -1841,33 +1868,39 @@
             "state" : "translated",
             "value" : "América do Norte"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "北美洲"
+          }
         }
       }
     },
     "Nordeuropa" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Northern Europe"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nordeuropa"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "北歐"
+            "value" : "Northern Europe"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Norte da Europa"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "北歐"
           }
         }
       }
@@ -1887,38 +1920,32 @@
             "value" : "NW"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "西北"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "NO"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "西北"
           }
         }
       }
     },
     "Orkan" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hurricane force"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Orkan"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "颶風"
+            "value" : "Hurricane force"
           }
         },
         "pt-BR" : {
@@ -1926,27 +1953,27 @@
             "state" : "translated",
             "value" : "Força de furacão"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "颶風"
+          }
         }
       }
     },
     "Orkanartiger Sturm" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Violent storm"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Orkanartiger Sturm"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "暴風"
+            "value" : "Violent storm"
           }
         },
         "pt-BR" : {
@@ -1954,18 +1981,31 @@
             "state" : "translated",
             "value" : "Tempestade violenta"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暴風"
+          }
         }
       }
     },
     "Radar" : {
+      "extractionState" : "stale",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radar"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Radar"
           }
         },
-        "de" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Radar"
@@ -1976,33 +2016,21 @@
             "state" : "translated",
             "value" : "雷達"
           }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Radar"
-          }
         }
       }
     },
     "Rauch driftet leicht, Windfahnen bleiben ruhig." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Smoke drifts slightly and wind vanes stay still."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rauch driftet leicht, Windfahnen bleiben ruhig."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "煙霧輕微飄移，風向標保持不動。"
+            "value" : "Smoke drifts slightly and wind vanes stay still."
           }
         },
         "pt-BR" : {
@@ -2010,27 +2038,27 @@
             "state" : "translated",
             "value" : "A fumaça se desloca levemente e os cata-ventos ficam parados."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "煙霧輕微飄移，風向標保持不動。"
+          }
         }
       }
     },
     "Rauch steigt fast senkrecht auf." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Smoke rises almost vertically."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rauch steigt fast senkrecht auf."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "煙霧幾乎垂直上升。"
+            "value" : "Smoke rises almost vertically."
           }
         },
         "pt-BR" : {
@@ -2038,27 +2066,27 @@
             "state" : "translated",
             "value" : "A fumaça sobe quase na vertical."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "煙霧幾乎垂直上升。"
+          }
         }
       }
     },
     "Regen" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rain"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Regen"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "降雨"
+            "value" : "Rain"
           }
         },
         "pt-BR" : {
@@ -2066,10 +2094,17 @@
             "state" : "translated",
             "value" : "Chuva"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降雨"
+          }
         }
       }
     },
     "Regen · noch >%lld min" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2077,21 +2112,22 @@
             "value" : "Rain · >%lld min left"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "降雨 · 仍有 >%lld 分鐘"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chuva · >%lld min restantes"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降雨 · 仍有 >%lld 分鐘"
+          }
         }
       }
     },
     "Regen · noch ~%lld min" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2099,21 +2135,22 @@
             "value" : "Rain · ~%lld min left"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "降雨 · 約剩 %lld 分鐘"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chuva · ~%lld min restantes"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降雨 · 約剩 %lld 分鐘"
+          }
         }
       }
     },
     "Regen ab %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2121,21 +2158,22 @@
             "value" : "Rain from %@"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "降雨從 %@ 開始"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chuva a partir de %@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降雨從 %@ 開始"
+          }
         }
       }
     },
     "Regen bis %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2143,16 +2181,16 @@
             "value" : "Rain until %@"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "降雨持續至 %@"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chuva até %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降雨持續至 %@"
           }
         }
       }
@@ -2172,38 +2210,32 @@
             "value" : "S"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "南"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "S"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "南"
           }
         }
       }
     },
     "Schauer" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Showers"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Schauer"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "陣雨"
+            "value" : "Showers"
           }
         },
         "pt-BR" : {
@@ -2211,27 +2243,27 @@
             "state" : "translated",
             "value" : "Pancadas de chuva"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陣雨"
+          }
         }
       }
     },
     "Schneefall" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Snow"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Schneefall"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "降雪"
+            "value" : "Snow"
           }
         },
         "pt-BR" : {
@@ -2239,27 +2271,27 @@
             "state" : "translated",
             "value" : "Neve"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降雪"
+          }
         }
       }
     },
     "Schwache Brise" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gentle breeze"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Schwache Brise"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "微風"
+            "value" : "Gentle breeze"
           }
         },
         "pt-BR" : {
@@ -2267,27 +2299,27 @@
             "state" : "translated",
             "value" : "Brisa fraca"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "微風"
+          }
         }
       }
     },
     "Schwere Sturmschäden, im Binnenland selten." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Severe storm damage, rare inland."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Schwere Sturmschäden, im Binnenland selten."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "嚴重的風暴損害，內陸少見。"
+            "value" : "Severe storm damage, rare inland."
           }
         },
         "pt-BR" : {
@@ -2295,27 +2327,27 @@
             "state" : "translated",
             "value" : "Danos graves de tempestade, raros no interior."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "嚴重的風暴損害，內陸少見。"
+          }
         }
       }
     },
     "Schwere Verwüstungen, sehr selten im Landesinneren." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Severe devastation, very rare inland."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Schwere Verwüstungen, sehr selten im Landesinneren."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "嚴重破壞，內陸地區極為少見。"
+            "value" : "Severe devastation, very rare inland."
           }
         },
         "pt-BR" : {
@@ -2323,33 +2355,39 @@
             "state" : "translated",
             "value" : "Devastação severa, muito rara no interior."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "嚴重破壞，內陸地區極為少見。"
+          }
         }
       }
     },
     "Schwerer Sturm" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Storm"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Schwerer Sturm"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "強烈風暴"
+            "value" : "Storm"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempestade forte"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "強烈風暴"
           }
         }
       }
@@ -2369,38 +2407,32 @@
             "value" : "SE"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "東南"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "SE"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "東南"
           }
         }
       }
     },
     "Sonnenaufgang bis Sonnenuntergang" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sunrise to sunset"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sonnenaufgang bis Sonnenuntergang"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "日出至日落"
+            "value" : "Sunrise to sunset"
           }
         },
         "pt-BR" : {
@@ -2408,27 +2440,27 @@
             "state" : "translated",
             "value" : "Do nascer do sol ao pôr do sol"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日出至日落"
+          }
         }
       }
     },
     "Starker Wind" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Strong breeze"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Starker Wind"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "強風"
+            "value" : "Strong breeze"
           }
         },
         "pt-BR" : {
@@ -2436,27 +2468,27 @@
             "state" : "translated",
             "value" : "Vento forte"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "強風"
+          }
         }
       }
     },
     "Steifer Wind" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Near gale"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Steifer Wind"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "疾風"
+            "value" : "Near gale"
           }
         },
         "pt-BR" : {
@@ -2464,27 +2496,27 @@
             "state" : "translated",
             "value" : "Ventania"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "疾風"
+          }
         }
       }
     },
     "stündlich" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "hourly"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "stündlich"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "每小時"
+            "value" : "hourly"
           }
         },
         "pt-BR" : {
@@ -2492,27 +2524,27 @@
             "state" : "translated",
             "value" : "por hora"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每小時"
+          }
         }
       }
     },
     "Stündlich" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hourly"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stündlich"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "每小時"
+            "value" : "Hourly"
           }
         },
         "pt-BR" : {
@@ -2520,27 +2552,27 @@
             "state" : "translated",
             "value" : "Por hora"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每小時"
+          }
         }
       }
     },
     "Sturm" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Strong gale"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sturm"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "烈風"
+            "value" : "Strong gale"
           }
         },
         "pt-BR" : {
@@ -2548,33 +2580,39 @@
             "state" : "translated",
             "value" : "Ventania muito forte"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "烈風"
+          }
         }
       }
     },
     "Stürmischer Wind" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gale"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stürmischer Wind"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "大風"
+            "value" : "Gale"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ventania forte"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大風"
           }
         }
       }
@@ -2594,38 +2632,32 @@
             "value" : "SW"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "西南"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "SO"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "西南"
           }
         }
       }
     },
     "System" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "System"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "System"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "系統"
+            "value" : "System"
           }
         },
         "pt-BR" : {
@@ -2633,27 +2665,27 @@
             "state" : "translated",
             "value" : "Sistema"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "系統"
+          }
         }
       }
     },
     "Teils bewölkt" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Partly cloudy"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teils bewölkt"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "局部多雲"
+            "value" : "Partly cloudy"
           }
         },
         "pt-BR" : {
@@ -2661,27 +2693,27 @@
             "state" : "translated",
             "value" : "Parcialmente nublado"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "局部多雲"
+          }
         }
       }
     },
     "Uhr" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uhr"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "時"
+            "value" : " "
           }
         },
         "pt-BR" : {
@@ -2689,33 +2721,39 @@
             "state" : "translated",
             "value" : "h"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時"
+          }
         }
       }
     },
     "USA" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "USA"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "USA"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "美國"
+            "value" : "USA"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "EUA"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美國"
           }
         }
       }
@@ -2735,38 +2773,32 @@
             "value" : "W"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "西"
-          }
-        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "O"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "西"
           }
         }
       }
     },
     "Wählt für jeden Ort weltweit automatisch das beste Modell und kombiniert mehrere Wetterdienste." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Automatically picks the best model for any location worldwide and combines several weather services."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wählt für jeden Ort weltweit automatisch das beste Modell und kombiniert mehrere Wetterdienste."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "為全球每個地點自動選擇最佳模型，並結合多個氣象服務。"
+            "value" : "Automatically picks the best model for any location worldwide and combines several weather services."
           }
         },
         "pt-BR" : {
@@ -2774,27 +2806,27 @@
             "state" : "translated",
             "value" : "Escolhe automaticamente o melhor modelo para qualquer local no mundo e combina vários serviços meteorológicos."
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "為全球每個地點自動選擇最佳模型，並結合多個氣象服務。"
+          }
         }
       }
     },
     "Werte ersetzen" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Replace values"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Werte ersetzen"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "取代數值"
+            "value" : "Replace values"
           }
         },
         "pt-BR" : {
@@ -2802,27 +2834,27 @@
             "state" : "translated",
             "value" : "Substituir valores"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取代數值"
+          }
         }
       }
     },
     "Windstille" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Calm"
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Windstille"
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "無風"
+            "value" : "Calm"
           }
         },
         "pt-BR" : {
@@ -2830,27 +2862,27 @@
             "state" : "translated",
             "value" : "Calmaria"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無風"
+          }
         }
       }
     },
     "Zweige bewegen sich, loses Papier hebt ab." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Branches move and loose paper lifts from the ground."
-          }
-        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zweige bewegen sich, loses Papier hebt ab."
           }
         },
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "樹枝搖動，紙張會被吹起。"
+            "value" : "Branches move and loose paper lifts from the ground."
           }
         },
         "pt-BR" : {
@@ -2858,33 +2890,11 @@
             "state" : "translated",
             "value" : "Galhos se movem e papéis soltos levantam do chão."
           }
-        }
-      }
-    },
-    "Bäume können entwurzelt werden, Gebäude können Schaden nehmen." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trees can be uprooted and buildings can be damaged."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bäume können entwurzelt werden, Gebäude können Schaden nehmen."
-          }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "樹木可能被連根拔起，建築物可能受損。"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Árvores podem ser arrancadas e edifícios podem sofrer danos."
+            "value" : "樹枝搖動，紙張會被吹起。"
           }
         }
       }

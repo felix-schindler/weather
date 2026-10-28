@@ -10,17 +10,6 @@ import Foundation
 import OpenAPIRuntime
 import OpenAPIURLSession
 
-let radarBaseURL: String = {
-	#if DEBUG
-		if let override = UserDefaults.standard.string(forKey: "radarBaseURL"),
-			!override.isEmpty
-		{
-			return override.hasSuffix("/") ? String(override.dropLast()) : override
-		}
-	#endif
-	return "https://server.oscars.love"
-}()
-
 final class APIClient: Sendable {
 	static let shared = APIClient()
 
@@ -29,8 +18,6 @@ final class APIClient: Sendable {
 	let openMeteoGeo: Client
 	let openMeteoArchive: Client
 	let canadaWeather: Client
-	let oscarServer: Client
-	let oscarServerSnapshot: Client
 
 	init() {
 		openMeteo = APIClient.get(
@@ -41,28 +28,6 @@ final class APIClient: Sendable {
 		openMeteoGeo = APIClient.get(url: Self.serverURL(Servers.server3))
 		openMeteoArchive = APIClient.get(url: Self.serverURL(Servers.server5))
 		canadaWeather = APIClient.get(url: Self.serverURL(Servers.server4))
-		oscarServer = Client(
-			serverURL: URL(string: radarBaseURL) ?? Self.serverURL(Servers.server6),
-			configuration: Self.oscarServerConfiguration,
-			transport: URLSessionTransport(),
-			middlewares: Self.stagingMiddlewares + [
-				ContactIdentityMiddleware(),
-				RetryingMiddleware(
-					signals: [.code(429), .range(500..<600), .errorThrown],
-					policy: .upToAttempts(count: 3),
-					delay: .exponentialWithJitter(base: 0.5, maxSeconds: 8)
-				),
-			]
-		)
-		let snapshotConfiguration = URLSessionConfiguration.default
-		snapshotConfiguration.timeoutIntervalForRequest = 20
-		oscarServerSnapshot = Client(
-			serverURL: URL(string: radarBaseURL) ?? Self.serverURL(Servers.server6),
-			configuration: Self.oscarServerConfiguration,
-			transport: URLSessionTransport(
-				configuration: .init(session: URLSession(configuration: snapshotConfiguration))),
-			middlewares: Self.stagingMiddlewares + [ContactIdentityMiddleware()]
-		)
 	}
 
 	private static func serverURL(_ make: () throws -> URL) -> URL {

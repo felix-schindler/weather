@@ -4,9 +4,6 @@
 //
 //  Created by Philipp Bolte on 01.12.21.
 //
-//  The Felix° tab's warning sheet — same card UI as the map's polygon
-//  tap sheet (AlertInfoSheet).
-//
 
 import SwiftUI
 
@@ -26,8 +23,6 @@ extension AlertResponse {
 				canadianAlerts
 					.flatMap { $0.alert?.alerts ?? [] }
 					.map(WeatherAlertInfo.init(canadianAlert:))
-			case .oscar(let oscarAlerts):
-				oscarAlerts.alerts.map(WeatherAlertInfo.init(pointAlert:))
 			}
 		return infos.sortedForDisplay()
 	}
@@ -40,8 +35,6 @@ extension WeatherAlertInfo {
 	) {
 		let banner = alert.alertBannerText ?? String(localized: "Wetterwarnung")
 		id = alert.alertId ?? "\(banner)-\(alert.eventOnsetTime ?? "")"
-		source = "ec"
-		senderName = nil
 		event = banner
 		severityRank =
 			switch (alert._type ?? "").lowercased() {
@@ -57,6 +50,6 @@ extension WeatherAlertInfo {
 	}
 
 	private static func parseISO8601(_ string: String?) -> Date? {
-		string.flatMap(PrecipSeriesDate.parse)
+		string.flatMap(ISODate.parse)
 	}
 }

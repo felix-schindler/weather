@@ -3,7 +3,6 @@ import Foundation
 enum HourlyForecastBuilder {
 	static func makeItems(
 		forecast: Operations.getForecast.Output.Ok.Body.jsonPayload,
-		precipSeries: PrecipSeriesResponse? = nil,
 		isLoading: Bool
 	) -> [HourlyTimelineItem] {
 		guard let hourly = forecast.hourly else {
@@ -32,7 +31,7 @@ enum HourlyForecastBuilder {
 			firstFutureIndex < availableCount
 		{
 			var items: [HourlyTimelineItem] = [
-				.forecast(nowItem(current: current, precipSeries: precipSeries, precipitationUnit: precipitationUnit))
+				.forecast(nowItem(current: current, precipitationUnit: precipitationUnit))
 			]
 
 			if !isLoading, firstFutureIndex > 0,
@@ -102,19 +101,14 @@ enum HourlyForecastBuilder {
 
 	private static func nowItem(
 		current: Components.Schemas.CurrentWeather,
-		precipSeries: PrecipSeriesResponse?,
 		precipitationUnit: String
 	) -> HourlyForecastItem {
-		let radarRate = precipSeries?.currentRate
-		let forecastPrecipitation = current.precipitation ?? 0
-		let precipitation =
-			radarRate.map { HourlyFormatting.displayRate(fromMillimeters: $0, unit: precipitationUnit) }
-			?? forecastPrecipitation
-		let isRaining = (radarRate ?? forecastPrecipitation) > 0
+		let precipitation = current.precipitation ?? 0
+		let isRaining = precipitation > 0
 
 		var weatherCode = current.weathercode
 		if isRaining, weatherCode < 51 {
-			weatherCode = (radarRate ?? forecastPrecipitation) >= 2.5 ? 61 : 51
+			weatherCode = precipitation >= 2.5 ? 61 : 51
 		}
 
 		return HourlyForecastItem(

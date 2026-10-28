@@ -1,49 +1,39 @@
 import SwiftUI
 
 enum NowSection: String, CaseIterable, Identifiable, Codable {
-	case map, radar, hourly, daily, stations, environment, climate
+	case hourly, daily, environment, climate
 
 	var id: String { rawValue }
 
 	var title: LocalizedStringResource {
 		switch self {
-		case .map: "Karte"
-		case .radar: "Radar"
 		case .hourly: "Stündlich"
 		case .daily: "Täglich"
 		case .environment: "Umwelt"
 		case .climate: "Klima"
-		case .stations: "Messstationen"
 		}
 	}
 
 	var systemImage: String {
 		switch self {
-		case .map: "map"
-		case .radar: "cloud.rain"
 		case .hourly: "clock"
 		case .daily: "calendar"
 		case .environment: "leaf"
 		case .climate: "chart.bar.xaxis"
-		case .stations: "sensor"
 		}
 	}
 
 	var tint: Color {
 		switch self {
-		case .map: .cyan
-		case .radar: .blue
 		case .hourly: .orange
 		case .daily: .indigo
 		case .environment: .green
 		case .climate: .red
-		case .stations: .teal
 		}
 	}
 
 	func renders(wide: Bool) -> Bool {
 		switch self {
-		case .map: wide
 		case .hourly: !wide
 		default: true
 		}
@@ -53,40 +43,32 @@ enum NowSection: String, CaseIterable, Identifiable, Codable {
 	@MainActor
 	func hasContent(in weather: Weather) -> Bool {
 		switch self {
-		case .map, .hourly, .daily, .environment:
+		case .hourly, .daily, .environment:
 			return true
-		case .radar:
-			return weather.precipSeries?.hasPrecipitation() ?? false
 		case .climate:
 			let latitude = weather.forecast.latitude ?? 0
 			let longitude = weather.forecast.longitude ?? 0
 			return latitude != 0 || longitude != 0
-		case .stations:
-			return !weather.stations.isEmpty
 		}
 	}
 
 	@MainActor @ViewBuilder
 	func view(
-		openRadarMap: @escaping () -> Void = {},
 		isWide: Bool = false,
 		hourlyDayLabel: Binding<String?> = .constant(nil)
 	) -> some View {
 		switch self {
-		case .map: MapPreview().frame(height: 260)
-		case .radar: RainView(openRadarMap: openRadarMap)
 		case .hourly: HourlyView(visibleDayLabel: hourlyDayLabel)
 		case .daily: DailyView(expandsDays: isWide)
 		case .environment: EnvironmentGaugesView()
 		case .climate: ClimateView()
-		case .stations: StationsView()
 		}
 	}
 }
 
 enum WideForecast {
 	static let minWidth: CGFloat = 760
-	static let defaultStage: Set<NowSection> = [.map, .radar, .stations]
+	static let defaultStage: Set<NowSection> = []
 
 	static let maxColumnWidth: CGFloat = 720
 }
@@ -129,7 +111,7 @@ struct SectionArrangement: Codable, Equatable {
 		order.removeAll { $0 == section }
 		let column = column.filter { $0 != section }
 		hidden.remove(section)
-		if let onStage, section != .map {
+		if let onStage {
 			if onStage { stage.insert(section) } else { stage.remove(section) }
 		}
 		if column.isEmpty {

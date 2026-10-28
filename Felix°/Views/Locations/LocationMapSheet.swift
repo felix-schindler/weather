@@ -29,7 +29,7 @@ struct LocationMapSheet: View {
 	/// MapKit prints the Apple logo and legal link in the map's bottom ornament
 	/// band. The card floats above it so the attribution never ends up behind
 	/// the glass instead of staying visible.
-	private let bottomAttributionInset: CGFloat = 44
+	private let bottomInset: CGFloat = 44
 
 	init(
 		cities: [City],
@@ -111,7 +111,7 @@ struct LocationMapSheet: View {
 					.transition(.move(edge: .bottom).combined(with: .opacity))
 			} else {
 				ToastBanner(message: String(localized: "Tippe auf die Karte, um einen Ort hinzuzufügen."))
-					.padding(.bottom, bottomAttributionInset)
+					.padding(.bottom, bottomInset)
 					.transition(.move(edge: .bottom).combined(with: .opacity))
 			}
 		}
@@ -166,7 +166,7 @@ struct LocationMapSheet: View {
 		.padding(14)
 		.glassEffect(.regular, in: .rect(cornerRadius: 22))
 		.padding(.horizontal, 16)
-		.padding(.bottom, bottomAttributionInset)
+		.padding(.bottom, bottomInset)
 	}
 
 	private func candidate(for point: PickedPoint) -> LocationCandidate {

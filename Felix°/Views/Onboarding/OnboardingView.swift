@@ -9,7 +9,6 @@ struct OnboardingView: View {
 	@Environment(\.accessibilityReduceMotion) private var reduceMotion
 	@State private var step: OnboardingStep = ScreenshotMode.onboardingStep ?? .location
 	private let coordinator = OnboardingCoordinator.shared
-	private let locationService = LocationService.shared
 
 	var body: some View {
 		GeometryReader { proxy in
@@ -38,17 +37,15 @@ struct OnboardingView: View {
 		case .location:
 			OnboardingLocationStep { granted in
 				if granted {
-					advance(to: .afterLocationResolved(locationService: locationService))
+					coordinator.complete()
 				} else {
 					advance(to: .manualLocation)
 				}
 			}
 		case .manualLocation:
 			OnboardingManualLocationStep {
-				advance(to: .afterLocationResolved(locationService: locationService))
+				coordinator.complete()
 			}
-		case .notifications:
-			OnboardingNotificationsStep { coordinator.complete() }
 		}
 	}
 

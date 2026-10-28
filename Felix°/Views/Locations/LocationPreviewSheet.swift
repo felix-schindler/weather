@@ -40,12 +40,6 @@ struct LocationPreviewSheet: View {
 						header
 					}
 
-					if hasRain {
-						Section("Radar") {
-							RainView()
-						}
-					}
-
 					Section("Stündlich") {
 						HourlyView()
 					}
@@ -84,10 +78,6 @@ struct LocationPreviewSheet: View {
 		.task {
 			await load()
 		}
-	}
-
-	private var hasRain: Bool {
-		weather.precipSeries?.hasPrecipitation() ?? false
 	}
 
 	private var header: some View {
@@ -134,10 +124,8 @@ struct LocationPreviewSheet: View {
 
 	private func load() async {
 		do {
-			async let radarTask = client.getRadarSeries(coordinates: candidate.coordinate)
 			let forecast = try await client.getForecast(coordinates: candidate.coordinate)
 			weather.forecast = forecast
-			weather.precipSeries = (try? await radarTask) ?? nil
 			weather.updateTime()
 			weather.lastUpdated = .now
 			weather.loadState = .loaded

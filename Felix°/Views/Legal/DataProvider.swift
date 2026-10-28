@@ -53,57 +53,11 @@ extension DataProvider {
 			title: "DWD", titleIsLocalized: true,
 			systemImage: "cloud.rain.fill", tint: .blue,
 			about:
-				"Felix° verwendet Wetter- und Geodaten des Deutschen Wetterdienstes (DWD), unter anderem Radardaten, Prognosedaten aus dem ICON-Modell sowie amtliche Warnmeldungen. Datenbasis: Deutscher Wetterdienst. Die Daten werden unter den Open-Data-Nutzungsbedingungen des DWD bereitgestellt.",
+				"Felix° verwendet Prognosedaten aus dem ICON-Modell des Deutschen Wetterdienstes (DWD), bezogen über Open-Meteo. Die Daten werden unter den Open-Data-Nutzungsbedingungen des DWD bereitgestellt.",
 			links: [
 				DataProviderLink(title: "dwd.de", url: URL(string: "https://www.dwd.de/")!),
 				DataProviderLink(title: "DWD Open Data", url: URL(string: "https://opendata.dwd.de/")!),
 			]
-		),
-		DataProvider(
-			id: "eumetnet", name: "EUMETNET (OPERA, Meteoalarm & E-SOH)", title: "EUMETNET",
-			systemImage: "globe.europe.africa.fill", tint: .green,
-			about:
-				"Felix° verwendet das europäische Radarkomposit des OPERA-Programms von EUMETNET, dem Zusammenschluss der europäischen Wetterdienste, für das Regenradar in Europa außerhalb Zentraleuropas, amtliche Warnmeldungen der europäischen Warnplattform Meteoalarm sowie Messwerte europäischer Wetterstationen aus dem Datenhub E-SOH. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu EUMETNET dar.",
-			license: "Attribution 4.0 International (CC BY 4.0)",
-			links: [
-				DataProviderLink(title: "eumetnet.eu", url: URL(string: "https://www.eumetnet.eu/")!),
-				DataProviderLink(
-					title: "OPERA-Programm", url: URL(string: "https://www.eumetnet.eu/activities/observations-programme/current-activities/opera/")!),
-				DataProviderLink(title: "meteoalarm.org", url: URL(string: "https://meteoalarm.org/")!),
-				DataProviderLink(title: "E-SOH (MeteoGate)", url: URL(string: "https://observations.meteogate.eu/")!),
-			]
-		),
-		DataProvider(
-			id: "noaa", name: "NOAA & NWS", title: "NOAA",
-			systemImage: "globe.americas.fill", tint: .indigo,
-			about:
-				"Felix° verwendet Daten der US-Wetterbehörde NOAA: Prognosedaten aus den Modellen GFS und HRRR, das MRMS-Radarkomposit für das Regenradar über den USA sowie amtliche Warnungen des National Weather Service (NWS). NOAA/NWS-Daten sind in der Regel gemeinfrei, sofern nicht anders gekennzeichnet. Die Nutzung stellt keine Unterstützung, Empfehlung oder offizielle Verbindung zu NOAA oder NWS dar.",
-			links: [
-				DataProviderLink(title: "noaa.gov", url: URL(string: "https://www.noaa.gov/")!),
-				DataProviderLink(title: "GFS bei NOAA/NCEI", url: URL(string: "https://www.ncei.noaa.gov/products/weather-climate-models/global-forecast")!),
-				DataProviderLink(title: "NWS Disclaimer", url: URL(string: "https://www.weather.gov/disclaimer/")!),
-			]
-		),
-		DataProvider(
-			id: "cwa", name: "Central Weather Administration (CWA)", title: "CWA",
-			systemImage: "globe.asia.australia.fill", tint: .mint,
-			about:
-				"Felix° verwendet Daten der Central Weather Administration (CWA), der Wetterbehörde Taiwans: das QPESUMS-Radarkomposit für das Regenradar über Taiwan sowie amtliche Warnungen auf Landkreisebene. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zur CWA dar.",
-			links: [DataProviderLink(title: "cwa.gov.tw", url: URL(string: "https://www.cwa.gov.tw/")!)]
-		),
-		DataProvider(
-			id: "redemet", name: "REDEMET (DECEA)", title: "REDEMET",
-			systemImage: "globe.americas.fill", tint: .green,
-			about:
-				"Felix° verwendet Radardaten des brasilianischen Flugwetterdienstes REDEMET (DECEA) für das Regenradar über Brasilien. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu REDEMET oder DECEA dar.",
-			links: [DataProviderLink(title: "redemet.decea.mil.br", url: URL(string: "https://redemet.decea.mil.br/")!)]
-		),
-		DataProvider(
-			id: "aemet", name: "AEMET", title: "AEMET",
-			systemImage: "globe.europe.africa.fill", tint: .purple,
-			about:
-				"Felix° verwendet Radardaten der Agencia Estatal de Meteorología (AEMET), des staatlichen spanischen Wetterdienstes, für das Regenradar über den Kanarischen Inseln. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu AEMET dar.",
-			links: [DataProviderLink(title: "aemet.es", url: URL(string: "https://www.aemet.es/")!)]
 		),
 		DataProvider(
 			id: "eccc", name: "Environment and Climate Change Canada", title: "ECCC",
@@ -111,13 +65,6 @@ extension DataProvider {
 			about:
 				"Felix° verwendet amtliche Wetterwarnungen von Environment and Climate Change Canada (ECCC) für Kanada. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu ECCC dar.",
 			links: [DataProviderLink(title: "weather.gc.ca", url: URL(string: "https://weather.gc.ca/")!)]
-		),
-		DataProvider(
-			id: "oscar", name: "Oscar-Server", title: "Oscar-Server",
-			systemImage: "server.rack", tint: .gray,
-			about:
-				"Der Oscar-Server ist der Begleit-Server der App. Er bereitet Radar-, Wolken- und Modelldaten für die Kartenansicht auf, liefert amtliche Wetterwarnungen, Messwerte nahegelegener Stationen und Webcams und verwaltet die Push-Benachrichtigungen. Die zugrunde liegenden Wetterdaten stammen von den weiteren hier aufgeführten Wetterdiensten.",
-			links: [DataProviderLink(title: "server.oscars.love", url: URL(string: "https://server.oscars.love")!)]
 		),
 	]
 }

@@ -13,15 +13,11 @@ struct FelixWidgetsBundle: WidgetBundle {
 	@WidgetBundleBuilder
 	var body: some Widget {
 		#if os(iOS)
-			RadarWidget()
 			NowTodayWidget()
 			DailyForecastWidget()
-			GlobalRadarWidget()
-			RainRadarLiveActivityWidget()
 		#endif
 		TemperatureLockScreenWidget()
 		PrecipitationLockScreenWidget()
-		RainTimelineLockScreenWidget()
 		UVIndexLockScreenWidget()
 		WindLockScreenWidget()
 	}

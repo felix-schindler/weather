@@ -5,7 +5,6 @@ enum NowSheet: Identifiable {
 	case ensemble
 	case environment(EnvironmentDetailSection)
 	case climate(ClimateSummary)
-	case stations(String)
 	case alerts
 	case places
 	case settings
@@ -21,8 +20,6 @@ enum NowSheet: Identifiable {
 			"environment-\(section.rawValue)"
 		case .climate:
 			"climate"  // single instance; the summary payload doesn't affect identity
-		case .stations:
-			"stations"  // the chips switch stations inside one sheet
 		case .alerts:
 			"alerts"
 		case .places:

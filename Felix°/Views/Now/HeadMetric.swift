@@ -1,10 +1,10 @@
 import SwiftUI
 
 enum HeadMetric: String, CaseIterable, Identifiable {
-	case cloudCover, wind, windDirection, feelsLike, humidity, uvIndex, pressure, precipitationChance, gusts, measured
+	case cloudCover, wind, windDirection, feelsLike, humidity, uvIndex, pressure, precipitationChance, gusts
 
 	static let maxShown = 4
-	static let defaultHidden: Set<HeadMetric> = [.cloudCover, .windDirection, .uvIndex, .pressure, .precipitationChance, .gusts, .measured]
+	static let defaultHidden: Set<HeadMetric> = [.cloudCover, .windDirection, .uvIndex, .pressure, .precipitationChance, .gusts]
 
 	var id: String { rawValue }
 
@@ -19,7 +19,6 @@ enum HeadMetric: String, CaseIterable, Identifiable {
 		case .pressure: "Luftdruck"
 		case .precipitationChance: "Regenwahrscheinlichkeit"
 		case .gusts: "Böen"
-		case .measured: "Gemessen"
 		}
 	}
 
@@ -34,7 +33,6 @@ enum HeadMetric: String, CaseIterable, Identifiable {
 		case .pressure: "barometer"
 		case .precipitationChance: "umbrella"
 		case .gusts: "wind.snow"
-		case .measured: "sensor"
 		}
 	}
 
@@ -49,7 +47,6 @@ enum HeadMetric: String, CaseIterable, Identifiable {
 		case .pressure: .indigo
 		case .precipitationChance: .blue
 		case .gusts: .green
-		case .measured: .brown
 		}
 	}
 
@@ -83,8 +80,6 @@ enum HeadMetric: String, CaseIterable, Identifiable {
 		case .gusts:
 			return (environmentValue(from: hourly?.windgusts_10m, time: time) ?? nil)
 				.map { Self.windString($0, weather: weather) }
-		case .measured:
-			return weather.headStation?.current.temperature_c.map { StationUnits().temperatureString($0) }
 		}
 	}
 

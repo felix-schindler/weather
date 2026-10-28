@@ -4,7 +4,6 @@
 	import Foundation
 	import ImageIO
 	import UIKit
-	import UserNotifications
 
 	enum ScreenshotFixtures {
 		static let latitude = 51.3397
@@ -328,128 +327,6 @@
 			]
 		}
 
-		// MARK: - Alerts (oscar-server /weather-alerts/point)
-
-		static func alertsJSON() -> [String: Any] {
-			if sunnyStory || showersStory { return ["alertCount": 0, "alerts": [] as [Any]] }
-			let formatter = ISO8601DateFormatter()
-			let now = storyNow
-			let event = localized(
-				de: "Ergiebiger Dauerregen",
-				en: "Persistent heavy rain"
-			)
-			let headline = localized(
-				de: "Amtliche Warnung vor ergiebigem Dauerregen",
-				en: "Warning of persistent heavy rain"
-			)
-			let description = localized(
-				de:
-					"Es tritt ergiebiger Dauerregen auf. Niederschlagsmengen bis 60 l/m² in 12 Stunden. Örtlich sind Überflutungen von Straßen und Unterführungen möglich.",
-				en:
-					"Persistent heavy rain is occurring. Precipitation amounts of up to 60 l/m² within 12 hours. Local flooding of roads and underpasses is possible."
-			)
-			let alert: [String: Any] = [
-				"alertId": "screenshot.heavy.rain",
-				"source": "dwd",
-				"event": event,
-				"severity": "severe",
-				"urgency": "Immediate",
-				"certainty": "Likely",
-				"responseType": "Prepare",
-				"onsetAt": formatter.string(from: now.addingTimeInterval(-2 * 3600)),
-				"expiresAt": formatter.string(from: now.addingTimeInterval(10 * 3600)),
-				"headline": headline,
-				"description": description,
-			]
-			return ["alertCount": 1, "alerts": [alert]]
-		}
-
-		// MARK: - Radar series (oscar-server /radar/series)
-
-		static func precipSeriesJSON(for url: URL? = nil) -> [String: Any] {
-			let formatter = ISO8601DateFormatter()
-			#if os(watchOS)
-				let now = Date()
-			#else
-				let now = storyNow
-			#endif
-			let peak: Double =
-				ScreenshotMode.scene == .places
-				? (url.map { isNear($0, place: essen) } == true ? 3.4 : 0)
-				: byStory(rain: 7.4, sunny: 0, showers: 0)
-			let series = stride(from: -30, through: 105, by: 5).map { minutes -> [String: Any] in
-				let t = Double(minutes)
-				let value =
-					approachingStory
-					? (minutes < 15 ? 0 : peak * exp(-pow((t - 60) / 30, 2)))
-					: peak * exp(-pow((t - 10) / 48, 2))
-						+ (peak > 0 ? 1.9 : 0) * exp(-pow((t - 90) / 22, 2))
-				return [
-					"timestamp": formatter.string(from: now.addingTimeInterval(t * 60)),
-					"precipitation": (value * 10).rounded() / 10,
-					"is_forecast": minutes > 0,
-				]
-			}
-			return [
-				"source": "dwd",
-				"unit": "mm/h",
-				"latitude": latitude,
-				"longitude": longitude,
-				"series": series,
-			]
-		}
-
-		// MARK: - Stations (oscar-server /stations/nearby)
-
-		static func stationsJSON() -> [String: Any] {
-			let formatter = ISO8601DateFormatter()
-			let now = storyNow.addingTimeInterval(-10 * 60)
-			let temperatureNow = byStory(rain: 14.3, sunny: 27.0, showers: 21.4)
-			let amplitude = byStory(rain: 3.0, sunny: 9.0, showers: 6.0)
-			let code = byStory(rain: approachingStory ? 3 : 61, sunny: 0, showers: 2)
-			func curve(_ date: Date) -> Double {
-				let hour = Double(Calendar.current.component(.hour, from: date))
-				return amplitude * exp(-pow((hour - 15) / 4.5, 2))
-			}
-			let stations: [(id: String, name: String, lat: Double, lon: Double, km: Double, bearing: Double, offset: Double)] = [
-				("10471", "Leipzig/Holzhausen", 51.3151, 12.4462, 5.8, 120, -0.4),
-				("10469", "Leipzig/Halle", 51.4347, 12.2396, 14.0, 315, 0.3),
-				("10466", "Bad Lauchstädt", 51.3907, 11.8760, 34.8, 280, -0.8),
-			]
-			return [
-				"generated_at": formatter.string(from: storyNow),
-				"stations": stations.map { station -> [String: Any] in
-					func reading(_ date: Date) -> [String: Any] {
-						let temperature = temperatureNow + station.offset + curve(date) - curve(now)
-						return [
-							"time": formatter.string(from: date),
-							"temperature_c": (temperature * 10).rounded() / 10,
-							"humidity_pct": byStory(rain: 88, sunny: 45, showers: 62),
-							"wind_speed_ms": byStory(rain: 8.4, sunny: 3.1, showers: 4.2),
-							"wind_direction_deg": 245,
-							"pressure_hpa": byStory(rain: 1002, sunny: 1022, showers: 1013),
-						]
-					}
-					var current = reading(now)
-					current["weather_code"] = code
-					return [
-						"id": station.id,
-						"name": station.name,
-						"source": "dwd",
-						"latitude": station.lat,
-						"longitude": station.lon,
-						"distance_km": station.km,
-						"bearing_deg": station.bearing,
-						"last_report_at": formatter.string(from: now),
-						"current": current,
-						"history": stride(from: -24, through: 0, by: 1).map {
-							reading(now.addingTimeInterval(Double($0) * 3600))
-						},
-					]
-				},
-			]
-		}
-
 		// MARK: - Climate archive (archive-api.open-meteo.com)
 
 		static func archiveJSON(for url: URL) -> [String: Any] {
@@ -666,42 +543,6 @@
 			}
 		}
 
-		static func notificationTime(_ date: Date) -> String {
-			let german = Locale.current.language.languageCode?.identifier == "de"
-			let formatter = DateFormatter()
-			formatter.locale = Locale(identifier: german ? "de_DE" : "en_US")
-			formatter.dateFormat = german ? "HH:mm" : "h:mm a"
-			return german ? "\(formatter.string(from: date)) Uhr" : formatter.string(from: date)
-		}
-
-		static func lockScreenNotificationCopy() -> [(title: String, body: String)] {
-			func clock(_ hour: Int, _ minute: Int) -> String {
-				let date = Calendar.current.date(bySettingHour: hour, minute: minute, second: 0, of: .now)
-				return notificationTime(date ?? .now)
-			}
-			let rainStart = clock(10, 5)
-			let rainEnd = clock(11, 20)
-			let alertEnd = clock(18, 0)
-			return [
-				(
-					title: localized(
-						de: "Warnung vor ergiebigem Dauerregen",
-						en: "Warning of persistent heavy rain"),
-					body: localized(
-						de: "Es tritt ergiebiger Dauerregen auf. Gültig bis \(alertEnd). (Leipzig)",
-						en: "Persistent heavy rain is occurring. Valid until \(alertEnd). (Leipzig)"
-					)
-				),
-				(
-					title: localized(de: "Regen zieht auf", en: "Rain soon"),
-					body: localized(
-						de: "Leichter Regen in Leipzig ab \(rainStart), voraussichtlich bis \(rainEnd).",
-						en: "Light Rain in Leipzig from \(rainStart), likely until \(rainEnd)."
-					)
-				),
-			]
-		}
-
 		private static let dayFormatter: DateFormatter = {
 			let formatter = DateFormatter()
 			formatter.calendar = Calendar(identifier: .gregorian)
@@ -712,29 +553,4 @@
 		}()
 	}
 
-	enum ScreenshotLockScreenNotifications {
-		static let deliveryDelay: TimeInterval = 14
-
-		@MainActor
-		static func schedule() async {
-			let center = UNUserNotificationCenter.current()
-			guard (try? await center.requestAuthorization(options: [.alert, .badge, .sound])) == true
-			else { return }
-			center.removeAllDeliveredNotifications()
-			center.removeAllPendingNotificationRequests()
-			for (index, copy) in ScreenshotFixtures.lockScreenNotificationCopy().enumerated() {
-				let content = UNMutableNotificationContent()
-				content.title = copy.title
-				content.body = copy.body
-				let request = UNNotificationRequest(
-					identifier: "screenshot.lock.\(index)",
-					content: content,
-					trigger: UNTimeIntervalNotificationTrigger(
-						timeInterval: deliveryDelay + Double(index) * 2, repeats: false
-					)
-				)
-				try? await center.add(request)
-			}
-		}
-	}
 #endif

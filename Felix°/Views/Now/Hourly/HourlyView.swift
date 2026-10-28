@@ -20,7 +20,6 @@ struct HourlyView: View {
 	private var items: [HourlyTimelineItem] {
 		HourlyForecastBuilder.makeItems(
 			forecast: weather.forecast,
-			precipSeries: weather.precipSeries,
 			isLoading: weather.isLoading
 		)
 	}

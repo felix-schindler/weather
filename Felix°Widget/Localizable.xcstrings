@@ -30,6 +30,7 @@
       }
     },
     "%@ · bis ca. %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -58,6 +59,7 @@
       }
     },
     "%@ · mindestens bis %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -254,6 +256,7 @@
       }
     },
     "+%lld min" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -282,6 +285,7 @@
       }
     },
     "+10 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -304,6 +308,7 @@
       }
     },
     "+20 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -326,6 +331,7 @@
       }
     },
     "+30 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -348,6 +354,7 @@
       }
     },
     "+40 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -370,6 +377,7 @@
       }
     },
     "+50 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -392,6 +400,7 @@
       }
     },
     "−10 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -414,6 +423,7 @@
       }
     },
     "−20 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -436,6 +446,7 @@
       }
     },
     "−30 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -458,6 +469,7 @@
       }
     },
     "−40 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -480,6 +492,7 @@
       }
     },
     "≥8 m/s" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -502,6 +515,7 @@
       }
     },
     "0 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -524,6 +538,7 @@
       }
     },
     "0 m/s" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -546,6 +561,7 @@
       }
     },
     "2 m/s" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -568,6 +584,7 @@
       }
     },
     "4 m/s" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -590,6 +607,7 @@
       }
     },
     "6 m/s" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -808,6 +826,7 @@
       }
     },
     "950" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -830,6 +849,7 @@
       }
     },
     "970" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -852,6 +872,7 @@
       }
     },
     "990" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -874,6 +895,7 @@
       }
     },
     "1010" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -896,6 +918,7 @@
       }
     },
     "1030" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -918,6 +941,7 @@
       }
     },
     "1060" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1307,6 +1331,7 @@
       }
     },
     "Bewegungspfeile" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1419,6 +1444,7 @@
       }
     },
     "Dunkel" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1555,6 +1581,7 @@
     },
     "Extrem" : {
       "comment" : "UV-Kategorie 11+",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1583,6 +1610,7 @@
       }
     },
     "Fehler beim Laden: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1611,6 +1639,7 @@
       }
     },
     "Fiord" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1886,6 +1915,7 @@
       }
     },
     "Hell" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2113,6 +2143,7 @@
     },
     "jetzt" : {
       "comment" : "Live Activity: unit line under the current rain rate, e.g. \"mm/h jetzt\"",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2141,6 +2172,7 @@
       }
     },
     "Jetzt" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2169,6 +2201,7 @@
       }
     },
     "Kartenstil" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2198,6 +2231,7 @@
     },
     "Kein Regen in Sicht" : {
       "comment" : "LS Widget Regenverlauf: kein Regen im Radarfenster",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2226,6 +2260,7 @@
       }
     },
     "Keine aktuellen Radardaten · Stand %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2255,6 +2290,7 @@
     },
     "Keine Radardaten" : {
       "comment" : "LS Widget Regenverlauf ohne Radarabdeckung",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2339,6 +2375,7 @@
       }
     },
     "Lässt bald nach" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2367,6 +2404,7 @@
       }
     },
     "Leicht" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2423,6 +2461,7 @@
       }
     },
     "Leichter Regen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2480,6 +2519,7 @@
     },
     "Mäßig" : {
       "comment" : "UV-Kategorie 3-5",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2537,6 +2577,7 @@
     },
     "max." : {
       "comment" : "Live Activity: unit line under the peak rain rate still to come, e.g. \"mm/h max.\"",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2763,6 +2804,7 @@
       }
     },
     "Neuer Regen gegen %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2849,6 +2891,7 @@
       }
     },
     "Niesel" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2877,6 +2920,7 @@
       }
     },
     "Nieselregen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3102,6 +3146,7 @@
       }
     },
     "Radar %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3130,6 +3175,7 @@
       }
     },
     "Radar ist für diesen Ort nicht verfügbar" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3159,6 +3205,7 @@
     },
     "Radarbasierter Niederschlag der nächsten 90 Minuten" : {
       "comment" : "LS Widget Regenverlauf Beschreibung",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3188,6 +3235,7 @@
     },
     "Radardaten sind veraltet" : {
       "comment" : "LS Widget Regenverlauf mit veralteten Radardaten",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3302,6 +3350,7 @@
     },
     "Regen · noch >%lld min" : {
       "comment" : "LS Widget Regenverlauf: Regen hält länger als das Radarfenster an",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3331,6 +3380,7 @@
     },
     "Regen · noch ~%lld min" : {
       "comment" : "LS Widget Regenverlauf: Regen endet in X Minuten",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3360,6 +3410,7 @@
     },
     "Regen ab %@" : {
       "comment" : "LS Widget Regenverlauf: Regen beginnt um Uhrzeit",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3389,6 +3440,7 @@
     },
     "Regen bis %@" : {
       "comment" : "LS Widget Regenverlauf: Regen endet um Uhrzeit",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3417,6 +3469,7 @@
       }
     },
     "Regen in Kürze" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3445,6 +3498,7 @@
       }
     },
     "Regen vorbei" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3502,6 +3556,7 @@
       }
     },
     "Regenradar" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3530,6 +3585,7 @@
       }
     },
     "Regenradar (Global)" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3558,6 +3614,7 @@
       }
     },
     "Regenradar für aktuellen Standort" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3586,6 +3643,7 @@
       }
     },
     "Regenradar für aktuellen Standort mit globaler Reichweite" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3615,6 +3673,7 @@
     },
     "Regenverlauf" : {
       "comment" : "LS Widget Regenverlauf",
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3643,6 +3702,7 @@
       }
     },
     "Regenzellen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3671,6 +3731,7 @@
       }
     },
     "Regnet gerade" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3728,6 +3789,7 @@
       }
     },
     "Satellitenbilder sind derzeit nicht verfügbar." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3955,6 +4017,7 @@
       }
     },
     "Stark" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3983,6 +4046,7 @@
       }
     },
     "Starker Regen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -4431,6 +4495,7 @@
       }
     },
     "Vorbei" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -4459,6 +4524,7 @@
       }
     },
     "Vorerst trocken" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -4600,6 +4666,7 @@
       }
     },
     "Weichzeichnen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {

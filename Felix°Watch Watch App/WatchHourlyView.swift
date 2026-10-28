@@ -15,7 +15,6 @@ struct WatchHourlyView: View {
 		let hourFormatter = Self.hourFormatter(timeZone: timeZone)
 		let items = HourlyForecastBuilder.makeItems(
 			forecast: weather.forecast,
-			precipSeries: weather.precipSeries,
 			isLoading: weather.isLoading
 		).prefix(Self.maxRows)
 

@@ -101,6 +101,7 @@
       "shouldTranslate" : false
     },
     "%.1f mm/h" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -157,6 +158,7 @@
       }
     },
     "%@ · bis ca. %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -185,6 +187,7 @@
       }
     },
     "%@ · mindestens bis %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -269,6 +272,7 @@
       }
     },
     "%@ hPa in 3h" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -297,6 +301,7 @@
       }
     },
     "%@ in 24h" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -325,6 +330,7 @@
       }
     },
     "%@ mm/h" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -403,6 +409,7 @@
       }
     },
     "%@, %lld von %lld" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -509,6 +516,7 @@
       }
     },
     "%lld %%" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -637,6 +645,7 @@
       }
     },
     "+%lldh" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -665,6 +674,7 @@
       }
     },
     "+10 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -687,6 +697,7 @@
       }
     },
     "+20 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -709,6 +720,7 @@
       }
     },
     "+30 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -731,6 +743,7 @@
       }
     },
     "+40 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -753,6 +766,7 @@
       }
     },
     "+50 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -775,6 +789,7 @@
       }
     },
     "−10 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -797,6 +812,7 @@
       }
     },
     "−20 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -819,6 +835,7 @@
       }
     },
     "−30 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -841,6 +858,7 @@
       }
     },
     "−40 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -863,6 +881,7 @@
       }
     },
     "≈ 1 km · 5 Min." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -920,6 +939,7 @@
       }
     },
     "≈ 1,4 km · 10 Min." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -948,6 +968,7 @@
       }
     },
     "≈ 2 km · 2 Min." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -976,6 +997,7 @@
       }
     },
     "≈ 2 km · 15 Min." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1004,6 +1026,7 @@
       }
     },
     "≈ 2 km · 20 Min." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1032,6 +1055,7 @@
       }
     },
     "≈ 2 km Raster" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1060,6 +1084,7 @@
       }
     },
     "≈ 5 km · 10 Min." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1088,6 +1113,7 @@
       }
     },
     "≈ 9 km Raster" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1116,6 +1142,7 @@
       }
     },
     "≥8 m/s" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1138,6 +1165,7 @@
       }
     },
     "0 °C" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1160,6 +1188,7 @@
       }
     },
     "0 m/s" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1182,6 +1211,7 @@
       }
     },
     "2 m/s" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1204,6 +1234,7 @@
       }
     },
     "4 m/s" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1226,6 +1257,7 @@
       }
     },
     "6 m/s" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1388,6 +1420,7 @@
       }
     },
     "17 Radare über Deutschland und den Grenzregionen. Die Kurzprognose für knapp 2 Stunden liefert der DWD selbst." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1640,6 +1673,7 @@
       }
     },
     "950" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1662,6 +1696,7 @@
       }
     },
     "970" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1684,6 +1719,7 @@
       }
     },
     "990" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1706,6 +1742,7 @@
       }
     },
     "1010" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1728,6 +1765,7 @@
       }
     },
     "1030" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1750,6 +1788,7 @@
       }
     },
     "1060" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1902,6 +1941,7 @@
       "shouldTranslate" : false
     },
     "AEMET" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1952,6 +1992,7 @@
       }
     },
     "Aktive Warngebiete (DWD, MeteoAlarm)" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2207,6 +2248,7 @@
       }
     },
     "alle %lld Min." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2376,6 +2418,7 @@
       }
     },
     "Amtliche Warnungen für deinen Ort." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2404,6 +2447,7 @@
       }
     },
     "Amtliche Warnungen in Europa (DWD, MeteoAlarm), den USA (NWS), Kanada (ECCC) und Taiwan (CWA)." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2666,6 +2710,7 @@
       }
     },
     "Auf meinen Standort zentrieren" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2694,6 +2739,7 @@
       }
     },
     "Auf windy.com ansehen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2722,6 +2768,7 @@
       }
     },
     "Aufgenommen %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2857,6 +2904,7 @@
       }
     },
     "Auswahl" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -3103,6 +3151,7 @@
       }
     },
     "Befindet sich etwa über %@." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3245,6 +3294,7 @@
       }
     },
     "Berechnet von Wettermodellen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3301,6 +3351,7 @@
       }
     },
     "Bevor es regnet" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3329,6 +3380,7 @@
       }
     },
     "Bewegungspfeile" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3630,6 +3682,7 @@
       }
     },
     "Brasilien" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3744,6 +3797,7 @@
       }
     },
     "Contains modified EUMETSAT Meteosat data %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3807,6 +3861,7 @@
       }
     },
     "CWA" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -4109,6 +4164,7 @@
       }
     },
     "Deckkraft" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -4137,6 +4193,7 @@
       }
     },
     "Deckkraft der Wetterebenen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -4165,6 +4222,7 @@
       }
     },
     "deinen Standort" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -4277,6 +4335,7 @@
       }
     },
     "Der Wettersatellit Meteosat beobachtet Europa, Afrika und den Atlantik aus 36.000 km Höhe. Alle 10 Minuten berechnet EUMETSAT daraus, wie dick die Wolken sind. Felix° zeigt dünne Schleier zart und dicke Wolken deckend, auch Nebel und tiefe Bewölkung, bei Tag und Nacht. Aus der Zugbewegung rechnet Felix° knapp 2 Stunden voraus." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -4305,6 +4364,7 @@
       }
     },
     "Deutscher Wetterdienst" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -4522,6 +4582,7 @@
       }
     },
     "Dunkel" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -4578,6 +4639,7 @@
       }
     },
     "DWD" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -4606,6 +4668,7 @@
       }
     },
     "DWD ICON-D2 · ≈ 2 km" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -4685,6 +4748,7 @@
       }
     },
     "ECMWF IFS · ≈ 9 km" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -4769,6 +4833,7 @@
       }
     },
     "Ein Wettermodell berechnet aus Millionen Messungen, wie sich die Atmosphäre entwickelt. Die Karte zeigt, was das Modell erwartet, nicht was gemessen wurde." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5022,6 +5087,7 @@
       }
     },
     "Erlaube Live-Aktivitäten in den iOS-Einstellungen." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -5044,6 +5110,7 @@
       }
     },
     "Erlaube Mitteilungen in den iOS-Einstellungen." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -5123,6 +5190,7 @@
       }
     },
     "Erreicht %@ gegen %@." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5151,6 +5219,7 @@
       }
     },
     "Etwa eine Viertelstunde vorher." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5179,6 +5248,7 @@
       }
     },
     "EUMETNET" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -5229,6 +5299,7 @@
       }
     },
     "Europäische Organisation für Wettersatelliten" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5401,6 +5472,7 @@
       }
     },
     "Extreme Unwetterwarnung" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5429,6 +5501,7 @@
       }
     },
     "Extremer Schauer" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5513,6 +5586,7 @@
       }
     },
     "Favorit" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5541,6 +5615,7 @@
       }
     },
     "Fehler beim Laden: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5569,6 +5644,7 @@
       }
     },
     "Feines Raster über Zentraleuropa, das auch einzelne Schauer und Gewitter abbilden kann. Stündlich bis 36 Stunden voraus, alle 3 Stunden ein neuer Lauf." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5592,6 +5668,208 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "涵蓋中歐的細緻網格，也能呈現個別的陣雨與雷雨。每小時更新，預報至 36 小時後，每 3 小時進行一次新的運算。"
+          }
+        }
+      }
+    },
+    "Felix° startet mit diesem Ort." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° startet mit diesem Ort."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° opens with this place."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° abre com este local."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° 會以此地點開啟。"
+          }
+        }
+      }
+    },
+    "Felix° verwendet amtliche Wetterwarnungen von Environment and Climate Change Canada (ECCC) für Kanada. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu ECCC dar." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° verwendet amtliche Wetterwarnungen von Environment and Climate Change Canada (ECCC) für Kanada. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu ECCC dar."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° uses official weather warnings from Environment and Climate Change Canada (ECCC) for Canada. Use does not imply endorsement by or official affiliation with ECCC."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° usa avisos meteorológicos oficiais da Environment and Climate Change Canada (ECCC) para o Canadá. O uso não implica endosso nem vínculo oficial com a ECCC."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° 使用加拿大環境與氣候變遷部（ECCC）針對加拿大的官方天氣警報。此使用行為不代表 ECCC 的背書，也不代表與 ECCC 有官方關係。"
+          }
+        }
+      }
+    },
+    "Felix° verwendet das europäische Radarkomposit des OPERA-Programms von EUMETNET, dem Zusammenschluss der europäischen Wetterdienste, für das Regenradar in Europa außerhalb Zentraleuropas, amtliche Warnmeldungen der europäischen Warnplattform Meteoalarm sowie Messwerte europäischer Wetterstationen aus dem Datenhub E-SOH. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu EUMETNET dar." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° verwendet das europäische Radarkomposit des OPERA-Programms von EUMETNET, dem Zusammenschluss der europäischen Wetterdienste, für das Regenradar in Europa außerhalb Zentraleuropas, amtliche Warnmeldungen der europäischen Warnplattform Meteoalarm sowie Messwerte europäischer Wetterstationen aus dem Datenhub E-SOH. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu EUMETNET dar."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° uses the European radar composite from EUMETNET's OPERA program, the network of European meteorological services, for the rain radar in Europe outside Central Europe, official warnings from the European alerting platform Meteoalarm, and readings from European weather stations via the E-SOH data hub. Use does not imply endorsement by or official affiliation with EUMETNET."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° usa o composto de radar europeu do programa OPERA da EUMETNET, a associação dos serviços meteorológicos europeus, para o radar de chuva na Europa fora da Europa Central, avisos oficiais da plataforma europeia de alertas Meteoalarm e leituras de estações meteorológicas europeias do hub de dados E-SOH. O uso não implica endosso nem vínculo oficial com a EUMETNET."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° 使用 EUMETNET（歐洲各氣象局組成的聯合組織）OPERA 計畫的歐洲雷達合成圖，用於中歐以外歐洲地區的降雨雷達；同時使用歐洲警報平台 Meteoalarm 的官方警報，以及透過 E-SOH 資料中心取得的歐洲氣象站觀測值。此使用行為不代表 EUMETNET 的背書，也不代表與 EUMETNET 有官方關係。"
+          }
+        }
+      }
+    },
+    "Felix° verwendet Daten der Central Weather Administration (CWA), der Wetterbehörde Taiwans: das QPESUMS-Radarkomposit für das Regenradar über Taiwan sowie amtliche Warnungen auf Landkreisebene. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zur CWA dar." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° verwendet Daten der Central Weather Administration (CWA), der Wetterbehörde Taiwans: das QPESUMS-Radarkomposit für das Regenradar über Taiwan sowie amtliche Warnungen auf Landkreisebene. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zur CWA dar."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° uses data from the Central Weather Administration (CWA), Taiwan's weather agency: the QPESUMS radar composite for the rain radar over Taiwan and official county-level warnings. Use does not imply endorsement by or official affiliation with the CWA."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° usa dados da Central Weather Administration (CWA), agência meteorológica de Taiwan: o composto de radar QPESUMS para o radar de chuva sobre Taiwan e avisos oficiais por condado. O uso não implica endosso nem vínculo oficial com a CWA."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° 使用台灣氣象機關中央氣象署（CWA）的資料：台灣降雨雷達採用 QPESUMS 雷達合成圖，以及官方縣市層級警報。此使用行為不代表 CWA 的背書，也不代表與 CWA 有官方關係。"
+          }
+        }
+      }
+    },
+    "Felix° verwendet Prognosedaten aus dem ICON-Modell des Deutschen Wetterdienstes (DWD), bezogen über Open-Meteo. Die Daten werden unter den Open-Data-Nutzungsbedingungen des DWD bereitgestellt." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° verwendet Prognosedaten aus dem ICON-Modell des Deutschen Wetterdienstes (DWD), bezogen über Open-Meteo. Die Daten werden unter den Open-Data-Nutzungsbedingungen des DWD bereitgestellt."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° uses forecast data from the ICON model of the German Meteorological Service (DWD), obtained via Open-Meteo. The data is provided under the DWD open data terms of use."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° usa dados de previsão do modelo ICON do Serviço Meteorológico Alemão (DWD), obtidos via Open-Meteo. Os dados são fornecidos sob os termos de uso de dados abertos do DWD."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° 使用德國氣象局（DWD）ICON 模型的預報資料，資料經由 Open-Meteo 取得。資料依 DWD 的開放資料使用條款提供。"
+          }
+        }
+      }
+    },
+    "Felix° verwendet Radardaten der Agencia Estatal de Meteorología (AEMET), des staatlichen spanischen Wetterdienstes, für das Regenradar über den Kanarischen Inseln. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu AEMET dar." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° verwendet Radardaten der Agencia Estatal de Meteorología (AEMET), des staatlichen spanischen Wetterdienstes, für das Regenradar über den Kanarischen Inseln. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu AEMET dar."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° uses radar data from the Agencia Estatal de Meteorología (AEMET), Spain's state meteorological agency, for the rain radar over the Canary Islands. Use does not imply endorsement by or official affiliation with AEMET."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° usa dados de radar da Agencia Estatal de Meteorología (AEMET), agência meteorológica estatal espanhola, para o radar de chuva sobre as Ilhas Canárias. O uso não implica endosso nem vínculo oficial com a AEMET."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° 使用西班牙國家氣象局（AEMET）的雷達資料，用於加那利群島的降雨雷達。此使用行為不代表 AEMET 的背書，也不代表與 AEMET 有官方關係。"
+          }
+        }
+      }
+    },
+    "Felix° verwendet Radardaten des brasilianischen Flugwetterdienstes REDEMET (DECEA) für das Regenradar über Brasilien. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu REDEMET oder DECEA dar." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° verwendet Radardaten des brasilianischen Flugwetterdienstes REDEMET (DECEA) für das Regenradar über Brasilien. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu REDEMET oder DECEA dar."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° uses radar data from REDEMET (DECEA), Brazil's aeronautical meteorology network, for the rain radar over Brazil. Use does not imply endorsement by or official affiliation with REDEMET or DECEA."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° usa dados de radar da REDEMET (DECEA), serviço de meteorologia aeronáutica do Brasil, para o radar de chuva sobre o Brasil. O uso não implica endosso nem vínculo oficial com a REDEMET ou o DECEA."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felix° 使用巴西航空氣象機構 REDEMET（DECEA）的雷達資料，用於巴西的降雨雷達。此使用行為不代表 REDEMET 或 DECEA 的背書，也不代表與其有官方關係。"
           }
         }
       }
@@ -5626,6 +5904,7 @@
       }
     },
     "Fiord" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5654,6 +5933,7 @@
       }
     },
     "Fläche" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5682,6 +5962,7 @@
       }
     },
     "Flugwetterdienst Brasiliens (DECEA)" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5710,6 +5991,7 @@
       }
     },
     "Flüssige Bewegungen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -6039,6 +6321,7 @@
       "shouldTranslate" : false
     },
     "Gemeinsames Radarbild der europäischen Wetterdienste. Gemessen wird alle 15 Minuten, die Bilder dazwischen berechnet Felix°." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -6096,6 +6379,7 @@
       }
     },
     "Gemessene Werte der nächstgelegenen Wetterstationen, keine Vorhersage." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -6124,6 +6408,7 @@
       }
     },
     "Gerade keine Messwerte in der Nähe." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -6331,6 +6616,7 @@
       "shouldTranslate" : false
     },
     "Gilt für %@, den Ort, der gerade in Felix° offen ist, auf etwa 100 m gerundet." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -6359,6 +6645,7 @@
       }
     },
     "Gilt für den Ort, der gerade in Felix° offen ist, auf etwa 100 m gerundet." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -6678,6 +6965,7 @@
       }
     },
     "Hell" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -7364,6 +7652,7 @@
       }
     },
     "jetzt" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -7421,6 +7710,7 @@
       }
     },
     "Jetzt nicht" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -7590,6 +7880,7 @@
       }
     },
     "Karten" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -7618,6 +7909,7 @@
       }
     },
     "Kartendaten © OpenStreetMap" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -7646,6 +7938,7 @@
       }
     },
     "Kartenebenen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -7674,6 +7967,7 @@
       }
     },
     "Kartenkacheln: OpenFreeMap" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -7730,6 +8024,7 @@
       }
     },
     "Kein Regen in Sicht" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -7809,6 +8104,7 @@
       }
     },
     "Keine aktuellen Radardaten · Stand %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -8241,6 +8537,7 @@
       }
     },
     "Kurzprognose" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -8269,6 +8566,7 @@
       }
     },
     "Lässt bald nach" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -8291,6 +8589,7 @@
       }
     },
     "Leicht" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -8347,6 +8646,7 @@
       }
     },
     "Leichter Regen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -8369,6 +8669,7 @@
       }
     },
     "Leichter Schauer" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -8425,6 +8726,7 @@
       }
     },
     "Letzte 24h" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -8503,6 +8805,7 @@
       }
     },
     "LIVE" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -8531,6 +8834,7 @@
       }
     },
     "Live gemessen, mit Kurzprognose" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -8559,6 +8863,7 @@
       }
     },
     "Live-Aktivitäten ausgeschaltet" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -8581,6 +8886,7 @@
       }
     },
     "Live-Radar, solange es regnet." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -8847,6 +9153,7 @@
       "shouldTranslate" : false
     },
     "Markante Wetterwarnung" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -8932,6 +9239,7 @@
       }
     },
     "Mäßiger Schauer" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -8988,6 +9296,7 @@
       }
     },
     "max." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -9122,6 +9431,7 @@
       }
     },
     "Messstationen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -9150,6 +9460,7 @@
       }
     },
     "Messung" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -9196,6 +9507,7 @@
       "shouldTranslate" : false
     },
     "Meteosat" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -9218,6 +9530,7 @@
       }
     },
     "Meteosat der dritten Generation über 0° Länge, Produkt Optimal Cloud Analysis. Zum Rand der Erdscheibe hin wird das Bild gröber. Contains modified EUMETSAT Meteosat data." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -9302,6 +9615,7 @@
       }
     },
     "Mit %@ fortsetzen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -9330,6 +9644,7 @@
       }
     },
     "Mitteilungen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -9358,6 +9673,7 @@
       }
     },
     "Mitteilungen deaktiviert" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -9386,6 +9702,7 @@
       }
     },
     "Mitteilungen erlauben" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -9414,6 +9731,7 @@
       }
     },
     "Mitteilungen sind in den iOS-Einstellungen ausgeschaltet." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -9493,6 +9811,7 @@
       }
     },
     "Mittlere Intensität" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -9822,6 +10141,7 @@
       }
     },
     "nahezu stationär" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -9963,6 +10283,7 @@
       }
     },
     "Neuer Regen gegen %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -10099,6 +10420,7 @@
       }
     },
     "Niesel" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -10185,6 +10507,7 @@
       }
     },
     "NOAA" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -10463,6 +10786,7 @@
       }
     },
     "Öffnet Details zu den Radarquellen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -10491,6 +10815,7 @@
       }
     },
     "Öffnet Details zur Satellitenquelle" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -10534,8 +10859,11 @@
         }
       }
     },
-    "Öffnet die Einstellungen" : {},
+    "Öffnet die Einstellungen" : {
+
+    },
     "Öffnet die Erklärung zu Wettermodellen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -10592,6 +10920,7 @@
       }
     },
     "Öffnet die Kartenebenen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -10619,7 +10948,9 @@
         }
       }
     },
-    "Öffnet die Orte. Gedrückt halten, um schnell den Ort zu wechseln." : {},
+    "Öffnet die Orte. Gedrückt halten, um schnell den Ort zu wechseln." : {
+
+    },
     "Öffnet die stündliche Vorhersage für diesen Tag" : {
       "localizations" : {
         "de" : {
@@ -10706,6 +11037,7 @@
       }
     },
     "Öffnet Karten" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -10762,6 +11094,7 @@
       }
     },
     "Öffnet Stationsdetails" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -11239,6 +11572,7 @@
       }
     },
     "Ortswerte" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -11266,36 +11600,8 @@
         }
       }
     },
-    "Oscar Server" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oscar Server"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oscar Server"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Servidor do Oscar"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oscar 伺服器"
-          }
-        }
-      }
-    },
     "Pause" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -11498,6 +11804,7 @@
       }
     },
     "Precipitation" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -11582,6 +11889,7 @@
       }
     },
     "Radar" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -11610,6 +11918,7 @@
       }
     },
     "Radar %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -11632,6 +11941,7 @@
       }
     },
     "Radarbild der 48 zusammenhängenden US-Bundesstaaten, alle 2 Minuten neu." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -11660,6 +11970,7 @@
       }
     },
     "Radarbild über Taiwan und den umliegenden Inseln. Die Bilder zwischen den Messungen berechnet Felix°." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -11688,6 +11999,7 @@
       }
     },
     "Radardaten werden geladen…" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -11716,6 +12028,7 @@
       }
     },
     "Radarquellen in der App" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -11800,6 +12113,7 @@
       }
     },
     "REDEMET" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -11850,6 +12164,7 @@
       }
     },
     "Regen · noch >%lld min" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -11872,6 +12187,7 @@
       }
     },
     "Regen · noch ~%lld min" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -11894,6 +12210,7 @@
       }
     },
     "Regen ab %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -11916,6 +12233,7 @@
       }
     },
     "Regen auf dem Sperrbildschirm" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -11944,6 +12262,7 @@
       }
     },
     "Regen bis %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -11966,6 +12285,7 @@
       }
     },
     "Regen in Kürze" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -11988,6 +12308,7 @@
       }
     },
     "Regen vorbei" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -12010,6 +12331,7 @@
       }
     },
     "Regen-Live-Aktivität" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -12038,6 +12360,7 @@
       }
     },
     "Regenradar" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -12066,6 +12389,7 @@
       }
     },
     "Regenverlauf" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -12116,6 +12440,7 @@
       }
     },
     "Regenwarnungen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -12138,6 +12463,7 @@
       }
     },
     "Regenwarnungen per Radar in Europa, den USA, Taiwan, Brasilien und auf den Kanaren." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -12166,6 +12492,7 @@
       }
     },
     "Regenzelle" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -12194,6 +12521,7 @@
       }
     },
     "Regenzellen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -12222,6 +12550,7 @@
       }
     },
     "Regnet gerade" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -12244,6 +12573,7 @@
       }
     },
     "Reihe" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -12294,6 +12624,7 @@
       }
     },
     "Rund 29 Radarstandorte, die nicht gleichzeitig melden. Deshalb kann das Bild Lücken haben." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -12351,6 +12682,7 @@
       }
     },
     "Sanfte Übergänge zwischen den Bildern" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -12408,6 +12740,7 @@
       }
     },
     "Satellitenbilder sind derzeit nicht verfügbar." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -12465,6 +12798,7 @@
       }
     },
     "Satellitenquelle in der App" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -13562,6 +13896,7 @@
       }
     },
     "Stark" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -13590,6 +13925,7 @@
       }
     },
     "Starker Regen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -13612,6 +13948,7 @@
       }
     },
     "Starker Schauer" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -13753,6 +14090,7 @@
       }
     },
     "Stil der Hintergrundkarte" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -14090,6 +14428,7 @@
       }
     },
     "Systemeinstellungen öffnen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -14174,6 +14513,7 @@
       }
     },
     "Taiwan" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -14196,6 +14536,7 @@
       }
     },
     "Taupunkt" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -14280,6 +14621,7 @@
       }
     },
     "Temperatur & Wind an Städten" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -14336,6 +14678,7 @@
       }
     },
     "Temperatur und Taupunkt" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -14759,6 +15102,7 @@
       }
     },
     "unregelmäßig" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -14843,6 +15187,7 @@
       }
     },
     "Unwetterwarnung" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -14899,6 +15244,7 @@
       }
     },
     "US-Wetterbehörde NOAA" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -15070,6 +15416,7 @@
       }
     },
     "Verbund der europäischen Wetterdienste" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -15154,6 +15501,7 @@
       }
     },
     "Verlauf der letzten 24 Stunden" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -15210,6 +15558,7 @@
       }
     },
     "Vorbei" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -15232,6 +15581,7 @@
       }
     },
     "Vorerst trocken" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -15445,6 +15795,7 @@
       }
     },
     "Wann soll sich Felix° melden?" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -15586,6 +15937,7 @@
       }
     },
     "Was sind Wettermodelle?" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -15614,6 +15966,7 @@
       }
     },
     "Was zeigt das Regenradar?" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -15642,6 +15995,7 @@
       }
     },
     "Was zeigt die Wolken-Ebene?" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -15670,6 +16024,7 @@
       }
     },
     "Webcams" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -15726,6 +16081,7 @@
       }
     },
     "Weiche Kanten statt harter Farbstufen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -15754,6 +16110,7 @@
       }
     },
     "Weichzeichnen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -15838,6 +16195,7 @@
       }
     },
     "Weltweit" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -15866,6 +16224,7 @@
       }
     },
     "Weltweites Modell. Stündlich bis 36 Stunden, danach in 4-Stunden-Schritten bis 3,5 Tage voraus. Alle 6 Stunden ein neuer Lauf." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -15921,6 +16280,34 @@
         }
       }
     },
+    "Wetter" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wetter"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weather"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天氣"
+          }
+        }
+      }
+    },
     "Wetter nicht verfügbar" : {
       "localizations" : {
         "de" : {
@@ -15949,238 +16336,8 @@
         }
       }
     },
-    "Felix° startet mit diesem Ort." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° startet mit diesem Ort."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° opens with this place."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° abre com este local."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° 會以此地點開啟。"
-          }
-        }
-      }
-    },
-    "Felix° verwendet amtliche Wetterwarnungen von Environment and Climate Change Canada (ECCC) für Kanada. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu ECCC dar." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° verwendet amtliche Wetterwarnungen von Environment and Climate Change Canada (ECCC) für Kanada. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu ECCC dar."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° uses official weather warnings from Environment and Climate Change Canada (ECCC) for Canada. Use does not imply endorsement by or official affiliation with ECCC."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° usa avisos meteorológicos oficiais da Environment and Climate Change Canada (ECCC) para o Canadá. O uso não implica endosso nem vínculo oficial com a ECCC."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° 使用加拿大環境與氣候變遷部（ECCC）針對加拿大的官方天氣警報。此使用行為不代表 ECCC 的背書，也不代表與 ECCC 有官方關係。"
-          }
-        }
-      }
-    },
-    "Felix° verwendet das europäische Radarkomposit des OPERA-Programms von EUMETNET, dem Zusammenschluss der europäischen Wetterdienste, für das Regenradar in Europa außerhalb Zentraleuropas, amtliche Warnmeldungen der europäischen Warnplattform Meteoalarm sowie Messwerte europäischer Wetterstationen aus dem Datenhub E-SOH. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu EUMETNET dar." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° verwendet das europäische Radarkomposit des OPERA-Programms von EUMETNET, dem Zusammenschluss der europäischen Wetterdienste, für das Regenradar in Europa außerhalb Zentraleuropas, amtliche Warnmeldungen der europäischen Warnplattform Meteoalarm sowie Messwerte europäischer Wetterstationen aus dem Datenhub E-SOH. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu EUMETNET dar."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° uses the European radar composite from EUMETNET's OPERA program, the network of European meteorological services, for the rain radar in Europe outside Central Europe, official warnings from the European alerting platform Meteoalarm, and readings from European weather stations via the E-SOH data hub. Use does not imply endorsement by or official affiliation with EUMETNET."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° usa o composto de radar europeu do programa OPERA da EUMETNET, a associação dos serviços meteorológicos europeus, para o radar de chuva na Europa fora da Europa Central, avisos oficiais da plataforma europeia de alertas Meteoalarm e leituras de estações meteorológicas europeias do hub de dados E-SOH. O uso não implica endosso nem vínculo oficial com a EUMETNET."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° 使用 EUMETNET（歐洲各氣象局組成的聯合組織）OPERA 計畫的歐洲雷達合成圖，用於中歐以外歐洲地區的降雨雷達；同時使用歐洲警報平台 Meteoalarm 的官方警報，以及透過 E-SOH 資料中心取得的歐洲氣象站觀測值。此使用行為不代表 EUMETNET 的背書，也不代表與 EUMETNET 有官方關係。"
-          }
-        }
-      }
-    },
-    "Felix° verwendet Daten der Central Weather Administration (CWA), der Wetterbehörde Taiwans: das QPESUMS-Radarkomposit für das Regenradar über Taiwan sowie amtliche Warnungen auf Landkreisebene. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zur CWA dar." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° verwendet Daten der Central Weather Administration (CWA), der Wetterbehörde Taiwans: das QPESUMS-Radarkomposit für das Regenradar über Taiwan sowie amtliche Warnungen auf Landkreisebene. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zur CWA dar."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° uses data from the Central Weather Administration (CWA), Taiwan's weather agency: the QPESUMS radar composite for the rain radar over Taiwan and official county-level warnings. Use does not imply endorsement by or official affiliation with the CWA."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° usa dados da Central Weather Administration (CWA), agência meteorológica de Taiwan: o composto de radar QPESUMS para o radar de chuva sobre Taiwan e avisos oficiais por condado. O uso não implica endosso nem vínculo oficial com a CWA."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° 使用台灣氣象機關中央氣象署（CWA）的資料：台灣降雨雷達採用 QPESUMS 雷達合成圖，以及官方縣市層級警報。此使用行為不代表 CWA 的背書，也不代表與 CWA 有官方關係。"
-          }
-        }
-      }
-    },
-    "Felix° verwendet Daten der US-Wetterbehörde NOAA: Prognosedaten aus den Modellen GFS und HRRR, das MRMS-Radarkomposit für das Regenradar über den USA sowie amtliche Warnungen des National Weather Service (NWS). NOAA/NWS-Daten sind in der Regel gemeinfrei, sofern nicht anders gekennzeichnet. Die Nutzung stellt keine Unterstützung, Empfehlung oder offizielle Verbindung zu NOAA oder NWS dar." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° verwendet Daten der US-Wetterbehörde NOAA: Prognosedaten aus den Modellen GFS und HRRR, das MRMS-Radarkomposit für das Regenradar über den USA sowie amtliche Warnungen des National Weather Service (NWS). NOAA/NWS-Daten sind in der Regel gemeinfrei, sofern nicht anders gekennzeichnet. Die Nutzung stellt keine Unterstützung, Empfehlung oder offizielle Verbindung zu NOAA oder NWS dar."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° uses data from the US agency NOAA: forecast data from the GFS and HRRR models, the MRMS radar composite for the rain radar over the United States, and official warnings from the National Weather Service (NWS). NOAA/NWS data is generally in the public domain unless marked otherwise. Use does not imply endorsement, recommendation, or official affiliation with NOAA or NWS."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° usa dados da agência norte-americana NOAA: dados de previsão dos modelos GFS e HRRR, o composto de radar MRMS para o radar de chuva sobre os Estados Unidos e avisos oficiais do National Weather Service (NWS). Os dados da NOAA/NWS geralmente são de domínio público, salvo indicação em contrário. O uso não implica endosso, recomendação nem vínculo oficial com a NOAA ou o NWS."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° 使用美國氣象機關 NOAA 的資料：GFS 與 HRRR 模型的預報資料、美國降雨雷達的 MRMS 雷達合成圖，以及國家氣象局（NWS）的官方警報。除非另有標示，NOAA/NWS 資料通常屬於公共領域。此使用行為不代表 NOAA 或 NWS 的背書、推薦，也不代表與其有官方關係。"
-          }
-        }
-      }
-    },
-    "Felix° verwendet Radardaten der Agencia Estatal de Meteorología (AEMET), des staatlichen spanischen Wetterdienstes, für das Regenradar über den Kanarischen Inseln. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu AEMET dar." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° verwendet Radardaten der Agencia Estatal de Meteorología (AEMET), des staatlichen spanischen Wetterdienstes, für das Regenradar über den Kanarischen Inseln. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu AEMET dar."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° uses radar data from the Agencia Estatal de Meteorología (AEMET), Spain's state meteorological agency, for the rain radar over the Canary Islands. Use does not imply endorsement by or official affiliation with AEMET."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° usa dados de radar da Agencia Estatal de Meteorología (AEMET), agência meteorológica estatal espanhola, para o radar de chuva sobre as Ilhas Canárias. O uso não implica endosso nem vínculo oficial com a AEMET."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° 使用西班牙國家氣象局（AEMET）的雷達資料，用於加那利群島的降雨雷達。此使用行為不代表 AEMET 的背書，也不代表與 AEMET 有官方關係。"
-          }
-        }
-      }
-    },
-    "Felix° verwendet Radardaten des brasilianischen Flugwetterdienstes REDEMET (DECEA) für das Regenradar über Brasilien. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu REDEMET oder DECEA dar." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° verwendet Radardaten des brasilianischen Flugwetterdienstes REDEMET (DECEA) für das Regenradar über Brasilien. Die Nutzung stellt keine Unterstützung oder offizielle Verbindung zu REDEMET oder DECEA dar."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° uses radar data from REDEMET (DECEA), Brazil's aeronautical meteorology network, for the rain radar over Brazil. Use does not imply endorsement by or official affiliation with REDEMET or DECEA."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° usa dados de radar da REDEMET (DECEA), serviço de meteorologia aeronáutica do Brasil, para o radar de chuva sobre o Brasil. O uso não implica endosso nem vínculo oficial com a REDEMET ou o DECEA."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° 使用巴西航空氣象機構 REDEMET（DECEA）的雷達資料，用於巴西的降雨雷達。此使用行為不代表 REDEMET 或 DECEA 的背書，也不代表與其有官方關係。"
-          }
-        }
-      }
-    },
-    "Felix° verwendet Wetter- und Geodaten des Deutschen Wetterdienstes (DWD), unter anderem Radardaten, Prognosedaten aus dem ICON-Modell sowie amtliche Warnmeldungen. Datenbasis: Deutscher Wetterdienst. Die Daten werden unter den Open-Data-Nutzungsbedingungen des DWD bereitgestellt." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° verwendet Wetter- und Geodaten des Deutschen Wetterdienstes (DWD), unter anderem Radardaten, Prognosedaten aus dem ICON-Modell sowie amtliche Warnmeldungen. Datenbasis: Deutscher Wetterdienst. Die Daten werden unter den Open-Data-Nutzungsbedingungen des DWD bereitgestellt."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° uses weather and geodata from the German Meteorological Service (DWD), including radar data, forecast data from the ICON model, and official warnings. Data basis: Deutscher Wetterdienst. The data is provided under the DWD open data terms of use."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° usa dados meteorológicos e geodados do Serviço Meteorológico Alemão (DWD), entre eles dados de radar, dados de previsão do modelo ICON e avisos oficiais. Base de dados: Deutscher Wetterdienst. Os dados são fornecidos sob os termos de uso de dados abertos do DWD."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felix° 使用德國氣象局（DWD）的氣象與地理資料，包括雷達資料、ICON 模型的預報資料以及官方警報。資料來源：Deutscher Wetterdienst。資料依 DWD 的開放資料使用條款提供。"
-          }
-        }
-      }
-    },
     "Wetterbehörde Taiwans" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -16237,6 +16394,7 @@
       }
     },
     "Wetterdaten werden geladen…" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -16293,6 +16451,7 @@
       }
     },
     "Wettermodelle" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -16321,6 +16480,7 @@
       }
     },
     "Wettermodelle in der App" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -16349,6 +16509,7 @@
       }
     },
     "Wetterradare messen, wo es gerade regnet oder schneit. Aus der Bewegung der letzten Bilder rechnet Felix° die nächsten 1,5 bis 2 Stunden voraus. Alles nach der LIVE-Markierung ist diese Kurzprognose. Schauer, die in der Zeit neu entstehen oder sich auflösen, erfasst sie nicht." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -16433,6 +16594,7 @@
       }
     },
     "Wiedergabe" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -16687,6 +16849,7 @@
       }
     },
     "Zeit" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -16765,6 +16928,7 @@
       }
     },
     "Zeitraffer von heute" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -16821,6 +16985,7 @@
       }
     },
     "Zentraleuropa" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -16849,6 +17014,7 @@
       }
     },
     "Zieht voraussichtlich an %@ vorbei." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -16933,6 +17099,7 @@
       }
     },
     "Zugbahnen kräftiger Schauer" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -16961,6 +17128,7 @@
       }
     },
     "Zugrichtung" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -17017,6 +17185,7 @@
       }
     },
     "Zur aktuellen Zeit springen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -17045,6 +17214,7 @@
       }
     },
     "Zwei Radare auf Gran Canaria und Teneriffa. Berge wie der Teide können einzelne Bereiche verdecken." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -17096,34 +17266,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "樹枝搖動，紙張會被吹起。"
-          }
-        }
-      }
-    },
-    "Wetter" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wetter"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weather"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tempo"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "天氣"
           }
         }
       }

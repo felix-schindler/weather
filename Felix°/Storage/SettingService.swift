@@ -20,48 +20,6 @@ final class SettingService {
 	var precipitationUnit: String {
 		didSet { unitDidChange(key: Self.precipitationUnitKey, value: precipitationUnit) }
 	}
-	var oscarRadarLayer: Bool {
-		didSet { UserDefaults.standard.set(oscarRadarLayer, forKey: "oscarRadarLayer") }
-	}
-	var activeTileLayerRaw: String? {
-		didSet { UserDefaults.standard.set(activeTileLayerRaw, forKey: "activeTileLayer") }
-	}
-	var oscarRadarRegionRaw: String {
-		didSet { Self.defaults.set(oscarRadarRegionRaw, forKey: "oscarRadarRegion") }
-	}
-	var radarSmoothMotion: Bool {
-		didSet { UserDefaults.standard.set(radarSmoothMotion, forKey: "radarSmoothMotion") }
-	}
-	var radarSoftRendering: Bool {
-		didSet { UserDefaults.standard.set(radarSoftRendering, forKey: "radarSoftRendering") }
-	}
-	var radarMotionArrows: Bool {
-		didSet { UserDefaults.standard.set(radarMotionArrows, forKey: "radarMotionArrows") }
-	}
-	var radarModelContinuation: Bool {
-		didSet { UserDefaults.standard.set(radarModelContinuation, forKey: "radarModelContinuation") }
-	}
-	var mapValueBubbles: Bool {
-		didSet { UserDefaults.standard.set(mapValueBubbles, forKey: "mapValueBubbles") }
-	}
-	var mapWebcams: Bool {
-		didSet { UserDefaults.standard.set(mapWebcams, forKey: "mapWebcams") }
-	}
-	var showAlertPolygons: Bool {
-		didSet { UserDefaults.standard.set(showAlertPolygons, forKey: "showAlertPolygons") }
-	}
-	var showStormCells: Bool {
-		didSet { UserDefaults.standard.set(showStormCells, forKey: "showStormCells") }
-	}
-	var showIsobars: Bool {
-		didSet { UserDefaults.standard.set(showIsobars, forKey: "showIsobars") }
-	}
-	var cloudLayerActive: Bool {
-		didSet { UserDefaults.standard.set(cloudLayerActive, forKey: "cloudLayerActive") }
-	}
-	var mapOverlayOpacity: Double {
-		didSet { UserDefaults.standard.set(mapOverlayOpacity, forKey: "mapOverlayOpacity") }
-	}
 	var sectionArrangementsRaw: [String: Data] {
 		didSet { UserDefaults.standard.set(sectionArrangementsRaw, forKey: "sectionArrangements") }
 	}
@@ -79,16 +37,6 @@ final class SettingService {
 	}
 	var hiddenHeadMetricsRaw: [String]? {
 		didSet { UserDefaults.standard.set(hiddenHeadMetricsRaw, forKey: "hiddenHeadMetrics") }
-	}
-	var favoriteStationIDs: [String] {
-		didSet { UserDefaults.standard.set(favoriteStationIDs, forKey: "favoriteStationIDs") }
-	}
-	var mapBasemapStyleRaw: String {
-		didSet { Self.defaults.set(mapBasemapStyleRaw, forKey: "mapBasemapStyle") }
-	}
-	var mapBasemapStyle: MapBasemapStyle {
-		get { MapBasemapStyle(rawValue: mapBasemapStyleRaw) ?? .fiord }
-		set { mapBasemapStyleRaw = newValue.rawValue }
 	}
 	var timeFormatPreference: TimeFormatPreference {
 		didSet {
@@ -161,36 +109,12 @@ final class SettingService {
 		temperatureUnit = Self.resolvedTemperatureUnit
 		windSpeedUnit = Self.resolvedWindSpeedUnit
 		precipitationUnit = Self.resolvedPrecipitationUnit
-		oscarRadarLayer = UserDefaults.standard.bool(forKey: "oscarRadarLayer")
-		activeTileLayerRaw = UserDefaults.standard.string(forKey: "activeTileLayer")
-		let resolvedRadarRegion =
-			Self.defaults.string(forKey: "oscarRadarRegion")
-			?? UserDefaults.standard.string(forKey: "oscarRadarRegion")
-			?? "germany"
-		oscarRadarRegionRaw = resolvedRadarRegion
-		Self.defaults.set(resolvedRadarRegion, forKey: "oscarRadarRegion")
-		UserDefaults.standard.removeObject(forKey: "radarPrecipTypeOverlay")
-		UserDefaults.standard.removeObject(forKey: "oscarRadarProduct")
-		radarSmoothMotion = (UserDefaults.standard.object(forKey: "radarSmoothMotion") as? Bool) ?? true
-		radarSoftRendering = (UserDefaults.standard.object(forKey: "radarSoftRendering") as? Bool) ?? true
-		radarMotionArrows = (UserDefaults.standard.object(forKey: "radarMotionArrows") as? Bool) ?? true
-		radarModelContinuation = UserDefaults.standard.bool(forKey: "radarModelContinuation")
-		mapValueBubbles = (UserDefaults.standard.object(forKey: "mapValueBubbles") as? Bool) ?? true
-		mapWebcams = UserDefaults.standard.bool(forKey: "mapWebcams")
-		showAlertPolygons = UserDefaults.standard.bool(forKey: "showAlertPolygons")
-		showStormCells = UserDefaults.standard.bool(forKey: "showStormCells")
-		showIsobars = UserDefaults.standard.bool(forKey: "showIsobars")
-		cloudLayerActive = UserDefaults.standard.bool(forKey: "cloudLayerActive")
-		let storedOpacity = UserDefaults.standard.object(forKey: "mapOverlayOpacity") as? Double
-		mapOverlayOpacity = min(max(storedOpacity ?? 0.7, 0.3), 1)
 		sectionArrangementsRaw = UserDefaults.standard.dictionary(forKey: "sectionArrangements") as? [String: Data] ?? [:]
 		nowSectionOrderRaw = UserDefaults.standard.stringArray(forKey: "nowSectionOrder")
 		hiddenNowSectionsRaw = UserDefaults.standard.stringArray(forKey: "hiddenNowSections")
 		stageNowSectionsRaw = UserDefaults.standard.stringArray(forKey: "stageNowSections")
 		headMetricOrderRaw = UserDefaults.standard.stringArray(forKey: "headMetricOrder")
 		hiddenHeadMetricsRaw = UserDefaults.standard.stringArray(forKey: "hiddenHeadMetrics")
-		favoriteStationIDs = UserDefaults.standard.stringArray(forKey: "favoriteStationIDs") ?? []
-		mapBasemapStyleRaw = Self.defaults.string(forKey: "mapBasemapStyle") ?? MapBasemapStyle.fiord.rawValue
 		timeFormatPreference =
 			TimeFormatPreference(
 				rawValue: Self.defaults.string(forKey: Self.timeFormatPreferenceKey) ?? ""

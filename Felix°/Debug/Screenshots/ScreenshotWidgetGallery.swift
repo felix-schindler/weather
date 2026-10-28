@@ -1,18 +1,9 @@
 #if DEBUG
 
-	import CoreLocation
 	import SwiftUI
 
 	struct ScreenshotWidgetGallery: View {
-		private static let center = CLLocationCoordinate2D(
-			latitude: ScreenshotFixtures.latitude,
-			longitude: ScreenshotFixtures.longitude
-		)
-
-		private static let largeSize = CGSize(width: 364, height: 382)
 		private static let mediumSize = CGSize(width: 364, height: 170)
-
-		@State private var radar: RadarSnapshotRenderer.Rendered?
 
 		var body: some View {
 			ZStack {
@@ -26,61 +17,11 @@
 				)
 				.ignoresSafeArea()
 
-				VStack(spacing: 26) {
-					radarWidget
-						.frame(width: Self.largeSize.width, height: Self.largeSize.height)
-						.clipShape(.rect(cornerRadius: 28, style: .continuous))
-						.shadow(color: .black.opacity(0.35), radius: 22, y: 12)
-
-					dailyWidget
-						.frame(width: Self.mediumSize.width, height: Self.mediumSize.height)
-						.clipShape(.rect(cornerRadius: 28, style: .continuous))
-						.shadow(color: .black.opacity(0.35), radius: 22, y: 12)
-				}
-				.accessibilityIdentifier(
-					radar == nil ? "screenshot.widgetGallery.loading" : "screenshot.widgetGallery.ready"
-				)
-			}
-			.task {
-				WidgetBasemapStore.registerRequestedStyle(MapBasemapStyle.fiord.rawValue)
-				for _ in 0..<6 {
-					await WidgetBasemapRenderer.refreshIfNeeded()
-					radar = await RadarSnapshotRenderer.render(
-						center: Self.center,
-						size: WidgetBasemapStore.largeCompositeSize,
-						options: RadarWidgetRenderOptions()
-					)
-					if radar != nil { break }
-					try? await Task.sleep(for: .seconds(3))
-				}
-			}
-		}
-
-		@ViewBuilder
-		private var radarWidget: some View {
-			if let radar {
-				Color.clear
-					.overlay {
-						Image(uiImage: radar.image)
-							.resizable()
-							.aspectRatio(contentMode: .fill)
-					}
-					.clipped()
-					.overlay(alignment: .topLeading) {
-						Text(SettingService.formattedTime(radar.frameDate ?? .now))
-							.font(.footnote)
-							.foregroundStyle(.white)
-							.padding(.horizontal, 5)
-							.padding(.vertical, 2)
-							.background(.gray.opacity(0.6))
-							.clipShape(.rect(cornerRadius: 5))
-							.padding(15)
-					}
-			} else {
-				ZStack {
-					Color(red: 0.2, green: 0.22, blue: 0.28)
-					ProgressView()
-				}
+				dailyWidget
+					.frame(width: Self.mediumSize.width, height: Self.mediumSize.height)
+					.clipShape(.rect(cornerRadius: 28, style: .continuous))
+					.shadow(color: .black.opacity(0.35), radius: 22, y: 12)
+					.accessibilityIdentifier("screenshot.widgetGallery.ready")
 			}
 		}
 

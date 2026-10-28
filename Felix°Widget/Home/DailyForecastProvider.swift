@@ -32,7 +32,7 @@ struct DailyForecastProvider: AppIntentTimelineProvider {
 		coordinates: CLLocationCoordinate2D,
 		locationName: String
 	) async throws -> DailyForecastEntry {
-		async let weatherRequest = client.getForecast(
+		let weather = try await client.getForecast(
 			coordinates: coordinates,
 			forecastDays: ._14,
 			hourly: [
@@ -40,7 +40,6 @@ struct DailyForecastProvider: AppIntentTimelineProvider {
 				.precipitation, .snowfall, .windspeed_10m, .winddirection_10m,
 			]
 		)
-		let weather = try await weatherRequest
 
 		let daily = weather.daily
 		let timeZone = weather.locationTimeZone

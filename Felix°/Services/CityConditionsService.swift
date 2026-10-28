@@ -15,14 +15,14 @@ struct CityConditions {
 	let temperature: Double
 	let weathercode: Int
 	let isDay: Bool
-	let isRadarRaining: Bool
+	let isRaining: Bool
 
 	var conditionText: String {
 		WeatherConditionLabel.text(for: weathercode)
 	}
 
 	var iconAssetName: String {
-		if isRadarRaining, ![51...57, 61...67, 71...77, 80...86, 95...99].contains(where: { $0.contains(weathercode) }) {
+		if isRaining, ![51...57, 61...67, 71...77, 80...86, 95...99].contains(where: { $0.contains(weathercode) }) {
 			return isDay ? "10d" : "10n"
 		}
 		return HourlyFormatting.weatherIconName(weatherCode: Double(weathercode), isDay: isDay ? 1 : 0)
@@ -59,16 +59,11 @@ final class CityConditionsStore {
 		defer { isLoading = false }
 
 		do {
-			async let radarTask = Self.fetchRadar(coordinates: outbound)
 			let entries = try await Self.fetchBatch(coordinates: outbound)
-			let radarByKey = await radarTask
 			var updated = conditions.filter { fetchKeys.contains($0.key) }
 			for (requested, entry) in zip(outbound, entries) {
 				let key = Self.key(for: requested)
-				updated[key] = Self.makeConditions(
-					entry: entry,
-					radar: radarByKey[key]
-				)
+				updated[key] = Self.makeConditions(entry: entry)
 			}
 			conditions = updated
 			lastFetch = (fetchKeys, .now)
@@ -79,42 +74,19 @@ final class CityConditionsStore {
 		}
 	}
 
-	private static func fetchRadar(
-		coordinates: [CLLocationCoordinate2D]
-	) async -> [String: PrecipSeriesResponse] {
-		await withTaskGroup(of: (String, PrecipSeriesResponse?).self) { group in
-			for coordinate in coordinates {
-				group.addTask {
-					let series = try? await APIClient.shared.getRadarSeries(coordinates: coordinate)
-					return (Self.key(for: coordinate), series ?? nil)
-				}
-			}
-			var result: [String: PrecipSeriesResponse] = [:]
-			for await (key, series) in group {
-				if let series {
-					result[key] = series
-				}
-			}
-			return result
-		}
-	}
-
 	nonisolated private static func key(for coordinate: CLLocationCoordinate2D) -> String {
 		let rounded = LocationService.outboundCoordinate(coordinate)
 		return "\(rounded.latitude),\(rounded.longitude)"
 	}
 
-	private static func makeConditions(
-		entry: BatchCurrentEntry,
-		radar: PrecipSeriesResponse?
-	) -> CityConditions? {
+	private static func makeConditions(entry: BatchCurrentEntry) -> CityConditions? {
 		guard let current = entry.current, let temperature = current.temperature else { return nil }
 
 		return CityConditions(
 			temperature: temperature,
 			weathercode: Int(current.weathercode ?? 0),
 			isDay: current.is_day == 1,
-			isRadarRaining: radar?.isRaining() ?? false
+			isRaining: (current.precipitation ?? 0) > 0
 		)
 	}
 

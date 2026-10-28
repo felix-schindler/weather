@@ -12,7 +12,6 @@ import SwiftUI
 enum WeatherLoadingQuery: String, CaseIterable, Comparable {
 	case forecast
 	case airQuality
-	case rainRadar
 	case alerts
 
 	var displayName: String {
@@ -21,8 +20,6 @@ enum WeatherLoadingQuery: String, CaseIterable, Comparable {
 			return "Forecast"
 		case .airQuality:
 			return "Air quality"
-		case .rainRadar:
-			return "Rain radar"
 		case .alerts:
 			return "Alerts"
 		}
@@ -54,9 +51,6 @@ final class Weather {
 	var alerts: AlertResponse
 	var air: Operations.getAirQuality.Output.Ok.Body.jsonPayload
 	var time: Double
-	var precipSeries: PrecipSeriesResponse?
-	var cloudSeries: CloudSeriesResponse?
-	var stations: [Components.Schemas.NearbyStation] = []
 	var error: String = ""
 	var lastUpdated: Date?
 	var debug = false
@@ -72,9 +66,8 @@ final class Weather {
 			longitude: 0.0,
 			current: .init(cloudcover: 0.0, time: 0.0, temperature: 20.0, windspeed: 0.0, wind_direction_10m: 0.0, weathercode: 0.0)
 		)
-		alerts = .oscar(.empty)
+		alerts = .canadian([])
 		air = Operations.getAirQuality.Output.Ok.Body.jsonPayload.init(latitude: 0, longitude: 0, hourly: nil)
-		precipSeries = nil
 	}
 
 	func updateTime() {
@@ -96,21 +89,9 @@ final class Weather {
 }
 
 extension Weather {
-	private enum RadarOutcome {
-		case fetched(PrecipSeriesResponse?)
-		case failed
-	}
-
-	private enum CloudOutcome {
-		case fetched(CloudSeriesResponse?)
-		case failed
-	}
-
 	private enum UpdateResponse {
 		case forecast(Operations.getForecast.Output.Ok.Body.jsonPayload)
 		case airQuality(Operations.getAirQuality.Output.Ok.Body.jsonPayload)
-		case precipSeries(RadarOutcome)
-		case cloudSeries(CloudOutcome)
 	}
 
 	func refresh(
@@ -152,8 +133,6 @@ extension Weather {
 		do {
 			var forecastResponse: Operations.getForecast.Output.Ok.Body.jsonPayload?
 			var airQualityResponse: Operations.getAirQuality.Output.Ok.Body.jsonPayload?
-			var radarOutcome: RadarOutcome = .failed
-			var cloudOutcome: CloudOutcome = .failed
 
 			try await withThrowingTaskGroup(of: UpdateResponse.self) { group in
 				markLoading(.forecast)
@@ -166,15 +145,6 @@ extension Weather {
 					.airQuality(try await client.getAirQuality(coordinates: coordinates))
 				}
 
-				markLoading(.rainRadar)
-				group.addTask {
-					do { return .precipSeries(.fetched(try await client.getRadarSeries(coordinates: coordinates))) } catch { return .precipSeries(.failed) }
-				}
-
-				group.addTask {
-					do { return .cloudSeries(.fetched(try await client.getCloudSeries(coordinates: coordinates))) } catch { return .cloudSeries(.failed) }
-				}
-
 				for try await response in group {
 					switch response {
 					case .forecast(let response):
@@ -183,11 +153,6 @@ extension Weather {
 					case .airQuality(let response):
 						airQualityResponse = response
 						markFinished(.airQuality)
-					case .precipSeries(let outcome):
-						radarOutcome = outcome
-						markFinished(.rainRadar)
-					case .cloudSeries(let outcome):
-						cloudOutcome = outcome
 					}
 				}
 			}
@@ -198,12 +163,6 @@ extension Weather {
 
 			forecast = forecastResponse
 			air = airQualityResponse
-			if case .fetched(let value) = radarOutcome {
-				precipSeries = value
-			}
-			if case .fetched(let value) = cloudOutcome {
-				cloudSeries = value
-			}
 			updateTime()
 			lastUpdated = .now
 			loadState = .loaded
@@ -213,7 +172,6 @@ extension Weather {
 				let snapshot = WeatherSnapshot(
 					forecast: forecastResponse,
 					air: airQualityResponse,
-					precipSeries: precipSeries,
 					coordinates: CodableCoordinate(LocationService.outboundCoordinate(coordinates)),
 					locationName: location.name,
 					savedAt: lastUpdated ?? .now
@@ -232,17 +190,9 @@ extension Weather {
 			} catch is CancellationError {
 				throw CancellationError()
 			} catch {
-				alerts = .oscar(.empty)
+				alerts = .canadian([])
 			}
 			markFinished(.alerts)
-
-			do {
-				stations = try await client.getNearbyStations(coordinates: coordinates)
-			} catch is CancellationError {
-				throw CancellationError()
-			} catch {
-				stations = []
-			}
 		} catch is CancellationError {
 		} catch let error as URLError where error.code == .cancelled {
 		} catch {
@@ -257,7 +207,6 @@ extension Weather {
 		withTransaction(transaction) {
 			forecast = snapshot.forecast
 			air = snapshot.air
-			precipSeries = snapshot.precipSeries
 			updateTime()
 			lastUpdated = snapshot.savedAt
 			location.coordinates = snapshot.coordinates.coordinate
@@ -316,9 +265,8 @@ extension Weather {
 		)
 
 		mockWeather.time = 0.5
-		mockWeather.alerts = .oscar(.empty)
+		mockWeather.alerts = .canadian([])
 		mockWeather.air = Operations.getAirQuality.Output.Ok.Body.jsonPayload(latitude: 51.34, longitude: 12.379999, hourly: nil)
-		mockWeather.precipSeries = nil
 
 		return mockWeather
 	}

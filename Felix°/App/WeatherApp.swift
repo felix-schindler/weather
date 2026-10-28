@@ -6,13 +6,10 @@
 //
 
 import CoreLocation
-import OSLog
 import SwiftUI
 import UIKit
-import UserNotifications
 
 final class AppDelegate: NSObject, UIApplicationDelegate {
-	private let logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "Felix°", category: "Notifications")
 	nonisolated(unsafe) private var memoryWarningObserver: NSObjectProtocol?
 
 	func application(
@@ -25,38 +22,12 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 			queue: .main
 		) { _ in
 			Task { @MainActor in
-				ModelGridLayerState.purgeDecodedCaches()
-				OscarRadarState.purgeDecodedGrids()
-				CloudLayerState.purgeDecodedCaches()
-				RadarCustomStyleLayer.purgeCachedTextures()
-				await WindFieldCache.shared.evict(retaining: [])
 				await CacheStore.shared.dropMemory()
 				await ClimateArchiveStore.shared.dropMemory()
 				await DailyEnsembleForecastCache.shared.dropMemory()
 			}
 		}
-		MainActor.assumeIsolated {
-			UNUserNotificationCenter.current().delegate = NotificationSettingsManager.shared
-			RainRadarLiveActivityManager.shared.startMonitoring()
-		}
 		return true
-	}
-
-	func application(
-		_ application: UIApplication,
-		didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
-	) {
-		logger.info("Lifecycle: UIApplication didRegisterForRemoteNotificationsWithDeviceToken; tokenBytes=\(deviceToken.count, privacy: .public)")
-		Task { @MainActor in
-			NotificationSettingsManager.shared.didRegisterForRemoteNotifications(deviceToken)
-		}
-	}
-
-	func application(
-		_ application: UIApplication,
-		didFailToRegisterForRemoteNotificationsWithError error: Error
-	) {
-		logger.error("Lifecycle: UIApplication didFailToRegisterForRemoteNotificationsWithError=\(error.localizedDescription, privacy: .public)")
 	}
 
 	deinit {
@@ -69,7 +40,6 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct WeatherApp: App {
 	@UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-	@Environment(\.scenePhase) private var scenePhase
 
 	init() {
 		URLCache.shared = URLCache(
@@ -96,7 +66,6 @@ struct WeatherApp: App {
 	@State private var location = Location()
 	private let locationService = LocationService.shared
 	private let persistenceController = PersistenceController.shared
-	private let notificationSettingsManager = NotificationSettingsManager.shared
 
 	var body: some Scene {
 		WindowGroup {
@@ -122,15 +91,6 @@ struct WeatherApp: App {
 				#endif
 				hydrateFromCache()
 				await weather.refresh(location: location)
-				await notificationSettingsManager.configureOnLaunch()
-				await WidgetBasemapRenderer.refreshIfNeeded()
-			}
-			.onChange(of: scenePhase) { _, phase in
-				#if DEBUG
-					ScreenshotMode.scenePhaseDidChange(phase)
-				#endif
-				guard phase == .active else { return }
-				Task { await notificationSettingsManager.handleForeground() }
 			}
 		}
 		.commands { FelixCommands() }
